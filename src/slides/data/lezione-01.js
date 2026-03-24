@@ -63,20 +63,20 @@ export const slides = [
     type: 'concept',
     centered: true,
     heading: 'Trovami qui',
-    content: `<p style="font-size:16px; color:var(--muted); margin-bottom:32px;">Aggiungimi su LinkedIn — se hai domande dopo il corso, mi trovi li. Rispondo sempre.</p>
-<div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center; max-width:700px; margin:0 auto;">
-  <a href="https://www.linkedin.com/in/attiliocianci/" target="_blank" rel="noopener" style="background:var(--surface); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:20px 28px; display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--text); min-width:200px;">
-    <span style="font-size:24px;">🔗</span>
+    content: `<p style="font-size:16px; color:var(--muted); margin-bottom:40px;">Se avete domande dopo il corso, cercatemi su LinkedIn o GitHub. Rispondo sempre.</p>
+<div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; max-width:700px; margin:0 auto;">
+  <a href="https://www.linkedin.com/in/attiliocianci/" target="_blank" rel="noopener" style="background:var(--surface); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:28px 36px; display:flex; align-items:center; gap:18px; text-decoration:none; color:var(--text); min-width:260px;">
+    <span style="font-size:32px;">🔗</span>
     <div>
-      <div style="font-size:12px; color:var(--muted);">LinkedIn</div>
-      <div style="font-size:15px; font-weight:600;">Attilio Cianci</div>
+      <div style="font-size:13px; color:var(--muted);">LinkedIn</div>
+      <div style="font-size:18px; font-weight:700;">Attilio Cianci</div>
     </div>
   </a>
-  <a href="https://calendly.com/attiliocianci/1-1" target="_blank" rel="noopener" style="background:var(--surface); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:20px 28px; display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--text); min-width:200px;">
-    <span style="font-size:24px;">📅</span>
+  <a href="https://github.com/zorahrel" target="_blank" rel="noopener" style="background:var(--surface); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:28px 36px; display:flex; align-items:center; gap:18px; text-decoration:none; color:var(--text); min-width:260px;">
+    <span style="font-size:32px;">🐙</span>
     <div>
-      <div style="font-size:12px; color:var(--muted);">Vuoi una call?</div>
-      <div style="font-size:15px; font-weight:600;">Prenota qui</div>
+      <div style="font-size:13px; color:var(--muted);">GitHub</div>
+      <div style="font-size:18px; font-weight:700;">@zorahrel</div>
     </div>
   </a>
 </div>`,
