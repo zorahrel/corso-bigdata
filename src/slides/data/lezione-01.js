@@ -39,10 +39,6 @@ export const slides = [
       <div style="font-size:11px; text-transform:uppercase; letter-spacing:2px; color:var(--muted); margin-bottom:6px;">Cosa faccio</div>
       <div style="font-size:15px; font-weight:600; line-height:1.5;">Costruisco prodotti digitali — siti, app, sistemi AI — per startup e aziende che vogliono crescere con la tecnologia.</div>
     </div>
-    <div style="background:var(--surface); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:20px;">
-      <div style="font-size:11px; text-transform:uppercase; letter-spacing:2px; color:var(--muted); margin-bottom:6px;">Approccio</div>
-      <div style="font-size:15px; font-weight:600; line-height:1.5;">Imparo facendo. Questo corso funziona allo stesso modo — teoria minima, pratica massima.</div>
-    </div>
   </div>
 </div>`,
   },
