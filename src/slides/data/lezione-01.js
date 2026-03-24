@@ -13,7 +13,86 @@ export const slides = [
     subtitle: 'Mercoledì 25/03/2026 · 6h in presenza · Blocco FONDAMENTA',
   },
 
-  // 2. AGENDA
+  // 2. CHI SONO
+  {
+    type: 'concept',
+    centered: true,
+    heading: 'Il tuo docente',
+    content: `<div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; max-width:900px; text-align:left;">
+  <div>
+    <div style="font-size:clamp(36px,4vw,48px); font-weight:800; letter-spacing:-2px; line-height:1; margin-bottom:8px;">Attilio<br>Cianci</div>
+    <div style="font-size:16px; color:var(--muted); margin-bottom:24px;">Co-founder & CTO · 30 anni · Salerno</div>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+      <span style="background:rgba(108,99,255,.15); border:1px solid rgba(108,99,255,.3); color:var(--accent); border-radius:50px; padding:5px 14px; font-size:13px; font-weight:500;">Web & AI</span>
+      <span style="background:rgba(108,99,255,.15); border:1px solid rgba(108,99,255,.3); color:var(--accent); border-radius:50px; padding:5px 14px; font-size:13px; font-weight:500;">Product</span>
+      <span style="background:rgba(255,249,107,.08); border:1px solid rgba(255,249,107,.3); color:var(--warning); border-radius:50px; padding:5px 14px; font-size:13px; font-weight:500;">Startup</span>
+      <span style="background:rgba(0,212,170,.08); border:1px solid rgba(0,212,170,.3); color:var(--secondary); border-radius:50px; padding:5px 14px; font-size:13px; font-weight:500;">Open Source</span>
+    </div>
+  </div>
+  <div style="display:flex; flex-direction:column; gap:16px;">
+    <div style="background:var(--surface); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:20px;">
+      <div style="font-size:11px; text-transform:uppercase; letter-spacing:2px; color:var(--muted); margin-bottom:6px;">Azienda</div>
+      <div style="font-size:18px; font-weight:700;">Armonia</div>
+      <div style="font-size:13px; color:var(--muted); margin-top:4px;">Web agency & digital studio · Salerno · dal 2021</div>
+    </div>
+    <div style="background:var(--surface); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:20px;">
+      <div style="font-size:11px; text-transform:uppercase; letter-spacing:2px; color:var(--muted); margin-bottom:6px;">Cosa faccio</div>
+      <div style="font-size:15px; font-weight:600; line-height:1.5;">Costruisco prodotti digitali — siti, app, sistemi AI — per startup e aziende che vogliono crescere con la tecnologia.</div>
+    </div>
+    <div style="background:var(--surface); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:20px;">
+      <div style="font-size:11px; text-transform:uppercase; letter-spacing:2px; color:var(--muted); margin-bottom:6px;">Approccio</div>
+      <div style="font-size:15px; font-weight:600; line-height:1.5;">Imparo facendo. Questo corso funziona allo stesso modo — teoria minima, pratica massima.</div>
+    </div>
+  </div>
+</div>`,
+  },
+
+  // 3. PATTO D'AULA
+  {
+    type: 'custom',
+    layout: 'feature-grid',
+    heading: "Il patto d'aula",
+    features: [
+      { icon: '\uD83D\uDCF5', title: 'Telefono in tasca', description: 'Se devi rispondere a qualcosa di importante, esci fuori — nessun problema. Ma qui dentro, siamo presenti.' },
+      { icon: '\uD83D\uDEB6', title: 'Bagno libero', description: "Non c'e bisogno di alzare la mano e chiedere. Sei un adulto, fidati." },
+      { icon: '\uD83C\uDFA4', title: 'Dillo a tutti', description: "Se hai una cosa da dire all'amico vicino, dilla ad alta voce — se e interessante ridiamo tutti, se no ti prendiamo in giro." },
+      { icon: '\uD83D\uDD17', title: 'Fate network', description: "Siete in una stanza con 25 persone che stanno imparando l'AI. Questo vale di piu di qualsiasi certificato." },
+      { icon: '\uD83D\uDCBC', title: 'LinkedIn ora', description: 'Aggiungiti con il tuo compagno di sinistra e di destra. Adesso. Lo facciamo insieme come primo esercizio.' },
+      { icon: '\u2753', title: 'Domande sempre', description: "Non esiste la domanda stupida. Se una cosa non e chiara, fermami — probabilmente ci sono altri 5 che pensano la stessa cosa." },
+    ],
+  },
+
+  // 4. CONTATTI
+  {
+    type: 'concept',
+    centered: true,
+    heading: 'Trovami qui',
+    content: `<p style="font-size:16px; color:var(--muted); margin-bottom:32px;">Aggiungimi su LinkedIn — se hai domande dopo il corso, mi trovi li. Rispondo sempre.</p>
+<div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center; max-width:700px; margin:0 auto;">
+  <a href="https://www.linkedin.com/in/attiliocianci/" target="_blank" rel="noopener" style="background:var(--surface); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:20px 28px; display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--text); min-width:200px;">
+    <span style="font-size:24px;">🔗</span>
+    <div>
+      <div style="font-size:12px; color:var(--muted);">LinkedIn</div>
+      <div style="font-size:15px; font-weight:600;">Attilio Cianci</div>
+    </div>
+  </a>
+  <a href="https://calendly.com/attiliocianci/1-1" target="_blank" rel="noopener" style="background:var(--surface); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:20px 28px; display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--text); min-width:200px;">
+    <span style="font-size:24px;">📅</span>
+    <div>
+      <div style="font-size:12px; color:var(--muted);">Vuoi una call?</div>
+      <div style="font-size:15px; font-weight:600;">Prenota qui</div>
+    </div>
+  </a>
+</div>
+<div style="margin-top:32px; display:flex; align-items:center; gap:12px; padding:16px 28px; background:rgba(108,99,255,.08); border:1px solid rgba(108,99,255,.2); border-radius:var(--radius); justify-content:center;">
+  <div style="text-align:left;">
+    <div style="font-size:16px; font-weight:700;">Armonia</div>
+    <div style="font-size:13px; color:var(--muted);">Web agency & digital studio · armonia.studio · Salerno</div>
+  </div>
+</div>`,
+  },
+
+  // 5. AGENDA
   {
     type: 'agenda',
     heading: 'Agenda del giorno',
