@@ -130,11 +130,16 @@
 /* ══════════════════════════════════
    AGENDA SLIDE
    ══════════════════════════════════ */
-.slide-agenda h2 { margin-bottom: 32px; }
+.slide-agenda {
+  align-items: center;
+  justify-content: center;
+}
+.slide-agenda h2 { margin-bottom: 32px; text-align: center; }
 .slide-agenda .agenda-list {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
+  width: 100%;
   max-width: 700px;
   text-align: left;
 }
