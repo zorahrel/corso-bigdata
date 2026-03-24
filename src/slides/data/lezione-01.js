@@ -79,12 +79,6 @@ export const slides = [
       <div style="font-size:15px; font-weight:600;">Prenota qui</div>
     </div>
   </a>
-</div>
-<div style="margin-top:32px; display:flex; align-items:center; gap:12px; padding:16px 28px; background:rgba(108,99,255,.08); border:1px solid rgba(108,99,255,.2); border-radius:var(--radius); justify-content:center;">
-  <div style="text-align:left;">
-    <div style="font-size:16px; font-weight:700;">Armonia</div>
-    <div style="font-size:13px; color:var(--muted);">Web agency & digital studio · armonia.studio · Salerno</div>
-  </div>
 </div>`,
   },
 
