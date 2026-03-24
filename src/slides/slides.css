@@ -136,6 +136,7 @@
   padding: 0;
   margin: 0 auto;
   max-width: 700px;
+  text-align: left;
 }
 .slide-agenda .agenda-list li {
   font-size: 0.85em;
