@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lezione 01 — Big Data & AI</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0f1117;
+    --bg2: #1a1f2e;
+    --card: #1e2335;
+    --border: rgba(255,255,255,0.08);
+    --accent: #7C3AED;
+    --accent2: #a78bfa;
+    --yellow: #FFF96B;
+    --text: #e8eaf0;
+    --muted: #8892a4;
+    --red: #e94560;
+    --green: #34d399;
+    --blue: #60a5fa;
+  }
+
+  html, body {
+    width: 100%; height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    overflow: hidden;
+  }
+
+  .deck {
+    width: 100%; height: 100%;
+    position: relative;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity .4s ease, transform .4s ease;
+    pointer-events: none;
+    text-align: center;
+  }
+  .slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+  }
+  .slide.out {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  /* NAV */
+  .nav {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 100;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    padding: 10px 20px;
+    backdrop-filter: blur(12px);
+  }
+  .nav button {
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    transition: color .2s, background .2s;
+  }
+  .nav button:hover { color: var(--text); background: rgba(255,255,255,0.06); }
+  .nav button:disabled { opacity: 0.2; cursor: default; }
+  .nav .dots {
+    display: flex; gap: 6px; align-items: center;
+  }
+  .nav .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--muted);
+    transition: background .2s, transform .2s;
+    cursor: pointer;
+  }
+  .nav .dot.active {
+    background: var(--accent2);
+    transform: scale(1.4);
+  }
+
+  /* PROGRESS */
+  .progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width .4s ease;
+    z-index: 100;
+  }
+
+  /* SLIDE 0 — COVER */
+  .cover { background: radial-gradient(ellipse at 60% 30%, rgba(124,58,237,.15) 0%, transparent 70%); }
+  .cover-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 24px;
+  }
+  .cover h1 {
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    background: linear-gradient(135deg, #fff 40%, var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+  .cover-sub {
+    font-size: 18px;
+    color: var(--muted);
+    margin-bottom: 48px;
+  }
+  .cover-logos {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    opacity: .7;
+  }
+  .cover-logos img {
+    height: 36px;
+    filter: brightness(0) invert(1);
+    opacity: .6;
+  }
+
+  /* SLIDE 1 — CHI SONO */
+  .bio-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    max-width: 900px;
+    text-align: left;
+  }
+  .bio-left {}
+  .bio-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 12px;
+  }
+  .bio-name {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .bio-role {
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .bio-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .pill {
+    background: rgba(124,58,237,.15);
+    border: 1px solid rgba(124,58,237,.3);
+    color: var(--accent2);
+    border-radius: 50px;
+    padding: 5px 14px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .pill.y { background: rgba(255,249,107,.08); border-color: rgba(255,249,107,.3); color: var(--yellow); }
+  .pill.g { background: rgba(52,211,153,.08); border-color: rgba(52,211,153,.3); color: var(--green); }
+  .pill.b { background: rgba(96,165,250,.08); border-color: rgba(96,165,250,.3); color: var(--blue); }
+
+  .bio-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .bio-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .bio-card-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .bio-card-val {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .bio-card-sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+  /* armonia logo inline */
+  .armonia-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .armonia-logo-wrap svg path { fill: white; }
+  .armonia-logo-text {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  /* SLIDE 2 — PATTO */
+  .patto-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 16px;
+  }
+  .patto-h {
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 48px;
+  }
+  .patto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 900px;
+  }
+  .patto-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: left;
+    transition: border-color .2s;
+  }
+  .patto-item:hover { border-color: rgba(124,58,237,.4); }
+  .patto-emoji { font-size: 28px; margin-bottom: 12px; display: block; }
+  .patto-item h3 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .patto-item p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* SLIDE 3 — CONTATTI */
+  .contact-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 16px;
+  }
+  .contact-h {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 12px;
+  }
+  .contact-sub {
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 48px;
+    max-width: 520px;
+  }
+  .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    max-width: 700px;
+  }
+  .contact-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color .2s, transform .2s;
+    min-width: 200px;
+  }
+  .contact-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .contact-card-icon { font-size: 24px; flex-shrink: 0; }
+  .contact-card-label { font-size: 12px; color: var(--muted); }
+  .contact-card-val { font-size: 15px; font-weight: 600; }
+
+  .armonia-block {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 28px;
+    background: rgba(124,58,237,.08);
+    border: 1px solid rgba(124,58,237,.2);
+    border-radius: 16px;
+  }
+  .armonia-block svg path { fill: white; }
+  .armonia-block-text { text-align: left; }
+  .armonia-block-name { font-size: 16px; font-weight: 700; }
+  .armonia-block-desc { font-size: 13px; color: var(--muted); }
+
+  /* KBD */
+  .kbd-hint {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    z-index: 100;
+  }
+  kbd {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 2px 7px;
+    font-size: 11px;
+    color: var(--muted);
+    font-family: inherit;
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<div class="kbd-hint"><kbd>←</kbd><kbd>→</kbd> navigare</div>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 0: COVER -->
+  <div class="slide cover active" data-index="0">
+    <div class="cover-tag">ITS NewtechSI Academy · Salerno · 2026</div>
+    <h1>Big Data<br>&amp; AI</h1>
+    <p class="cover-sub">Corso pratico · 10 giornate · 60 ore</p>
+    <div class="cover-logos">
+      <img src="assets/its-academy-large.png" alt="ITS NewtechSI">
+      <img src="assets/skills-it.png" alt="Skills.it">
+    </div>
+  </div>
+
+  <!-- SLIDE 1: CHI SONO -->
+  <div class="slide" data-index="1">
+    <div class="bio-wrap">
+      <div class="bio-left">
+        <div class="bio-tag">Il tuo docente</div>
+        <div class="bio-name">Attilio<br>Cianci</div>
+        <div class="bio-role">Co-founder &amp; CTO · 30 anni · Salerno</div>
+        <div class="bio-pills">
+          <span class="pill">Web &amp; AI</span>
+          <span class="pill">Product</span>
+          <span class="pill y">Startup</span>
+          <span class="pill g">Open Source</span>
+          <span class="pill b">Design Systems</span>
+        </div>
+      </div>
+      <div class="bio-right">
+        <div class="bio-card">
+          <div class="bio-card-label">Azienda</div>
+          <div class="armonia-logo-wrap">
+            <svg width="26" height="27" viewBox="0 0 41 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.5271 30.5037C21.0625 31.9805 24.1412 32.1562 26.9785 31.6182C35.4738 30.0425 41.1867 22.2574 40.5665 13.6926C40.4348 9.41574 38.7445 5.23769 36.2475 1.81728L32.4773 4.56788C34.6067 7.38436 35.9622 10.4644 36.1652 13.9342C36.4232 16.9758 35.7811 20.1107 33.9755 22.6307C32.5158 24.7609 30.3645 26.3915 27.9334 27.2809L27.2035 25.9084C28.2681 25.0464 29.1791 23.9868 29.8486 22.7844C31.3194 20.2479 31.4895 17.1734 30.9572 14.346C29.4645 6.1271 21.8637 0.301979 13.5605 0.768647C9.09884 0.801589 4.77985 2.49807 1.2127 5.10592L3.89629 8.78986C6.71708 6.65965 9.81226 5.30357 13.2861 5.10043C16.3374 4.84788 19.4765 5.49573 22.0009 7.3075C24.1138 8.76241 25.7382 10.8981 26.6327 13.3028L25.2662 14.022L25.2772 14.044C24.4101 12.9679 23.3455 12.0456 22.1326 11.3703C19.5917 9.8879 16.5075 9.71221 13.6703 10.2448C5.42742 11.7271 -0.428183 19.3585 0.0218263 27.6982C0.043778 32.1837 1.74503 36.5319 4.35728 40.1171L8.23175 37.2896C6.10243 34.4841 4.75241 31.4205 4.54387 27.9562C4.28594 24.9201 4.92253 21.8017 6.71159 19.2872C8.10004 17.2503 10.1306 15.6746 12.419 14.7632L12.4026 14.7742L13.2532 16.0864C12.2434 16.9319 11.3763 17.953 10.7342 19.106C9.2525 21.648 9.07689 24.7335 9.60921 27.5719C11.0909 35.8237 18.7191 41.6763 27.0498 41.2261C31.5334 41.1986 35.8799 39.5021 39.469 36.8888L36.6427 33.0127C33.8384 35.1374 30.7761 36.4935 27.3187 36.7021C24.2839 36.9602 21.1668 36.3233 18.6533 34.5335C16.5624 33.1006 14.949 31.0033 14.0489 28.6315L15.4374 27.8903C16.2935 28.939 17.3417 29.8339 18.5216 30.4927L18.5271 30.5037ZM20.3106 14.7467C23.7296 14.7467 26.501 17.5193 26.501 20.9397C26.501 24.3601 23.7296 27.1382 20.3106 27.1382C16.8917 27.1382 14.1148 24.3656 14.1148 20.9397C14.1148 17.5138 16.8862 14.7467 20.3106 14.7467Z" fill="white"/>
+            </svg>
+            <span class="armonia-logo-text">Armonia</span>
+          </div>
+          <div class="bio-card-sub">Web agency &amp; digital studio · Salerno · dal 2021</div>
+        </div>
+        <div class="bio-card">
+          <div class="bio-card-label">Cosa faccio</div>
+          <div class="bio-card-val" style="font-size:15px; line-height:1.5">
+            Costruisco prodotti digitali — siti, app, sistemi AI — per startup e aziende che vogliono crescere con la tecnologia.
+          </div>
+        </div>
+        <div class="bio-card">
+          <div class="bio-card-label">Approccio</div>
+          <div class="bio-card-val" style="font-size:15px; line-height:1.5">
+            Imparo facendo. Questo corso funziona allo stesso modo — teoria minima, pratica massima.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: PATTO D'AULA -->
+  <div class="slide" data-index="2">
+    <div class="patto-title">Prima di iniziare</div>
+    <h2 class="patto-h">Il patto d'aula 🤝</h2>
+    <div class="patto-grid">
+      <div class="patto-item">
+        <span class="patto-emoji">📵</span>
+        <h3>Telefono in tasca</h3>
+        <p>Se devi rispondere a qualcosa di importante, esci fuori — nessun problema. Ma qui dentro, siamo presenti.</p>
+      </div>
+      <div class="patto-item">
+        <span class="patto-emoji">🚶</span>
+        <h3>Bagno libero</h3>
+        <p>Non c'è bisogno di alzare la mano e chiedere. Sei un adulto, fidati.</p>
+      </div>
+      <div class="patto-item">
+        <span class="patto-emoji">🎤</span>
+        <h3>Dillo a tutti</h3>
+        <p>Se hai una cosa da dire all'amico vicino, dilla ad alta voce — se è interessante ridiamo tutti, se no ti prendiamo in giro.</p>
+      </div>
+      <div class="patto-item">
+        <span class="patto-emoji">🔗</span>
+        <h3>Fate network</h3>
+        <p>Siete in una stanza con 25 persone che stanno imparando l'AI. Questo vale di più di qualsiasi certificato.</p>
+      </div>
+      <div class="patto-item">
+        <span class="patto-emoji">💼</span>
+        <h3>LinkedIn ora</h3>
+        <p>Aggiungiti con il tuo compagno di sinistra e di destra. Adesso. Lo facciamo insieme come primo esercizio.</p>
+      </div>
+      <div class="patto-item">
+        <span class="patto-emoji">❓</span>
+        <h3>Domande sempre</h3>
+        <p>Non esiste la domanda stupida. Se una cosa non è chiara, fermami — probabilmente ci sono altri 5 che pensano la stessa cosa.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: CONTATTI -->
+  <div class="slide" data-index="3">
+    <div class="contact-tag">Restiamo in contatto</div>
+    <h2 class="contact-h">Trovami qui 👇</h2>
+    <p class="contact-sub">Aggiungimi su LinkedIn — se hai domande dopo il corso, mi trovi lì. Rispondo sempre.</p>
+
+    <div class="contact-grid">
+      <a href="https://www.linkedin.com/in/attiliocianci/" target="_blank" class="contact-card">
+        <span class="contact-card-icon">🔗</span>
+        <div>
+          <div class="contact-card-label">LinkedIn</div>
+          <div class="contact-card-val">Attilio Cianci</div>
+        </div>
+      </a>
+      <a href="https://calendly.com/attiliocianci/1-1" target="_blank" class="contact-card">
+        <span class="contact-card-icon">📅</span>
+        <div>
+          <div class="contact-card-label">Vuoi una call?</div>
+          <div class="contact-card-val">Prenota qui</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="armonia-block" style="margin-top:32px">
+      <svg width="32" height="33" viewBox="0 0 41 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18.5271 30.5037C21.0625 31.9805 24.1412 32.1562 26.9785 31.6182C35.4738 30.0425 41.1867 22.2574 40.5665 13.6926C40.4348 9.41574 38.7445 5.23769 36.2475 1.81728L32.4773 4.56788C34.6067 7.38436 35.9622 10.4644 36.1652 13.9342C36.4232 16.9758 35.7811 20.1107 33.9755 22.6307C32.5158 24.7609 30.3645 26.3915 27.9334 27.2809L27.2035 25.9084C28.2681 25.0464 29.1791 23.9868 29.8486 22.7844C31.3194 20.2479 31.4895 17.1734 30.9572 14.346C29.4645 6.1271 21.8637 0.301979 13.5605 0.768647C9.09884 0.801589 4.77985 2.49807 1.2127 5.10592L3.89629 8.78986C6.71708 6.65965 9.81226 5.30357 13.2861 5.10043C16.3374 4.84788 19.4765 5.49573 22.0009 7.3075C24.1138 8.76241 25.7382 10.8981 26.6327 13.3028L25.2662 14.022L25.2772 14.044C24.4101 12.9679 23.3455 12.0456 22.1326 11.3703C19.5917 9.8879 16.5075 9.71221 13.6703 10.2448C5.42742 11.7271 -0.428183 19.3585 0.0218263 27.6982C0.043778 32.1837 1.74503 36.5319 4.35728 40.1171L8.23175 37.2896C6.10243 34.4841 4.75241 31.4205 4.54387 27.9562C4.28594 24.9201 4.92253 21.8017 6.71159 19.2872C8.10004 17.2503 10.1306 15.6746 12.419 14.7632L12.4026 14.7742L13.2532 16.0864C12.2434 16.9319 11.3763 17.953 10.7342 19.106C9.2525 21.648 9.07689 24.7335 9.60921 27.5719C11.0909 35.8237 18.7191 41.6763 27.0498 41.2261C31.5334 41.1986 35.8799 39.5021 39.469 36.8888L36.6427 33.0127C33.8384 35.1374 30.7761 36.4935 27.3187 36.7021C24.2839 36.9602 21.1668 36.3233 18.6533 34.5335C16.5624 33.1006 14.949 31.0033 14.0489 28.6315L15.4374 27.8903C16.2935 28.939 17.3417 29.8339 18.5216 30.4927L18.5271 30.5037ZM20.3106 14.7467C23.7296 14.7467 26.501 17.5193 26.501 20.9397C26.501 24.3601 23.7296 27.1382 20.3106 27.1382C16.8917 27.1382 14.1148 24.3656 14.1148 20.9397C14.1148 17.5138 16.8862 14.7467 20.3106 14.7467Z" fill="white"/>
+      </svg>
+      <div class="armonia-block-text">
+        <div class="armonia-block-name">Armonia</div>
+        <div class="armonia-block-desc">Web agency &amp; digital studio · armonia.studio · Salerno</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /deck -->
+
+<nav class="nav">
+  <button id="prev" onclick="go(-1)">←</button>
+  <div class="dots" id="dots"></div>
+  <button id="next" onclick="go(1)">→</button>
+</nav>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const dotsEl = document.getElementById('dots');
+  const progress = document.getElementById('progress');
+  let current = 0;
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goTo(i);
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(n) {
+    if (n < 0 || n >= slides.length) return;
+    slides[current].classList.remove('active');
+    slides[current].classList.add('out');
+    setTimeout(() => slides[current].classList.remove('out'), 400);
+    current = n;
+    slides[current].classList.add('active');
+    // dots
+    dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+    // progress
+    progress.style.width = ((current + 1) / slides.length * 100) + '%';
+    // buttons
+    document.getElementById('prev').disabled = current === 0;
+    document.getElementById('next').disabled = current === slides.length - 1;
+  }
+
+  function go(dir) { goTo(current + dir); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') go(1);
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') go(-1);
+  });
+
+  goTo(0);
+</script>
+</body>
+</html>

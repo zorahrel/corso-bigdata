@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="1200" height="200">
+  <defs>
+    <style>
+      .tl-year { font-family: 'Inter', system-ui, sans-serif; font-size: 13px; font-weight: 800; fill: #fff; text-anchor: middle; }
+      .tl-event { font-family: 'Inter', system-ui, sans-serif; font-size: 10px; fill: rgba(255,255,255,0.7); text-anchor: middle; }
+      .tl-line { stroke: rgba(255,255,255,0.2); stroke-width: 2; }
+      .tl-dot { stroke: #fff; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <!-- Main timeline line -->
+  <line x1="60" y1="100" x2="1140" y2="100" class="tl-line"/>
+
+  <!-- 2017 -->
+  <circle cx="100" cy="100" r="8" fill="#6c63ff" class="tl-dot"/>
+  <text x="100" y="80" class="tl-year" style="fill:#6c63ff;">2017</text>
+  <text x="100" y="130" class="tl-event">Transformer</text>
+  <text x="100" y="145" class="tl-event">paper</text>
+
+  <!-- 2018 -->
+  <circle cx="250" cy="100" r="8" fill="#00d4aa" class="tl-dot"/>
+  <text x="250" y="80" class="tl-year" style="fill:#00d4aa;">2018</text>
+  <text x="250" y="130" class="tl-event">BERT / GPT-1</text>
+
+  <!-- 2020 -->
+  <circle cx="400" cy="100" r="8" fill="#f093fb" class="tl-dot"/>
+  <text x="400" y="80" class="tl-year" style="fill:#f093fb;">2020</text>
+  <text x="400" y="130" class="tl-event">GPT-3</text>
+  <text x="400" y="145" class="tl-event">175B params</text>
+
+  <!-- 2022 -->
+  <circle cx="550" cy="100" r="10" fill="#ffd93d" class="tl-dot"/>
+  <text x="550" y="75" class="tl-year" style="fill:#ffd93d; font-size:14px;">2022</text>
+  <text x="550" y="130" class="tl-event">ChatGPT</text>
+  <text x="550" y="145" class="tl-event">AI per tutti</text>
+
+  <!-- 2023 -->
+  <circle cx="700" cy="100" r="10" fill="#ff6b6b" class="tl-dot"/>
+  <text x="700" y="75" class="tl-year" style="fill:#ff6b6b; font-size:14px;">2023</text>
+  <text x="700" y="130" class="tl-event">GPT-4</text>
+  <text x="700" y="145" class="tl-event">multimodal</text>
+
+  <!-- 2024 -->
+  <circle cx="850" cy="100" r="10" fill="#FF8C42" class="tl-dot"/>
+  <text x="850" y="75" class="tl-year" style="fill:#FF8C42; font-size:14px;">2024</text>
+  <text x="850" y="130" class="tl-event">Claude 3 / Gemini</text>
+  <text x="850" y="145" class="tl-event">reasoning (o1)</text>
+
+  <!-- 2025 -->
+  <circle cx="1000" cy="100" r="10" fill="#00d4aa" class="tl-dot"/>
+  <text x="1000" y="75" class="tl-year" style="fill:#00d4aa; font-size:14px;">2025</text>
+  <text x="1000" y="130" class="tl-event">Reasoning</text>
+  <text x="1000" y="145" class="tl-event">models</text>
+
+  <!-- 2026 -->
+  <circle cx="1120" cy="100" r="12" fill="#6c63ff" class="tl-dot"/>
+  <rect x="1070" y="55" width="100" height="26" rx="6" fill="rgba(108,99,255,0.2)" stroke="#6c63ff" stroke-width="1"/>
+  <text x="1120" y="68" class="tl-year" style="fill:#6c63ff; font-size:15px;">2026</text>
+  <text x="1120" y="130" class="tl-event" style="font-weight:700; fill:#fff;">Agentic AI</text>
+  <text x="1120" y="145" class="tl-event">autonomia</text>
+
+  <!-- Progress gradient overlay -->
+  <line x1="60" y1="102" x2="1140" y2="102" stroke="url(#tlGrad)" stroke-width="1" opacity="0.5"/>
+  <defs>
+    <linearGradient id="tlGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6c63ff"/>
+      <stop offset="50%" stop-color="#00d4aa"/>
+      <stop offset="100%" stop-color="#6c63ff"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <style>
+      @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      @keyframes pulse { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
+      .node-label { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #fff; text-anchor: middle; dominant-baseline: central; }
+      .node-sub { font-family: 'Inter', system-ui, sans-serif; font-size: 10px; fill: rgba(255,255,255,0.6); text-anchor: middle; dominant-baseline: central; }
+      .center-label { font-family: 'Inter', system-ui, sans-serif; font-size: 18px; font-weight: 800; fill: #fff; text-anchor: middle; dominant-baseline: central; letter-spacing: 2px; }
+      .center-sub { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: rgba(255,255,255,0.5); text-anchor: middle; dominant-baseline: central; }
+      .arrow-path { fill: none; stroke: rgba(255,255,255,0.3); stroke-width: 2; marker-end: url(#arrowLoop); }
+      .orbit { fill: none; stroke: rgba(255,255,255,0.08); stroke-width: 1; }
+      .glow { animation: pulse 3s ease-in-out infinite; }
+    </style>
+    <marker id="arrowLoop" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="rgba(255,255,255,0.35)"/>
+    </marker>
+  </defs>
+
+  <!-- Orbit circle -->
+  <circle cx="300" cy="300" r="190" class="orbit"/>
+  <circle cx="300" cy="300" r="191" class="orbit" stroke-dasharray="4,8"/>
+
+  <!-- Center -->
+  <circle cx="300" cy="300" r="65" fill="rgba(108,99,255,0.15)" stroke="#6c63ff" stroke-width="2"/>
+  <circle cx="300" cy="300" r="45" fill="rgba(108,99,255,0.25)" class="glow"/>
+  <text x="300" y="293" class="center-label">AI AGENT</text>
+  <text x="300" y="315" class="center-sub">loop autonomo</text>
+
+  <!-- Node positions: 5 nodes around circle, r=190 -->
+  <!-- Percezione: top (270deg = top) -->
+  <rect x="248" y="70" width="104" height="56" rx="12" fill="#6c63ff"/>
+  <text x="300" y="90" class="node-label">Percezione</text>
+  <text x="300" y="108" class="node-sub">input + sensori</text>
+
+  <!-- Ragionamento: top-right -->
+  <rect x="428" y="160" width="114" height="56" rx="12" fill="#00d4aa"/>
+  <text x="485" y="180" class="node-label">Ragionamento</text>
+  <text x="485" y="198" class="node-sub">analisi + LLM</text>
+
+  <!-- Pianificazione: bottom-right -->
+  <rect x="408" y="380" width="114" height="56" rx="12" fill="#f093fb"/>
+  <text x="465" y="400" class="node-label">Pianificazione</text>
+  <text x="465" y="418" class="node-sub">strategia + step</text>
+
+  <!-- Azione: bottom-left -->
+  <rect x="78" y="380" width="104" height="56" rx="12" fill="#ffd93d"/>
+  <text x="130" y="400" class="node-label" style="fill:#1a1a2e;">Azione</text>
+  <text x="130" y="418" class="node-sub" style="fill:rgba(26,26,46,0.6);">tool + API call</text>
+
+  <!-- Feedback: top-left -->
+  <rect x="58" y="160" width="104" height="56" rx="12" fill="#ff6b6b"/>
+  <text x="110" y="180" class="node-label">Feedback</text>
+  <text x="110" y="198" class="node-sub">risultato + errori</text>
+
+  <!-- Arrows connecting nodes (curved paths along the orbit) -->
+  <!-- Percezione → Ragionamento -->
+  <path d="M352,105 Q410,120 435,165" class="arrow-path"/>
+  <!-- Ragionamento → Pianificazione -->
+  <path d="M500,216 Q520,300 490,380" class="arrow-path"/>
+  <!-- Pianificazione → Azione -->
+  <path d="M408,415 Q300,470 182,415" class="arrow-path"/>
+  <!-- Azione → Feedback -->
+  <path d="M85,380 Q50,300 65,216" class="arrow-path"/>
+  <!-- Feedback → Percezione -->
+  <path d="M130,160 Q170,120 248,98" class="arrow-path"/>
+</svg>

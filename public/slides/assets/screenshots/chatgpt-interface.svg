@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <style>
+      .ui-text { font-family: 'Inter', system-ui, sans-serif; fill: #ececec; }
+      .ui-muted { font-family: 'Inter', system-ui, sans-serif; fill: #8e8ea0; }
+      .ui-mono { font-family: 'JetBrains Mono', monospace; fill: #ececec; font-size: 12px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#212121" rx="12"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="200" height="500" fill="#171717" rx="12"/>
+  <rect x="12" y="0" width="188" height="500" fill="#171717"/>
+
+  <!-- Sidebar header -->
+  <text x="20" y="32" class="ui-text" font-size="14" font-weight="700">ChatGPT</text>
+  <rect x="165" y="16" width="24" height="24" rx="6" fill="#2f2f2f"/>
+  <text x="172" y="33" class="ui-text" font-size="16">+</text>
+
+  <!-- Sidebar divider -->
+  <line x1="0" y1="48" x2="200" y2="48" stroke="#2f2f2f" stroke-width="1"/>
+
+  <!-- Chat list -->
+  <rect x="8" y="58" width="184" height="36" rx="8" fill="#2f2f2f"/>
+  <text x="20" y="81" class="ui-text" font-size="12">Analisi vendite Q1 2026</text>
+
+  <text x="20" y="115" class="ui-muted" font-size="12">Report mensile marketing</text>
+  <text x="20" y="143" class="ui-muted" font-size="12">Traduzione contratto EN→IT</text>
+  <text x="20" y="171" class="ui-muted" font-size="12">Codice Python web scraper</text>
+  <text x="20" y="199" class="ui-muted" font-size="12">Brainstorm nomi prodotto</text>
+
+  <text x="20" y="235" class="ui-muted" font-size="10" font-weight="600">Ieri</text>
+  <text x="20" y="257" class="ui-muted" font-size="12">Riepilogo riunione team</text>
+  <text x="20" y="285" class="ui-muted" font-size="12">Ottimizza query SQL</text>
+
+  <!-- Main area -->
+  <!-- Model selector -->
+  <text x="220" y="32" class="ui-text" font-size="14" font-weight="600">GPT-4o</text>
+  <text x="275" y="32" class="ui-muted" font-size="12">▾</text>
+
+  <!-- User message -->
+  <rect x="380" y="80" width="380" height="60" rx="16" fill="#2f2f2f"/>
+  <text x="400" y="103" class="ui-text" font-size="13">Analizza le vendite del Q1 2026 e</text>
+  <text x="400" y="123" class="ui-text" font-size="13">identificami i trend principali.</text>
+
+  <!-- AI response (no box) -->
+  <circle cx="232" cy="175" r="14" fill="#19c37d"/>
+  <text x="226" y="180" class="ui-text" font-size="14" font-weight="700">G</text>
+
+  <text x="258" y="175" class="ui-text" font-size="13" font-weight="600">ChatGPT</text>
+
+  <text x="258" y="200" class="ui-text" font-size="12.5" opacity="0.95">Ecco l'analisi dei trend principali del Q1 2026:</text>
+  <text x="258" y="224" class="ui-text" font-size="12.5" opacity="0.95">1. Crescita del 23% nel segmento enterprise</text>
+  <text x="258" y="246" class="ui-text" font-size="12.5" opacity="0.95">2. Il canale e-commerce ha superato il retail fisico</text>
+  <text x="258" y="268" class="ui-text" font-size="12.5" opacity="0.95">3. Margine lordo in miglioramento: 34% → 38%</text>
+  <text x="258" y="292" class="ui-text" font-size="12.5" opacity="0.95">4. Il prodotto "Pro" rappresenta il 45% del fatturato</text>
+
+  <text x="258" y="324" class="ui-text" font-size="12.5" opacity="0.7">Il trend piu significativo e la migrazione verso</text>
+  <text x="258" y="344" class="ui-text" font-size="12.5" opacity="0.7">l'enterprise, con deal medi cresciuti del 67%...</text>
+
+  <!-- Input box -->
+  <rect x="220" y="440" width="560" height="44" rx="22" fill="#2f2f2f" stroke="#424242" stroke-width="1"/>
+  <text x="248" y="467" class="ui-muted" font-size="13">Scrivi un messaggio a ChatGPT...</text>
+  <circle cx="752" cy="462" r="16" fill="#19c37d"/>
+  <text x="747" y="467" class="ui-text" font-size="14">↑</text>
+</svg>

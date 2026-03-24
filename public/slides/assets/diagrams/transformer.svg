@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <style>
+      .box { rx: 12; ry: 12; }
+      .label { font-family: 'Inter', system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #fff; text-anchor: middle; dominant-baseline: central; }
+      .sublabel { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: rgba(255,255,255,0.7); text-anchor: middle; dominant-baseline: central; }
+      .arrow { stroke: rgba(255,255,255,0.4); stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .title { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: rgba(255,255,255,0.5); text-anchor: middle; letter-spacing: 2px; text-transform: uppercase; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="rgba(255,255,255,0.4)"/>
+    </marker>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6c63ff"/><stop offset="100%" stop-color="#5a52e0"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00d4aa"/><stop offset="100%" stop-color="#00b894"/></linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f093fb"/><stop offset="100%" stop-color="#f5576c"/></linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffd93d"/><stop offset="100%" stop-color="#ff6b6b"/></linearGradient>
+  </defs>
+
+  <text x="400" y="30" class="title">Transformer Architecture (simplified)</text>
+
+  <!-- Input -->
+  <rect x="10" y="90" width="110" height="80" class="box" fill="#3d3d5c"/>
+  <text x="65" y="122" class="label">Input</text>
+  <text x="65" y="145" class="sublabel">testo utente</text>
+
+  <line x1="120" y1="130" x2="148" y2="130" class="arrow"/>
+
+  <!-- Tokenizer -->
+  <rect x="150" y="90" width="110" height="80" class="box" fill="url(#g2)"/>
+  <text x="205" y="122" class="label">Tokenizer</text>
+  <text x="205" y="145" class="sublabel">spezza in token</text>
+
+  <line x1="260" y1="130" x2="288" y2="130" class="arrow"/>
+
+  <!-- Embedding -->
+  <rect x="290" y="90" width="110" height="80" class="box" fill="url(#g1)"/>
+  <text x="345" y="122" class="label">Embedding</text>
+  <text x="345" y="145" class="sublabel">vettori numerici</text>
+
+  <line x1="400" y1="130" x2="428" y2="130" class="arrow"/>
+
+  <!-- Attention (highlighted) -->
+  <rect x="430" y="75" width="120" height="110" class="box" fill="url(#g3)" opacity="0.95"/>
+  <rect x="430" y="75" width="120" height="110" class="box" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="490" y="118" class="label" style="font-size:16px;">Attention</text>
+  <text x="490" y="143" class="sublabel">capisce il contesto</text>
+  <text x="490" y="165" class="sublabel" style="font-size:9px;">x N layer</text>
+
+  <line x1="550" y1="130" x2="578" y2="130" class="arrow"/>
+
+  <!-- Feed Forward -->
+  <rect x="580" y="90" width="110" height="80" class="box" fill="url(#g4)"/>
+  <text x="635" y="122" class="label" style="font-size:13px;">Feed Forward</text>
+  <text x="635" y="145" class="sublabel">trasformazione</text>
+
+  <line x1="690" y1="130" x2="718" y2="130" class="arrow"/>
+
+  <!-- Output -->
+  <rect x="720" y="90" width="70" height="80" class="box" fill="#3d3d5c"/>
+  <text x="755" y="122" class="label">Output</text>
+  <text x="755" y="145" class="sublabel">next token</text>
+
+  <!-- Bottom annotation -->
+  <text x="400" y="240" class="title" style="font-size:10px;">attention is all you need (2017) — ogni blocco attention si ripete decine di volte</text>
+
+  <!-- Self-attention loop arrow -->
+  <path d="M490,75 Q490,50 520,50 Q550,50 550,75" class="arrow" style="stroke:rgba(255,255,255,0.25);"/>
+</svg>
