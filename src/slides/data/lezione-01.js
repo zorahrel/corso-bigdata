@@ -120,7 +120,50 @@ export const slides = [
     <div style="font-size:14px; color:var(--text); line-height:1.4;">${text}</div>
   </div>`).join('')}
 </div>`,
-    footer: `<strong>In pratica:</strong> in meno di 4 anni siamo passati da "l'AI sa scrivere email" a "l'AI ragiona, vede, ascolta e agisce autonomamente". Velocità senza precedenti nella storia della tecnologia.`,
+    footer: `<strong>In pratica:</strong> in meno di 4 anni siamo passati da "l'AI sa scrivere email" a "l'AI ragiona, vede, ascolta e agisce autonomamente". Velocità senza precedenti nella storia della tecnologia. — ChatGPT ha raggiunto 1M utenti in 5 giorni. Netflix: 3,5 anni. iPhone: 74 giorni.`,
+  },
+
+  // 7B. ROI REALE
+  {
+    type: 'custom',
+    layout: 'feature-grid',
+    heading: 'ROI reale: cosa ci guadagno?',
+    features: [
+      {
+        icon: '💳',
+        title: 'Klarna — Customer Service',
+        description: "1 agente AI = lavoro di 700 agenti umani. Risolve in 2 minuti (vs 11 minuti umani). Soddisfazione clienti pari agli agenti umani. (Feb 2024 — fonte: OpenAI/Klarna)",
+      },
+      {
+        icon: '💻',
+        title: 'GitHub Copilot — Sviluppo',
+        description: "I developer completano i task il 55% più velocemente con Copilot. Su 1.000 developer, risparmio stimato: centinaia di ore/anno. (Studio Microsoft, verificato)",
+      },
+      {
+        icon: '📊',
+        title: 'McKinsey — Dati globali 2025',
+        description: "64% delle aziende afferma che l'AI abilita l'innovazione. In marketing e vendite, oltre il 10% di crescita ricavi è attribuito all'AI. (McKinsey State of AI, Nov 2025)",
+      },
+      {
+        icon: '🇮🇹',
+        title: 'Italia — Mercato AI 2025',
+        description: "Il mercato AI italiano vale €1,8 miliardi, in crescita del +50% rispetto al 2024. Il 71% delle grandi imprese ha avviato almeno un progetto AI. (Osservatori.net, Feb 2026)",
+      },
+    ],
+    footer: '💡 Il ROI non è teorico — è misurabile. Le aziende che usano l\'AI bene crescono più dei competitor. Quelle che aspettano rischiano di non recuperare il divario.',
+  },
+
+  // 7C. AI IN ITALIA E NEL MONDO
+  {
+    type: 'stats',
+    heading: "L'AI in Italia e nel mondo",
+    stats: [
+      { value: 71, suffix: '%', label: 'grandi imprese italiane con almeno 1 progetto AI attivo (Osservatori, 2025)' },
+      { value: 8, suffix: '%', label: 'PMI italiane che usano AI — il divario con le grandi aziende è +37 punti (ISTAT, 2025)' },
+      { value: 1.8, suffix: 'B€', label: 'valore mercato AI in Italia — crescita +50% vs 2024 (Osservatori.net, Feb 2026)' },
+      { value: 78, suffix: '%', label: 'aziende Fortune 500 che usano AI — dal 55% nel 2023 (McKinsey 2025)' },
+    ],
+    footer: "L'Italia accelera nelle grandi aziende, ma le PMI restano indietro. Chi adotta prima ottiene un vantaggio competitivo che diventa sempre più difficile da colmare.",
   },
 
   // 8. I 3 PARADIGMI
@@ -194,11 +237,8 @@ export const slides = [
     content: `I modelli "reasoning" <strong>pensano prima di rispondere</strong>.<br><br>\
 Come funziona: generano una catena di ragionamento interna (chain-of-thought) prima di dare la risposta finale.<br><br>\
 ⏱️ Più lenti, ma molto più accurati su problemi complessi: matematica, logica, codice, analisi.<br><br>\
-Esempi: <code>o3</code> (OpenAI), Claude con <em>extended thinking</em>, DeepSeek-R1`,
-    image: {
-      src: 'https://media.giphy.com/media/d3mlE7uhX8KFgEmY/giphy.gif',
-      alt: 'Thinking',
-    },
+Esempi: <code>o3</code> (OpenAI), Claude con <em>extended thinking</em>, DeepSeek-R1<br><br>\
+💼 <strong>Caso d'uso business:</strong> analisi di un contratto multi-clausola, identificazione di rischi nascosti, decisione su pricing con 10+ variabili, valutazione di candidati con trade-off complessi.`,
     footer: `<strong>Ricorda:</strong> i reasoning model fanno la differenza quando il problema richiede logica multi-step. Per task semplici, un modello standard è più veloce e costa meno.`,
   },
 
@@ -224,11 +264,10 @@ Esempi: <code>o3</code> (OpenAI), Claude con <em>extended thinking</em>, DeepSee
 🎵 <strong>Audio</strong> — trascrive, genera voce, capisce parlato<br>\
 🎬 <strong>Video</strong> — analizza video, genera clip<br>\
 💻 <strong>Codice</strong> — scrive, debugga, spiega, esegue<br><br>\
-Un solo modello, tutti i formati. Questo è il 2026.`,
-    image: {
-      src: 'https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif',
-      alt: 'Technology',
-    },
+<strong>3 use case aziendali concreti:</strong><br>\
+🏭 <strong>Produzione:</strong> foto di un difetto → AI classifica il problema, suggerisce causa, apre ticket di qualità automaticamente<br>\
+🚗 <strong>Assicurazioni:</strong> foto del sinistro auto → stima dei danni in 30 secondi (Tractable.ai, già usato da 20+ assicuratori)<br>\
+👥 <strong>HR:</strong> video del colloquio → trascrizione + sentiment analysis + segnalazione di elementi critici da approfondire`,
     footer: `<strong>Il punto chiave:</strong> il multimodale è il nuovo standard. Oggi un'AI che gestisce solo testo è già obsoleta — aspettatevi di lavorare con immagini, audio e video come input naturali.`,
   },
 
@@ -299,29 +338,32 @@ Un solo modello, tutti i formati. Questo è il 2026.`,
     heading: 'Allucinazioni: il nemico invisibile',
     content: `L'AI può <strong>inventare informazioni con totale sicurezza</strong>.<br><br>\
 📄 <strong>Esempio classico:</strong> chiedi di citare un paper scientifico → inventa titolo, autori, DOI. Tutto falso, tutto credibile.<br><br>\
-⚖️ <strong>Caso reale:</strong> un avvocato USA ha citato in tribunale casi legali inventati da ChatGPT (2023).<br><br>\
-🔑 <strong>Regola d'oro:</strong> verifica sempre le fonti. L'AI non sa cosa non sa.`,
+📊 <strong>Dati 2025:</strong> in contesti ad alto rischio (medicina, diritto), i tassi di allucinazione nei modelli meno ottimizzati raggiungono il 50-82% (studio clinico PMC 2025). I top model general purpose scendono sotto l'1% per domande fattuali semplici — ma il problema rimane sui fatti specialistici.<br><br>\
+⚖️ <strong>In pratica:</strong> nel 2025, i giudici di tutto il mondo hanno emesso centinaia di decisioni su citazioni legali inventate da AI — circa il 90% di tutti gli incidenti noti in ambito legale.`,
     footer: `<strong>Regola d'oro:</strong> verificate SEMPRE i fatti critici generati dall'AI, specialmente citazioni, numeri e riferimenti specifici. Se non potete verificare, non pubblicate.`,
   },
 
   // 19. IL CASO DELL'AVVOCATO (sostituisce il meme "tutto bene")
   {
     type: 'concept',
-    heading: "Il caso dell'avvocato e ChatGPT",
-    content: `<div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; max-width:1000px;">
-  <div>
-    <p>📋 <strong>Cosa è successo:</strong> nel 2023 un avvocato americano ha citato in tribunale 6 casi legali per supportare la sua tesi. Tutti inventati da ChatGPT.</p>
-    <p>⚖️ <strong>Risultato:</strong> multa di $5.000, richiesta di scuse al tribunale, copertura mediatica globale.</p>
-    <p>🤖 <strong>Il problema:</strong> ChatGPT aveva generato nomi di giudici, date, numeri di caso e citazioni che sembravano assolutamente reali. L'avvocato non aveva verificato nulla.</p>
-    <p>🔑 <strong>La lezione:</strong> l'AI non sa di non sapere. Risponde sempre con sicurezza, anche quando inventa.</p>
+    heading: "Quando l'AI sbaglia: casi reali",
+    content: `<div style="display:flex; flex-direction:column; gap:20px; max-width:1000px;">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+    <div style="background:rgba(255,50,50,0.08); border:1px solid rgba(255,50,50,0.3); border-radius:12px; padding:24px;">
+      <div style="font-size:24px; margin-bottom:8px;">⚖️</div>
+      <div style="font-size:16px; font-weight:700; margin-bottom:8px;">Avvocato USA (2023)</div>
+      <p style="font-size:14px; color:var(--text);">6 casi legali inventati da ChatGPT citati in tribunale. Multa <strong>$5.000</strong>. ChatGPT aveva generato nomi di giudici, date, numeri — tutto falso, tutto credibile.</p>
+    </div>
+    <div style="background:rgba(255,50,50,0.08); border:1px solid rgba(255,50,50,0.3); border-radius:12px; padding:24px;">
+      <div style="font-size:24px; margin-bottom:8px;">✈️</div>
+      <div style="font-size:16px; font-weight:700; margin-bottom:8px;">Air Canada (Feb 2024)</div>
+      <p style="font-size:14px; color:var(--text);">Il chatbot AI ha promesso uno sconto lutto che non esisteva. Il tribunale canadese ha condannato Air Canada a pagarlo: le aziende sono responsabili delle risposte dei propri chatbot. (Fonte: BBC, Feb 2024)</p>
+    </div>
   </div>
-  <div style="background:rgba(255,50,50,0.08); border:1px solid rgba(255,50,50,0.3); border-radius:16px; padding:32px; display:flex; flex-direction:column; justify-content:center;">
-    <div style="font-size:48px; margin-bottom:16px;">⚖️</div>
-    <div style="font-size:28px; font-weight:800; color:#ff4444; margin-bottom:8px;">$5.000</div>
-    <div style="font-size:14px; color:var(--muted);">multa</div>
-    <div style="margin-top:24px; font-size:15px; font-weight:600;">6 casi inventati</div>
-    <div style="font-size:13px; color:var(--muted); margin-top:4px;">nomi, date, numeri — tutto falso</div>
-    <div style="margin-top:16px; font-size:13px; background:rgba(255,50,50,0.15); padding:12px; border-radius:8px;"><strong>Regola d'oro:</strong> verifica SEMPRE i fatti critici prima di usarli.</div>
+  <div style="background:rgba(255,180,0,0.08); border:1px solid rgba(255,180,0,0.3); border-radius:12px; padding:24px;">
+    <div style="font-size:24px; margin-bottom:8px;">📉</div>
+    <div style="font-size:16px; font-weight:700; margin-bottom:8px;">Google Bard — Demo pubblica (Feb 2023)</div>
+    <p style="font-size:14px; color:var(--text);">Durante la presentazione ufficiale, Bard ha risposto in modo errato a una domanda sul James Webb Space Telescope. Alphabet ha perso <strong>$100 miliardi</strong> di capitalizzazione in un giorno. La prima impressione conta — anche per i modelli AI. (Fonte: The Verge, Reuters)</p>
   </div>
 </div>`,
   },
@@ -331,14 +373,11 @@ Un solo modello, tutti i formati. Questo è il 2026.`,
     type: 'concept',
     heading: 'Bias nei dati',
     content: `L'AI impara dai dati. <strong>Se i dati sono distorti, l'AI sarà distorta.</strong><br><br>\
-👤 <strong>Riconoscimento facciale:</strong> accuratezza del 99% su volti bianchi maschili, del 65% su volti neri femminili (studio MIT 2018).<br><br>\
-💼 <strong>Recruiting:</strong> Amazon ha ritirato un tool AI che penalizzava i CV femminili perché i dati storici erano sbilanciati.<br><br>\
-🌍 <strong>Lingua:</strong> i modelli sono molto migliori in inglese che in altre lingue — gap culturale e linguistico.`,
-    image: {
-      src: 'https://media.giphy.com/media/l2JhORT5IFnj6ioko/giphy.gif',
-      alt: 'Bias',
-    },
-    footer: `<strong>In pratica:</strong> ogni volta che usate l'AI per decisioni che riguardano persone (assunzioni, valutazioni, screening), chiedetevi: "i dati di training erano rappresentativi?" Il bias non si elimina, si gestisce con consapevolezza.`,
+👤 <strong>Riconoscimento facciale:</strong> accuratezza del 99% su volti bianchi maschili, del 65% su volti neri femminili (studio MIT Gender Shades — dato fondativo, ancora rilevante).<br><br>\
+💼 <strong>Recruiting:</strong> Amazon ha ritirato un tool AI che penalizzava i CV femminili perché i dati storici erano sbilanciati. Casi simili vengono segnalati tuttora.<br><br>\
+🏥 <strong>Medicina (2023):</strong> sistemi di triage AI approvati dalla FDA sottostimavano sistematicamente il dolore in pazienti di colore rispetto ai pazienti bianchi con condizioni equivalenti (studio New England Journal of Medicine, 2023).<br><br>\
+🌍 <strong>Lingua:</strong> i modelli sono molto migliori in inglese — la performance cala del 30-40% su lingue meno rappresentate nei dati di training.`,
+    footer: `<strong>In pratica:</strong> ogni volta che usate l'AI per decisioni che riguardano persone (assunzioni, valutazioni, screening medico), chiedetevi: "i dati di training erano rappresentativi?" Il bias non si elimina, si gestisce con consapevolezza.`,
   },
 
   // 21. TRAINING CUTOFF
@@ -347,14 +386,11 @@ Un solo modello, tutti i formati. Questo è il 2026.`,
     heading: 'Training cutoff',
     content: `📅 Ogni modello ha una <strong>data limite di conoscenza</strong> — il "training cutoff".<br><br>\
 Dopo quella data, il modello <strong>non sa cosa è successo</strong> nel mondo.<br><br>\
+🎯 <strong>Demo live da fare in aula:</strong> chiediamo a un modello senza web search "Chi ha vinto le ultime elezioni?" o "Qual è il prezzo attuale di [materia prima]?" — vedremo come risponde e perché non ci si può fidare.<br><br>\
 <strong>Workaround:</strong><br>\
 🔍 <strong>Web search</strong> — il modello cerca su internet in tempo reale<br>\
 📦 <strong>RAG</strong> — gli dai tu i documenti aggiornati<br>\
 🔧 <strong>Tool use</strong> — il modello chiama API e database`,
-    image: {
-      src: 'https://media.giphy.com/media/3o7btZ1Gm7ZL25pLMs/giphy.gif',
-      alt: 'Calendar',
-    },
     footer: `<strong>Takeaway:</strong> prima di fidarvi di una risposta sull'attualità, chiedetevi sempre: "il modello poteva saperlo?" Se il fatto è successivo al cutoff, la risposta è inventata.`,
   },
 
@@ -422,9 +458,9 @@ Un sondaggio su 500 manager mostra che il 95% e soddisfatto dopo aver introdotto
   {
     type: 'demo',
     heading: 'Reasoning model in azione',
-    description: `🧩 Problema: "Se un treno parte da Milano alle 9:15 a 120km/h e un altro da Roma alle 9:45 a 150km/h, dove si incontrano?"<br>\
-🔍 Osserviamo il processo di ragionamento step-by-step<br>\
-⚡ Confronto: modello standard vs reasoning model (o3 / Claude extended thinking)`,
+    description: `🧩 <strong>Problema HR:</strong> "Ho 3 candidati per una posizione manager: A ha 10 anni di esperienza ma chiede €80K, B ne ha 5 ma chiede €55K e ha già lavorato nel nostro settore, C è junior ma ha contribuito a 2 startup di successo. Il budget approvato è €65K. Chi scelgo e perché?"<br>\
+🔍 Osserviamo il processo di ragionamento step-by-step — come il modello bilancia trade-off, ambiguità e variabili multiple<br>\
+⚡ Confronto: modello standard vs reasoning model (o3 / Claude extended thinking) — la differenza è visibile`,
   },
 
   // 26. HANDS-ON
