@@ -103,18 +103,24 @@ export const slides = [
   {
     type: 'concept',
     heading: "L'AI nel 2026: dove siamo",
-    content: `<strong>2017</strong> — Transformer (Google) 🔬<br>\
-<strong>2018</strong> — BERT cambia l'NLP<br>\
-<strong>2020</strong> — GPT-3: 175B parametri 🤯<br>\
-<strong>2022</strong> — ChatGPT: AI per tutti<br>\
-<strong>2023</strong> — GPT-4, Claude 2, modelli multimodali<br>\
-<strong>2024</strong> — Reasoning models (o1), agenti AI<br>\
-<strong>2025–26</strong> — GPT-4o, Claude 4.5, Gemini 3.1, 10M token context, agenti autonomi 🚀`,
-    image: {
-      src: '/slides/assets/diagrams/llm-timeline.svg',
-      alt: 'LLM Timeline 2017-2026',
-    },
-    footer: `<strong>In pratica:</strong> in meno di 4 anni siamo passati da "l'AI sa scrivere email" a "l'AI ragiona, vede, ascolta e agisce". La velocità di questa evoluzione non ha precedenti.`,
+    centered: true,
+    content: `<div style="display:flex; flex-direction:column; gap:10px; max-width:700px; margin:0 auto; text-align:left;">
+  ${[
+    ['2017', '#6c63ff', 'Transformer (Google) — nasce l\'architettura moderna'],
+    ['2020', '#6c63ff', 'GPT-3: 175B parametri — l\'AI inizia a stupire'],
+    ['2022', '#00d4aa', 'ChatGPT: l\'AI arriva a tutti — 100M utenti in 2 mesi'],
+    ['2023', '#00d4aa', 'GPT-4, Claude 2, multimodale — visione + testo'],
+    ['2024', '#ffd700', 'Reasoning models (o1) — l\'AI "pensa" step by step'],
+    ['2025', '#ffd700', 'Agenti autonomi, 1M token context, AI ovunque'],
+    ['2026', '#ff6b6b', 'GPT-4o, Claude 4.5, 10M token — siamo qui 🚀'],
+  ].map(([year, color, text]) => `
+  <div style="display:flex; align-items:center; gap:16px;">
+    <div style="min-width:52px; font-size:13px; font-weight:700; color:${color}; text-align:right;">${year}</div>
+    <div style="width:12px; height:12px; border-radius:50%; background:${color}; flex-shrink:0;"></div>
+    <div style="font-size:14px; color:var(--text); line-height:1.4;">${text}</div>
+  </div>`).join('')}
+</div>`,
+    footer: `<strong>In pratica:</strong> in meno di 4 anni siamo passati da "l'AI sa scrivere email" a "l'AI ragiona, vede, ascolta e agisce autonomamente". Velocità senza precedenti nella storia della tecnologia.`,
   },
 
   // 8. I 3 PARADIGMI
@@ -356,7 +362,7 @@ Dopo quella data, il modello <strong>non sa cosa è successo</strong> nel mondo.
   {
     type: 'quote',
     text: '"Trust, but verify."',
-    source: "L'AI è uno strumento potentissimo — ma resta uno strumento.<br>Il pensiero critico è tuo, non suo.",
+    source: "L'AI è uno strumento potentissimo — ma resta uno strumento. Il pensiero critico è tuo, non suo.",
   },
 
   // 23. DEMO — ChatGPT vs Claude
