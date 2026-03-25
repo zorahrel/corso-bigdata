@@ -613,6 +613,49 @@ function AgendaView({ hidden, onSlideOpen }) {
   )
 }
 
+const BLOCK_ICONS = {
+  1: '🧠', 2: '💬', 3: '🛠️', 4: '⚙️', 5: '🚀', 6: '🏢',
+}
+
+function RisorseView({ hidden }) {
+  return (
+    <div className={`risorse ${hidden ? 'risorse--hidden' : ''}`}>
+      <div className="risorse-header">
+        <h2 className="risorse-title">📚 Risorse del Corso</h2>
+        <p className="risorse-sub">Tutti i link utili, organizzati per lezione</p>
+      </div>
+      <div className="risorse-grid">
+        {DAYS.map((day, i) => {
+          if (!day.resources || day.resources.length === 0) return null
+          const block = BLOCK_COLORS[day.blockNum]
+          return (
+            <div className="risorse-card" key={i} style={{ '--accent': block.accent }}>
+              <div className="risorse-card-header">
+                <span className="risorse-card-icon">{BLOCK_ICONS[day.blockNum]}</span>
+                <div>
+                  <span className="risorse-card-num">Lezione {String(i + 1).padStart(2, '0')}</span>
+                  <h3 className="risorse-card-title">{day.title}</h3>
+                  <span className="risorse-card-block" style={{ color: block.accent }}>{block.label}</span>
+                </div>
+              </div>
+              <ul className="risorse-links">
+                {day.resources.map((r, j) => (
+                  <li key={j}>
+                    <a href={r.url} target="_blank" rel="noopener noreferrer">
+                      <span className="risorse-link-label">{r.label}</span>
+                      <IconExternal size={11} />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
 function App() {
   const [view, setView] = useState('agenda')
   const totalHours = DAYS.reduce((s, d) => s + d.hours, 0)
@@ -704,6 +747,12 @@ function App() {
             >
               Agenda
             </button>
+            <button
+              className={`view-btn ${view === 'risorse' ? 'active' : ''}`}
+              onClick={() => setView('risorse')}
+            >
+              📚 Risorse
+            </button>
           </div>
         </div>
         <div className="legend">
@@ -719,6 +768,7 @@ function App() {
       <main>
         {view === 'calendar' && <CalendarView weeks={weeks} onSlideOpen={openSlide} />}
         <AgendaView hidden={view !== 'agenda'} onSlideOpen={openSlide} />
+        <RisorseView hidden={view !== 'risorse'} />
       </main>
 
       <footer>
