@@ -338,7 +338,7 @@ Esempi: <code>o3</code> (OpenAI), Claude con <em>extended thinking</em>, DeepSee
     heading: 'Allucinazioni: il nemico invisibile',
     content: `L'AI può <strong>inventare informazioni con totale sicurezza</strong>.<br><br>\
 📄 <strong>Esempio classico:</strong> chiedi di citare un paper scientifico → inventa titolo, autori, DOI. Tutto falso, tutto credibile.<br><br>\
-📊 <strong>Dati 2025:</strong> in contesti ad alto rischio (medicina, diritto), i tassi di allucinazione nei modelli meno ottimizzati raggiungono il 50-82% (studio clinico PMC 2025). I top model general purpose scendono sotto l'1% per domande fattuali semplici — ma il problema rimane sui fatti specialistici.<br><br>\
+📊 <strong>Dati 2026:</strong> su query legali specifiche, i modelli allucinano tra il 69% e l'88% delle volte — e spesso non se ne accorgono (Suprmind Research, 2026). Il 91% delle aziende ha già implementato protocolli espliciti contro le allucinazioni (feb 2026). I top model general purpose scendono sotto l'1% su fatti generali — ma il rischio esplode su dati specialistici.<br><br>\
 ⚖️ <strong>In pratica:</strong> nel 2025, i giudici di tutto il mondo hanno emesso centinaia di decisioni su citazioni legali inventate da AI — circa il 90% di tutti gli incidenti noti in ambito legale.`,
     footer: `<strong>Regola d'oro:</strong> verificate SEMPRE i fatti critici generati dall'AI, specialmente citazioni, numeri e riferimenti specifici. Se non potete verificare, non pubblicate.`,
   },
