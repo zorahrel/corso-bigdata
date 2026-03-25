@@ -425,12 +425,13 @@
 /* ══════════════════════════════════
    RECAP SLIDE
    ══════════════════════════════════ */
+.slide-recap { text-align: left; }
 .slide-recap h2 { margin-bottom: 32px; }
 .slide-recap .recap-list {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
-  max-width: 650px;
+  margin: 0;
+  max-width: 700px;
 }
 .slide-recap .recap-list li {
   font-size: 0.8em;
@@ -918,4 +919,39 @@
 /* QR button in footer — pointer-events override (footer has pointer-events: none) */
 .footer-qr-btn {
   pointer-events: auto;
+}
+
+/* ══════════════════════════════════
+   TOKEN DEMO & EMBEDDING VISUALS
+   ══════════════════════════════════ */
+.token-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-size: 1.4em;
+  font-weight: 600;
+  line-height: 1;
+}
+.token-demo span {
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #fff;
+}
+.tok-1 { background: #2563eb; }
+.tok-2 { background: #0891b2; }
+.tok-3 { background: #7c3aed; }
+.tok-4 { background: #dc2626; }
+.tok-5 { background: #d97706; }
+.tok-6 { background: #059669; }
+
+.embed-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.embed-eq {
+  font-size: 1.3em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }

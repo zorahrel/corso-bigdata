@@ -447,7 +447,7 @@ function SlideModal({ url, onClose }) {
 function DayCard({ day, index, onSlideOpen }) {
   const block = BLOCK_COLORS[day.blockNum]
   const [showResources, setShowResources] = useState(false)
-  const isDev = import.meta.env.DEV
+  const isDev = import.meta.env.DEV || import.meta.env.MODE === 'development'
   const dayDate = parseDate(day.date)
   const unlocked = isDev || dayDate <= new Date()
 

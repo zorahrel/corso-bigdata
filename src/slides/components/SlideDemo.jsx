@@ -1,9 +1,10 @@
-export function SlideDemo({ heading, description, badgeText = 'DEMO LIVE', demoMaterial }) {
+export function SlideDemo({ heading, description, content, badgeText = 'DEMO LIVE', demoMaterial }) {
   return (
     <section className="slide-demo" style={{ overflowY: 'auto', maxHeight: '100%' }}>
       <span className="demo-badge"><span className="dot"></span> {badgeText}</span>
       <h2>{heading}</h2>
       {description && <p className="demo-description" dangerouslySetInnerHTML={{ __html: description }} />}
+      {content && <div className="demo-content" dangerouslySetInnerHTML={{ __html: content }} />}
       {demoMaterial && (
         <div style={{ marginTop: '12px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '12px', padding: '12px 16px', textAlign: 'left', fontSize: '0.55em', lineHeight: '1.5' }}>
           {demoMaterial.label && <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--muted)', marginBottom: '12px' }}>{demoMaterial.label}</div>}

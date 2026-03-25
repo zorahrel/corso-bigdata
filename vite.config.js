@@ -6,6 +6,6 @@ export default defineConfig({
   server: {
     allowedHosts: ['macbook', 'localhost', '127.0.0.1'],
     host: true,
-    port: 5174,
+    port: 5176,
   },
 })

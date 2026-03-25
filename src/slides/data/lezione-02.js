@@ -111,7 +111,7 @@ leggermente di più in italiano.</p>`,
   <p style="font-size:0.5em; color:var(--muted); margin-top:16px;">14 token · Provate su <code>platform.openai.com/tokenizer</code></p>
 </div>
 <div style="text-align:center;margin-top:1rem">
-  <img src="assets/screenshots/tokenizer.svg" alt="OpenAI Tokenizer" style="max-width:80%;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.4)">
+  <img src="/slides/assets/screenshots/tokenizer.svg" alt="OpenAI Tokenizer" style="max-width:80%;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.4)">
   <p style="font-size:0.7em;color:var(--muted);margin-top:0.5rem">OpenAI Tokenizer — platform.openai.com/tokenizer</p>
 </div>`,
     demoMaterial: [
@@ -124,37 +124,45 @@ leggermente di più in italiano.</p>`,
   // 6. Architettura transformer
   {
     type: 'concept',
-    centered: true,
     heading: "L'architettura Transformer",
-    content: `<p style="text-align:center; margin-bottom:24px;">Dal paper "Attention Is All You Need" (2017) — l'invenzione che ha cambiato tutto.</p>
-<div style="background:var(--surface); padding:28px; border-radius:var(--radius); max-width:700px; margin:0 auto;">
-  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; text-align:center; font-size:0.55em;">
-    <div style="background:rgba(108,99,255,0.15); border:1px solid var(--accent); padding:16px; border-radius:10px;">
-      <div style="font-size:1.8em; margin-bottom:8px;">📥</div>
-      <div style="font-weight:700; color:var(--accent); margin-bottom:6px;">Input</div>
-      <div style="color:var(--muted);">Tokenizzazione<br>del testo</div>
+    content: `<p><strong>Prima (2016):</strong> i modelli leggevano le parole <em>una alla volta</em>,
+in sequenza. Lenti e smemorati.</p>
+<p><strong>Il Transformer (2017)</strong> cambia tutto:
+legge <strong>tutte le parole insieme</strong> e calcola
+quali sono collegate tra loro. In parallelo.</p>
+<p><strong>Analogia:</strong> è come la differenza tra leggere
+un libro parola per parola e poter vedere
+l'intera pagina in un colpo d'occhio. 👁️</p>
+<p>Questo ha reso possibile GPT, Claude, Gemini
+e tutta l'AI generativa che usiamo oggi.</p>`,
+    image: {
+      src: null,
+      alt: 'Transformer pipeline',
+      html: `<div style="background:var(--surface); padding:16px; border-radius:var(--radius); font-size:0.48em;">
+  <div style="display:flex; flex-direction:column; gap:4px; align-items:center;">
+    <div style="background:rgba(37,99,235,0.12); border:1px solid var(--accent); padding:10px 20px; border-radius:8px; text-align:center; width:85%;">
+      <div style="font-weight:700; color:var(--accent);">📥 1. Tokenizzazione</div>
+      <div style="color:var(--muted); font-size:0.9em;">Spezza il testo in pezzi (token)</div>
     </div>
-    <div style="background:rgba(0,212,170,0.15); border:1px solid var(--secondary); padding:16px; border-radius:10px;">
-      <div style="font-size:1.8em; margin-bottom:8px;">🔢</div>
-      <div style="font-weight:700; color:var(--secondary); margin-bottom:6px;">Embedding</div>
-      <div style="color:var(--muted);">Token → vettori<br>di significato</div>
+    <div style="color:var(--muted);">↓</div>
+    <div style="background:rgba(8,145,178,0.12); border:1px solid var(--secondary); padding:10px 20px; border-radius:8px; text-align:center; width:85%;">
+      <div style="font-weight:700; color:var(--secondary);">🔢 2. Embedding</div>
+      <div style="color:var(--muted); font-size:0.9em;">Ogni token diventa un vettore numerico</div>
     </div>
-    <div style="background:rgba(251,191,36,0.15); border:1px solid var(--warning); padding:16px; border-radius:10px;">
-      <div style="font-size:1.8em; margin-bottom:8px;">👁️</div>
-      <div style="font-weight:700; color:var(--warning); margin-bottom:6px;">Attention</div>
-      <div style="color:var(--muted);">Calcola relazioni<br>tra token</div>
+    <div style="color:var(--muted);">↓</div>
+    <div style="background:rgba(217,119,6,0.12); border:1px solid var(--warning); padding:10px 20px; border-radius:8px; text-align:center; width:85%;">
+      <div style="font-weight:700; color:var(--warning);">👁️ 3. Attention (× 120 volte)</div>
+      <div style="color:var(--muted); font-size:0.9em;">"Quale parola è collegata a quale?"</div>
+    </div>
+    <div style="color:var(--muted);">↓</div>
+    <div style="background:rgba(220,38,38,0.12); border:1px solid var(--danger); padding:10px 20px; border-radius:8px; text-align:center; width:85%;">
+      <div style="font-weight:700; color:var(--danger);">📤 4. Output</div>
+      <div style="color:var(--muted); font-size:0.9em;">Sceglie il prossimo token più probabile</div>
     </div>
   </div>
-  <div style="text-align:center; color:var(--muted); font-size:0.6em; margin:12px 0;">↓ × N layer (GPT-4: ~120 layer)</div>
-  <div style="background:rgba(239,68,68,0.15); border:1px solid var(--danger); padding:16px; border-radius:10px; text-align:center; font-size:0.55em;">
-    <div style="font-size:1.8em; margin-bottom:8px;">📤</div>
-    <div style="font-weight:700; color:var(--danger); margin-bottom:6px;">Output</div>
-    <div style="color:var(--muted);">Distribuzione di probabilità → token successivo</div>
-  </div>
-</div>
-<p style="text-align:center; font-size:0.55em; color:var(--muted); margin-top:16px;">
-  Ogni blocco Attention si ripete decine di volte per costruire la comprensione del contesto
-</p>`,
+</div>`,
+    },
+    footer: '<strong>Il punto chiave:</strong> il Transformer non legge in sequenza come noi — vede tutto il contesto insieme. È questa la svolta che ha reso possibile l\'AI moderna, dal paper "Attention Is All You Need" (2017).',
   },
 
   // 7. Attention mechanism
@@ -200,16 +208,28 @@ Ed ecco la magia:</p>`,
     image: {
       src: null,
       alt: 'Embedding visual',
-      html: `<div class="embed-visual">
-  <div class="embed-eq">👑 Re − 👨 Uomo + 👩 Donna = 👸 Regina</div>
-  <br>
-  <div style="font-size:0.85em; color:var(--muted);">
-    La matematica dei significati funziona!<br>
-    <span style="font-size:0.85em;">Parigi − Francia + Italia = Roma</span>
+      html: `<div style="display:flex; flex-direction:column; gap:16px;">
+  <div style="background:var(--surface); padding:18px; border-radius:var(--radius);">
+    <div style="font-size:1.2em; font-weight:700; text-align:center; letter-spacing:0.02em;">👑 Re − 👨 Uomo + 👩 Donna = 👸 Regina</div>
+    <div style="text-align:center; font-size:0.7em; color:var(--muted); margin-top:6px;">Parigi − Francia + Italia = Roma</div>
+  </div>
+  <div style="background:var(--surface); padding:18px; border-radius:var(--radius); position:relative; height:180px; font-size:0.55em;">
+    <div style="position:absolute; left:10%; top:20%; color:var(--accent); font-weight:700;">● gatto</div>
+    <div style="position:absolute; left:22%; top:30%; color:var(--accent);">● cane</div>
+    <div style="position:absolute; left:8%; top:42%; color:var(--accent);">● topo</div>
+    <div style="position:absolute; left:60%; top:18%; color:var(--secondary); font-weight:700;">● Roma</div>
+    <div style="position:absolute; left:72%; top:28%; color:var(--secondary);">● Parigi</div>
+    <div style="position:absolute; left:55%; top:35%; color:var(--secondary);">● Madrid</div>
+    <div style="position:absolute; left:35%; top:70%; color:var(--warning); font-weight:700;">● correre</div>
+    <div style="position:absolute; left:50%; top:78%; color:var(--warning);">● saltare</div>
+    <div style="position:absolute; left:28%; top:82%; color:var(--warning);">● nuotare</div>
+    <div style="position:absolute; left:8%; top:92%; font-size:0.85em; color:var(--muted);">Parole simili = vicine nello spazio</div>
+    <div style="position:absolute; right:5%; top:50%; writing-mode:vertical-lr; font-size:0.8em; color:var(--border);">dimensione 2 →</div>
+    <div style="position:absolute; left:5%; bottom:3%; font-size:0.8em; color:var(--border);">dimensione 1 →</div>
   </div>
 </div>`,
     },
-    footer: '<strong>Takeaway:</strong> gli embedding trasformano le parole in numeri che catturano il significato. Questo è il cuore della ricerca semantica, del RAG e di ogni applicazione AI che "capisce" il linguaggio.',
+    footer: '<strong>Takeaway:</strong> gli embedding trasformano le parole in numeri che catturano il significato. Parole simili finiscono vicine — ed è così che l\'AI "capisce" che gatto e cane sono più simili di gatto e Roma.',
   },
 
   // 9. Training
@@ -290,7 +310,7 @@ L'RLHF funziona esattamente così: l'AI propone, gli umani valutano, il modello 
   {
     type: 'quote',
     text: '"The hottest new programming language is English."',
-    source: '— Andrej Karpathy, ex-Director of AI @ Tesla',
+    source: 'Andrej Karpathy, ex-Director of AI @ Tesla',
   },
 
   // 13. Context window
@@ -308,19 +328,46 @@ Come una RAM che si riempie. 💾</p>`,
     image: {
       src: null,
       alt: 'Context window visualization',
-      html: `<div style="background:var(--surface); padding:20px; border-radius:var(--radius); font-size:0.5em; text-align:center; width:100%;">
-  <div style="display:flex; gap:4px; margin-bottom:12px;">
-    <div style="flex:1; background:var(--accent); height:24px; border-radius:4px; opacity:0.3;"></div>
-    <div style="flex:1; background:var(--accent); height:24px; border-radius:4px; opacity:0.5;"></div>
-    <div style="flex:1; background:var(--accent); height:24px; border-radius:4px; opacity:0.7;"></div>
-    <div style="flex:1; background:var(--accent); height:24px; border-radius:4px; opacity:0.9;"></div>
-    <div style="flex:1; background:var(--secondary); height:24px; border-radius:4px;"></div>
+      html: `<div style="background:var(--surface); padding:20px; border-radius:var(--radius); font-size:0.5em; width:100%;">
+  <div style="display:flex; flex-direction:column; gap:14px;">
+    <div>
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+        <span style="font-weight:700; min-width:50px;">GPT-3</span>
+        <div style="background:var(--border); height:14px; border-radius:4px; flex:1; overflow:hidden;">
+          <div style="background:var(--accent); height:100%; width:2%; border-radius:4px;"></div>
+        </div>
+      </div>
+      <div style="color:var(--muted); font-size:0.85em; margin-left:58px;">4K token · ~3 pagine</div>
+    </div>
+    <div>
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+        <span style="font-weight:700; min-width:50px;">GPT-4</span>
+        <div style="background:var(--border); height:14px; border-radius:4px; flex:1; overflow:hidden;">
+          <div style="background:var(--secondary); height:100%; width:32%; border-radius:4px;"></div>
+        </div>
+      </div>
+      <div style="color:var(--muted); font-size:0.85em; margin-left:58px;">128K token · ~100 pagine</div>
+    </div>
+    <div>
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+        <span style="font-weight:700; min-width:50px;">Claude</span>
+        <div style="background:var(--border); height:14px; border-radius:4px; flex:1; overflow:hidden;">
+          <div style="background:var(--warning); height:100%; width:100%; border-radius:4px;"></div>
+        </div>
+      </div>
+      <div style="color:var(--muted); font-size:0.85em; margin-left:58px;">200K–1M token · ~un libro intero 📖</div>
+    </div>
   </div>
-  <div style="display:flex; justify-content:space-between; color:var(--muted);">
-    <span>← ricorda poco</span>
-    <span>ricorda bene →</span>
+  <div style="margin-top:16px; padding-top:12px; border-top:1px solid var(--border);">
+    <div style="display:flex; gap:3px; margin-bottom:6px;">
+      <div style="flex:1; height:10px; background:var(--secondary); border-radius:3px; opacity:0.9;"></div>
+      <div style="flex:1; height:10px; background:var(--border); border-radius:3px; opacity:0.5;"></div>
+      <div style="flex:1; height:10px; background:var(--border); border-radius:3px; opacity:0.3;"></div>
+      <div style="flex:1; height:10px; background:var(--border); border-radius:3px; opacity:0.3;"></div>
+      <div style="flex:1; height:10px; background:var(--secondary); border-radius:3px; opacity:0.9;"></div>
+    </div>
+    <div style="text-align:center; color:var(--warning); font-size:0.9em;">⚠️ Il modello ricorda meglio inizio e fine — il centro si perde</div>
   </div>
-  <div style="margin-top:8px; color:var(--warning);">⚠️ L'attention non è uniforme: il modello ricorda meglio inizio e fine</div>
 </div>`,
     },
     footer: '<strong>In pratica:</strong> la context window è il limite più importante da conoscere. Se la conversazione è troppo lunga, il modello perde informazioni. Mettete le informazioni cruciali all\'inizio o alla fine del prompt.',
@@ -330,46 +377,62 @@ Come una RAM che si riempie. 💾</p>`,
   {
     type: 'concept',
     heading: "Temperature: creatività vs precisione",
-    content: `<p><strong>Temperature = 0</strong><br>
-Il modello sceglie SEMPRE il token più probabile.
-Risposte precise, ripetibili, deterministiche.</p>
-<p><strong>Temperature = 1</strong><br>
-Distribuzione naturale. Buon bilanciamento.</p>
-<p><strong>Temperature = 2</strong><br>
-Token improbabili diventano possibili.
-Creativo, ma può delirare. 🌀</p>`,
+    content: `<p>La temperature controlla <strong>quanto il modello "osa"</strong>
+nella scelta del prossimo token.</p>
+<p><strong>Temperature = 0</strong> → sceglie SEMPRE il più probabile.<br>
+<strong>Temperature = 1</strong> → distribuzione naturale.<br>
+<strong>Temperature = 2</strong> → anche token improbabili diventano possibili.</p>
+<p><strong>Analogia:</strong> è come il volume della creatività.
+A zero è un robot ripetitivo, al massimo è un poeta ubriaco. 🎚️</p>`,
     image: {
       src: null,
-      alt: 'Creativity spectrum',
-      html: `<div style="background:var(--surface); padding:24px; border-radius:var(--radius); font-size:0.55em; width:100%;">
-  <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:16px; gap:8px;">
-    <div style="text-align:center; flex:1;">
-      <div style="background:var(--accent); height:40px; border-radius:6px 6px 0 0; margin-bottom:8px;"></div>
-      <div style="font-weight:700; color:var(--accent);">0</div>
-      <div style="color:var(--muted); font-size:0.9em;">Dati · Report<br>Codice · Analisi</div>
+      alt: 'Temperature comparison',
+      html: `<div style="background:var(--surface); padding:20px; border-radius:var(--radius); font-size:0.5em; width:100%;">
+  <div style="font-weight:700; color:var(--muted); margin-bottom:14px; font-size:0.9em;">Prompt: "Il cielo è..."</div>
+  <div style="display:flex; flex-direction:column; gap:12px;">
+    <div style="background:rgba(37,99,235,0.08); border:1px solid rgba(37,99,235,0.25); padding:12px 14px; border-radius:8px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+        <span style="font-weight:700; color:var(--accent);">T = 0</span>
+        <span style="font-size:0.85em; color:var(--muted);">🎯 Preciso</span>
+      </div>
+      <div style="color:var(--text-mid);">"Il cielo è <strong>azzurro</strong>."</div>
+      <div style="display:flex; gap:3px; margin-top:6px;">
+        <div style="height:6px; flex:9; background:var(--accent); border-radius:3px;"></div>
+        <div style="height:6px; flex:1; background:var(--border); border-radius:3px;"></div>
+      </div>
+      <div style="font-size:0.8em; color:var(--muted); margin-top:2px;">azzurro 90% · grigio 10%</div>
     </div>
-    <div style="text-align:center; flex:1;">
-      <div style="background:var(--secondary); height:80px; border-radius:6px 6px 0 0; margin-bottom:8px;"></div>
-      <div style="font-weight:700; color:var(--secondary);">0.7–1</div>
-      <div style="color:var(--muted); font-size:0.9em;">Email · Chat<br>Assistente</div>
+    <div style="background:rgba(8,145,178,0.08); border:1px solid rgba(8,145,178,0.25); padding:12px 14px; border-radius:8px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+        <span style="font-weight:700; color:var(--secondary);">T = 1</span>
+        <span style="font-size:0.85em; color:var(--muted);">⚖️ Bilanciato</span>
+      </div>
+      <div style="color:var(--text-mid);">"Il cielo è <strong>grigio e carico di pioggia</strong>."</div>
+      <div style="display:flex; gap:3px; margin-top:6px;">
+        <div style="height:6px; flex:5; background:var(--accent); border-radius:3px;"></div>
+        <div style="height:6px; flex:3; background:var(--secondary); border-radius:3px;"></div>
+        <div style="height:6px; flex:2; background:var(--warning); border-radius:3px;"></div>
+      </div>
+      <div style="font-size:0.8em; color:var(--muted); margin-top:2px;">azzurro 50% · grigio 30% · nuvoloso 20%</div>
     </div>
-    <div style="text-align:center; flex:1;">
-      <div style="background:var(--warning); height:120px; border-radius:6px 6px 0 0; margin-bottom:8px;"></div>
-      <div style="font-weight:700; color:var(--warning);">1.5</div>
-      <div style="color:var(--muted); font-size:0.9em;">Brainstorming<br>Storytelling</div>
+    <div style="background:rgba(220,38,38,0.08); border:1px solid rgba(220,38,38,0.25); padding:12px 14px; border-radius:8px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+        <span style="font-weight:700; color:var(--danger);">T = 2</span>
+        <span style="font-size:0.85em; color:var(--muted);">🌀 Caotico</span>
+      </div>
+      <div style="color:var(--text-mid);">"Il cielo è <strong>un oceano capovolto di meduse luminose</strong>."</div>
+      <div style="display:flex; gap:3px; margin-top:6px;">
+        <div style="height:6px; flex:3; background:var(--accent); border-radius:3px;"></div>
+        <div style="height:6px; flex:2; background:var(--secondary); border-radius:3px;"></div>
+        <div style="height:6px; flex:2; background:var(--warning); border-radius:3px;"></div>
+        <div style="height:6px; flex:3; background:var(--danger); border-radius:3px;"></div>
+      </div>
+      <div style="font-size:0.8em; color:var(--muted); margin-top:2px;">probabilità quasi uniformi — tutto è possibile</div>
     </div>
-    <div style="text-align:center; flex:1;">
-      <div style="background:var(--danger); height:100px; border-radius:6px 6px 0 0; margin-bottom:8px; opacity:0.7;"></div>
-      <div style="font-weight:700; color:var(--danger);">2+</div>
-      <div style="color:var(--muted); font-size:0.9em;">Caos creativo<br>⚠️ inaffidabile</div>
-    </div>
-  </div>
-  <div style="border-top:1px solid var(--border); padding-top:12px; text-align:center; color:var(--muted);">
-    ← preciso &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; creativo →
   </div>
 </div>`,
     },
-    footer: '<strong>Takeaway:</strong> temperature bassa per dati, analisi e codice; temperature alta per brainstorming e scrittura creativa. Scegliere la temperature giusta è già metà del prompt engineering.',
+    footer: '<strong>Takeaway:</strong> temperature bassa (0–0.3) per dati, analisi e codice; media (0.7–1) per email e chat; alta (1.5+) per brainstorming. Scegliere la temperature giusta è già metà del prompt engineering.',
   },
 
   // 15. System prompt
@@ -559,17 +622,32 @@ Ma il problema non è mai "risolto" al 100%.</p>`,
     image: {
       src: null,
       alt: 'Bias in AI',
-      html: `<div style="background:var(--surface); padding:20px; border-radius:var(--radius); font-size:0.55em; width:100%;">
-  <div style="font-weight:700; color:var(--warning); margin-bottom:12px;">⚠️ Casi documentati</div>
+      html: `<div style="background:var(--surface); padding:20px; border-radius:var(--radius); font-size:0.5em; width:100%;">
+  <div style="font-weight:700; color:var(--warning); margin-bottom:14px; font-size:1.1em;">⚠️ Casi documentati</div>
   <div style="display:flex; flex-direction:column; gap:10px;">
-    <div style="background:var(--surface-dark); padding:10px; border-radius:8px; line-height:1.5;">
-      <strong>Amazon (2018):</strong> sistema AI per CV scartava automaticamente candidate donne
+    <div style="background:rgba(220,38,38,0.06); border-left:3px solid var(--danger); padding:10px 12px; border-radius:0 8px 8px 0; line-height:1.5;">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+        <span style="font-size:1.3em;">👩‍💼</span>
+        <strong style="color:var(--danger);">Genere</strong>
+        <span style="margin-left:auto; font-size:0.85em; color:var(--muted);">Amazon 2018</span>
+      </div>
+      <div>AI per CV scartava automaticamente candidate donne</div>
     </div>
-    <div style="background:var(--surface-dark); padding:10px; border-radius:8px; line-height:1.5;">
-      <strong>AI medica (2023):</strong> sistemi di triage FDA-approvati sottostimavano il dolore in pazienti neri (NEJM)
+    <div style="background:rgba(217,119,6,0.06); border-left:3px solid var(--warning); padding:10px 12px; border-radius:0 8px 8px 0; line-height:1.5;">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+        <span style="font-size:1.3em;">🏥</span>
+        <strong style="color:var(--warning);">Etnia</strong>
+        <span style="margin-left:auto; font-size:0.85em; color:var(--muted);">NEJM 2023</span>
+      </div>
+      <div>Triage FDA sottostimava il dolore in pazienti neri</div>
     </div>
-    <div style="background:var(--surface-dark); padding:10px; border-radius:8px; line-height:1.5;">
-      <strong>LLM multilingual (2024):</strong> performance cala del 30-40% su lingue non occidentali (Oxford)
+    <div style="background:rgba(37,99,235,0.06); border-left:3px solid var(--accent); padding:10px 12px; border-radius:0 8px 8px 0; line-height:1.5;">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+        <span style="font-size:1.3em;">🌍</span>
+        <strong style="color:var(--accent);">Lingua</strong>
+        <span style="margin-left:auto; font-size:0.85em; color:var(--muted);">Oxford 2024</span>
+      </div>
+      <div>Performance cala del <strong>30–40%</strong> su lingue non occidentali</div>
     </div>
   </div>
 </div>`,
@@ -584,7 +662,8 @@ Ma il problema non è mai "risolto" al 100%.</p>`,
     content: `<p>Ogni modello ha una <strong>data di cutoff</strong>:
 dopo quella data, non sa nulla.</p>
 <p>GPT-4o: novembre 2024<br>
-Claude Sonnet 4: aprile 2025<br>
+Claude Opus 4.6: maggio 2025<br>
+Gemini 2.5: gennaio 2025<br>
 Notizie di ieri? Non le conosce.</p>
 <p><strong>Workaround:</strong><br>
 🔍 Web search integrato (ChatGPT, Perplexity)<br>

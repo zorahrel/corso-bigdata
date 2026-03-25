@@ -5,6 +5,11 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>corso-bigdata</title>
+    <script>
+      // Fallback for React Fast Refresh (Vite 8 + plugin-react v6 compat)
+      window.$RefreshReg$ = window.$RefreshReg$ || function() {};
+      window.$RefreshSig$ = window.$RefreshSig$ || function() { return function(type) { return type; }; };
+    </script>
   </head>
   <body>
     <div id="root"></div>
