@@ -814,11 +814,14 @@ Notizie di ieri? Non le conosce.</p>
     type: 'resource',
     heading: "Approfondimenti",
     links: [
-      { label: 'AI Hallucination Statistics Research Report 2026 — Suprmind', url: 'https://suprmind.ai/hub/insights/ai-hallucination-statistics-research-report-2026/' },
-      { label: 'Survey sulle allucinazioni nei LLM — arXiv', url: 'https://arxiv.org/abs/2510.06265' },
+      { label: 'Attention Is All You Need — il paper originale (2017)', url: 'https://arxiv.org/abs/1706.03762' },
+      { label: 'Illustrated Transformer — guida visiva passo-passo', url: 'https://jalammar.github.io/illustrated-transformer/' },
+      { label: 'OpenAI Tokenizer — prova la tokenizzazione dal vivo', url: 'https://platform.openai.com/tokenizer' },
+      { label: 'Embedding projector — esplora lo spazio vettoriale in 3D', url: 'https://projector.tensorflow.org/' },
+      { label: 'Brief History of LLMs: Transformers → DeepSeek R1', url: 'https://medium.com/@lmpo/a-brief-history-of-lmms-from-transformers-2017-to-deepseek-r1-2025' },
+      { label: 'AI Hallucination Statistics 2026 — Suprmind Research', url: 'https://suprmind.ai/hub/insights/ai-hallucination-statistics-research-report-2026/' },
       { label: 'Enterprise RAG Predictions 2025 — Vectara', url: 'https://www.vectara.com/blog/top-enterprise-rag-predictions' },
-      { label: 'Brief History of LLMs: Transformers 2017 → DeepSeek R1', url: 'https://medium.com/@lmpo/a-brief-history-of-lmms-from-transformers-2017-to-deepseek-r1-2025' },
-      { label: 'Transformer (deep learning) — Wikipedia', url: 'https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)' },
+      { label: 'LLM Stats — confronta context window e parametri', url: 'https://llm-stats.com' },
     ],
   },
 

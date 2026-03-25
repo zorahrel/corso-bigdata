@@ -103,9 +103,12 @@ const DAYS = [
     hours: 6,
     presence: 'in presenza',
     resources: [
+      { label: "Illustrated Transformer — guida visiva passo-passo", url: "https://jalammar.github.io/illustrated-transformer/" },
+      { label: "OpenAI Tokenizer — prova la tokenizzazione dal vivo", url: "https://platform.openai.com/tokenizer" },
+      { label: "Embedding Projector — esplora vettori in 3D", url: "https://projector.tensorflow.org/" },
       { label: "AI Hallucinations — IBM (cosa sono e perché)", url: "https://www.ibm.com/think/topics/ai-hallucinations" },
-      { label: "OpenAI Tokenizer — prova dal vivo", url: "https://platform.openai.com/tokenizer" },
-      { label: "LLM Stats — confronto tutti i modelli", url: "https://llm-stats.com" },
+      { label: "AI Hallucination Statistics 2026 — Suprmind", url: "https://suprmind.ai/hub/insights/ai-hallucination-statistics-research-report-2026/" },
+      { label: "LLM Stats — confronta context window e parametri", url: "https://llm-stats.com" },
     ],
     schedule: [
       { from: '09:00', to: '10:15', type: 'teoria', label: 'Architettura transformer semplificata' },
