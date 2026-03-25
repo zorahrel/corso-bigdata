@@ -476,15 +476,23 @@ Un sondaggio su 500 manager mostra che il 95% e soddisfatto dopo aver introdotto
 
 Base Rules: Use the original image as strict base. Editing only (no generation). Do NOT add/remove elements. Do NOT alter composition or structure.
 
-Lighting (Cinematic & Natural): Preserve original lighting direction. Amplify existing light only: increase light/shadow contrast, boost natural highlights, deepen shadows without crushing blacks.
+Realism & Materials: Preserve textures, materials, and natural grain. Maintain full surface realism. No smoothing. No plastic effect. No artificial sharpening.
 
-Bloom / Glare: Apply ONLY on existing bright sources. Keep soft, diffused. Subtle lens flare only if coherent. Gently lift whites ONLY where naturally illuminated.
+Lighting (Cinematic & Natural): Preserve original lighting direction and sources. Do NOT introduce new light or alter scene logic. Preserve original time-of-day and overall scene mood. Amplify existing light only: Increase light/shadow contrast (no detail loss). Gently boost natural highlights. Deepen shadows without crushing blacks. Add soft gradients following original light.
 
-Color Grading: Preserve original color balance. Maintain natural greens and blues. Pink tones: brighter, lighter, slightly desaturated. Slightly warm highlights. Clean shadows.
+Bloom / Glare + White Enhancement: Apply ONLY on existing bright sources. Keep soft, diffused, physically plausible. No heavy glow or washed highlights. Subtle lens flare only if coherent. Gently lift whites ONLY where naturally illuminated. Increase brightness without clipping details. Preserve texture inside highlights. Blend whites seamlessly into bloom. Avoid flat pure white. Keep transitions soft, airy, and natural.
 
-Style: Cinematic, minimal, Japanese photography. Soft atmospheric light. Delicate colors. Premium editorial look with preserved texture and authentic mood.
+Color Grading: Preserve original color balance of the scene. Maintain natural greens and blues. Respect scene context (daylight, night tones, artificial lighting). Pink tones: Brighter, lighter, more airy, slightly desaturated. Slightly warm highlights. Neutral, clean shadows. Preserve smooth color transitions.
 
-Hard Constraints: No AI artifacts. No fake lighting. No HDR or overprocessed look.
+Enhancements: Remove only minor distractions. Apply subtle perspective correction. Maintain full detail fidelity.
+
+Subject Handling: Keep subject sharp and naturally separated via light contrast. No artificial depth of field.
+
+Motion Blur: Apply ONLY to already moving elements. Keep subtle and realistic.
+
+Hard Constraints: No AI artifacts. No fake lighting. No inconsistent shadows. No HDR or overprocessed look.
+
+Style: Cinematic, minimal, Japanese photography. Soft atmospheric light. Delicate colors. Refined bloom. Premium editorial look with preserved texture and authentic mood.
 
 OUTPUT THE EDITED IMAGE.`,
     },
