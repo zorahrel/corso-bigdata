@@ -112,7 +112,7 @@ export const slides = [
     ['2023', '#00d4aa', 'GPT-4, Claude 2, multimodale — visione + testo'],
     ['2024', '#ffd700', 'Reasoning models (o1) — l\'AI "pensa" step by step'],
     ['2025', '#ffd700', 'Agenti autonomi, 1M token context, AI ovunque'],
-    ['2026', '#ff6b6b', 'GPT-4o, Claude 4.5, 10M token — siamo qui 🚀'],
+    ['2026', '#ff6b6b', 'GPT-5, Claude Opus 4.6, Gemini 2.5 — siamo qui 🚀'],
   ].map(([year, color, text]) => `
   <div style="display:flex; align-items:center; gap:16px;">
     <div style="min-width:52px; font-size:13px; font-weight:700; color:${color}; text-align:right;">${year}</div>
@@ -185,12 +185,12 @@ export const slides = [
     layout: 'player-grid',
     heading: 'Modelli principali 2026',
     players: [
-      { emoji: '🟢', name: 'GPT-4o', strength: 'Versatile, multimodale, veloce' },
-      { emoji: '🟠', name: 'Claude 4.5', strength: 'Codice, ragionamento, contesto lungo' },
-      { emoji: '🔵', name: 'Gemini 3.1', strength: '1M token context, integrato Google' },
-      { emoji: '🦙', name: 'Llama 4', strength: 'Open source, 10M context (Scout)' },
-      { emoji: '🇨🇳', name: 'DeepSeek-R1', strength: 'Reasoning, open, costo bassissimo' },
-      { emoji: '🇫🇷', name: 'Mistral Large', strength: 'Europeo, multilingue, efficiente' },
+      { emoji: '🟢', name: 'GPT-5', strength: 'Versatile, multimodale, reasoning avanzato' },
+      { emoji: '🟠', name: 'Claude Opus 4.6', strength: 'Codice, ragionamento, contesto lungo' },
+      { emoji: '🔵', name: 'Gemini 2.5 Pro', strength: '1M token context, integrato Google' },
+      { emoji: '🦙', name: 'Llama 4 Scout', strength: 'Open source, 10M context — gratuito' },
+      { emoji: '🇨🇳', name: 'DeepSeek-R1', strength: 'Reasoning, open source, costo bassissimo' },
+      { emoji: '🇫🇷', name: 'Mistral Large', strength: 'Europeo, privacy, multilingue' },
     ],
     footer: `<strong>Takeaway:</strong> non esiste IL modello migliore. Il panorama è diversificato e ogni modello ha punti di forza specifici — la scelta dipende dal vostro caso d'uso.`,
   },
@@ -277,7 +277,7 @@ Esempi: <code>o3</code> (OpenAI), Claude con <em>extended thinking</em>, DeepSee
     layout: 'player-grid',
     heading: "Chi produce l'AI: la mappa del potere",
     players: [
-      { emoji: '🏢', name: 'OpenAI', strength: 'ChatGPT, GPT-4o, o3 — il più popolare' },
+      { emoji: '🏢', name: 'OpenAI', strength: 'ChatGPT, GPT-5, o3 — il più diffuso al mondo' },
       { emoji: '🛡️', name: 'Anthropic', strength: 'Claude — focus su sicurezza e codice' },
       { emoji: '🔍', name: 'Google', strength: "Gemini — integrato in tutto l'ecosistema" },
       { emoji: '📘', name: 'Meta', strength: 'Llama — open source, record di contesto' },
