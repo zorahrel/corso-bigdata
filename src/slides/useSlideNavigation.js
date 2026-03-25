@@ -1,4 +1,6 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
+
+const BROADCAST_SUPPORTED = typeof BroadcastChannel !== 'undefined'
 
 export function useSlideNavigation(totalSlides, lessonId, onExit) {
   const parseHash = useCallback(() => {
@@ -8,6 +10,7 @@ export function useSlideNavigation(totalSlides, lessonId, onExit) {
   }, [lessonId, totalSlides])
 
   const [currentIndex, setCurrentIndex] = useState(parseHash)
+  const isSyncing = useRef(false)
 
   // Re-parse hash when totalSlides becomes available (data loaded)
   useEffect(() => {
@@ -54,5 +57,39 @@ export function useSlideNavigation(totalSlides, lessonId, onExit) {
     return () => { window.removeEventListener('touchstart', onStart); window.removeEventListener('touchend', onEnd) }
   }, [next, prev])
 
-  return { currentIndex, totalSlides, next, prev, goTo }
+  // BroadcastChannel sync
+  useEffect(() => {
+    if (!BROADCAST_SUPPORTED || totalSlides === 0) return
+
+    const channel = new BroadcastChannel('slide-sync')
+
+    channel.onmessage = (e) => {
+      const { type, lesson, index } = e.data || {}
+      if (type !== 'navigate' || lesson !== lessonId) return
+      setCurrentIndex(prev => {
+        if (prev === index) return prev
+        isSyncing.current = true
+        window.location.hash = `#/${lessonId}/${index + 1}`
+        return index
+      })
+    }
+
+    return () => channel.close()
+  }, [lessonId, totalSlides])
+
+  // Broadcast on navigation (only when not receiving)
+  useEffect(() => {
+    if (!BROADCAST_SUPPORTED || totalSlides === 0) return
+
+    if (isSyncing.current) {
+      isSyncing.current = false
+      return
+    }
+
+    const channel = new BroadcastChannel('slide-sync')
+    channel.postMessage({ type: 'navigate', lesson: lessonId, index: currentIndex })
+    channel.close()
+  }, [currentIndex, lessonId, totalSlides])
+
+  return { currentIndex, totalSlides, next, prev, goTo, syncSupported: BROADCAST_SUPPORTED }
 }

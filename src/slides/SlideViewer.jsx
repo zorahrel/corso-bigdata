@@ -64,7 +64,7 @@ export function SlideViewer({ lessonId, onExit }) {
 
   const slides = lessonData?.slides || []
   const meta = lessonData?.meta || {}
-  const { currentIndex, totalSlides, next, prev, goTo } = useSlideNavigation(slides.length, lessonId, onExit)
+  const { currentIndex, totalSlides, next, prev, goTo, syncSupported } = useSlideNavigation(slides.length, lessonId, onExit)
 
   if (error) {
     return (
@@ -100,12 +100,17 @@ export function SlideViewer({ lessonId, onExit }) {
           <span className="slide-nav-label">Lezione {lessonNum} — {currentIndex + 1}/{totalSlides}</span>
           <button className="slide-nav-arrow" onClick={next} disabled={currentIndex === totalSlides - 1}>›</button>
         </div>
-        <button
-          className={`slide-nav-overview-btn ${showOverview ? 'active' : ''}`}
-          onClick={() => setShowOverview(!showOverview)}
-        >
-          ▦ Panoramica
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          {syncSupported && (
+            <span title="Sincronizzazione tab attiva" style={{ fontSize: '0.75em', color: 'var(--muted, #888)', userSelect: 'none' }}>📡 sync</span>
+          )}
+          <button
+            className={`slide-nav-overview-btn ${showOverview ? 'active' : ''}`}
+            onClick={() => setShowOverview(!showOverview)}
+          >
+            ▦ Panoramica
+          </button>
+        </div>
       </div>
 
       {showOverview && (
