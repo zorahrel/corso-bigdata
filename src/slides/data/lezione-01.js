@@ -463,7 +463,34 @@ Un sondaggio su 500 manager mostra che il 95% e soddisfatto dopo aver introdotto
 ⚡ Confronto: modello standard vs reasoning model (o3 / Claude extended thinking) — la differenza è visibile`,
   },
 
-  // 26. HANDS-ON
+  // 26. CASO REALE — Prompt foto Giappone
+  {
+    type: 'demo',
+    heading: 'Prompt reale: editing foto con AI',
+    description: `📸 <strong>Caso d'uso:</strong> editing di 188 foto di viaggio in stile cinematico giapponese — con un solo prompt.<br>
+🎯 <strong>Il punto:</strong> non "migliora questa foto" ma un sistema di istruzioni preciso che replica lo stesso stile su centinaia di immagini.<br>
+💡 <strong>Takeaway:</strong> la differenza tra un prompt generico e uno professionale è la differenza tra un risultato mediocre e un risultato consistente.`,
+    demoMaterial: {
+      label: 'Il prompt usato (ChatGPT, image editing)',
+      text: `Use image generation to edit this photo.
+
+Base Rules: Use the original image as strict base. Editing only (no generation). Do NOT add/remove elements. Do NOT alter composition or structure.
+
+Lighting (Cinematic & Natural): Preserve original lighting direction. Amplify existing light only: increase light/shadow contrast, boost natural highlights, deepen shadows without crushing blacks.
+
+Bloom / Glare: Apply ONLY on existing bright sources. Keep soft, diffused. Subtle lens flare only if coherent. Gently lift whites ONLY where naturally illuminated.
+
+Color Grading: Preserve original color balance. Maintain natural greens and blues. Pink tones: brighter, lighter, slightly desaturated. Slightly warm highlights. Clean shadows.
+
+Style: Cinematic, minimal, Japanese photography. Soft atmospheric light. Delicate colors. Premium editorial look with preserved texture and authentic mood.
+
+Hard Constraints: No AI artifacts. No fake lighting. No HDR or overprocessed look.
+
+OUTPUT THE EDITED IMAGE.`,
+    },
+  },
+
+  // 27. HANDS-ON
   {
     type: 'hands-on',
     heading: 'Ora tocca a voi!',
