@@ -5,7 +5,7 @@ export function SlideDemo({ heading, description, badgeText = 'DEMO LIVE', demoM
       <h2>{heading}</h2>
       {description && <p className="demo-description" dangerouslySetInnerHTML={{ __html: description }} />}
       {demoMaterial && (
-        <div style={{ marginTop: '24px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '12px', padding: '20px', textAlign: 'left', fontSize: '14px', lineHeight: '1.6' }}>
+        <div style={{ marginTop: '12px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '12px', padding: '12px 16px', textAlign: 'left', fontSize: '0.55em', lineHeight: '1.5' }}>
           {demoMaterial.label && <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--muted)', marginBottom: '12px' }}>{demoMaterial.label}</div>}
           {demoMaterial.text && <div style={{ fontFamily: 'var(--font-mono, monospace)', fontSize: '13px', whiteSpace: 'pre-wrap', color: 'var(--text)', lineHeight: '1.7' }}>{demoMaterial.text}</div>}
           {demoMaterial.note && <div style={{ marginTop: '16px', color: 'var(--muted)', fontStyle: 'italic' }}>{demoMaterial.note}</div>}
