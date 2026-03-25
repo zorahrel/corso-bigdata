@@ -249,7 +249,7 @@ Esempi: <code>o3</code> (OpenAI), Claude con <em>extended thinking</em>, DeepSee
     stats: [
       { value: 4, suffix: '', label: 'K token — GPT-3 (2020)' },
       { value: 128, suffix: '', label: 'K token — GPT-4 (2023)' },
-      { value: 1000, suffix: '', label: 'K token — Gemini 3.1 (1M)' },
+      { value: 1000, suffix: '', label: 'K token — Gemini 2.5 Pro (1M)' },
       { value: 10000, suffix: '', label: 'K token — Llama 4 Scout (10M!)' },
     ],
     footer: "1 token ≈ ¾ parola · 128K ≈ un libro di 300 pagine · 10M ≈ un'intera biblioteca",
