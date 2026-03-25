@@ -431,14 +431,14 @@ body {
   opacity: 0.6;
 }
 
-.timeline-sonia {
+.timeline-tutor {
   color: var(--warning);
   font-style: italic;
   opacity: 0.7;
 }
 
-.timeline-sonia .timeline-label::after {
-  content: ' · Sonia';
+.timeline-tutor .timeline-label::after {
+  content: ' · Tutor';
   font-size: 0.6rem;
   font-weight: 600;
   text-transform: uppercase;

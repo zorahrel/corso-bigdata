@@ -84,7 +84,7 @@ const DAYS = [
       { from: '11:15', to: '11:30', type: 'pausa', label: 'Pausa' },
       { from: '11:30', to: '13:15', type: 'pratica', label: 'Demo live: casi reali di utilizzo' },
       { from: '13:15', to: '14:15', type: 'pausa', label: 'Pranzo' },
-      { from: '14:15', to: '16:15', type: 'sonia', label: 'Primi prompt guidati — ChatGPT e Claude' },
+      { from: '14:15', to: '16:15', type: 'tutor', label: 'Primi prompt guidati — ChatGPT e Claude' },
     ],
   },
   {
@@ -113,7 +113,7 @@ const DAYS = [
       { from: '11:30', to: '11:45', type: 'pausa', label: 'Pausa' },
       { from: '11:45', to: '13:15', type: 'pratica', label: 'Esperimenti con parametri e temperature' },
       { from: '13:15', to: '14:15', type: 'pausa', label: 'Pranzo' },
-      { from: '14:15', to: '16:15', type: 'sonia', label: 'Limiti: allucinazioni, bias — test dal vivo' },
+      { from: '14:15', to: '16:15', type: 'tutor', label: 'Limiti: allucinazioni, bias — test dal vivo' },
     ],
   },
   {
@@ -143,7 +143,7 @@ const DAYS = [
       { from: '10:45', to: '13:15', type: 'pratica', label: 'Workshop: costruire la propria prompt library' },
       { from: '13:15', to: '14:15', type: 'pausa', label: 'Pranzo' },
       { from: '14:15', to: '15:15', type: 'pratica', label: 'System prompt, ruoli e formati — esercizi' },
-      { from: '15:15', to: '16:15', type: 'sonia', label: 'Esercizi guidati su prompt e formati' },
+      { from: '15:15', to: '16:15', type: 'tutor', label: 'Esercizi guidati su prompt e formati' },
     ],
   },
   {
@@ -160,7 +160,7 @@ const DAYS = [
     ],
     handson: 'Creare un GPT custom per un task lavorativo reale',
     hours: 6,
-    presence: 'gestita da Sonia',
+    presence: 'gestita da Tutor',
     deferred: true,
     resources: [
       { label: "OpenAI Platform — esplora l'API", url: "https://platform.openai.com" },
@@ -220,7 +220,7 @@ const DAYS = [
     ],
     handson: 'Creare un\'automazione base con Power Automate / confronto piattaforme su stesso task',
     hours: 6,
-    presence: 'gestita da Sonia',
+    presence: 'gestita da Tutor',
     deferred: true,
     resources: [
       { label: "Power Automate — Microsoft", url: "https://powerautomate.microsoft.com" },
@@ -285,7 +285,7 @@ const DAYS = [
     ],
     handson: 'Ogni studente mappa il proprio stack AI ideale e lo presenta',
     hours: 6,
-    presence: 'gestita da Sonia',
+    presence: 'gestita da Tutor',
     deferred: true,
     resources: [
       { label: "There's An AI For That — directory tool AI", url: "https://theresanaiforthat.com" },
@@ -318,7 +318,7 @@ const DAYS = [
     ],
     handson: 'Role-play: proporre un piano di adozione AI al proprio team',
     hours: 6,
-    presence: 'gestita da Sonia',
+    presence: 'gestita da Tutor',
     deferred: true,
     resources: [
       { label: "Google AI Essentials — certificato gratuito", url: "https://grow.google/certificates/ai-essentials" },
@@ -348,7 +348,7 @@ const DAYS = [
     ],
     handson: 'Presentazioni finali + feedback collettivo',
     hours: 6,
-    presence: 'gestita da Sonia',
+    presence: 'gestita da Tutor',
     deferred: true,
     resources: [
       { label: "The Batch — newsletter settimanale AI", url: "https://www.deeplearning.ai/the-batch/" },
