@@ -109,6 +109,11 @@ const DAYS = [
       { label: "AI Hallucinations — IBM (cosa sono e perché)", url: "https://www.ibm.com/think/topics/ai-hallucinations" },
       { label: "AI Hallucination Statistics 2026 — Suprmind", url: "https://suprmind.ai/hub/insights/ai-hallucination-statistics-research-report-2026/" },
       { label: "LLM Stats — confronta context window e parametri", url: "https://llm-stats.com" },
+      { label: "Groq — inferenza veloce con temperature slider", url: "https://groq.com" },
+      { label: "HuggingFace Chat — modelli open con parametri avanzati", url: "https://huggingface.co/chat" },
+      { label: "Mistral Chat — modello europeo gratuito", url: "https://chat.mistral.ai" },
+      { label: "Whisper Typing — dettatura AI gratuita per Windows", url: "https://whispertyping.com" },
+      { label: "Arc Browser — browser moderno con AI integrata (invito)", url: "https://arc.net/gift/95f1363d" },
     ],
     schedule: [
       { from: '09:00', to: '10:15', type: 'teoria', label: 'Architettura transformer semplificata' },
