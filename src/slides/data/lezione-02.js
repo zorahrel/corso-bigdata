@@ -1200,7 +1200,7 @@ Notizie di ieri? Non le conosce.</p>
         icon: '🔓',
         title: 'Data leakage',
         color: 'var(--danger)',
-        body: `<p>I dati aziendali inseriti nei prompt possono finire nei training set dei provider consumer. <strong>Samsung (2023):</strong> ingegneri incollano codice proprietario su ChatGPT — dati potenzialmente esposti.</p>
+        description: `<p>I dati aziendali inseriti nei prompt possono finire nei training set dei provider consumer. <strong>Samsung (2023):</strong> ingegneri incollano codice proprietario su ChatGPT — dati potenzialmente esposti.</p>
 <div style="margin-top:10px; padding:10px; background:rgba(220,38,38,0.1); border-radius:8px; font-size:0.85em;">
   ⚠️ <strong>13%</strong> delle organizzazioni ha subito un breach AI nel 2025 — 97% senza controlli di accesso adeguati.<br>
   <span style="color:var(--muted);">Fonte: IBM Cost of a Data Breach 2025</span><br><br>
@@ -1211,7 +1211,7 @@ Notizie di ieri? Non le conosce.</p>
         icon: '🎭',
         title: 'Prompt injection',
         color: 'var(--warning)',
-        body: `<p>Input malevolo può dirottare il comportamento del modello. Classificato <strong>#1 rischio AI</strong> nell'OWASP Top 10 for LLMs 2025. Colpisce chatbot, agenti AI e pipeline RAG.</p>
+        description: `<p>Input malevolo può dirottare il comportamento del modello. Classificato <strong>#1 rischio AI</strong> nell'OWASP Top 10 for LLMs 2025. Colpisce chatbot, agenti AI e pipeline RAG.</p>
 <div style="margin-top:10px; padding:10px; background:rgba(251,191,36,0.1); border-radius:8px; font-size:0.85em;">
   ⚡ Incident 2025: Perplexity Comet leak via indirect injection · CVE-2025-59944 (zero-click RCE in IDE AI tools)<br><br>
   ✅ Separare istruzioni da dati, validare ogni input esterno, limitare i permessi degli agenti AI.
@@ -1221,7 +1221,7 @@ Notizie di ieri? Non le conosce.</p>
         icon: '🌫️',
         title: 'Shadow AI',
         color: 'var(--accent)',
-        body: `<p>I dipendenti usano AI non approvata dall'azienda, spesso con dati sensibili. Shadow AI allunga i tempi di rilevamento breach da <strong>207 a 247 giorni</strong>.</p>
+        description: `<p>I dipendenti usano AI non approvata dall'azienda, spesso con dati sensibili. Shadow AI allunga i tempi di rilevamento breach da <strong>207 a 247 giorni</strong>.</p>
 <div style="margin-top:10px; padding:10px; background:rgba(108,99,255,0.1); border-radius:8px; font-size:0.85em;">
   📊 <strong>20%</strong> delle organizzazioni ha subito breach legati a Shadow AI nel 2025. Costo medio: <strong>$4.63M</strong> (+$670K rispetto ai breach standard).<br>
   <span style="color:var(--muted);">Fonte: IBM 2025 / Reco.ai</span><br><br>
@@ -1232,7 +1232,7 @@ Notizie di ieri? Non le conosce.</p>
         icon: '⚖️',
         title: 'Compliance',
         color: 'var(--secondary)',
-        body: `<p>GDPR: ogni dato personale processato da AI deve avere base giuridica. <strong>AI Act EU</strong>: sistemi ad alto rischio (HR, credito, salute) devono conformarsi entro agosto 2026.</p>
+        description: `<p>GDPR: ogni dato personale processato da AI deve avere base giuridica. <strong>AI Act EU</strong>: sistemi ad alto rischio (HR, credito, salute) devono conformarsi entro agosto 2026.</p>
 <div style="margin-top:10px; padding:10px; background:rgba(0,212,170,0.1); border-radius:8px; font-size:0.85em;">
   📋 <strong>63%</strong> delle organizzazioni breachate non aveva policy di AI governance nel 2025.<br>
   <span style="color:var(--muted);">Fonte: IBM Cost of a Data Breach 2025</span><br><br>
