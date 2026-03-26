@@ -427,6 +427,30 @@ VALUTAZIONI
 4. Mostra: temp=0.2 vs temp=1.5 \u2014 stessa domanda, risposte diverse<br>
 5. Cambia modello: gpt-4o-mini vs gpt-4o \u2192 confronta qualita<br>
 6. Mostra il contatore token e il costo stimato`,
+    demoMaterial: {
+      label: 'Configurazioni da testare live nel Playground',
+      experiments: [
+        {
+          name: 'Esperimento 1: temperature bassa vs alta',
+          systemPrompt: 'Sei un copywriter creativo specializzato in brand del food.',
+          userMessage: 'Scrivi uno slogan per un caffè artigianale siciliano.',
+          configs: [
+            { param: 'temperature', value: '0.2', expected: 'Slogan preciso, prevedibile, formale' },
+            { param: 'temperature', value: '1.5', expected: 'Slogan creativo, insolito, a volte bizzarro' },
+          ],
+        },
+        {
+          name: 'Esperimento 2: modello economico vs avanzato',
+          systemPrompt: 'Sei un analista finanziario.',
+          userMessage: 'Elenca 3 rischi di investire in startup AI nel 2026.',
+          configs: [
+            { param: 'model', value: 'gpt-4o-mini', expected: 'Risposta rapida, economica, discreta qualità' },
+            { param: 'model', value: 'gpt-4o', expected: 'Risposta più articolata e contestualizzata' },
+          ],
+        },
+      ],
+      tip: 'Mostra il contatore token in basso a destra — utile per capire il costo prima di andare in produzione.',
+    },
   },
 
   // 25. Workshop - Crea il tuo GPT custom

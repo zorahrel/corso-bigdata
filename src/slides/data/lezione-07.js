@@ -18,6 +18,7 @@ export const slides = [
     heading: 'Agenda',
     items: [
       { emoji: '\u{1F916}', text: "Cos'e un agente AI e come funziona" },
+      { emoji: '\u{1F310}', text: 'AI + Browser: agenti che navigano il web' },
       { emoji: '\u26A1', text: 'Zapier AI Actions' },
       { emoji: '\u{1F527}', text: 'n8n: workflow avanzati open source' },
       { emoji: '\u{1F534}', text: 'BUILD LIVE: email triage automatico' },
@@ -161,7 +162,160 @@ export const slides = [
     source: 'IBM Technology Trends & Predictions 2026',
   },
 
-  // 12. Zapier nel 2026
+  // ─── SEZIONE: AI + BROWSER ─────────────────────────────────────────────────
+
+  // 12. Titolo sezione: AI + Browser
+  {
+    type: 'title',
+    lessonNumber: '07',
+    title: 'AI + Browser',
+    subtitle: 'Agenti che navigano il web come un umano',
+    style: { background: 'linear-gradient(135deg, rgba(0,212,170,0.12), rgba(108,99,255,0.10))' },
+  },
+
+  // 13. Come funziona: Vision vs DOM
+  {
+    type: 'concept',
+    centered: true,
+    heading: 'Come funziona: due approcci',
+    content: `<div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; max-width:860px; margin:0 auto;">
+  <div style="background:rgba(108,99,255,0.1); border:1px solid rgba(108,99,255,0.3); border-radius:var(--radius); padding:28px;">
+    <h3 style="color:var(--accent); font-size:0.7em; margin-bottom:14px;">👁️ Vision-based</h3>
+    <p style="font-size:0.55em; color:var(--text); line-height:1.8;">
+      L'AI <strong>vede uno screenshot</strong> del browser e decide dove cliccare, scrivere, scorrere — come un umano.<br><br>
+      <span style="color:var(--secondary);">✅ Funziona su qualsiasi sito</span><br>
+      <span style="color:var(--muted);">⚠️ Lento, costoso in token, fragile ai cambi di layout</span><br><br>
+      <strong>Tool:</strong> Claude Computer Use, Gemini
+    </p>
+  </div>
+  <div style="background:rgba(0,212,170,0.1); border:1px solid rgba(0,212,170,0.3); border-radius:var(--radius); padding:28px;">
+    <h3 style="color:var(--secondary); font-size:0.7em; margin-bottom:14px;">🏗️ DOM / Playwright-based</h3>
+    <p style="font-size:0.55em; color:var(--text); line-height:1.8;">
+      L'AI <strong>legge la struttura HTML</strong> della pagina e interagisce via API (Playwright, CDP, Puppeteer).<br><br>
+      <span style="color:var(--secondary);">✅ Veloce, affidabile, tracciabile</span><br>
+      <span style="color:var(--muted);">⚠️ Non funziona con siti non standard / CAPTCHA</span><br><br>
+      <strong>Tool:</strong> OpenClaw, browser-use, OpenHands
+    </p>
+  </div>
+</div>
+<p style="text-align:center; font-size:0.5em; color:var(--muted); margin-top:20px;">In pratica i tool moderni usano entrambi: DOM per velocità, Vision come fallback</p>`,
+  },
+
+  // 14. Il loop di un browser agent
+  {
+    type: 'custom',
+    layout: 'workflow-diagram',
+    heading: 'Il loop di un browser agent',
+    steps: [
+      { emoji: '🎯', label: 'Obiettivo', type: 'trigger' },
+      { emoji: '👁️', label: 'Osserva pagina', type: 'ai' },
+      { emoji: '🧠', label: 'Pianifica azione', type: 'ai' },
+      { emoji: '🖱️', label: 'Click / Type / Scroll', type: 'action' },
+      { emoji: '✅', label: 'Verifica risultato', type: 'output' },
+    ],
+    footer: "Se il risultato non è quello atteso, l'agente ritenta — fino a raggiungere l'obiettivo o il limite di tentativi",
+  },
+
+  // 15. Strumenti: gratuiti vs a pagamento
+  {
+    type: 'concept',
+    centered: true,
+    heading: 'Strumenti browser AI: cosa usare',
+    content: `<div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:880px; margin:0 auto;">
+  <div>
+    <h3 style="color:var(--secondary); font-size:0.6em; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.08em;">🆓 Gratuiti / Open Source</h3>
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div style="background:var(--surface); border-radius:8px; padding:14px 18px;">
+        <div style="font-size:0.6em; font-weight:700;">browser-use</div>
+        <div style="font-size:0.48em; color:var(--muted); margin-top:4px;">Libreria Python, 10 righe di codice, usi il tuo LLM. Gemini free funziona.</div>
+      </div>
+      <div style="background:var(--surface); border-radius:8px; padding:14px 18px;">
+        <div style="font-size:0.6em; font-weight:700;">OpenHands</div>
+        <div style="font-size:0.48em; color:var(--muted); margin-top:4px;">Self-host su Docker/Codespaces. Agent completo con browser + terminale + codice.</div>
+      </div>
+      <div style="background:var(--surface); border-radius:8px; padding:14px 18px;">
+        <div style="font-size:0.6em; font-weight:700;">Playwright MCP</div>
+        <div style="font-size:0.48em; color:var(--muted); margin-top:4px;">Plugin Microsoft per Claude. Zero codice: parli e Claude naviga.</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3 style="color:var(--warning); font-size:0.6em; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.08em;">💳 Freemium / A pagamento</h3>
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div style="background:var(--surface); border-radius:8px; padding:14px 18px;">
+        <div style="font-size:0.6em; font-weight:700;">Manus</div>
+        <div style="font-size:0.48em; color:var(--muted); margin-top:4px;">Agent autonomo con browser. Piano free limitato, ottimo per demo rapide.</div>
+      </div>
+      <div style="background:var(--surface); border-radius:8px; padding:14px 18px;">
+        <div style="font-size:0.6em; font-weight:700;">OpenClaw</div>
+        <div style="font-size:0.48em; color:var(--muted); margin-top:4px;">Self-hosted, browser Playwright integrato. Costi solo LLM.</div>
+      </div>
+      <div style="background:var(--surface); border-radius:8px; padding:14px 18px;">
+        <div style="font-size:0.6em; font-weight:700;">Operator (OpenAI)</div>
+        <div style="font-size:0.48em; color:var(--muted); margin-top:4px;">Solo ChatGPT Plus. Vision-based. Buono per task consumer.</div>
+      </div>
+    </div>
+  </div>
+</div>`,
+  },
+
+  // 16. Criteri di qualità
+  {
+    type: 'custom',
+    layout: 'feature-grid',
+    heading: 'Come valutare un browser agent',
+    features: [
+      { icon: '🎯', title: 'Affidabilità', description: 'Quante volte riesce sul task? Testa con 10 run diversi, non con una demo fortunata.' },
+      { icon: '🛡️', title: 'Sicurezza', description: 'Dove gira la sessione browser? Chi vede le credenziali? Mai dare password a tool cloud non fidati.' },
+      { icon: '👁️', title: 'Osservabilità', description: 'Vedi cosa sta facendo? Screenshot, log, replay? Se è una black box, non puoi debuggare.' },
+      { icon: '💸', title: 'Costo per task', description: 'Quanti token / crediti consuma? Un task Vision usa 10-50x più token di un task DOM.' },
+      { icon: '⚡', title: 'Graceful degradation', description: "Cosa fa con CAPTCHA, popup, login 2FA? Un buon agent si ferma e chiede aiuto all'umano." },
+    ],
+  },
+
+  // 17. Use case pratici + stack consigliato
+  {
+    type: 'concept',
+    centered: true,
+    heading: 'Use case reali + come iniziare gratis',
+    content: `<div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; max-width:880px; margin:0 auto;">
+  <div>
+    <h3 style="color:var(--accent); font-size:0.6em; margin-bottom:14px;">💡 Cosa puoi automatizzare</h3>
+    <ul style="list-style:none; padding:0; font-size:0.55em; line-height:2; color:var(--text);">
+      <li>📊 Scraping prezzi / dati da siti</li>
+      <li>📋 Compilare form ripetitivi</li>
+      <li>📥 Login + download fatture/documenti</li>
+      <li>🧪 Test automatici UI (smoke test)</li>
+      <li>🔍 Ricerca e confronto prodotti</li>
+      <li>📣 Posting su piattaforme social</li>
+    </ul>
+  </div>
+  <div>
+    <h3 style="color:var(--secondary); font-size:0.6em; margin-bottom:14px;">🚀 Stack per iniziare gratis</h3>
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <div style="background:rgba(0,212,170,0.1); border-radius:8px; padding:12px 16px; font-size:0.52em;">
+        <strong>1. browser-use + Gemini free</strong><br>
+        <span style="color:var(--muted);">pip install browser-use · 10 righe Python · zero costi</span>
+      </div>
+      <div style="background:rgba(108,99,255,0.1); border-radius:8px; padding:12px 16px; font-size:0.52em;">
+        <strong>2. Playwright MCP + Claude.ai</strong><br>
+        <span style="color:var(--muted);">Installa il plugin, parli in italiano, Claude naviga</span>
+      </div>
+      <div style="background:var(--surface); border-radius:8px; padding:12px 16px; font-size:0.52em;">
+        <strong>3. Manus free tier</strong><br>
+        <span style="color:var(--muted);">Vai su manus.im · zero setup · demo immediata</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.25); border-radius:8px; padding:14px 20px; max-width:880px; margin:20px auto 0; text-align:center; font-size:0.52em; color:var(--warning);">
+  ⚠️ Regola d'oro: mai dare credenziali reali a un browser agent cloud. Usa account di test o tool self-hosted.
+</div>`,
+  },
+
+  // ─── FINE SEZIONE AI + BROWSER ────────────────────────────────────────────
+
+  // 18. Zapier nel 2026
   {
     type: 'concept',
     heading: 'Zapier nel 2026',

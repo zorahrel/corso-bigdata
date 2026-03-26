@@ -143,7 +143,8 @@ const DAYS = [
       { label: "Learn Prompting — guida gratuita completa", url: "https://learnprompting.org" },
       { label: "Anthropic Prompt Library — 100+ prompt pronti", url: "https://docs.anthropic.com/en/prompt-library/library" },
       { label: "OpenAI Prompt Engineering Guide — ufficiale", url: "https://platform.openai.com/docs/guides/prompt-engineering" },
-      { label: "roadmap.sh — Prompt Engineering path", url: "https://roadmap.sh/prompt-engineering" },
+      { label: "Context Engineering Guide — robotsatemyhomework", url: "https://robotsatemyhomework.substack.com/p/context-engineering-guide" },
+      { label: "everything-claude-code — case study context engineering", url: "https://github.com/affaan-m/everything-claude-code" },
     ],
     schedule: [
       { from: '09:00', to: '10:30', type: 'teoria', label: 'Tecniche di prompting e context engineering' },
