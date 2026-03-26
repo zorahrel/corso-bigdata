@@ -1294,6 +1294,7 @@ Notizie di ieri? Non le conosce.</p>
       { label: 'Groq — inferenza veloce con temperature slider', url: 'https://groq.com' },
       { label: 'HuggingFace Chat — modelli open con parametri avanzati', url: 'https://huggingface.co/chat' },
       { label: 'Mistral Chat — modello europeo gratuito', url: 'https://chat.mistral.ai' },
+      { label: 'Whisper Typing — dettatura AI gratuita per Windows', url: 'https://whispertyping.com' },
     ],
   },
 
