@@ -24,7 +24,7 @@ function FeatureGrid({ features = [] }) {
         <div className="feature-card" key={i}>
           <div className="feature-icon">{f.icon}</div>
           <div className="feature-title">{f.title}</div>
-          <div className="feature-desc">{f.description}</div>
+          <div className="feature-desc" dangerouslySetInnerHTML={f.description && typeof f.description === 'string' && f.description.includes('<') ? { __html: f.description } : undefined}>{f.description && !(typeof f.description === 'string' && f.description.includes('<')) ? f.description : null}</div>
         </div>
       ))}
     </div>
