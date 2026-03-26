@@ -147,11 +147,11 @@ export function SlideViewer({ lessonId, onExit }) {
         <>
           <div
             onClick={prev}
-            style={{ position: 'fixed', left: 0, top: '36px', width: '12%', height: 'calc(100% - 76px)', cursor: 'w-resize', zIndex: 50 }}
+            style={{ position: 'fixed', left: 0, top: '36px', width: '12%', height: 'calc(100% - 76px)', cursor: 'w-resize', zIndex: 9999 }}
           />
           <div
             onClick={next}
-            style={{ position: 'fixed', right: 0, top: '36px', width: '12%', height: 'calc(100% - 76px)', cursor: 'e-resize', zIndex: 50 }}
+            style={{ position: 'fixed', right: 0, top: '36px', width: '12%', height: 'calc(100% - 76px)', cursor: 'e-resize', zIndex: 9999 }}
           />
         </>
       )}
