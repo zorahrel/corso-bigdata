@@ -776,7 +776,309 @@ Notizie di ieri? Non le conosce.</p>
     footer: '<strong>Il messaggio:</strong> non serve diventare ingegneri AI. Serve capire abbastanza da fare le domande giuste, riconoscere gli errori e guidare il vostro team verso un uso responsabile e produttivo.',
   },
 
-  // 24. Hands-on
+  // 24. Fine-tuning vs prompting
+  {
+    type: 'custom',
+    layout: 'feature-grid',
+    heading: "Fine-tuning vs prompting: quando usare cosa?",
+    features: [
+      {
+        icon: '✍️',
+        title: 'Prompt engineering',
+        color: 'var(--secondary)',
+        body: `<p>Nessun costo, nessun setup. Funziona subito, si modifica in minuti.</p>
+<p>Copre il <strong>90% dei casi d'uso aziendali</strong>. Inizia sempre da qui.</p>
+<div style="margin-top:8px; font-size:0.85em; color:var(--muted);">✅ Ideale per: riassunti, email, analisi, brainstorming, traduzione</div>`,
+      },
+      {
+        icon: '🎯',
+        title: 'Fine-tuning',
+        color: 'var(--accent)',
+        body: `<p>Addestri il modello su tuoi dati proprietari. Risultati più coerenti su task specializzati.</p>
+<p><strong>Ha senso solo quando il prompt non basta</strong> — tono di brand, terminologia interna, task ripetitivi ad alto volume.</p>
+<div style="margin-top:8px; font-size:0.85em; color:var(--muted);">⚠️ Richiede: 100–1000+ esempi etichettati, budget, manutenzione</div>`,
+      },
+      {
+        icon: '📚',
+        title: 'RAG (Retrieval Augmented Generation)',
+        color: 'var(--warning)',
+        body: `<p>Aggiungi conoscenza esterna al modello senza addestrarlo. Il modello "legge" i tuoi documenti al momento della risposta.</p>
+<p>Perfetto per <strong>knowledge base, manuali, documenti aggiornati</strong>.</p>
+<div style="margin-top:8px; font-size:0.85em; color:var(--muted);">✅ Ideale per: FAQ aziendali, contratti, normative, dati real-time</div>`,
+      },
+      {
+        icon: '🚫',
+        title: 'Quando NON fare fine-tuning',
+        color: 'var(--danger)',
+        body: `<p>Il fine-tuning ha costi reali: OpenAI addebita <strong>$25/1M token di training</strong> + inferenza più costosa.</p>
+<p>Può <strong>degradare le capacità generali</strong> del modello se i dati sono pochi o sbilanciati. Richiede dataset etichettati di qualità — spesso il vero collo di bottiglia.</p>
+<div style="margin-top:8px; font-size:0.85em; color:var(--muted);">❌ Evita se: hai meno di 100 esempi, il problema è risolvibile con RAG, non hai un ML team</div>`,
+      },
+    ],
+    footer: '📊 Dati 2026: il 78% delle aziende ottiene risultati soddisfacenti con solo prompt engineering. Il fine-tuning vale la pena per task ad alto volume (>100K chiamate/mese) con output molto specifico. (Fonte: a16z State of AI Enterprise 2025)',
+  },
+
+  // 25. Quanto costa l'AI
+  {
+    type: 'custom',
+    layout: 'pricing-table',
+    heading: "Quanto costa l'AI in azienda?",
+    content: `<div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:24px;">
+
+  <div style="background:var(--surface); border-radius:var(--radius); padding:24px;">
+    <div style="font-size:0.65em; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:16px;">💳 Abbonamenti consumer</div>
+    <div style="display:flex; flex-direction:column; gap:12px; font-size:0.6em;">
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background:rgba(37,99,235,0.08); border-radius:8px;">
+        <span style="font-weight:600;">ChatGPT Plus (OpenAI)</span>
+        <span style="font-weight:700; color:var(--accent);">$20 / mese</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background:rgba(0,212,170,0.08); border-radius:8px;">
+        <span style="font-weight:600;">Claude Pro (Anthropic)</span>
+        <span style="font-weight:700; color:var(--secondary);">$20 / mese · $17 annuale</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background:rgba(251,191,36,0.08); border-radius:8px;">
+        <span style="font-weight:600;">Gemini Advanced (Google)</span>
+        <span style="font-weight:700; color:var(--warning);">$21.99 / mese</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background:rgba(255,255,255,0.04); border-radius:8px;">
+        <span style="font-weight:600;">Copilot Pro (Microsoft)</span>
+        <span style="font-weight:700; color:var(--muted);">$20 / mese</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--surface); border-radius:var(--radius); padding:24px;">
+    <div style="font-size:0.65em; font-weight:700; color:var(--warning); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:16px;">⚡ API enterprise (per 1M token)</div>
+    <div style="display:flex; flex-direction:column; gap:12px; font-size:0.6em;">
+      <div style="padding:10px 14px; background:rgba(37,99,235,0.08); border-radius:8px;">
+        <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+          <span style="font-weight:600;">GPT-4o (OpenAI)</span>
+          <span style="font-weight:700; color:var(--accent);">$2.50 input · $10 output</span>
+        </div>
+        <div style="color:var(--muted); font-size:0.9em;">Modello di riferimento per testo e visione</div>
+      </div>
+      <div style="padding:10px 14px; background:rgba(0,212,170,0.08); border-radius:8px;">
+        <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+          <span style="font-weight:600;">Claude Sonnet 4.6 (Anthropic)</span>
+          <span style="font-weight:700; color:var(--secondary);">$3 input · $15 output</span>
+        </div>
+        <div style="color:var(--muted); font-size:0.9em;">Bilanciamento ottimale velocità/intelligenza</div>
+      </div>
+      <div style="padding:10px 14px; background:rgba(251,191,36,0.08); border-radius:8px;">
+        <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+          <span style="font-weight:600;">Gemini 2.0 Flash (Google)</span>
+          <span style="font-weight:700; color:var(--warning);">$0.10 input · $0.40 output</span>
+        </div>
+        <div style="color:var(--muted); font-size:0.9em;">Il più economico tra i modelli di fascia alta</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="background:rgba(0,212,170,0.08); border:1px solid rgba(0,212,170,0.25); border-radius:var(--radius); padding:20px; font-size:0.6em;">
+  <div style="font-weight:700; color:var(--secondary); margin-bottom:10px;">🧮 Esempio pratico: team di 10 persone</div>
+  <div style="display:flex; gap:24px; flex-wrap:wrap;">
+    <div>
+      <span style="color:var(--muted);">Claude Pro × 10 persone =</span>
+      <span style="font-weight:700; color:var(--secondary); font-size:1.2em; margin-left:8px;">$200/mese</span>
+    </div>
+    <div>
+      <span style="color:var(--muted);">GPT-4o API moderato uso =</span>
+      <span style="font-weight:700; color:var(--accent); font-size:1.2em; margin-left:8px;">$50–150/mese</span>
+    </div>
+    <div>
+      <span style="color:var(--muted);">Modello locale (Ollama) =</span>
+      <span style="font-weight:700; color:var(--warning); font-size:1.2em; margin-left:8px;">$0 + hardware</span>
+    </div>
+  </div>
+</div>`,
+    footer: '💡 Per la maggior parte delle PMI, €20–50/mese per persona è il punto di partenza realistico. Prezzi API rilevati marzo 2026 — possono variare. I token "si consumano" solo quando usate le API, non con gli abbonamenti consumer.',
+  },
+
+  // 26. Modelli locali
+  {
+    type: 'concept',
+    centered: true,
+    heading: "Modelli locali: privacy e controllo",
+    headingColor: 'var(--warning)',
+    content: `<div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:960px; margin:0 auto; text-align:left;">
+
+  <div style="background:var(--surface); padding:24px; border-radius:var(--radius);">
+    <div style="font-size:1.4em; margin-bottom:10px;">🏠</div>
+    <h3 style="font-size:0.65em; color:var(--secondary); margin-bottom:10px;">Cosa sono</h3>
+    <p style="font-size:0.55em; color:var(--muted); line-height:1.7;">
+      Modelli che girano direttamente sul tuo computer o server aziendale. <strong>I tuoi dati non lasciano mai la tua infrastruttura</strong> — nessuna trasmissione a OpenAI, Anthropic o Google.
+    </p>
+  </div>
+
+  <div style="background:var(--surface); padding:24px; border-radius:var(--radius);">
+    <div style="font-size:1.4em; margin-bottom:10px;">🛠️</div>
+    <h3 style="font-size:0.65em; color:var(--accent); margin-bottom:10px;">Tool principali (gratuiti e open source)</h3>
+    <div style="font-size:0.55em; color:var(--muted); line-height:1.8;">
+      <div><strong style="color:var(--text);">Ollama</strong> — installa modelli con un comando, API locale</div>
+      <div><strong style="color:var(--text);">LM Studio</strong> — interfaccia grafica, ottimo per iniziare</div>
+      <div><strong style="color:var(--text);">Jan.ai</strong> — alternativa open source a ChatGPT desktop</div>
+    </div>
+  </div>
+
+  <div style="background:var(--surface); padding:24px; border-radius:var(--radius);">
+    <div style="font-size:1.4em; margin-bottom:10px;">🔒</div>
+    <h3 style="font-size:0.65em; color:var(--warning); margin-bottom:10px;">Quando usarli</h3>
+    <div style="font-size:0.55em; color:var(--muted); line-height:1.8;">
+      <div>• Dati sensibili: <strong>medici, legali, finanziari, HR</strong></div>
+      <div>• Ambienti air-gapped (no internet)</div>
+      <div>• Compliance GDPR stretta o settori regolamentati</div>
+      <div>• Costo API elevato ad alto volume</div>
+    </div>
+  </div>
+
+  <div style="background:var(--surface); padding:24px; border-radius:var(--radius);">
+    <div style="font-size:1.4em; margin-bottom:10px;">⚡</div>
+    <h3 style="font-size:0.65em; color:var(--danger); margin-bottom:10px;">Limiti e trend 2026</h3>
+    <div style="font-size:0.55em; color:var(--muted); line-height:1.8;">
+      <div>⚠️ Meno potenti dei modelli cloud frontier</div>
+      <div>⚠️ Richiedono GPU dedicata per performance decenti</div>
+      <div style="margin-top:6px; padding-top:6px; border-top:1px solid var(--border);">
+        <strong style="color:var(--secondary);">🚀 Trend 2026:</strong> Llama 4 (Meta), Mistral Medium, Phi-4 (Microsoft) — il gap con i cloud model si sta chiudendo rapidamente
+      </div>
+    </div>
+  </div>
+
+</div>`,
+    footer: '📌 Regola pratica: se i dati sono pubblici o non sensibili → cloud è più semplice e potente. Se i dati sono riservati e la compliance è critica → modelli locali. La scelta non è tecnica, è di governance.',
+  },
+
+  // 27. Come scegliere il modello
+  {
+    type: 'custom',
+    layout: 'feature-grid',
+    heading: "Come scegliere il modello giusto per il tuo caso",
+    features: [
+      {
+        icon: '🧠',
+        title: 'Testo, ragionamento, analisi complessa',
+        color: 'var(--accent)',
+        body: `<p>Hai bisogno della migliore qualità, task cognitivamente complessi, report strategici, analisi multi-step.</p>
+<div style="margin-top:10px; padding:10px; background:rgba(37,99,235,0.1); border-radius:8px; font-size:0.9em;">
+  <strong>→ Claude Opus 4.6</strong> o <strong>GPT-4o</strong><br>
+  <span style="color:var(--muted);">~$15–20/M token output · qualità massima</span>
+</div>`,
+      },
+      {
+        icon: '⚡',
+        title: 'Velocità, costo, alto volume',
+        color: 'var(--secondary)',
+        body: `<p>Task semplici e ripetitivi, classificazioni, riassunti brevi, chatbot. Hai budget limitato o molte chiamate al giorno.</p>
+<div style="margin-top:10px; padding:10px; background:rgba(0,212,170,0.1); border-radius:8px; font-size:0.9em;">
+  <strong>→ Claude Haiku</strong> · <strong>GPT-4o mini</strong> · <strong>Gemini Flash</strong><br>
+  <span style="color:var(--muted);">$0.10–0.40/M token output · 10-50× più economico</span>
+</div>`,
+      },
+      {
+        icon: '💻',
+        title: 'Scrittura e review del codice',
+        color: 'var(--warning)',
+        body: `<p>Debug, generazione di codice, spiegazioni tecniche, refactoring. Anche per non-tecnici che creano automazioni.</p>
+<div style="margin-top:10px; padding:10px; background:rgba(251,191,36,0.1); border-radius:8px; font-size:0.9em;">
+  <strong>→ Claude Sonnet 4.6</strong> · <strong>GitHub Copilot</strong><br>
+  <span style="color:var(--muted);">Copilot: $10/mese/utente con integrazione IDE</span>
+</div>`,
+      },
+      {
+        icon: '🔐',
+        title: 'Privacy, compliance, locale',
+        color: 'var(--danger)',
+        body: `<p>Dati sensibili che non possono uscire dall'azienda. Settori regolamentati: sanità, legale, finanza, difesa.</p>
+<div style="margin-top:10px; padding:10px; background:rgba(220,38,38,0.1); border-radius:8px; font-size:0.9em;">
+  <strong>→ Llama 4</strong> · <strong>Mistral</strong> via <strong>Ollama</strong><br>
+  <span style="color:var(--muted);">Gratuito · dati mai trasmessi · richiede GPU</span>
+</div>`,
+      },
+    ],
+    footer: '"Non esiste il modello migliore in assoluto — esiste il modello giusto per ogni task." Usate il modello più potente per prototipare, poi ottimizzate verso versioni più economiche in produzione.',
+  },
+
+  // 28. Modelli multimodali
+  {
+    type: 'concept',
+    centered: true,
+    heading: "Multimodale: un modello, tutti i formati",
+    headingColor: 'var(--secondary)',
+    content: `<div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:960px; margin:0 auto; text-align:left;">
+
+  <div style="background:var(--surface); padding:28px; border-radius:var(--radius);">
+    <div style="font-size:0.65em; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:16px;">📥 Input — cosa capisce</div>
+    <div style="display:flex; flex-direction:column; gap:10px; font-size:0.58em;">
+      <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:rgba(37,99,235,0.08); border-radius:8px;">
+        <span style="font-size:1.3em;">💬</span>
+        <div><strong>Testo</strong> — domande, documenti, codice</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:rgba(37,99,235,0.08); border-radius:8px;">
+        <span style="font-size:1.3em;">🖼️</span>
+        <div><strong>Immagini</strong> — foto, screenshot, grafici, fatture</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:rgba(37,99,235,0.08); border-radius:8px;">
+        <span style="font-size:1.3em;">🎙️</span>
+        <div><strong>Audio</strong> — voce, meeting, podcast</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:rgba(37,99,235,0.08); border-radius:8px;">
+        <span style="font-size:1.3em;">🎬</span>
+        <div><strong>Video</strong> — clip, demo, contenuti</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:rgba(37,99,235,0.08); border-radius:8px;">
+        <span style="font-size:1.3em;">📄</span>
+        <div><strong>Documenti</strong> — PDF, Excel, presentazioni</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--surface); padding:28px; border-radius:var(--radius);">
+    <div style="font-size:0.65em; font-weight:700; color:var(--secondary); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:16px;">📤 Output — cosa genera</div>
+    <div style="display:flex; flex-direction:column; gap:10px; font-size:0.58em;">
+      <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:rgba(0,212,170,0.08); border-radius:8px;">
+        <span style="font-size:1.3em;">✍️</span>
+        <div><strong>Testo</strong> — report, email, analisi, codice</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:rgba(0,212,170,0.08); border-radius:8px;">
+        <span style="font-size:1.3em;">🎨</span>
+        <div><strong>Immagini</strong> — DALL-E 3, Imagen 3, Flux</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:rgba(0,212,170,0.08); border-radius:8px;">
+        <span style="font-size:1.3em;">🔊</span>
+        <div><strong>Audio</strong> — TTS, voci clonate, podcast sintetici</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:rgba(0,212,170,0.08); border-radius:8px;">
+        <span style="font-size:1.3em;">📹</span>
+        <div><strong>Video</strong> — Sora 2, Kling, Runway Gen-3</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:rgba(0,212,170,0.08); border-radius:8px;">
+        <span style="font-size:1.3em;">⚙️</span>
+        <div><strong>Codice eseguibile</strong> — Python, SQL, formule Excel</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="max-width:960px; margin:20px auto 0; background:rgba(251,191,36,0.08); border:1px solid rgba(251,191,36,0.2); border-radius:var(--radius); padding:20px; font-size:0.58em;">
+  <div style="font-weight:700; color:var(--warning); margin-bottom:12px; font-size:1.1em;">💼 Esempi business concreti già oggi</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
+    <div style="padding:12px; background:rgba(0,0,0,0.2); border-radius:8px; line-height:1.5;">
+      📸 <strong>Foto fattura</strong> → estrazione automatica dati → registrazione contabile
+    </div>
+    <div style="padding:12px; background:rgba(0,0,0,0.2); border-radius:8px; line-height:1.5;">
+      🎙️ <strong>Meeting audio</strong> → trascrizione → action items → assegnazione task
+    </div>
+    <div style="padding:12px; background:rgba(0,0,0,0.2); border-radius:8px; line-height:1.5;">
+      📦 <strong>Foto prodotto</strong> → descrizione e-commerce → video promozionale
+    </div>
+  </div>
+</div>`,
+    footer: '"Il multimodale è già il default — i modelli text-only sono l\'eccezione, non la norma." GPT-4o, Claude e Gemini gestiscono già testo + immagini + audio in un\'unica interfaccia. Il futuro è già qui.',
+  },
+
+  // 29. Hands-on
   {
     type: 'hands-on',
     heading: "Esperimenti dal vivo",
