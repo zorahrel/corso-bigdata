@@ -1295,6 +1295,7 @@ Notizie di ieri? Non le conosce.</p>
       { label: 'HuggingFace Chat — modelli open con parametri avanzati', url: 'https://huggingface.co/chat' },
       { label: 'Mistral Chat — modello europeo gratuito', url: 'https://chat.mistral.ai' },
       { label: 'Whisper Typing — dettatura AI gratuita per Windows', url: 'https://whispertyping.com' },
+      { label: 'Arc Browser — browser moderno con AI integrata (invito)', url: 'https://arc.net/gift/95f1363d' },
     ],
   },
 
