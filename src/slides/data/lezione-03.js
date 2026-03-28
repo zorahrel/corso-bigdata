@@ -250,6 +250,80 @@ Formato: oggetto + corpo (max 150 parole)
 </div>`,
   },
 
+  // 16-NEW. Gli errori invisibili che rovinano i prompt
+  {
+    type: 'concept',
+    centered: true,
+    heading: "Gli errori invisibili che rovinano i prompt",
+    content: `<p>Dai docs ufficiali Anthropic: errori sottili che non sembrano sbagliati ma lo sono.</p>
+<ul class="antipattern-list">
+<li><span style="color:var(--danger); font-size:1.2em;">✗</span> <div><strong>Dire cosa NON fare invece di cosa fare</strong> — "Non usare markdown" → meglio "Scrivi in prosa fluente"</div></li>
+<li><span style="color:var(--danger); font-size:1.2em;">✗</span> <div><strong>Prompt in stile diverso dall'output atteso</strong> — se scrivi il prompt pieno di bullet, l'AI risponderà piena di bullet</div></li>
+<li><span style="color:var(--danger); font-size:1.2em;">✗</span> <div><strong>Spiegare solo COSA, non PERCHÉ</strong> — "Non usare puntini di sospensione" → il modello può ignorarlo. "Il testo andrà in un TTS che non sa pronunciarli" → rispettato</div></li>
+<li><span style="color:var(--danger); font-size:1.2em;">✗</span> <div><strong>Mettere i documenti dopo la domanda</strong> — con contesti lunghi (20k+ token) metti sempre il documento PRIMA e la domanda DOPO: +30% di performance</div></li>
+<li><span style="color:var(--danger); font-size:1.2em;">✗</span> <div><strong>Esempi non diversi tra loro</strong> — se tutti gli esempi sono simili, il modello impara il pattern sbagliato. Coprire i casi-limite</div></li>
+</ul>`,
+    footer: '<strong>Fonte:</strong> Anthropic Prompting Best Practices (Claude 4, 2026). Questi errori si trovano anche nei prompt "buoni" — verificateli sempre.',
+  },
+
+  // 16-NEW2. Extended thinking: l'AI che ragiona prima di rispondere
+  {
+    type: 'concept',
+    centered: true,
+    heading: "Extended thinking: l'AI che pensa prima di rispondere",
+    content: `<p>Una feature avanzata: il modello usa un <strong>"blocco di pensiero" interno</strong> prima di darti la risposta finale. Puoi vederlo, è trasparente.</p>
+<div class="compare-grid">
+<div>
+<div class="prompt-box bad"><span class="label">🧠 THINKING (interno)</span>
+"Initial situation: Three people each pay $10, total $30. Room costs $25. Manager gives $5 to bellboy. Bellboy keeps $2, returns $3.
+
+After: each person paid $9, total $27. Hotel has $25, bellboy has $2. $25+$2=$27 ✓
+
+The puzzle adds $27+$2 = double-counting the $2..."</div>
+</div>
+<div>
+<div class="prompt-box good"><span class="label">✅ RISPOSTA FINALE</span>
+"Il dollar mancante è un'illusione contabile. I $2 del fattorino sono già inclusi nei $27 pagati dagli ospiti. Non vanno sommati di nuovo.
+
+Conti corretti: $25 hotel + $2 fattorino + $3 restituiti = $30 ✓"</div>
+</div>
+</div>`,
+    footer: '<strong>Quando usarlo:</strong> matematica, logica complessa, analisi multi-step. Non serve per task semplici — aggiunge latenza e costo. Disponibile su Claude Opus/Sonnet 4.x con il parametro <code>thinking: adaptive</code>.',
+  },
+
+  // 16-NEW3. Orchestrator-Workers: AI che orchestra AI
+  {
+    type: 'concept',
+    centered: true,
+    heading: "Orchestrator-Workers: AI che delega ad AI",
+    content: `<p>Pattern avanzato da Anthropic Cookbook: un LLM <strong>analizza il task</strong> e <strong>delega a LLM specializzati</strong>.</p>
+<div style="font-size:0.5em; width:100%;">
+  <div style="display:flex; gap:8px; align-items:flex-start;">
+    <div style="background:var(--surface-dark); padding:12px; border-radius:8px; flex:1; border-left:3px solid var(--accent);">
+      <div style="color:var(--accent); font-weight:700; margin-bottom:6px;">1. ORCHESTRATOR analizza</div>
+      <div>Task: "Scrivi copy per una borraccia eco-friendly"</div>
+      <div style="color:var(--muted); margin-top:4px;">→ Decide: servono 3 approcci diversi</div>
+    </div>
+    <div style="color:var(--accent); font-size:1.5em; padding-top:12px;">→</div>
+    <div style="display:flex; flex-direction:column; gap:6px; flex:2;">
+      <div style="background:var(--surface-dark); padding:10px; border-radius:8px; border-left:3px solid var(--secondary);">
+        <strong>Worker 1:</strong> tecnico-scientifico (materiali, certificazioni, CO₂ risparmiata)
+      </div>
+      <div style="background:var(--surface-dark); padding:10px; border-radius:8px; border-left:3px solid var(--warning);">
+        <strong>Worker 2:</strong> lifestyle-emozionale (valori, identità, comunità)
+      </div>
+      <div style="background:var(--surface-dark); padding:10px; border-radius:8px; border-left:3px solid var(--danger);">
+        <strong>Worker 3:</strong> benefit-pratico (risparmio, temperatura, durata)
+      </div>
+    </div>
+  </div>
+  <div style="background:var(--surface-dark); padding:12px; border-radius:8px; margin-top:8px; border-left:3px solid var(--accent); text-align:center;">
+    <strong>Risultato:</strong> 3 versioni ottimizzate per canali diversi (e-commerce, social, retail) — generate in parallelo
+  </div>
+</div>`,
+    footer: '<strong>Usa questo pattern quando:</strong> task che richiedono prospettive diverse, sottotask non prevedibili, output paralleli. <strong>Non usarlo per:</strong> task semplici, latency-critical, output singolo. (Fonte: Anthropic Cookbook)',
+  },
+
   // 16. Context engineering: il prossimo livello
   {
     type: 'concept',
@@ -261,6 +335,190 @@ Formato: oggetto + corpo (max 150 parole)
 Non si tratta solo di COSA chiedi, ma di <strong>TUTTO CIO CHE L'AI SA</strong> quando risponde: istruzioni, memoria, strumenti, esempi.`,
     image: { src: '', alt: '' },
     footer: '<strong>In pratica:</strong> il prompt e solo la punta dell\'iceberg. Il vero vantaggio competitivo sta nel costruire l\'intero ecosistema informativo attorno all\'AI.',
+  },
+
+  // 16-NEW4. Tool use: quando l'AI esegue, non solo risponde
+  {
+    type: 'concept',
+    centered: true,
+    heading: "Tool use: quando l'AI esegue, non solo risponde",
+    content: `<p>Un LLM da solo risponde. Un LLM con <strong>tool use</strong> chiama API esterne, legge file, esegue codice.</p>
+<div style="font-size:0.5em; width:100%; display:flex; gap:10px;">
+  <div style="flex:1;">
+    <div style="background:var(--surface-dark); padding:14px; border-radius:8px; border-left:3px solid var(--danger);">
+      <div style="color:var(--danger); font-weight:700; margin-bottom:8px;">❌ Prompt vago → suggerisce</div>
+      <code>"Can you suggest some changes to improve this function?"</code>
+      <div style="color:var(--muted); margin-top:8px;">→ L'AI suggerisce ma NON modifica</div>
+    </div>
+  </div>
+  <div style="flex:1;">
+    <div style="background:var(--surface-dark); padding:14px; border-radius:8px; border-left:3px solid var(--accent);">
+      <div style="color:var(--accent); font-weight:700; margin-bottom:8px;">✅ Prompt diretto → agisce</div>
+      <code>"Change this function to improve its performance."</code>
+      <div style="color:var(--muted); margin-top:8px;">→ L'AI modifica direttamente il file</div>
+    </div>
+  </div>
+</div>
+<br/>
+<div style="font-size:0.5em; background:var(--surface-dark); padding:14px; border-radius:8px;">
+  <strong>💡 System prompt per renderla proattiva:</strong><br/>
+  <code>"By default, implement changes rather than only suggesting them. If the user's intent is unclear, infer the most useful action and proceed."</code>
+</div>`,
+    footer: '<strong>Takeaway:</strong> "can you suggest" vs "change this" — due parole diverse, due comportamenti opposti. Con il tool use la precisione del linguaggio conta doppio.',
+  },
+
+  // 16-NEW5. Prompt per il controllo del formato output
+  {
+    type: 'concept',
+    centered: true,
+    heading: "Controllare l'output: 4 tecniche concrete",
+    content: `<p>Dai docs Claude 4: come evitare output disordinati, troppo lunghi, o nel formato sbagliato.</p>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:0.48em; width:100%;">
+  <div style="background:var(--surface-dark); padding:12px; border-radius:8px;">
+    <div style="color:var(--accent); font-weight:700; margin-bottom:6px;">1. Di' cosa fare, non cosa evitare</div>
+    <div style="color:var(--danger); margin-bottom:4px;">❌ "Non usare markdown"</div>
+    <div style="color:var(--secondary);">✅ "Scrivi in prosa fluente con paragrafi"</div>
+  </div>
+  <div style="background:var(--surface-dark); padding:12px; border-radius:8px;">
+    <div style="color:var(--accent); font-weight:700; margin-bottom:6px;">2. XML per sezioni precise</div>
+    <div style="color:var(--muted);">Usa tag per isolare parti specifiche:</div>
+    <code style="font-size:0.9em;">"Scrivi la risposta in &lt;prosa_fluente&gt; tag"</code>
+  </div>
+  <div style="background:var(--surface-dark); padding:12px; border-radius:8px;">
+    <div style="color:var(--accent); font-weight:700; margin-bottom:6px;">3. Stile del prompt = stile dell'output</div>
+    <div>Se il tuo prompt usa bullet, l'AI risponderà con bullet. Scrivi il prompt come vuoi l'output.</div>
+  </div>
+  <div style="background:var(--surface-dark); padding:12px; border-radius:8px;">
+    <div style="color:var(--accent); font-weight:700; margin-bottom:6px;">4. Prompt dettagliato per casi complessi</div>
+    <div>Per report tecnici: specifica esplicitamente "no liste a meno che non siano dati discreti, usa prosa con paragrafi"</div>
+  </div>
+</div>`,
+    footer: '<strong>Bonus Anthropic:</strong> rimuovere il markdown dal prompt riduce il markdown nell\'output. Il modello "mima" lo stile di scrittura che legge.',
+  },
+
+  // 16-NEW6. Subagent: i sistemi autonomi che lavorano per te
+  {
+    type: 'concept',
+    centered: true,
+    heading: "Subagent: i sistemi che lavorano per ore senza di te",
+    content: `<p>I modelli Claude più recenti possono <strong>orchestrare altri AI autonomamente</strong> su task lunghi. Come funziona in pratica:</p>
+<div style="font-size:0.5em; display:flex; flex-direction:column; gap:8px; width:100%;">
+  <div style="background:var(--surface-dark); padding:12px; border-radius:8px; display:flex; gap:12px; align-items:center;">
+    <div style="background:var(--accent); color:white; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-weight:bold; flex-shrink:0;">1</div>
+    <div><strong>Context awareness</strong> — Claude sa quanti token ha usato e quanto spazio resta nella finestra</div>
+  </div>
+  <div style="background:var(--surface-dark); padding:12px; border-radius:8px; display:flex; gap:12px; align-items:center;">
+    <div style="background:var(--secondary); color:white; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-weight:bold; flex-shrink:0;">2</div>
+    <div><strong>State management</strong> — salva progressi in JSON strutturato (<code>tests.json</code>, <code>progress.txt</code>) e usa git come checkpoint</div>
+  </div>
+  <div style="background:var(--surface-dark); padding:12px; border-radius:8px; display:flex; gap:12px; align-items:center;">
+    <div style="background:var(--warning); color:white; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-weight:bold; flex-shrink:0;">3</div>
+    <div><strong>Multi-window workflows</strong> — il task continua su finestre di contesto diverse, con verifiche automatiche tra una e l'altra</div>
+  </div>
+  <div style="background:var(--surface-dark); padding:12px; border-radius:8px; display:flex; gap:12px; align-items:center;">
+    <div style="background:var(--danger); color:white; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-weight:bold; flex-shrink:0;">4</div>
+    <div><strong>Safety by default</strong> — Claude chiede conferma prima di azioni irreversibili (push forzato, cancellazione file, post pubblici)</div>
+  </div>
+</div>`,
+    footer: '<strong>In pratica oggi:</strong> Claude Code può lavorare per ore su una codebase — scrive test, fixa bug, fa commit — senza intervento umano. Fonte: Anthropic Agentic Systems Docs 2026.',
+  },
+
+  // 16-NEW7. Self-correction: il prompt che migliora se stesso
+  {
+    type: 'concept',
+    centered: true,
+    heading: "Self-correction: l'AI che si auto-valuta",
+    content: `<p>Tecnica dal Cookbook Anthropic: 3 API call in sequenza per output di qualità superiore.</p>
+<div style="font-size:0.5em; width:100%; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; gap:8px; align-items:center;">
+    <div style="background:var(--accent); color:white; padding:8px 14px; border-radius:8px; font-weight:700; white-space:nowrap;">STEP 1</div>
+    <div style="background:var(--surface-dark); padding:12px; border-radius:8px; flex:1;">
+      <strong>Generate</strong> — prima chiamata: genera il draft iniziale<br/>
+      <code style="font-size:0.9em;">Prompt: "Scrivi un piano di marketing per X"</code>
+    </div>
+  </div>
+  <div style="display:flex; gap:8px; align-items:center;">
+    <div style="background:var(--secondary); color:white; padding:8px 14px; border-radius:8px; font-weight:700; white-space:nowrap;">STEP 2</div>
+    <div style="background:var(--surface-dark); padding:12px; border-radius:8px; flex:1;">
+      <strong>Review</strong> — seconda chiamata: critica il draft con criteri espliciti<br/>
+      <code style="font-size:0.9em;">Prompt: "Valuta questo piano: è specifico? misurabile? realistico? Lista i punti deboli."</code>
+    </div>
+  </div>
+  <div style="display:flex; gap:8px; align-items:center;">
+    <div style="background:var(--warning); color:white; padding:8px 14px; border-radius:8px; font-weight:700; white-space:nowrap;">STEP 3</div>
+    <div style="background:var(--surface-dark); padding:12px; border-radius:8px; flex:1;">
+      <strong>Refine</strong> — terza chiamata: riscrivi integrando le critiche<br/>
+      <code style="font-size:0.9em;">Prompt: "Riscrivi il piano risolvendo questi problemi: [critiche]"</code>
+    </div>
+  </div>
+  <div style="background:var(--surface-dark); padding:10px; border-radius:8px; border-left:3px solid var(--accent); margin-top:4px;">
+    <strong>Perché funziona:</strong> ogni step è una chiamata API separata — puoi loggare, valutare e ramificare il flusso in qualsiasi punto.
+  </div>
+</div>`,
+    footer: '<strong>Applicazioni pratiche:</strong> revisione contratti, qualità codice, content marketing, report automatici. Costo: 3x token. Qualità: nettamente superiore. Vale quasi sempre.',
+  },
+
+  // 16-NEW8. Parallel tool calling: velocità professionale
+  {
+    type: 'concept',
+    centered: true,
+    heading: "Parallel tool calling: AI che multitasking",
+    content: `<p>I modelli Claude 4 eseguono più tool <strong>in parallelo</strong> automaticamente — come un professionista che delega più task contemporaneamente.</p>
+<div style="font-size:0.5em; width:100%; display:flex; gap:10px;">
+  <div style="flex:1; background:var(--surface-dark); padding:14px; border-radius:8px; border-left:3px solid var(--danger);">
+    <div style="color:var(--danger); font-weight:700; margin-bottom:8px;">❌ Sequenziale (vecchio)</div>
+    <div>→ Leggi file A (2s)</div>
+    <div>→ Leggi file B (2s)</div>
+    <div>→ Leggi file C (2s)</div>
+    <div style="color:var(--muted); margin-top:8px;">Totale: <strong>6 secondi</strong></div>
+  </div>
+  <div style="flex:1; background:var(--surface-dark); padding:14px; border-radius:8px; border-left:3px solid var(--accent);">
+    <div style="color:var(--accent); font-weight:700; margin-bottom:8px;">✅ Parallelo (Claude 4)</div>
+    <div>→ Leggi A + B + C contemporaneamente</div>
+    <div style="color:var(--muted); margin-top:8px;">Totale: <strong>2 secondi</strong></div>
+  </div>
+</div>
+<br/>
+<div style="font-size:0.5em; background:var(--surface-dark); padding:14px; border-radius:8px; width:100%;">
+  <strong>System prompt per massimizzare:</strong><br/>
+  <code>"If you intend to call multiple tools and there are no dependencies between them, make all calls in parallel. Maximize use of parallel tool calls where possible."</code><br/><br/>
+  <div style="color:var(--warning);">⚠️ Eccezione: se il tool B dipende dal risultato di A, usare sequenziale — non indovinare i parametri</div>
+</div>`,
+    footer: '<strong>Impatto reale:</strong> su ricerche multi-fonte, analisi di codebase, scraping multiplo — il parallelismo riduce i tempi del 60-80%. Fonte: Anthropic Best Practices Claude 4.',
+  },
+
+  // 16-NEW9. Adaptive thinking: il budget del ragionamento
+  {
+    type: 'concept',
+    centered: true,
+    heading: "Adaptive thinking: quanto deve 'pensare' l'AI?",
+    content: `<p>Claude 4 calibra autonomamente <strong>quanto ragionamento usare</strong> in base alla difficoltà del task — con un parametro <code>effort</code> che tu controlli.</p>
+<div style="font-size:0.5em; width:100%; display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:10px;">
+  <div style="background:var(--surface-dark); padding:12px; border-radius:8px; text-align:center; border-top:3px solid var(--secondary);">
+    <div style="font-size:1.4em;">⚡</div>
+    <div style="font-weight:700; color:var(--secondary);">low</div>
+    <div style="color:var(--muted); margin-top:4px;">Chat, classificazione, contenuti semplici</div>
+  </div>
+  <div style="background:var(--surface-dark); padding:12px; border-radius:8px; text-align:center; border-top:3px solid var(--warning);">
+    <div style="font-size:1.4em;">⚙️</div>
+    <div style="font-weight:700; color:var(--warning);">medium</div>
+    <div style="color:var(--muted); margin-top:4px;">Coding, analisi, report tecnici</div>
+  </div>
+  <div style="background:var(--surface-dark); padding:12px; border-radius:8px; text-align:center; border-top:3px solid var(--accent);">
+    <div style="font-size:1.4em;">🧠</div>
+    <div style="font-weight:700; color:var(--accent);">high</div>
+    <div style="color:var(--muted); margin-top:4px;">Agent autonomi, multi-step, ricerca complessa</div>
+  </div>
+  <div style="background:var(--surface-dark); padding:12px; border-radius:8px; text-align:center; border-top:3px solid var(--danger);">
+    <div style="font-size:1.4em;">🚀</div>
+    <div style="font-weight:700; color:var(--danger);">max</div>
+    <div style="color:var(--muted); margin-top:4px;">Task critici, migrazioni grandi, ricerca profonda</div>
+  </div>
+</div>
+<div style="font-size:0.5em; background:var(--surface-dark); padding:12px; border-radius:8px;">
+  <strong>🧮 Trade-off:</strong> effort alto = risposte migliori ma più lente e costose. Scegli in base al task. Per le chat quotidiane: <code>low</code> o <code>medium</code>. Per agenti autonomi: <code>high</code> o <code>max</code>.
+</div>`,
+    footer: '<strong>Differenza con extended thinking:</strong> extended thinking era manuale (budget_tokens fisso). Adaptive thinking si regola da solo — tu dici solo l\'importanza del task. Claude 4.6+ only.',
   },
 
   // 17. I 4 strati del context (layer-stack)
@@ -588,16 +846,51 @@ sempre la fonte.</div>
     ],
   },
 
-  // 34. Risorse
+  // 34. Golden rules Anthropic (da email ufficiale)
+  {
+    type: 'concept',
+    heading: "Le regole d'oro Anthropic per il prompting",
+    content: `<p>Direttamente dalle <strong>best practices ufficiali Claude 4</strong> — le linee guida usate dai team di Anthropic:</p>
+<ul>
+  <li>🎯 <strong>Sii specifico sul formato output</strong> — non lasciare che Claude indovini: di' esattamente cosa vuoi</li>
+  <li>💡 <strong>Spiega il perché</strong> — "<em>Il testo verrà letto da un TTS, quindi non usare puntini di sospensione</em>" funziona meglio di "<em>non usare puntini di sospensione</em>"</li>
+  <li>📄 <strong>Documenti lunghi? Mettili prima della query</strong> — migliora le performance fino al 30%</li>
+  <li>🏷️ <strong>XML tags per prompt complessi</strong> — <code>&lt;istruzioni&gt;</code>, <code>&lt;contesto&gt;</code>, <code>&lt;esempi&gt;</code> riducono l'ambiguità</li>
+  <li>🤖 <strong>Dai un ruolo nel system prompt</strong> — anche una sola frase cambia il comportamento</li>
+</ul>`,
+    image: {
+      src: null,
+      alt: 'Golden rule Anthropic',
+      html: `<div style="display:flex; flex-direction:column; gap:12px; font-size:0.5em; width:100%;">
+  <div style="background:var(--surface-dark); padding:16px; border-radius:8px; border-left:4px solid var(--accent);">
+    <div style="color:var(--accent); font-weight:700; margin-bottom:6px;">💡 GOLDEN RULE (Anthropic Docs)</div>
+    <div style="color:var(--text);">"Mostra il prompt a un collega con minimal contesto sul task. Se sarebbe confuso, Claude lo sarà pure."</div>
+  </div>
+  <div style="background:var(--surface-dark); padding:16px; border-radius:8px;">
+    <div style="color:var(--secondary); font-weight:700; margin-bottom:8px;">🛠️ STRUMENTO GRATUITO: Prompt Generator</div>
+    <div style="color:var(--text);">Descrivi il tuo task → il Console Anthropic genera automaticamente un prompt ottimizzato. Zero blank page problem.</div>
+    <div style="color:var(--muted); margin-top:6px;">platform.claude.com → Console → Workbench</div>
+  </div>
+</div>`,
+    },
+    footer: '<strong>Fonte:</strong> Email ufficiale Claude Team + Anthropic Prompting Best Practices (Claude 4, marzo 2026). Questi principi si applicano a qualsiasi LLM, non solo Claude.',
+  },
+
+  // 35. Risorse
   {
     type: 'resource',
     heading: 'Risorse',
     links: [
-      { label: 'Learn Prompting \u2014 guida gratuita completa', url: 'https://learnprompting.org' },
-      { label: 'Anthropic Prompt Library \u2014 100+ prompt pronti', url: 'https://docs.anthropic.com/en/prompt-library/library' },
-      { label: 'OpenAI Prompt Engineering Guide \u2014 ufficiale', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
-      { label: 'Context Engineering Guide \u2014 robotsatemyhomework', url: 'https://robotsatemyhomework.substack.com/p/context-engineering-guide' },
-      { label: 'everything-claude-code \u2014 case study context engineering', url: 'https://github.com/affaan-m/everything-claude-code' },
+      { label: 'Learn Prompting — guida gratuita completa', url: 'https://learnprompting.org' },
+      { label: 'Anthropic Prompt Library — 100+ prompt pronti', url: 'https://docs.anthropic.com/en/prompt-library/library' },
+      { label: 'OpenAI Prompt Engineering Guide — ufficiale', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
+      { label: 'Context Engineering Guide — robotsatemyhomework', url: 'https://robotsatemyhomework.substack.com/p/context-engineering-guide' },
+      { label: 'everything-claude-code — case study context engineering', url: 'https://github.com/affaan-m/everything-claude-code' },
+      { label: '⭐ Anthropic Best Practices Claude 4 — guida ufficiale prompt engineering', url: 'https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices' },
+      { label: '⭐ Anthropic Academy — corso video gratuito (API, RAG, Agents, MCP)', url: 'https://anthropic.skilljar.com/claude-with-the-anthropic-api/287745' },
+      { label: '⭐ Claude Cookbook — 30+ ricette pratiche pronte all\'uso', url: 'https://platform.claude.com/cookbook' },
+      { label: '⭐ Claude Quickstarts — 5 progetti completi (customer support, financial analyst, computer use...)', url: 'https://github.com/anthropics/anthropic-quickstarts' },
+      { label: '⭐ Prompt Generator — genera prompt ottimizzati automaticamente (Console Anthropic)', url: 'https://platform.claude.com' },
     ],
   },
 

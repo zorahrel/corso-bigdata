@@ -176,6 +176,7 @@ const DAYS = [
       { label: "OpenAI Cookbook — esempi pratici", url: "https://cookbook.openai.com" },
       { label: "GPTs Editor — crea il tuo GPT custom", url: "https://chatgpt.com/gpts/editor" },
       { label: "GPT Store — esplora GPT della community", url: "https://chatgpt.com/gpts" },
+      { label: "Emergent — build production-ready apps con AI agents", url: "https://app.emergent.sh/landing/" },
     ],
     schedule: [
       { from: '09:00', to: '10:00', type: 'teoria', label: 'ChatGPT avanzato: GPTs custom, canvas' },
@@ -238,6 +239,7 @@ const DAYS = [
       { label: "ClickUp AI — project management AI", url: "https://clickup.com" },
       { label: "Cursor — VSCode con AI integrata", url: "https://cursor.sh" },
       { label: "v0.dev — UI da prompt in secondi", url: "https://v0.dev" },
+      { label: "Emergent — build production-ready apps con AI agents", url: "https://app.emergent.sh/landing/" },
     ],
     schedule: [
       { from: '09:00', to: '10:00', type: 'teoria', label: 'Microsoft Power Automate + Copilot' },
