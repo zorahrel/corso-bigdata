@@ -29,7 +29,7 @@ export const slides = [
   // 3. MEME
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif', alt: 'Choosing the right AI tool' },
+    image: { src: 'https://i.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif', alt: 'Choosing the right AI tool' },
     caption: '"Scegliere il tool AI giusto nel 2026"',
   },
 
@@ -62,7 +62,7 @@ export const slides = [
   <br><br>
   <strong>Perch\u00E9 \u00E8 potente:</strong> integrazione nativa con tutto l'ecosistema Microsoft 365. Se la tua azienda usa Office, \u00E8 gi\u00E0 li.
 </p>`,
-    image: { src: 'https://media.giphy.com/media/l0HlNQ03J5JxX2rGU/giphy.gif', alt: 'Automation' },
+    image: { src: 'https://i.giphy.com/media/l0HlNQ03J5JxX2rGU/giphy.gif', alt: 'Automation' },
   },
 
   // 6. Copilot in azione: Office 365
@@ -93,7 +93,7 @@ export const slides = [
   <br><br>
   \u{1F4F7} <strong>OCR intelligente</strong> — estrai dati da documenti scannerizzati
 </p>`,
-    image: { src: 'https://media.giphy.com/media/3o7btNa0RUYa5E7iiQ/giphy.gif', alt: 'AI Builder' },
+    image: { src: 'https://i.giphy.com/media/3o7btNa0RUYa5E7iiQ/giphy.gif', alt: 'AI Builder' },
   },
 
   // 8. Connettori: Power Automate parla con tutto
@@ -142,7 +142,7 @@ export const slides = [
   // 10. MEME Power Automate
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif', alt: 'Power Automate when it works' },
+    image: { src: 'https://i.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif', alt: 'Power Automate when it works' },
     caption: '"Power Automate quando il flusso funziona al primo tentativo"',
   },
 
@@ -190,7 +190,7 @@ export const slides = [
   <br><br>
   <strong>Gratis</strong> — incluso nell'account Google. Nessun costo aggiuntivo.
 </p>`,
-    image: { src: 'https://media.giphy.com/media/l2JehQ2GitHGdVG9y/giphy.gif', alt: 'Research' },
+    image: { src: 'https://i.giphy.com/media/l2JehQ2GitHGdVG9y/giphy.gif', alt: 'Research' },
   },
 
   // 14. Gemini vs ChatGPT vs Claude
@@ -226,7 +226,7 @@ export const slides = [
   <br><br>
   <strong>Pro vs Google:</strong> risposte dirette, fonti verificabili, niente SEO spam. Meno rumore, piu segnale.
 </p>`,
-    image: { src: 'https://media.giphy.com/media/3oKIPnAiaMCJ8rJ1wk/giphy.gif', alt: 'Search' },
+    image: { src: 'https://i.giphy.com/media/3oKIPnAiaMCJ8rJ1wk/giphy.gif', alt: 'Search' },
   },
 
   // 17. Cursor: scrivere codice con AI
@@ -240,7 +240,7 @@ export const slides = [
   <br><br>
   <strong>Impatto:</strong> sviluppatori 2-5x piu produttivi. Junior che producono come senior. Il gap si riduce.
 </p>`,
-    image: { src: 'https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif', alt: 'Coding' },
+    image: { src: 'https://i.giphy.com/media/ZVik7pBtu9dNS/giphy.gif', alt: 'Coding' },
   },
 
   // 18. v0 by Vercel: UI dal prompt
@@ -254,7 +254,7 @@ export const slides = [
   <br><br>
   <strong>Per chi:</strong> product manager, designer, chiunque voglia prototipare velocemente senza aspettare il team dev.
 </p>`,
-    image: { src: 'https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif', alt: 'UI generation' },
+    image: { src: 'https://i.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif', alt: 'UI generation' },
   },
 
   // 19. Notion AI: knowledge management
@@ -268,7 +268,7 @@ export const slides = [
   <br><br>
   <strong>Q&A:</strong> "Qual era la decisione presa nel meeting del 15 marzo?" — risponde con link alla pagina.
 </p>`,
-    image: { src: 'https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif', alt: 'Knowledge' },
+    image: { src: 'https://i.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif', alt: 'Knowledge' },
   },
 
   // 20. Make vs Zapier vs n8n
@@ -543,5 +543,14 @@ Headcount: 187 (+12 nel trimestre). Tempo medio di assunzione: 35 giorni (target
       { label: 'Cursor — cursor.sh', url: 'https://cursor.sh' },
       { label: 'v0 by Vercel — v0.dev', url: 'https://v0.dev' },
     ],
+  },
+
+  // 27. Prossima lezione
+  {
+    type: 'title',
+    lessonNumber: 'Prossima lezione',
+    title: '07 · Agenti AI + Zapier + n8n',
+    subtitle: 'Da AI passivo ad AI attivo: agenti autonomi e workflow intelligenti',
+    style: { color: 'var(--secondary)' },
   },
 ]

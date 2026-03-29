@@ -29,7 +29,7 @@ export const slides = [
   // 3. MEME
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/077i6AULCXc0FKTj9s/giphy.gif', alt: 'AI agent does something unexpected' },
+    image: { src: 'https://i.giphy.com/media/077i6AULCXc0FKTj9s/giphy.gif', alt: 'AI agent does something unexpected' },
     caption: '"Quando il tuo agente AI fa qualcosa di inaspettato"',
   },
 
@@ -59,9 +59,7 @@ export const slides = [
   </div>
 </div>
 <p style="text-align:center; font-size:0.55em; color:var(--muted); margin-top:24px;">2024: anno degli LLM \u00B7 2025: anno degli agenti \u00B7 2026: agenti in produzione</p>
-<div style="text-align:center; margin-top:24px;">
-  <img src="assets/diagrams/agent-loop.svg" style="max-width:400px;border-radius:8px;" alt="Agent Loop: Percezione \u2192 Ragionamento \u2192 Pianificazione \u2192 Azione \u2192 Feedback">
-</div>`,
+`,
   },
 
   // 5. Anatomia di un agente AI
@@ -330,7 +328,7 @@ export const slides = [
   <br><br>
   7000+ app connesse, 30M+ utenti
 </p>`,
-    image: { src: 'https://media.giphy.com/media/3o7btNa0RUYa5E7iiQ/giphy.gif', alt: 'Automation' },
+    image: { src: 'https://i.giphy.com/media/3o7btNa0RUYa5E7iiQ/giphy.gif', alt: 'Automation' },
   },
 
   // 13. Zaps: il blocco base
@@ -390,13 +388,13 @@ export const slides = [
   <br><br>
   <strong>Quando Zapier diventa un app builder:</strong> form raccolta dati \u2192 Zap AI processa \u2192 Table salva \u2192 Interface mostra risultati.
 </p>`,
-    image: { src: 'https://media.giphy.com/media/l0HlNQ03J5JxX2rGU/giphy.gif', alt: 'App builder' },
+    image: { src: 'https://i.giphy.com/media/l0HlNQ03J5JxX2rGU/giphy.gif', alt: 'App builder' },
   },
 
   // 16. MEME Zapier
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif', alt: 'When your Zap finally works' },
+    image: { src: 'https://i.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif', alt: 'When your Zap finally works' },
     caption: '"Quando il tuo Zap funziona finalmente al primo tentativo"',
   },
 
@@ -413,7 +411,7 @@ export const slides = [
   <br><br>
   <strong>Piu potente</strong> — sub-workflow, error handling avanzato, webhook bidirezionali.
 </p>`,
-    image: { src: 'https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif', alt: 'n8n workflow' },
+    image: { src: 'https://i.giphy.com/media/ZVik7pBtu9dNS/giphy.gif', alt: 'n8n workflow' },
   },
 
   // 18. L'interfaccia n8n
@@ -533,7 +531,7 @@ export const slides = [
   // 23. MEME
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/IPbS5R4fSUl5S/giphy.gif', alt: 'Building automations at 3am' },
+    image: { src: 'https://i.giphy.com/media/IPbS5R4fSUl5S/giphy.gif', alt: 'Building automations at 3am' },
     caption: '"Costruire automazioni alle 3 di notte perche \'ancora un nodo e ho finito\'"',
   },
 
@@ -728,5 +726,14 @@ Genera la bozza di risposta:`,
       { label: 'IBM AI Trends & Predictions 2026', url: 'https://ibm.com/think/news/ai-tech-trends-predictions-2026' },
       { label: 'AI Agent Statistics 2025-2032 — azumo.com', url: 'https://azumo.com/artificial-intelligence/ai-insights/ai-agent-statistics' },
     ],
+  },
+
+  // 29. Prossima lezione
+  {
+    type: 'title',
+    lessonNumber: 'Prossima lezione',
+    title: '08 · AI per la Produttività',
+    subtitle: 'Stack AI personale, email, riunioni, ricerca e il paradosso del ROI',
+    style: { color: 'var(--secondary)' },
   },
 ]

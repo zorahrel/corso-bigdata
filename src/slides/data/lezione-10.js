@@ -35,7 +35,7 @@ export const slides = [
   // 3. Meme Celebrativo
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/26tPghhxHtI2M4Fks/giphy.gif', alt: 'Completing the AI course' },
+    image: { src: 'https://i.giphy.com/media/26tPghhxHtI2M4Fks/giphy.gif', alt: 'Completing the AI course' },
     caption: '"Noi che arriviamo all\'ultima lezione del corso"',
   },
 
@@ -49,7 +49,7 @@ L'AI non è magia: è <strong>statistica su steroidi</strong>. Token, probabilit
 I modelli non "capiscono" — <strong>predicono</strong>. Ma la qualità della predizione è così alta da sembrare comprensione.
 <br><br>
 Da GPT-1 (2018) a oggi: la velocità del progresso è senza precedenti.`,
-    image: { src: 'https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif', alt: 'AI foundations' },
+    image: { src: 'https://i.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif', alt: 'AI foundations' },
   },
 
   // 5. Recap: Interazione (L03)
@@ -62,7 +62,7 @@ Il <strong>prompt engineering</strong> è la skill più importante dell'era AI: 
 Chain of Thought, few-shot, system prompts: tecniche che trasformano output mediocri in eccellenti.
 <br><br>
 La regola d'oro: <strong>più contesto dai, migliore è il risultato</strong>.`,
-    image: { src: 'https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif', alt: 'Prompt engineering' },
+    image: { src: 'https://i.giphy.com/media/13HgwGsXF0aiGY/giphy.gif', alt: 'Prompt engineering' },
   },
 
   // 6. Recap: Piattaforme (L04-05-06)
@@ -75,7 +75,7 @@ La regola d'oro: <strong>più contesto dai, migliore è il risultato</strong>.`,
 <strong>Media:</strong> Midjourney, DALL-E, Runway, ElevenLabs — la creatività amplificata.
 <br><br>
 <strong>Codice:</strong> Copilot, Cursor, Claude Code — il programmatore ha un copilota.`,
-    image: { src: 'https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif', alt: 'AI platforms' },
+    image: { src: 'https://i.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif', alt: 'AI platforms' },
   },
 
   // 7. Recap: Automazione (L07-08-09)
@@ -88,7 +88,7 @@ La regola d'oro: <strong>più contesto dai, migliore è il risultato</strong>.`,
 <strong>Stack personale:</strong> non collezionare tool, costruisci un sistema.
 <br><br>
 <strong>Adozione aziendale:</strong> il problema non è tecnico, è umano. Governance, change management, ROI.`,
-    image: { src: 'https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif', alt: 'Automation' },
+    image: { src: 'https://i.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif', alt: 'Automation' },
   },
 
   // 8. Rubrica Progetto Finale
@@ -151,7 +151,7 @@ La regola d'oro: <strong>più contesto dai, migliore è il risultato</strong>.`,
   // 10. Meme: Project Works
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/3ohzdIuqJoo8QdKlnW/giphy.gif', alt: 'When your project works' },
+    image: { src: 'https://i.giphy.com/media/3ohzdIuqJoo8QdKlnW/giphy.gif', alt: 'When your project works' },
     caption: '"Quando il tuo progetto funziona davvero durante la presentazione"',
   },
 
@@ -166,7 +166,7 @@ La regola d'oro: <strong>più contesto dai, migliore è il risultato</strong>.`,
 <strong>AI Act EU:</strong> regolamentazione in arrivo. Chi usa AI in azienda dovrà adeguarsi.
 <br><br>
 <strong>Multimodale nativo:</strong> testo + voce + immagini + video in un unico flusso.`,
-    image: { src: 'https://media.giphy.com/media/l0HlNaQ6gWfllcjDO/giphy.gif', alt: 'Future AI' },
+    image: { src: 'https://i.giphy.com/media/l0HlNaQ6gWfllcjDO/giphy.gif', alt: 'Future AI' },
   },
 
   // 12. AI Act Europeo
@@ -180,7 +180,7 @@ La regola d'oro: <strong>più contesto dai, migliore è il risultato</strong>.`,
 <strong>Sanzioni:</strong> fino al 7% del fatturato globale. Non è opzionale.
 <br><br>
 <strong>Timeline:</strong> obblighi graduali dal 2025 al 2027. Iniziate ora.`,
-    image: { src: 'https://media.giphy.com/media/077i6AULCXc0FKTj9s/giphy.gif', alt: 'EU AI Act' },
+    image: { src: 'https://i.giphy.com/media/077i6AULCXc0FKTj9s/giphy.gif', alt: 'EU AI Act' },
   },
 
   // 13. Come Restare Aggiornati
@@ -240,7 +240,7 @@ La regola d'oro: <strong>più contesto dai, migliore è il risultato</strong>.`,
   // 18. Meme Finale Epico
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/l0MYt5jPR6QX5APm0/giphy.gif', alt: 'Us after the course — triumphant' },
+    image: { src: 'https://i.giphy.com/media/l0MYt5jPR6QX5APm0/giphy.gif', alt: 'Us after the course — triumphant' },
     caption: '"Noi dopo il corso. Pronti a conquistare il mondo (con l\'AI)."',
   },
 

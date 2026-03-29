@@ -1,6 +1,6 @@
 export const meta = {
   lessonNumber: '05',
-  title: 'Claude: Chat, Cowork e Claude Code',
+  title: 'Claude: Projects, Artifacts & MCP',
 }
 
 export const slides = [
@@ -29,7 +29,7 @@ export const slides = [
   // 3. MEME
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif', alt: 'Sophisticated choice' },
+    image: { src: 'https://i.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif', alt: 'Sophisticated choice' },
     caption: '"Utenti Claude vs utenti ChatGPT quando si parla di qualita del testo"',
   },
 
@@ -300,7 +300,7 @@ export const slides = [
   // 16. MEME — When MCP just works
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif', alt: 'Magic' },
+    image: { src: 'https://i.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif', alt: 'Magic' },
     caption: '"Quando configuri MCP e Claude accede ai tuoi file al primo tentativo"',
   },
 
@@ -593,5 +593,14 @@ I 5 TREND CHIAVE DEL 2026
       { label: 'MCP — Annuncio ufficiale Anthropic', url: 'https://anthropic.com/news/model-context-protocol' },
       { label: 'Claude Code per produzione — Dev.to', url: 'https://dev.to/lizechengnet/how-to-structure-claude-code-for-production' },
     ],
+  },
+
+  // 27. Prossima lezione
+  {
+    type: 'title',
+    lessonNumber: 'Prossima lezione',
+    title: '06 · Power Automate & Tool Emergenti',
+    subtitle: 'Microsoft Copilot, Google Gemini, e la mappa completa dei tool AI nel 2026',
+    style: { color: 'var(--secondary)' },
   },
 ]

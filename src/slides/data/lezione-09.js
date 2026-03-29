@@ -9,7 +9,7 @@ export const slides = [
     type: 'title',
     lessonNumber: '09',
     title: 'AI e Azienda: Implementazione',
-    subtitle: 'Mercoledì 22 Aprile 2026 · Blocco Adozione',
+    subtitle: 'Mercoledi 22/04/2026 · 6h in presenza · Blocco ADOZIONE',
   },
 
   // 2. Agenda
@@ -27,7 +27,7 @@ export const slides = [
   // 3. Meme
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif', alt: 'Proposing AI to the board' },
+    image: { src: 'https://i.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif', alt: 'Proposing AI to the board' },
     caption: '"Quando proponi l\'AI al board e ti guardano come se parlassi alieno"',
   },
 
@@ -40,7 +40,7 @@ export const slides = [
 Change management: come far sì che le persone <strong>cambino abitudini</strong> consolidate.
 <br><br>
 L'80% dei fallimenti AI non è tecnico — è organizzativo.`,
-    image: { src: 'https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif', alt: 'Change is hard' },
+    image: { src: 'https://i.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif', alt: 'Change is hard' },
   },
 
   // 5. Le 3 Fasi dell'Adozione
@@ -80,7 +80,7 @@ L'80% dei fallimenti AI non è tecnico — è organizzativo.`,
 <strong>Provider approvati:</strong> lista dei tool autorizzati, con motivazione.
 <br><br>
 <strong>Training:</strong> formazione obbligatoria prima dell'accesso ai tool AI.`,
-    image: { src: 'https://media.giphy.com/media/l46Cy1rHbQ92uuLXa/giphy.gif', alt: 'Governance' },
+    image: { src: 'https://i.giphy.com/media/l46Cy1rHbQ92uuLXa/giphy.gif', alt: 'Governance' },
   },
 
   // 8. Privacy e GDPR
@@ -92,7 +92,7 @@ L'80% dei fallimenti AI non è tecnico — è organizzativo.`,
 <strong>Zona grigia:</strong> dati aggregati, comunicazioni interne, bozze di documenti. Serve una policy chiara.
 <br><br>
 <strong>Soluzioni:</strong> modelli on-premise, API con data processing agreement, anonimizzazione pre-invio.`,
-    image: { src: 'https://media.giphy.com/media/077i6AULCXc0FKTj9s/giphy.gif', alt: 'Privacy shield' },
+    image: { src: 'https://i.giphy.com/media/077i6AULCXc0FKTj9s/giphy.gif', alt: 'Privacy shield' },
   },
 
   // 9. AI Policy Template
@@ -133,7 +133,7 @@ L'80% dei fallimenti AI non è tecnico — è organizzativo.`,
 <strong>NPS interno:</strong> "Quanto è utile l'AI nel tuo lavoro?" (1-10).
 <br><br>
 Target: >60% usage, -30% tempo task, NPS >7 dopo 3 mesi.`,
-    image: { src: 'https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif', alt: 'Metrics' },
+    image: { src: 'https://i.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif', alt: 'Metrics' },
   },
 
   // 11. Stats: Crescita
@@ -171,7 +171,7 @@ Target: >60% usage, -30% tempo task, NPS >7 dopo 3 mesi.`,
 <strong>Early majority (34%):</strong> aspettano che qualcun altro provi prima. Vogliono prove.
 <br><br>
 <strong>Late majority + Laggards (50%):</strong> cambiano solo se obbligati. Servono incentivi chiari.`,
-    image: { src: 'https://media.giphy.com/media/3oKIPjHCmuXqdSupvW/giphy.gif', alt: 'Adoption curve' },
+    image: { src: 'https://i.giphy.com/media/3oKIPjHCmuXqdSupvW/giphy.gif', alt: 'Adoption curve' },
   },
 
   // 14. Strategie Change Management
@@ -196,7 +196,7 @@ Target: >60% usage, -30% tempo task, NPS >7 dopo 3 mesi.`,
 <strong>Dà l'esempio:</strong> condividi pubblicamente come AI ti ha aiutato in una decisione.
 <br><br>
 <strong>Crea lo spazio:</strong> tempo dedicato alla sperimentazione. "AI Friday" — 2h/settimana per esplorare.`,
-    image: { src: 'https://media.giphy.com/media/dSetNZo2AJfptAk9hp/giphy.gif', alt: 'Leader' },
+    image: { src: 'https://i.giphy.com/media/dSetNZo2AJfptAk9hp/giphy.gif', alt: 'Leader' },
   },
 
   // 16. AI-Washing
@@ -208,13 +208,13 @@ Target: >60% usage, -30% tempo task, NPS >7 dopo 3 mesi.`,
 <strong>Segnali:</strong> slide deck pieni di "AI-powered", zero metriche, nessun processo cambiato.
 <br><br>
 <strong>Antidoto:</strong> mostra i numeri. Prima/dopo. Task concreti. Risparmio misurabile.`,
-    image: { src: 'https://media.giphy.com/media/8YBm95B5JNIXTWp5on/giphy.gif', alt: 'AI washing' },
+    image: { src: 'https://i.giphy.com/media/8YBm95B5JNIXTWp5on/giphy.gif', alt: 'AI washing' },
   },
 
   // 17. Meme: Employee Reaction
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/l0IylOPCNkiqOgMyA/giphy.gif', alt: 'Employee reaction to AI' },
+    image: { src: 'https://i.giphy.com/media/l0IylOPCNkiqOgMyA/giphy.gif', alt: 'Employee reaction to AI' },
     caption: '"La reazione del team quando annunci l\'ennesimo tool AI obbligatorio"',
   },
 

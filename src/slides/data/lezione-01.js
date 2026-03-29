@@ -63,7 +63,7 @@ export const slides = [
     type: 'meme',
     heading: 'Icebreaker',
     image: {
-      src: 'https://media.giphy.com/media/077i6AULCXc0FKTj9s/giphy.gif',
+      src: 'https://i.giphy.com/media/077i6AULCXc0FKTj9s/giphy.gif',
       alt: 'AI thinking',
     },
     caption: '"Che AI hai usato questa settimana? E per fare cosa?"',
@@ -309,7 +309,7 @@ Esempi: <code>o3</code> (OpenAI), Claude con <em>extended thinking</em>, DeepSee
 🔍 Fare ricerca e sintesi<br>\
 ⚡ Automatizzare workflow`,
     image: {
-      src: 'https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif',
+      src: 'https://i.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif',
       alt: 'Superpowers',
     },
     footer: `<strong>Takeaway:</strong> le capacità dell'AI si espandono ogni mese. Quello che ieri era impossibile, oggi è routine. Tenetevi aggiornati perché il confine si sposta continuamente.`,
@@ -325,7 +325,7 @@ Esempi: <code>o3</code> (OpenAI), Claude con <em>extended thinking</em>, DeepSee
 🚫 <strong>Accesso a internet</strong> — di default non naviga (servono plugin/tool)<br><br>\
 🚫 <strong>Capire davvero</strong> — pattern matching sofisticato, non comprensione`,
     image: {
-      src: 'https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif',
+      src: 'https://i.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif',
       alt: 'Confused',
     },
     footer: `<strong>Ricorda:</strong> conoscere i limiti dell'AI è tanto importante quanto conoscerne le capacità. Chi sa cosa l'AI NON sa fare, la usa meglio di tutti.`,
@@ -573,7 +573,7 @@ OUTPUT THE EDITED IMAGE.`,
   {
     type: 'meme',
     image: {
-      src: 'https://media.giphy.com/media/42D3CxaINsAFemFuId/giphy.gif',
+      src: 'https://i.giphy.com/media/42D3CxaINsAFemFuId/giphy.gif',
       alt: 'See you tomorrow',
     },
     caption: '"Ci vediamo domani — e stavolta portate i portatili carichi! 🔋"',

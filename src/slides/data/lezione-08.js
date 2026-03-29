@@ -9,7 +9,7 @@ export const slides = [
     type: 'title',
     lessonNumber: '08',
     title: 'AI per la Produttività',
-    subtitle: 'Mercoledì 15 Aprile 2026 · Blocco Produttività',
+    subtitle: 'Mercoledi 15/04/2026 · 6h in presenza · Blocco PRODUTTIVITA',
   },
 
   // 2. Agenda
@@ -27,7 +27,7 @@ export const slides = [
   // 3. Meme
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif', alt: 'Personal AI stack meme' },
+    image: { src: 'https://i.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif', alt: 'Personal AI stack meme' },
     caption: '"Io dopo aver costruito il mio stack AI personale"',
   },
 
@@ -40,7 +40,7 @@ integrati tra loro per creare un sistema coerente.
 <br><br>
 Non si tratta di usare un singolo tool, ma di costruire
 un <strong>ecosistema</strong> che amplifica le tue capacità.`,
-    image: { src: 'https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif', alt: 'Connected tools' },
+    image: { src: 'https://i.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif', alt: 'Connected tools' },
   },
 
   // 5. AI Fatigue
@@ -54,7 +54,7 @@ non collezionare tool. Meno è meglio, se ben collegati.
 <br><br>
 Regola d'oro: ogni tool deve <strong>risparmiare più tempo</strong>
 di quanto ne richieda per essere usato.`,
-    image: { src: 'https://media.giphy.com/media/l0IylOPCNkiqOgMyA/giphy.gif', alt: 'Too many tools' },
+    image: { src: 'https://i.giphy.com/media/l0IylOPCNkiqOgMyA/giphy.gif', alt: 'Too many tools' },
   },
 
   // 6. 5 Archetipi di Stack
@@ -82,7 +82,7 @@ di quanto ne richieda per essere usato.`,
 <strong>Follow-up:</strong> reminder intelligenti per email senza risposta.
 <br><br>
 Tool: <strong>Gmail AI</strong>, <strong>Superhuman</strong>, <strong>Copilot per Outlook</strong>`,
-    image: { src: 'https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif', alt: 'Email workflow' },
+    image: { src: 'https://i.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif', alt: 'Email workflow' },
   },
 
   // 8. AI per Riunioni
@@ -94,7 +94,7 @@ Tool: <strong>Gmail AI</strong>, <strong>Superhuman</strong>, <strong>Copilot pe
 <strong>Riassunti intelligenti:</strong> punti chiave, decisioni prese, azioni da fare.
 <br><br>
 <strong>Integrazione calendario:</strong> prep automatica pre-meeting con contesto dei partecipanti.`,
-    image: { src: 'https://media.giphy.com/media/3o7btNa0RUYa5E7iiQ/giphy.gif', alt: 'Meeting AI' },
+    image: { src: 'https://i.giphy.com/media/3o7btNa0RUYa5E7iiQ/giphy.gif', alt: 'Meeting AI' },
   },
 
   // 9. AI per la Ricerca
@@ -108,7 +108,7 @@ Tool: <strong>Gmail AI</strong>, <strong>Superhuman</strong>, <strong>Copilot pe
 <strong>ChatGPT / Claude con web:</strong> ricerca conversazionale, buona per esplorare temi ampi.
 <br><br>
 <em>Quando usare quale?</em> Fact → Perplexity. Documenti → NotebookLM. Esplorazione → ChatGPT/Claude.`,
-    image: { src: 'https://media.giphy.com/media/3o6Zt11R527fgtrIJO/giphy.gif', alt: 'Research AI' },
+    image: { src: 'https://i.giphy.com/media/3o6Zt11R527fgtrIJO/giphy.gif', alt: 'Research AI' },
   },
 
   // 10. AI per la Produzione di Contenuti
@@ -146,7 +146,7 @@ Tool: <strong>Gmail AI</strong>, <strong>Superhuman</strong>, <strong>Copilot pe
 <strong>Step 3:</strong> Review — tu leggi solo i draft, modifichi e invii. 30 sec/email invece di 3 min.
 <br><br>
 <strong>Step 4:</strong> Follow-up — AI traccia le email senza risposta e ti ricorda dopo 48h.`,
-    image: { src: 'https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif', alt: 'Email speed' },
+    image: { src: 'https://i.giphy.com/media/o0vwzuFwCGAFO/giphy.gif', alt: 'Email speed' },
   },
 
   // 13. Documenti e Report
@@ -160,7 +160,7 @@ Tool: <strong>Gmail AI</strong>, <strong>Superhuman</strong>, <strong>Copilot pe
 <strong>Revisione:</strong> AI come editor — controlla coerenza, tono, errori.
 <br><br>
 Il segreto: <strong>iterare</strong>, non accettare la prima versione.`,
-    image: { src: 'https://media.giphy.com/media/XIqCQx02E1U9W/giphy.gif', alt: 'Writing together' },
+    image: { src: 'https://i.giphy.com/media/XIqCQx02E1U9W/giphy.gif', alt: 'Writing together' },
   },
 
   // 14. RAG su Knowledge Base
@@ -172,7 +172,7 @@ Il segreto: <strong>iterare</strong>, non accettare la prima versione.`,
 Invece di cercare in 50 cartelle, <strong>chiedi</strong>: "Qual era la policy sui rimborsi aggiornata a marzo?"
 <br><br>
 Tool: <strong>Notion AI</strong>, <strong>Confluence AI</strong>, soluzioni custom con embeddings.`,
-    image: { src: 'https://media.giphy.com/media/xT9C25UNTwfZuk85WP/giphy.gif', alt: 'Knowledge base search' },
+    image: { src: 'https://i.giphy.com/media/xT9C25UNTwfZuk85WP/giphy.gif', alt: 'Knowledge base search' },
   },
 
   // 15. Decisioni Data-Driven
@@ -184,13 +184,13 @@ Tool: <strong>Notion AI</strong>, <strong>Confluence AI</strong>, soluzioni cust
 <strong>Tableau / Power BI + AI:</strong> query in linguaggio naturale sulle dashboard.
 <br><br>
 <strong>Il salto:</strong> da "fammi un report" a "dimmi cosa devo sapere".`,
-    image: { src: 'https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif', alt: 'Data analysis' },
+    image: { src: 'https://i.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif', alt: 'Data analysis' },
   },
 
   // 16. Meme: Inbox
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif', alt: 'AI handling inbox' },
+    image: { src: 'https://i.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif', alt: 'AI handling inbox' },
     caption: '"Il mio assistente AI che gestisce la mia inbox"',
   },
 
@@ -205,7 +205,7 @@ Tool: <strong>Notion AI</strong>, <strong>Confluence AI</strong>, soluzioni cust
 <strong>Setup cost:</strong> configurare, promptare, integrare. Se il task è raro, fallo a mano.
 <br><br>
 <strong>Regola:</strong> se passi più tempo a parlare con l'AI che a fare il task, fermati.`,
-    image: { src: 'https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif', alt: 'Slowdown' },
+    image: { src: 'https://i.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif', alt: 'Slowdown' },
   },
 
   // 18. Come Misurare l'Impatto
@@ -240,7 +240,7 @@ Tool: <strong>Notion AI</strong>, <strong>Confluence AI</strong>, soluzioni cust
 <strong>KPI sbagliate:</strong> si misura l'adozione (% utenti) non l'impatto (tempo, qualità, revenue).
 <br><br>
 <strong>Change management mancato:</strong> si compra il tool, non si cambia la cultura.`,
-    image: { src: 'https://media.giphy.com/media/3o7TKTDn976rzVgky4/giphy.gif', alt: 'ROI gap' },
+    image: { src: 'https://i.giphy.com/media/3o7TKTDn976rzVgky4/giphy.gif', alt: 'ROI gap' },
   },
 
   // 21. Framework Business Case

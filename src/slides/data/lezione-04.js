@@ -30,7 +30,7 @@ export const slides = [
   // 3. Meme
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif', alt: 'Mind blown' },
+    image: { src: 'https://i.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif', alt: 'Mind blown' },
     caption: '"Io quando ho scoperto ChatGPT per la prima volta"',
   },
 
@@ -225,7 +225,7 @@ Pensa a un <em>GPT custom programmabile</em> via API.`,
   // 17. Meme - API bill
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif', alt: 'Shocked' },
+    image: { src: 'https://i.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif', alt: 'Shocked' },
     caption: '"Quando vedi la tua prima fattura API di OpenAI"',
   },
 
@@ -293,7 +293,7 @@ Pensa a un <em>GPT custom programmabile</em> via API.`,
   // 22. Meme - GPT doing my job
   {
     type: 'meme',
-    image: { src: 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif', alt: 'Relaxing' },
+    image: { src: 'https://i.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif', alt: 'Relaxing' },
     caption: '"Io dopo aver chiesto a GPT di fare il mio lavoro"',
   },
 
@@ -492,5 +492,14 @@ VALUTAZIONI
       { label: 'Assistants API \u2014 Documentazione ufficiale', url: 'https://platform.openai.com/docs/assistants' },
       { label: 'Function Calling \u2014 Guida e best practices', url: 'https://platform.openai.com/docs/guides/function-calling' },
     ],
+  },
+
+  // 28. Prossima lezione
+  {
+    type: 'title',
+    lessonNumber: 'Prossima lezione',
+    title: '05 \u00b7 Claude: Projects, Artifacts & MCP',
+    subtitle: 'L\'ecosistema Anthropic: workspace, app live e il protocollo che connette tutto',
+    style: { color: 'var(--secondary)' },
   },
 ]
