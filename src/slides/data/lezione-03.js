@@ -1015,6 +1015,7 @@ precedenti. Rispondi sempre:
       { label: 'ai-marketing-claude \u2014 15 marketing skills con subagent paralleli', url: 'https://github.com/zubair-trabzada/ai-marketing-claude' },
       { label: 'Six Hats Navigator \u2014 framework De Bono applicato ai prompt AI', url: 'https://taaft.notion.site/Six-Hats-Navigator-2eced82cbfd380099d25db4c2dfc32d6' },
       { label: 'The Delegation \u2014 simulazione 3D multi-agente autonoma (demo live)', url: 'https://arturitu.github.io/the-delegation/' },
+      { label: 'The Learning System \u2014 prompt modulare con 3 modalit\u00e0 (Navigator, Tutor, Roadmap)', url: 'https://taaft.notion.site/The-Learning-System-325ed82cbfd380b0a01be9826ddb1dad' },
       { label: '\u2b50 Anthropic Best Practices Claude 4 \u2014 guida ufficiale prompt engineering', url: 'https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices' },
       { label: '\u2b50 Anthropic Academy \u2014 corso video gratuito (API, RAG, Agents, MCP)', url: 'https://anthropic.skilljar.com/claude-with-the-anthropic-api/287745' },
       { label: '\u2b50 Claude Cookbook \u2014 30+ ricette pratiche pronte all\'uso', url: 'https://platform.claude.com/cookbook' },

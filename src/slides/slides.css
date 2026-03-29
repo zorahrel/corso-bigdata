@@ -90,6 +90,9 @@
   display: block;
   text-align: left;
 }
+.slide-container ul.antipattern-list {
+  display: flex;
+}
 
 /* Slide transition */
 .slide-transition-enter { opacity: 0; transform: translateX(30px); }
@@ -1071,7 +1074,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 28px;
   width: 100%;
   max-width: 1000px;
 }
