@@ -1021,6 +1021,7 @@ precedenti. Rispondi sempre:
       { label: '\u2b50 Claude Cookbook \u2014 30+ ricette pratiche pronte all\'uso', url: 'https://platform.claude.com/cookbook' },
       { label: '\u2b50 Claude Quickstarts \u2014 5 progetti completi (customer support, financial analyst, computer use...)', url: 'https://github.com/anthropics/anthropic-quickstarts' },
       { label: '\u2b50 Prompt Generator \u2014 genera prompt ottimizzati automaticamente (Console Anthropic)', url: 'https://console.anthropic.com' },
+      { label: '\u2b50 Skills.sh \u2014 piattaforma interattiva per imparare AI skills con pratica guidata', url: 'https://skills.sh/' },
     ],
   },
 
