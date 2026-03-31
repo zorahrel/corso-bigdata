@@ -1,6 +1,6 @@
 export const meta = {
   lessonNumber: '06',
-  title: 'Power Automate e altri strumenti',
+  title: 'Lab: Esplora le piattaforme',
 }
 
 export const slides = [
@@ -8,549 +8,238 @@ export const slides = [
   {
     type: 'title',
     lessonNumber: '06',
-    title: 'Power Automate &\nTool Emergenti',
-    subtitle: 'Giovedi 09/04/2026 · 6h in presenza · Blocco PIATTAFORME',
+    title: 'Lab: Esplora le\nPiattaforme AI',
+    subtitle: 'Giovedì 09/04/2026 · 6h in presenza · Gestita da Tutor',
     style: { '--accent': '#0d9488' },
   },
 
   // 2. AGENDA
   {
     type: 'agenda',
-    heading: 'Agenda',
+    heading: 'Agenda — Oggi solo pratica!',
     items: [
-      { emoji: '\u{1F3E2}', text: 'Microsoft Power Automate + Copilot' },
-      { emoji: '\u{1F52E}', text: 'Google Gemini e Workspace AI' },
-      { emoji: '\u{1F9F0}', text: 'Tool emergenti 2026' },
-      { emoji: '\u{1F5FA}\uFE0F', text: 'La mappa completa dei tool AI' },
-      { emoji: '\u{1F4BB}', text: 'Demo + Workshop pratico' },
+      { emoji: '\u{1F4AC}', text: 'Esercizio 1 — ChatGPT free: Canvas, istruzioni, memoria (45 min)' },
+      { emoji: '\u{1F9E0}', text: 'Esercizio 2 — Claude free: Projects, Artifacts, crea un\'app (45 min)' },
+      { emoji: '\u2728', text: 'Esercizio 3 — Gemini free: confronto sullo stesso task (45 min)' },
+      { emoji: '\u{1F4D3}', text: 'Esercizio 4 — NotebookLM: documenti e podcast automatico (45 min)' },
+      { emoji: '\u{1F4CA}', text: 'Esercizio 5 — Confronto finale: tabella comparativa (30 min)' },
     ],
   },
 
-  // 3. MEME
+  // 3. REGOLE DEL LAB
+  {
+    type: 'concept',
+    centered: true,
+    heading: '\u{1F6A8} Regole del Lab',
+    content: `<div style="max-width:700px; margin:0 auto; text-align:left;">
+  <ul class="feature-list">
+    <li><span class="icon">\u{1F6AB}</span> <strong>ZERO teoria pesante</strong> — oggi si lavora, non si ascolta</li>
+    <li><span class="icon">\u{1F4B0}</span> <strong>SOLO tool gratuiti</strong> — nessun account a pagamento richiesto</li>
+    <li><span class="icon">\u{1F4F8}</span> <strong>Ogni esercizio ha un deliverable</strong> — screenshot o documento da consegnare</li>
+    <li><span class="icon">\u{1F91D}</span> <strong>Aiutatevi tra di voi</strong> — il tutor facilita, voi sperimentate</li>
+    <li><span class="icon">\u23F0</span> <strong>Timer attivo</strong> — rispettate i tempi per completare tutto</li>
+  </ul>
+</div>`,
+  },
+
+  // 4. MEME
   {
     type: 'meme',
-    image: { src: 'https://i.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif', alt: 'Choosing the right AI tool' },
+    image: { src: 'https://devhumor.com/content/uploads/images/April2025/chat_bots.jpg', alt: 'Choosing the right AI tool' },
     caption: '"Scegliere il tool AI giusto nel 2026"',
   },
 
-  // 4. Microsoft AI nel 2026: l'ecosistema
+  // ─── ESERCIZIO 1: ChatGPT ──────────────────────────────────────────────
+
+  // 5. Esercizio 1: ChatGPT free
   {
-    type: 'custom',
-    layout: 'eco-map',
-    heading: "Microsoft AI nel 2026: l'ecosistema",
-    center: 'Microsoft Copilot',
-    nodes: [
-      { icon: '', label: 'Copilot in Word' },
-      { icon: '', label: 'Copilot in Excel' },
-      { icon: '', label: 'Power Automate' },
-      { icon: '', label: 'Azure AI Services' },
-      { icon: '', label: 'Copilot in Teams' },
-      { icon: '', label: 'Bing AI / Edge' },
-      { icon: '', label: 'Copilot in Outlook' },
-      { icon: '', label: 'GitHub Copilot' },
+    type: 'hands-on',
+    heading: 'Esercizio 1: ChatGPT Free — Canvas, Istruzioni, Memoria',
+    timer: '45 minuti',
+    level: 'base',
+    tools: ['ChatGPT (chatgpt.com — account gratuito)'],
+    deliverable: 'Screenshot di: custom instructions configurate, un documento Canvas modificato, e la memoria attiva',
+    instructions: [
+      '<strong>Obiettivo:</strong> scoprire le 3 funzionalità chiave di ChatGPT free: Custom Instructions, Canvas e Memory',
+      '<strong>Step 1 — Account:</strong> Vai su chatgpt.com e accedi con Google (se non hai un account, creane uno gratuito — 2 min)',
+      '<strong>Step 2 — Custom Instructions:</strong> Clicca sul tuo avatar in alto a destra → "Customize ChatGPT". Compila: "Cosa vuoi che ChatGPT sappia di te?" → scrivi il tuo ruolo, settore, cosa fai. "Come vuoi che risponda?" → scrivi: "In italiano, tono professionale, risposte pratiche con esempi"',
+      '<strong>Step 3 — Testa le istruzioni:</strong> Apri una nuova chat e chiedi: "Dammi 3 consigli per migliorare la produttività". Nota come la risposta è già calibrata sul tuo profilo!',
+      '<strong>Step 4 — Canvas:</strong> Scrivi nella chat: "Crea un documento di analisi SWOT per un\'azienda del mio settore". ChatGPT aprirà Canvas — un editor laterale. Prova: seleziona una sezione → chiedi "espandi questo punto" o "riscrivi in tono più formale"',
+      '<strong>Step 5 — Modifica in Canvas:</strong> Usa i controlli Canvas per: aggiungere suggerimenti AI, cambiare lunghezza, cambiare tono. Fai almeno 3 modifiche diverse',
+      '<strong>Step 6 — Memory:</strong> Nella chat scrivi: "Ricorda che preferisco bullet point invece di paragrafi lunghi". Poi in una NUOVA chat chiedi qualcosa — ChatGPT dovrebbe ricordare la preferenza. Vai su Impostazioni → Personalizzazione → Memoria per vedere cosa ha salvato',
+      '<strong>Step 7 — Screenshot:</strong> Cattura: 1) Le tue Custom Instructions, 2) Il documento Canvas con le modifiche, 3) La schermata Memoria',
     ],
   },
 
-  // 5. Power Automate: automazione no-code
-  {
-    type: 'concept',
-    heading: 'Power Automate:\nautomazione no-code',
-    content: `<p class="concept-text">
-  <strong>Cos'\u00E8:</strong> piattaforma Microsoft per creare workflow automatici senza scrivere codice.
-  <br><br>
-  <strong>Cosa fa:</strong> collega app, automatizza processi ripetitivi, gestisce approvazioni, invia notifiche.
-  <br><br>
-  <strong>Perch\u00E9 \u00E8 potente:</strong> integrazione nativa con tutto l'ecosistema Microsoft 365. Se la tua azienda usa Office, \u00E8 gi\u00E0 li.
-</p>`,
-    image: { src: 'https://i.giphy.com/media/l0HlNQ03J5JxX2rGU/giphy.gif', alt: 'Automation' },
-  },
+  // ─── ESERCIZIO 2: Claude ──────────────────────────────────────────────
 
-  // 6. Copilot in azione: Office 365
+  // 6. Esercizio 2: Claude free
   {
-    type: 'concept',
-    centered: true,
-    heading: 'Copilot in azione: Office 365',
-    content: `<ul class="feature-list">
-  <li><span class="icon">\u{1F4DD}</span> <strong>Word:</strong> "Riscrivi questo paragrafo in tono formale" — genera, riassume, riscrive documenti</li>
-  <li><span class="icon">\u{1F4CA}</span> <strong>Excel:</strong> "Analizza i trend di vendita Q1" — formula automatiche, pivot, grafici da prompt</li>
-  <li><span class="icon">\u{1F4E7}</span> <strong>Outlook:</strong> "Rispondi a questa email declinando educatamente" — bozze, riassunti thread lunghi</li>
-  <li><span class="icon">\u{1F465}</span> <strong>Teams:</strong> "Cosa mi sono perso nella riunione?" — riassunti meeting, action items automatici</li>
-  <li><span class="icon">\u{1F3A8}</span> <strong>PowerPoint:</strong> "Crea una presentazione da questo documento Word" — slide generate da testo</li>
-</ul>
-<p class="concept-text"><strong>In pratica:</strong> Copilot funziona meglio se siete gia nell'ecosistema Microsoft — il valore e nell'integrazione nativa con i tool che usate ogni giorno.</p>`,
-  },
-
-  // 7. Power Automate + AI Builder
-  {
-    type: 'concept',
-    heading: 'Power Automate + AI Builder',
-    content: `<p class="concept-text">
-  <strong>AI Builder</strong> aggiunge intelligenza ai tuoi workflow senza ML expertise.
-  <br><br>
-  \u{1F4C4} <strong>Classificazione documenti</strong> — fatture, contratti, ordini smistati automaticamente
-  <br><br>
-  \u{1F4AC} <strong>Sentiment analysis</strong> — analisi automatica feedback clienti
-  <br><br>
-  \u{1F4F7} <strong>OCR intelligente</strong> — estrai dati da documenti scannerizzati
-</p>`,
-    image: { src: 'https://i.giphy.com/media/3o7btNa0RUYa5E7iiQ/giphy.gif', alt: 'AI Builder' },
-  },
-
-  // 8. Connettori: Power Automate parla con tutto
-  {
-    type: 'concept',
-    centered: true,
-    heading: 'Connettori: Power Automate parla con tutto',
-    content: `<p style="text-align:center; font-size:0.65em; color:var(--muted); margin-bottom:28px;">1000+ connettori disponibili — alcuni esempi di flussi reali:</p>
-<ul class="feature-list">
-  <li><span class="icon">\u{1F4E7}</span> Nuova email con allegato \u2192 <strong>salva su SharePoint</strong> \u2192 notifica Teams</li>
-  <li><span class="icon">\u{1F4CB}</span> Nuovo record in Forms \u2192 <strong>aggiungi riga Excel</strong> \u2192 invia conferma email</li>
-  <li><span class="icon">\u{1F514}</span> Mention su Twitter/X \u2192 <strong>analisi sentiment</strong> \u2192 alert se negativo</li>
-  <li><span class="icon">\u2705</span> Approvazione manager \u2192 <strong>aggiorna Dynamics 365</strong> \u2192 genera PDF</li>
-</ul>
-<p class="concept-text"><strong>Il punto chiave:</strong> 1000+ connettori significano che quasi ogni app aziendale puo parlare con le altre — senza scrivere codice.</p>`,
-  },
-
-  // 9. Quando scegliere Power Automate?
-  {
-    type: 'concept',
-    centered: true,
-    heading: 'Quando scegliere Power Automate?',
-    content: `<div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; max-width:800px; margin:0 auto;">
-  <div style="background:rgba(0,212,170,0.1); border:1px solid rgba(0,212,170,0.3); border-radius:var(--radius); padding:24px;">
-    <h3 style="color:var(--secondary); font-size:0.7em; margin-bottom:12px;">\u2705 Si, se...</h3>
-    <ul style="font-size:0.6em; line-height:1.8; padding-left:1em;">
-      <li>La tua azienda usa Microsoft 365</li>
-      <li>Workflow interni tra app Office</li>
-      <li>Processi di approvazione</li>
-      <li>Il team non sa programmare</li>
-    </ul>
-  </div>
-  <div style="background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.3); border-radius:var(--radius); padding:24px;">
-    <h3 style="color:var(--danger); font-size:0.7em; margin-bottom:12px;">\u274C No, se...</h3>
-    <ul style="font-size:0.6em; line-height:1.8; padding-left:1em;">
-      <li>Vuoi massima flessibilita</li>
-      <li>Hai bisogno di self-hosting</li>
-      <li>Budget limitato (le licenze costano)</li>
-      <li>Stack non-Microsoft</li>
-    </ul>
-  </div>
-</div>
-<p class="concept-text"><strong>Ricorda:</strong> se il vostro stack e Microsoft, Power Automate e la scelta naturale. Altrimenti, valutate Make o n8n per evitare lock-in.</p>`,
-  },
-
-  // 10. MEME Power Automate
-  {
-    type: 'meme',
-    image: { src: 'https://i.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif', alt: 'Power Automate when it works' },
-    caption: '"Power Automate quando il flusso funziona al primo tentativo"',
-  },
-
-  // 11. Google AI nel 2026
-  {
-    type: 'custom',
-    layout: 'eco-map',
-    heading: 'Google AI nel 2026',
-    center: 'Gemini 2.5 Pro',
-    nodes: [
-      { icon: '', label: '1M token context' },
-      { icon: '', label: 'NotebookLM' },
-      { icon: '', label: 'Workspace AI' },
-      { icon: '', label: 'Veo (video)' },
-      { icon: '', label: 'Imagen 3 (immagini)' },
-      { icon: '', label: 'AI Studio' },
+    type: 'hands-on',
+    heading: 'Esercizio 2: Claude Free — Projects, Artifacts, Crea un\'App',
+    timer: '45 minuti',
+    level: 'intermedio',
+    tools: ['Claude (claude.ai — account gratuito)'],
+    deliverable: 'Screenshot del Project con documenti + l\'app interattiva creata con Artifacts',
+    instructions: [
+      '<strong>Obiettivo:</strong> usare Projects (ora GRATIS!) per creare una knowledge base e Artifacts per generare un\'app interattiva',
+      '<strong>Step 1 — Account:</strong> Vai su claude.ai e accedi con Google (gratis)',
+      '<strong>Step 2 — Crea un Project:</strong> Nel menu laterale clicca "Projects" → "Create Project". Nome: "Il mio assistente [settore]". Descrizione: "Assistente specializzato per il mio lavoro"',
+      '<strong>Step 3 — Aggiungi Knowledge:</strong> Nel Project, clicca "Add Content" e carica 2-3 documenti: possono essere PDF del tuo lavoro, oppure copia-incolla testo di policy aziendali, FAQ, o listini. Se non hai documenti, usa questi testi di esempio (il tutor li condivide)',
+      '<strong>Step 4 — Testa il Project:</strong> Nella chat del Project, fai 3 domande sui tuoi documenti. Nota come Claude cita le fonti specifiche! Confronta con ChatGPT: qui le risposte sono ancorate ai TUOI documenti',
+      '<strong>Step 5 — Artifacts — Crea un\'app:</strong> Apri una nuova chat (anche fuori dal Project) e scrivi: "Crea un\'app interattiva: un calcolatore di ROI per l\'adozione di AI in azienda. Input: numero dipendenti, ore risparmiate a settimana per dipendente, costo orario medio. Output: risparmio annuo, ROI in %, tempo di payback. Rendilo visualmente accattivante con grafici"',
+      '<strong>Step 6 — Itera sull\'app:</strong> L\'Artifact apparirà come un\'app funzionante a destra. Prova a: "Aggiungi un grafico a barre", "Cambia i colori in blu e verde", "Aggiungi un campo per il costo della licenza AI"',
+      '<strong>Step 7 — Screenshot:</strong> Cattura: 1) Il Project con i documenti caricati, 2) Una risposta con citazione dalle fonti, 3) L\'app Artifact funzionante',
+      '<strong>Wow moment:</strong> Claude Projects + Artifacts gratis è una delle novità più grosse di marzo 2026. Prima costava $20/mese!',
     ],
   },
 
-  // 12. Gemini in Google Workspace
+  // ─── ESERCIZIO 3: Gemini ──────────────────────────────────────────────
+
+  // 7. Esercizio 3: Gemini free
   {
-    type: 'concept',
-    centered: true,
-    heading: 'Gemini in Google Workspace',
-    content: `<ul class="feature-list">
-  <li><span class="icon">\u{1F4C4}</span> <strong>Docs:</strong> "Scrivi una proposta commerciale partendo da questi appunti" — genera, espande, riassume</li>
-  <li><span class="icon">\u{1F4CA}</span> <strong>Sheets:</strong> "Crea un piano di progetto con timeline" — formule, tabelle pivot, grafici</li>
-  <li><span class="icon">\u{1F4E7}</span> <strong>Gmail:</strong> "Rispondi ringraziando e proponendo un meeting" — contextual reply, tone adjustment</li>
-  <li><span class="icon">\u{1F5BC}\uFE0F</span> <strong>Slides:</strong> "Genera immagini per questa presentazione" — Imagen integrato nelle slide</li>
-</ul>
-<p style="text-align:center; font-size:0.6em; color:var(--muted); margin-top:20px;">Vantaggi vs Copilot: costo inferiore, contesto piu lungo, multimodale nativo</p>
-<p class="concept-text"><strong>In pratica:</strong> se usate Google Workspace, Gemini e gia integrato e costa meno di Copilot. Il contesto da 1M token lo rende ideale per documenti lunghi.</p>`,
+    type: 'hands-on',
+    heading: 'Esercizio 3: Gemini Free — Confronto sullo Stesso Task',
+    timer: '45 minuti',
+    level: 'base',
+    tools: ['Gemini (gemini.google.com — account Google gratuito)', 'ChatGPT (free)', 'Claude (free)'],
+    deliverable: 'Documento Google Docs con le 3 risposte affiancate e valutazione comparativa',
+    instructions: [
+      '<strong>Obiettivo:</strong> dare lo STESSO prompt a 3 AI diverse e confrontare qualità, stile e completezza',
+      '<strong>Step 1:</strong> Apri 3 tab nel browser: chatgpt.com, claude.ai, gemini.google.com',
+      '<strong>Step 2 — Il prompt:</strong> Copia questo prompt IDENTICO su tutte e 3: "Sei un consulente aziendale esperto. Un\'azienda manifatturiera italiana con 200 dipendenti e fatturato di 30M€ vuole introdurre l\'AI. Budget disponibile: 50.000€. Crea un piano di implementazione in 3 fasi con: timeline realistica, costi per fase, KPI misurabili, rischi e mitigazioni per ogni fase."',
+      '<strong>Step 3:</strong> Invia il prompt su tutte e 3 contemporaneamente. Aspetta le risposte',
+      '<strong>Step 4 — Valuta:</strong> Per ogni risposta, dai un voto 1-5 su: Completezza (copre tutti i punti?), Praticità (consigli applicabili?), Numeri concreti (o solo vaghi?), Struttura (facile da leggere?), Tono (professionale?)',
+      '<strong>Step 5 — Esplora Gemini:</strong> Prova una funzione unica di Gemini: carica un\'immagine (es: foto di un grafico, un documento cartaceo) e chiedi di analizzarla. Gemini è forte nel multimodale!',
+      '<strong>Step 6 — Google Integration:</strong> In Gemini, prova: "Crea una tabella comparativa in Google Sheets" — Gemini può creare direttamente file Google Workspace',
+      '<strong>Step 7 — Documento finale:</strong> Crea un Google Doc con le 3 risposte affiancate + la tua tabella di valutazione + una riga "VINCITORE per questo task" con motivazione',
+      '<strong>Spoiler:</strong> non esiste un vincitore assoluto. Il vincitore dipende dal task. Questo è il punto dell\'esercizio!',
+    ],
   },
 
-  // 13. NotebookLM: il tuo ricercatore AI
+  // ─── ESERCIZIO 4: NotebookLM ──────────────────────────────────────────
+
+  // 8. Esercizio 4: NotebookLM
   {
-    type: 'concept',
-    heading: 'NotebookLM:\nil tuo ricercatore AI',
-    content: `<p class="concept-text">
-  <strong>Carica documenti</strong> — PDF, Google Docs, siti web, video YouTube. Fino a 50 fonti.
-  <br><br>
-  <strong>Fa ricerca per te</strong> — risposte con citazioni precise dalle tue fonti. Zero allucinazioni.
-  <br><br>
-  <strong>Genera podcast audio</strong> — due voci AI discutono i tuoi documenti. 10-15 minuti. Perfetto per ripassare.
-  <br><br>
-  <strong>Gratis</strong> — incluso nell'account Google. Nessun costo aggiuntivo.
-</p>`,
-    image: { src: 'https://i.giphy.com/media/l2JehQ2GitHGdVG9y/giphy.gif', alt: 'Research' },
+    type: 'hands-on',
+    heading: 'Esercizio 4: NotebookLM — Documenti e Podcast Automatico',
+    timer: '45 minuti',
+    level: 'base',
+    tools: ['NotebookLM (notebooklm.google.com — gratuito con account Google)'],
+    deliverable: 'Screenshot delle risposte con citazioni + link al podcast audio generato',
+    instructions: [
+      '<strong>Obiettivo:</strong> caricare documenti su NotebookLM, fare domande con citazioni precise, e generare un podcast audio automatico',
+      '<strong>Step 1:</strong> Vai su notebooklm.google.com e clicca "New Notebook"',
+      '<strong>Step 2 — Carica 3 fonti diverse:</strong> Scegli almeno 3 tra: un PDF del tuo lavoro, un articolo Wikipedia del tuo settore, un link a un video YouTube di un talk/webinar, un Google Doc con appunti. Se non hai materiale, usa i documenti di esempio forniti dal tutor',
+      '<strong>Step 3 — Domande con citazioni:</strong> Nella chat di NotebookLM, chiedi: "Quali sono i 3 trend principali secondo le mie fonti?" Osserva: ogni risposta ha numeri di citazione [1], [2] che rimandano al punto esatto del documento!',
+      '<strong>Step 4 — Domande incrociate:</strong> Chiedi: "Ci sono contraddizioni o punti di vista diversi tra le mie fonti?" NotebookLM confronta le fonti tra loro — cosa che ChatGPT/Claude non fanno automaticamente',
+      '<strong>Step 5 — Riassunto esecutivo:</strong> Chiedi: "Genera un riassunto esecutivo in 200 parole, evidenziando i punti chiave con bullet point"',
+      '<strong>Step 6 — Genera il Podcast:</strong> Clicca su "Audio Overview" → "Generate". NotebookLM creerà un podcast di 10-15 minuti con 2 voci AI che discutono i tuoi documenti. Ascolta almeno 3 minuti — è impressionante!',
+      '<strong>Step 7 — Screenshot e condivisione:</strong> Cattura: 1) Una risposta con le citazioni numerate, 2) Il player del podcast. Condividi il link del podcast con un compagno',
+      '<strong>Takeaway:</strong> NotebookLM è GRATIS, non allucina (cita sempre le fonti), e il podcast è perfetto per ripassare materiale. È il tool più sottovalutato del 2026.',
+    ],
+    handsOnMaterial: {
+      label: 'Documenti di esempio da caricare (se non hai materiale tuo)',
+      documents: [
+        {
+          filename: 'memo-strategia-digitale-2026.txt',
+          content: `MEMO INTERNO — STRATEGIA DIGITALE 2026\nDa: Direzione Generale\nA: Tutti i responsabili di area\nData: 15 gennaio 2026\n\nCONTESTO\nL'azienda ha chiuso il 2025 con un fatturato di 45M euro (+8% vs 2024). La marginalità è rimasta stabile al 12%, ma i costi operativi sono cresciuti del 15%. È necessario un cambio di passo sulla digitalizzazione.\n\nOBIETTIVI 2026\n1. Ridurre i costi operativi del 10% tramite automazione\n2. Implementare almeno 3 progetti AI in produzione entro Q3\n3. Formare il 100% dei dipendenti sugli strumenti AI base\n4. Digitalizzare il processo ordini (oggi 60% cartaceo)\n\nBUDGET ALLOCATO\n- Formazione AI: 120.000 euro\n- Licenze tool AI: 85.000 euro\n- Consulenza esterna: 150.000 euro\n- Infrastruttura cloud: 200.000 euro\nTotale: 555.000 euro (1.2% del fatturato)`,
+        },
+        {
+          filename: 'report-customer-satisfaction-2025.txt',
+          content: `REPORT SODDISFAZIONE CLIENTI — ANNO 2025\nCampione: 2.400 clienti (su 8.500 attivi)\n\nNET PROMOTER SCORE (NPS)\n- NPS 2025: 42 (vs 38 nel 2024, +4 punti)\n- Benchmark settore: 35\n\nAREE DI MIGLIORAMENTO\n1. Tempi di risposta assistenza: 3.1/5 — tempo medio prima risposta: 14 ore (target: 4 ore)\n2. Facilità d'uso del portale online: 3.2/5 — il 45% preferisce ancora chiamare\n3. Proattività nella comunicazione: 3.0/5 — solo il 22% riceve notifiche di spedizione\n\nRACCOMANDAZIONI\n1. Implementare chatbot AI per ridurre tempi di prima risposta a <1 ora\n2. Rinnovare il portale clienti con focus mobile\n3. Attivare notifiche automatiche su stato ordine`,
+        },
+        {
+          filename: 'analisi-competitor-q4-2025.txt',
+          content: `ANALISI COMPETITIVA — Q4 2025\n\nMercato totale: ~500M euro. Nostra quota: 9% (stabile).\n\nCOMPETITOR A — "TechFlow Solutions" (quota 22%)\nPunti di forza: piattaforma cloud avanzata, forte R&D. Novità 2025: assistente AI integrato nel portale.\n\nCOMPETITOR B — "DataPrime" (quota 18%)\nPunti di forza: prezzo aggressivo, forte su e-commerce. Novità 2025: partnership con grande retailer.\n\nCOMPETITOR C — "InnovaGroup" (quota 15%)\nPunti di forza: innovazione rapida, team giovane. Novità 2025: round 20M, assunzione 50 persone, crescita +40% YoY.\n\nIMPLICAZIONI: TechFlow ha AI integrata — dobbiamo accelerare. Nessun competitor ha servizio clienti AI — opportunità.`,
+        },
+      ],
+      testQuestions: [
+        'Quali sono i principali problemi emersi dalla survey clienti?',
+        'Quanto budget è stato allocato per la strategia digitale 2026?',
+        'Chi è il nostro competitor più pericoloso e perché?',
+        "Come potremmo usare l'AI per risolvere il problema dei tempi di risposta?",
+        'Genera un podcast audio che riassuma i 3 documenti',
+      ],
+    },
   },
 
-  // 14. Gemini vs ChatGPT vs Claude
+  // ─── ESERCIZIO 5: Confronto Finale ──────────────────────────────────────
+
+  // 9. Esercizio 5: Confronto finale
+  {
+    type: 'hands-on',
+    heading: 'Esercizio 5: Confronto Finale — Tabella Comparativa',
+    timer: '30 minuti',
+    level: 'base',
+    tools: ['Google Docs o Sheets (free)'],
+    deliverable: 'Tabella comparativa delle 4 piattaforme compilata + raccomandazione personale',
+    instructions: [
+      '<strong>Obiettivo:</strong> sintetizzare tutto quello che hai imparato oggi in una tabella comparativa delle 4 piattaforme',
+      '<strong>Step 1:</strong> Crea un Google Sheet con le colonne: Criterio | ChatGPT | Claude | Gemini | NotebookLM',
+      '<strong>Step 2:</strong> Compila le righe con i tuoi voti (1-5) per ogni criterio: Facilità d\'uso, Qualità delle risposte, Funzionalità uniche (Canvas / Projects / Workspace / Podcast), Utilità per il MIO lavoro, Velocità di risposta, Aspetto grafico / UX',
+      '<strong>Step 3:</strong> Aggiungi una riga "Funzionalità killer" — per ogni piattaforma, scrivi LA feature che ti ha colpito di più',
+      '<strong>Step 4:</strong> Aggiungi una riga "Limite principale" — il difetto più evidente di ciascuna',
+      '<strong>Step 5:</strong> In fondo, scrivi: "Per il MIO lavoro, lo stack ideale sarebbe: [piattaforma principale] + [piattaforma secondaria] perché..."',
+      '<strong>Step 6:</strong> Prepara una mini-presentazione di 2 minuti per condividere i tuoi risultati con la classe',
+      '<strong>Ricorda:</strong> non esiste la risposta "giusta" — il tool migliore è quello che TU userai davvero ogni giorno!',
+    ],
+  },
+
+  // 10. Tabella di riferimento
   {
     type: 'custom',
     layout: 'compare-table',
-    heading: 'Gemini vs ChatGPT vs Claude',
-    columns: ['', 'Gemini 2.5 Pro', 'ChatGPT (GPT-4o)', 'Claude (Opus 4)'],
+    heading: 'Cheat Sheet: Le 4 Piattaforme a Confronto',
+    columns: ['', 'ChatGPT', 'Claude', 'Gemini', 'NotebookLM'],
     rows: [
-      ['Forza', 'Context 1M, multimodale, gratis', 'Ecosistema plugin, GPTs, DALL-E', 'Ragionamento, codice, sicurezza'],
-      ['Debolezza', 'Meno creativo, a volte generico', 'Costo elevato, privacy concerns', 'No generazione immagini, no plugin'],
-      ['Best per', 'Ricerca su documenti lunghi', 'Task creativi e generali', 'Analisi complesse, coding, writing'],
-      ['Prezzo', 'Gratis / $20 Advanced', '$20/mese Plus', '$20/mese Pro'],
+      ['Punto forte', 'Canvas, plugin, versatilità', 'Projects, Artifacts, ragionamento', 'Multimodale, Google Workspace', 'Citazioni precise, podcast auto'],
+      ['Free tier', 'GPT-5.2, Canvas, memoria', 'Projects, Artifacts, Sonnet', 'Gemini 2.5, integrazione Google', 'Tutto gratis, fino a 50 fonti'],
+      ['Limite free', 'Meno messaggi/giorno', 'Meno messaggi, no Opus', 'Meno potente dei competitors', 'Solo fonti caricate, no chat libera'],
+      ['Best per', 'Task generici e creativi', 'Analisi documenti, coding, app', 'Chi usa Google Workspace', 'Ricerca su documenti specifici'],
     ],
-    footer: '<strong>Takeaway:</strong> non esiste il "migliore" in assoluto. Gemini per ricerca e contesto lungo, ChatGPT per versatilita e plugin, Claude per ragionamento e codice.',
+    footer: '<strong>Consiglio:</strong> non scegliete UNA sola piattaforma. Usate quella giusta per il task giusto. Tutte sono gratuite!',
   },
 
-  // 15. QUOTE
+  // 11. QUOTE
   {
     type: 'quote',
     text: 'The best AI tool is the one your team will actually use every day.',
     source: 'Ethan Mollick, Wharton Professor & AI Researcher',
   },
 
-  // 16. Perplexity: il search AI
-  {
-    type: 'concept',
-    heading: 'Perplexity:\nil search AI',
-    content: `<p class="concept-text">
-  <strong>Cos'\u00E8:</strong> motore di ricerca che risponde con fonti citate. Non genera: <em>trova e sintetizza</em>.
-  <br><br>
-  <strong>Per l'azienda:</strong> ricerca di mercato, analisi competitor, fact-checking in tempo reale.
-  <br><br>
-  <strong>Pro vs Google:</strong> risposte dirette, fonti verificabili, niente SEO spam. Meno rumore, piu segnale.
-</p>`,
-    image: { src: 'https://i.giphy.com/media/3oKIPnAiaMCJ8rJ1wk/giphy.gif', alt: 'Search' },
-  },
-
-  // 17. Cursor: scrivere codice con AI
-  {
-    type: 'concept',
-    heading: 'Cursor:\nscrivere codice con AI',
-    content: `<p class="concept-text">
-  <strong>Cos'\u00E8:</strong> editor di codice (fork di VS Code) con AI integrata. Legge il tuo progetto, scrive codice, fa debug.
-  <br><br>
-  <strong>Per i non-dev:</strong> questo e il futuro. Chi sa "parlare" all'AI potra creare software senza essere programmatore.
-  <br><br>
-  <strong>Impatto:</strong> sviluppatori 2-5x piu produttivi. Junior che producono come senior. Il gap si riduce.
-</p>`,
-    image: { src: 'https://i.giphy.com/media/ZVik7pBtu9dNS/giphy.gif', alt: 'Coding' },
-  },
-
-  // 18. v0 by Vercel: UI dal prompt
-  {
-    type: 'concept',
-    heading: 'v0 by Vercel:\nUI dal prompt',
-    content: `<p class="concept-text">
-  <strong>Cos'\u00E8:</strong> scrivi una descrizione testuale, ottieni un'interfaccia web funzionante. Gratis.
-  <br><br>
-  <strong>Esempio:</strong> "Crea una dashboard con grafico vendite, tabella clienti e filtro per data" \u2192 interfaccia completa in 30 secondi.
-  <br><br>
-  <strong>Per chi:</strong> product manager, designer, chiunque voglia prototipare velocemente senza aspettare il team dev.
-</p>`,
-    image: { src: 'https://i.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif', alt: 'UI generation' },
-  },
-
-  // 19. Notion AI: knowledge management
-  {
-    type: 'concept',
-    heading: 'Notion AI:\nknowledge management',
-    content: `<p class="concept-text">
-  <strong>Wiki aziendale potenziata:</strong> cerca e trova risposte nella knowledge base dell'azienda, non solo keyword.
-  <br><br>
-  <strong>Scrittura:</strong> genera report, riassumi meeting notes, traduci documenti — dentro Notion.
-  <br><br>
-  <strong>Q&A:</strong> "Qual era la decisione presa nel meeting del 15 marzo?" — risponde con link alla pagina.
-</p>`,
-    image: { src: 'https://i.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif', alt: 'Knowledge' },
-  },
-
-  // 20. Make vs Zapier vs n8n
-  {
-    type: 'custom',
-    layout: 'compare-table',
-    heading: 'Make vs Zapier vs n8n',
-    columns: ['', 'Zapier', 'Make', 'n8n'],
-    rows: [
-      ['Facilita', '\u2B50\u2B50\u2B50\u2B50\u2B50', '\u2B50\u2B50\u2B50\u2B50', '\u2B50\u2B50\u2B50'],
-      ['Potenza', '\u2B50\u2B50\u2B50', '\u2B50\u2B50\u2B50\u2B50', '\u2B50\u2B50\u2B50\u2B50\u2B50'],
-      ['Prezzo', 'Da $20/mese', 'Da $9/mese', 'Gratis (self-hosted)'],
-      ['Self-host', 'No', 'No', 'Si'],
-      ['Best per', 'Automazioni semplici', 'Workflow visivi complessi', 'Dev team, massima flessibilita'],
-    ],
-    footer: '<strong>Ricorda:</strong> Zapier per semplicita, Make per workflow visivi complessi, n8n per massimo controllo e self-hosting. Il budget e il livello tecnico del team guidano la scelta.',
-  },
-
-  // 21. La mappa dei tool AI — 2026
-  {
-    type: 'concept',
-    centered: true,
-    heading: 'La mappa dei tool AI — 2026',
-    content: `<div class="tool-map" style="gap:12px;">
-  <div class="tool-category">
-    <h4>\u{1F4AC} Chat</h4>
-    <div class="tool-items">ChatGPT · Claude · Gemini · Copilot</div>
-  </div>
-  <div class="tool-category">
-    <h4>\u{1F50D} Search</h4>
-    <div class="tool-items">Perplexity · Bing AI · Google AI</div>
-  </div>
-  <div class="tool-category">
-    <h4>\u{1F4BB} Coding</h4>
-    <div class="tool-items">Cursor · GitHub Copilot · v0</div>
-  </div>
-  <div class="tool-category">
-    <h4>\u26A1 Automazione</h4>
-    <div class="tool-items">Zapier · Make · n8n · Power Automate</div>
-  </div>
-  <div class="tool-category">
-    <h4>\u{1F3A8} Creative</h4>
-    <div class="tool-items">Midjourney · DALL-E 3 · Sora · Runway</div>
-  </div>
-  <div class="tool-category">
-    <h4>\u{1F4CB} Produttivita</h4>
-    <div class="tool-items">Notion AI · NotebookLM · Gamma</div>
-  </div>
-</div>`,
-  },
-
-  // 22. DEMO — Power Automate
-  {
-    type: 'demo',
-    heading: 'Automazione base con Power Automate',
-    description: `Creiamo un flusso: nuova email con allegato \u2192 salva su SharePoint \u2192 notifica Teams.<br>
-Dall'idea al workflow funzionante in 5 minuti.`,
-    demoMaterial: {
-      label: 'Checklist pre-demo (preparare PRIMA della lezione)',
-      checklist: [
-        'Account Microsoft 365 con licenza Power Automate (anche trial)',
-        'Accesso a Outlook, SharePoint e Teams sullo stesso tenant',
-        'Creare una cartella SharePoint di test: "Demo-Corso-AI"',
-        'Creare un canale Teams di test: "Demo AI Corso"',
-        'Preparare 2-3 email di test con allegati PDF da inviare durante la demo',
-        'Verificare che il browser sia loggato su make.powerautomate.com',
-        'Piano B: se M365 non disponibile, mostrare la demo con screenshot/video preparato',
-      ],
-      planB: 'Se non si ha accesso a M365: usare il template gratuito Power Automate "Save email attachments to OneDrive" come walkthrough visuale, mostrando i passaggi senza eseguire.',
-    },
-  },
-
-  // 23. DEMO — NotebookLM
-  {
-    type: 'demo',
-    heading: 'NotebookLM su documenti aziendali',
-    description: `Carichiamo 3 documenti interni, facciamo domande, e generiamo<br>
-un podcast audio che riassume i punti chiave.`,
-    demoMaterial: {
-      label: 'Documenti da caricare su NotebookLM',
-      note: 'Usare gli stessi 3 report della demo Claude Projects (lezione 05) oppure i seguenti documenti specifici:',
-      documents: [
-        {
-          filename: 'memo-strategia-digitale-2026.txt',
-          content: `MEMO INTERNO — STRATEGIA DIGITALE 2026
-Da: Direzione Generale
-A: Tutti i responsabili di area
-Data: 15 gennaio 2026
-
-CONTESTO
-L'azienda ha chiuso il 2025 con un fatturato di 45M euro (+8% vs 2024). La marginalita e rimasta stabile al 12%, ma i costi operativi sono cresciuti del 15%. E necessario un cambio di passo sulla digitalizzazione.
-
-OBIETTIVI 2026
-1. Ridurre i costi operativi del 10% tramite automazione
-2. Implementare almeno 3 progetti AI in produzione entro Q3
-3. Formare il 100% dei dipendenti sugli strumenti AI base
-4. Digitalizzare il processo ordini (oggi 60% cartaceo)
-
-BUDGET ALLOCATO
-- Formazione AI: 120.000 euro
-- Licenze tool AI: 85.000 euro
-- Consulenza esterna: 150.000 euro
-- Infrastruttura cloud: 200.000 euro
-Totale: 555.000 euro (1.2% del fatturato)
-
-RISCHI IDENTIFICATI
-- Resistenza del personale senior (eta media 48 anni)
-- GDPR compliance per dati clienti processati da AI
-- Dipendenza da fornitori cloud USA
-- Possibile impatto su 15-20 posizioni ripetitive (piano di riqualificazione necessario)
-
-PROSSIMI PASSI
-- Febbraio: selezione fornitori e kick-off formazione
-- Marzo: primi POC su customer service e analisi ordini
-- Giugno: go-live primo progetto AI
-- Settembre: assessment risultati e piano 2027`,
-        },
-        {
-          filename: 'report-customer-satisfaction-2025.txt',
-          content: `REPORT SODDISFAZIONE CLIENTI — ANNO 2025
-Campione: 2.400 clienti (su 8.500 attivi)
-Metodologia: NPS + survey strutturata
-
-NET PROMOTER SCORE (NPS)
-- NPS 2025: 42 (vs 38 nel 2024, +4 punti)
-- Benchmark settore: 35
-- Promotori (9-10): 52%
-- Passivi (7-8): 28%
-- Detrattori (0-6): 20%
-
-PUNTI DI FORZA (top 3)
-1. Qualita del prodotto: 4.3/5
-2. Competenza del team commerciale: 4.1/5
-3. Rapporto qualita-prezzo: 3.9/5
-
-AREE DI MIGLIORAMENTO (top 3)
-1. Tempi di risposta assistenza: 3.1/5 (target: 4.0)
-   - Tempo medio prima risposta: 14 ore (target: 4 ore)
-   - Il 35% dei ticket richiede 3+ interazioni per la risoluzione
-2. Facilita d'uso del portale online: 3.2/5
-   - Il 45% preferisce ancora chiamare per fare un ordine
-   - Mobile experience giudicata "scarsa" dal 60% degli utenti
-3. Proattivita nella comunicazione: 3.0/5
-   - I clienti vogliono aggiornamenti automatici sullo stato ordine
-   - Solo il 22% riceve notifiche di spedizione
-
-VERBATIM SIGNIFICATIVI
-"Il prodotto e ottimo ma quando ho un problema devo aspettare giorni per una risposta"
-"Perche non posso tracciare il mio ordine online come faccio su Amazon?"
-"Il vostro commerciale e bravissimo, ma il sito sembra del 2010"
-
-RACCOMANDAZIONI
-1. Implementare chatbot AI per ridurre tempi di prima risposta a <1 ora
-2. Rinnovare il portale clienti con focus mobile
-3. Attivare notifiche automatiche su stato ordine e spedizione
-4. Creare area self-service per FAQ e documentazione tecnica`,
-        },
-        {
-          filename: 'analisi-competitor-q4-2025.txt',
-          content: `ANALISI COMPETITIVA — Q4 2025
-Preparato da: Marketing & Strategy
-
-PANORAMICA MERCATO
-- Mercato totale: ~500M euro (nostro segmento)
-- Nostra quota: 9% (stabile)
-- Top 3 competitor coprono il 55% del mercato
-
-COMPETITOR A — "TechFlow Solutions"
-- Quota mercato: 22% (leader)
-- Fatturato stimato: 110M euro
-- Punti di forza: piattaforma cloud avanzata, forte R&D, brand riconosciuto
-- Debolezze: prezzi alti (+30% vs noi), servizio clienti standardizzato
-- Novita 2025: hanno lanciato assistente AI integrato nel loro portale
-- Minaccia: stanno acquisendo PMI nel nostro segmento
-
-COMPETITOR B — "DataPrime"
-- Quota mercato: 18%
-- Fatturato stimato: 90M euro
-- Punti di forza: prezzo aggressivo, forte su e-commerce
-- Debolezze: qualita prodotto inferiore, alto churn rate (22%)
-- Novita 2025: partnership con grande retailer, espansione in Spagna
-- Minaccia: guerra di prezzo in corso, margini in compressione
-
-COMPETITOR C — "InnovaGroup"
-- Quota mercato: 15%
-- Fatturato stimato: 75M euro
-- Punti di forza: innovazione rapida, team giovane, forte su social
-- Debolezze: poca presenza enterprise, supporto post-vendita debole
-- Novita 2025: round di finanziamento 20M, assunzione 50 persone
-- Minaccia: crescita veloce (+40% YoY), ci stanno superando su clienti <50 dip.
-
-IMPLICAZIONI STRATEGICHE
-1. TechFlow ha AI integrata: dobbiamo accelerare i nostri progetti AI
-2. DataPrime compete sul prezzo: non possiamo seguirli, puntare su valore
-3. InnovaGroup cresce su PMI: proteggere il segmento con offerta dedicata
-4. Nessun competitor ha un servizio clienti AI: opportunita di differenziazione`,
-        },
-      ],
-      testQuestions: [
-        'Quali sono i principali problemi emersi dalla survey clienti?',
-        'Quanto budget e stato allocato per la strategia digitale 2026?',
-        'Chi e il nostro competitor piu pericoloso e perche?',
-        'Come potremmo usare l\'AI per risolvere il problema dei tempi di risposta?',
-        'Genera un podcast audio che riassuma i 3 documenti (funzione NotebookLM)',
-      ],
-    },
-  },
-
-  // 24. HANDS-ON
-  {
-    type: 'hands-on',
-    heading: 'Confronto piattaforme sullo stesso task',
-    timer: '90 minuti',
-    instructions: [
-      '<strong>Task:</strong> "Riassumi il documento qui sotto e scrivi un\'email con i 5 punti chiave al tuo manager"',
-      '<strong>Fallo con:</strong> ChatGPT, Claude, Gemini, e (se Microsoft-shop) Copilot',
-      '<strong>Valuta:</strong> qualita output, facilita d\'uso, velocita, costo',
-      '<strong>Bonus:</strong> prova lo stesso task su NotebookLM e Perplexity',
-      '<strong>Output:</strong> tabella di confronto personale con il tuo "vincitore"',
-    ],
-    handsOnMaterial: {
-      label: 'Documento condiviso per l\'esercizio (tutti usano lo stesso)',
-      text: `RELAZIONE TRIMESTRALE — Q4 2025
-Direzione Operativa — TechCorp Italia S.r.l.
-
-1. PERFORMANCE FINANZIARIA
-Il Q4 2025 si chiude con ricavi di 12.8M euro (+11% vs Q4 2024). Il margine operativo e al 14.2%, in miglioramento rispetto al 12.1% del trimestre precedente. I costi del personale sono aumentati del 6% a causa di 12 nuove assunzioni nel reparto tech. I costi infrastruttura cloud sono cresciuti del 22%, principalmente per il nuovo ambiente di staging e i test AI.
-
-2. PRODOTTO E SVILUPPO
-Rilasciate 3 major release della piattaforma. La funzionalita di ricerca AI (beta) ha registrato un tasso di adozione del 34% tra gli utenti enterprise. Tempo medio di risposta della piattaforma migliorato del 18% grazie alla migrazione a microservizi. Il backlog e stato ridotto del 25% (da 340 a 255 ticket). Criticita: 2 incidenti di severita alta in novembre (downtime totale: 4.2 ore).
-
-3. COMMERCIALE
-42 nuovi clienti acquisiti (target: 50). Churn rate stabile al 4.5% (benchmark settore: 8%). Il deal medio e cresciuto del 15% (da 32K a 37K euro/anno). Pipeline Q1 2026: 3.2M euro (55% probabilita media). Il settore manifatturiero e il verticale con crescita piu rapida (+28% YoY).
-
-4. CUSTOMER SUCCESS
-NPS: 42 (stabile). Tempo medio di risoluzione ticket: 12 ore (target: 8 ore). Il chatbot AI pilota ha gestito il 22% dei ticket di primo livello con un CSAT di 3.8/5. Il 78% dei clienti enterprise ha rinnovato con upsell. Il team ha condotto 180 sessioni di onboarding (vs 145 nel Q3).
-
-5. PERSONE E ORGANIZZAZIONE
-Headcount: 187 (+12 nel trimestre). Tempo medio di assunzione: 35 giorni (target: 28). Completato il primo ciclo di formazione AI: 145 dipendenti formati (78%). Engagement score (survey interna): 7.2/10 (vs 6.8 nel Q3). 3 dimissioni nel trimestre (2 junior dev, 1 marketing).
-
-6. PRIORITA Q1 2026
-- Go-live chatbot AI per tutti i clienti (target: febbraio)
-- Lancio funzionalita di analytics predittivo
-- Hiring: 8 posizioni aperte (4 dev, 2 sales, 1 PM, 1 data scientist)
-- Preparazione per audit SOC2 Type II (marzo)
-- Kick-off partnership strategica con distributore DACH`,
-      prompt: 'Riassumi questa relazione trimestrale e scrivi un\'email al tuo manager con i 5 punti chiave, evidenziando successi, criticita e azioni prioritarie per il prossimo trimestre.',
-    },
-  },
-
-  // 25. RECAP
+  // 12. RECAP
   {
     type: 'recap',
-    heading: 'Recap',
+    heading: 'Recap — Lab 06',
     items: [
-      'Power Automate: potente se sei nell\'ecosistema Microsoft',
-      'Gemini + NotebookLM: l\'alternativa Google, gratis e potente',
-      'Non esiste il tool perfetto — esiste quello giusto per il tuo contesto',
-      'Perplexity, Cursor, v0: tool verticali che fanno UNA cosa molto bene',
-      'La prossima lezione: agenti AI + workflow avanzati con Zapier e n8n',
+      'ChatGPT free: Canvas per editare documenti, Custom Instructions per personalizzare, Memory per continuità',
+      'Claude free: Projects per knowledge base personalizzate, Artifacts per creare app interattive — ORA GRATIS!',
+      'Gemini free: forte su multimodale e integrazione Google Workspace',
+      'NotebookLM: citazioni precise, zero allucinazioni, podcast audio automatico — il tool più sottovalutato',
+      'Non esiste il tool "migliore" — esiste quello giusto per il TUO task',
     ],
   },
 
-  // 26. RISORSE
+  // 13. RISORSE
   {
     type: 'resource',
     heading: 'Risorse',
     links: [
-      { label: 'Power Automate — make.powerautomate.com', url: 'https://make.powerautomate.com' },
+      { label: 'ChatGPT — chatgpt.com', url: 'https://chatgpt.com' },
+      { label: 'Claude — claude.ai', url: 'https://claude.ai' },
+      { label: 'Gemini — gemini.google.com', url: 'https://gemini.google.com' },
       { label: 'NotebookLM — notebooklm.google.com', url: 'https://notebooklm.google.com' },
-      { label: 'Perplexity — perplexity.ai', url: 'https://perplexity.ai' },
-      { label: 'Cursor — cursor.sh', url: 'https://cursor.sh' },
-      { label: 'v0 by Vercel — v0.dev', url: 'https://v0.dev' },
+      { label: 'Claude Projects e Artifacts ora gratis — Tom\'s Guide', url: 'https://www.tomsguide.com/ai/claude-just-made-two-of-its-best-features-free-heres-how-to-use-projects-and-artifacts' },
     ],
   },
 
-  // 27. Prossima lezione
+  // 14. Prossima lezione
   {
     type: 'title',
     lessonNumber: 'Prossima lezione',
-    title: '07 · Agenti AI + Zapier + n8n',
-    subtitle: 'Da AI passivo ad AI attivo: agenti autonomi e workflow intelligenti',
+    title: '07 · Lab: Automazione\nda Zero',
+    subtitle: 'Zapier, Make.com, n8n — costruisci il tuo primo workflow automatico',
     style: { color: 'var(--secondary)' },
   },
 ]
