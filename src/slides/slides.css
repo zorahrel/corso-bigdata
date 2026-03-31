@@ -593,10 +593,10 @@
   font-size: 0.7em;
   text-align: center;
 }
-.wf-step.trigger { background: #dcfce7; border-color: #059669; }
-.wf-step.ai { background: #dbeafe; border-color: var(--accent); }
-.wf-step.action { background: #fef3c7; border-color: var(--warning); }
-.wf-step.output { background: #d1fae5; border-color: #059669; }
+.wf-step.trigger, .wf-step.wf-trigger { background: #dcfce7; border-color: #059669; }
+.wf-step.ai, .wf-step.wf-ai { background: #dbeafe; border-color: var(--accent); }
+.wf-step.action, .wf-step.wf-action { background: #fef3c7; border-color: var(--warning); }
+.wf-step.output, .wf-step.wf-output { background: #d1fae5; border-color: #059669; }
 .wf-arrow { color: var(--accent); font-size: 1em; font-weight: 700; }
 
 /* Risk Grid */
@@ -1102,3 +1102,52 @@
 :root {
   --surface-dark: #f1f5f9;
 }
+
+/* ══════════════════════════════════
+   FEATURE LIST (inline HTML in L06, L07)
+   ══════════════════════════════════ */
+.feature-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; text-align: left; }
+.feature-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.65em; line-height: 1.6; }
+.feature-list .icon { font-size: 1.2em; flex-shrink: 0; width: 28px; text-align: center; }
+
+/* ══════════════════════════════════
+   TOOL MAP (L06 slide 21)
+   ══════════════════════════════════ */
+.tool-map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 900px; margin: 0 auto; }
+.tool-category { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; text-align: center; }
+.tool-category h4 { font-size: 0.7em; margin-bottom: 8px; }
+.tool-items { font-size: 0.55em; color: var(--muted); line-height: 1.6; }
+
+/* ══════════════════════════════════
+   MEMORY TYPES (L07 slide 7)
+   ══════════════════════════════════ */
+.memory-types { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 900px; margin: 0 auto; }
+.mem-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: left; }
+.mem-card h4 { font-size: 0.7em; margin-bottom: 8px; }
+.mem-card p { font-size: 0.55em; color: var(--muted); line-height: 1.5; }
+
+/* ══════════════════════════════════
+   WORKFLOW STEP: HUMAN TYPE (L05)
+   ══════════════════════════════════ */
+.wf-step.human, .wf-step.wf-human { background: #f3e8ff; border-color: #7c3aed; }
+
+/* ══════════════════════════════════
+   CLOSING CONTENT (SlideClosing)
+   ══════════════════════════════════ */
+.slide-closing .closing-content {
+  font-size: 1.2em;
+  color: var(--text-mid);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ══════════════════════════════════
+   HANDS-ON: level, tools, deliverable
+   ══════════════════════════════════ */
+.handson-meta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.handson-level { background: #dbeafe; color: var(--accent); font-size: 0.55em; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; }
+.handson-tools { font-size: 0.6em; color: var(--muted); line-height: 1.5; }
+.handson-tools strong { color: var(--text); }
+.handson-deliverable { background: var(--surface); border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 0 var(--radius) var(--radius) 0; font-size: 0.6em; margin-bottom: 12px; }
+.handson-deliverable strong { color: var(--accent); }
