@@ -31,11 +31,11 @@ export const slides = [
     heading: '\u{1F6A8} Regole del Lab',
     content: `<div style="max-width:700px; margin:0 auto; text-align:left;">
   <ul class="feature-list">
-    <li><span class="icon">\u{1F4B0}</span> <strong>SOLO free tier</strong> — Zapier (100 task/mese), Make (1000 ops/mese), n8n cloud (trial gratis)</li>
-    <li><span class="icon">\u{1F6AB}</span> <strong>Zero teoria</strong> — oggi si costruisce, si testa, si rompe, si rifà</li>
-    <li><span class="icon">\u{1F4F8}</span> <strong>Ogni esercizio = un deliverable</strong> — screenshot del workflow funzionante</li>
-    <li><span class="icon">\u{1F4A1}</span> <strong>Se ti blocchi:</strong> chiedi al compagno → poi al tutor → mai restare fermo</li>
-    <li><span class="icon">\u{1F916}</span> <strong>AI step obbligatorio</strong> — ogni workflow deve avere almeno uno step con AI</li>
+    <li><span class="icon">\u{1F4B0}</span> <strong>SOLO free tier</strong> — Zapier, Make, n8n cloud trial</li>
+    <li><span class="icon">\u{1F6AB}</span> <strong>Zero teoria</strong> — si costruisce, si testa, si rompe</li>
+    <li><span class="icon">\u{1F4F8}</span> <strong>Ogni esercizio = deliverable</strong> — screenshot del workflow</li>
+    <li><span class="icon">\u{1F4A1}</span> <strong>Se ti blocchi:</strong> compagno → tutor → mai fermo</li>
+    <li><span class="icon">\u{1F916}</span> <strong>AI step obbligatorio</strong> — almeno uno step AI per workflow</li>
   </ul>
 </div>`,
   },
@@ -60,7 +60,7 @@ export const slides = [
       ['Punto forte', 'Semplicità assoluta', 'Workflow visuale potente', 'Open source, massimo controllo'],
       ['Registrazione', 'zapier.com', 'make.com', 'n8n.cloud'],
     ],
-    footer: '<strong>Consiglio:</strong> registratevi su tutti e 3 ADESSO (5 min) così avete gli account pronti per gli esercizi.',
+    footer: '<strong>Consiglio:</strong> registratevi su tutti e 3 ADESSO (5 min) — account pronti per gli esercizi.',
   },
 
   // ─── ESERCIZIO 1: Zapier ──────────────────────────────────────────────
@@ -74,17 +74,17 @@ export const slides = [
     tools: ['Zapier (zapier.com — free tier)', 'Gmail (free)'],
     deliverable: 'Screenshot dello Zap funzionante + risultato nel Google Sheet',
     instructions: [
-      '<strong>Obiettivo:</strong> creare il tuo primo Zap che usa AI per classificare automaticamente le email',
-      '<strong>Step 1 — Registrazione:</strong> Vai su zapier.com → "Sign up free" con Google. Il piano gratuito include 100 task/mese e 5 Zap attivi',
-      '<strong>Step 2 — Nuovo Zap:</strong> Clicca "Create" → "Zaps" → "Create a new Zap"',
-      '<strong>Step 3 — Trigger:</strong> Cerca "Gmail" → seleziona "New Email" → connetti il tuo account Gmail → scegli la label "INBOX"',
-      '<strong>Step 4 — AI Step:</strong> Clicca "+" per aggiungere un\'azione → cerca "ChatGPT" → seleziona "Conversation". Nel campo "User Message" scrivi: "Classifica questa email in una di queste categorie: URGENTE, NORMALE, SPAM. Rispondi SOLO con la categoria e una motivazione di 1 riga. Email da: {{from}}. Oggetto: {{subject}}. Testo: {{body_plain}}"',
-      '<strong>Step 5 — Log su Sheets:</strong> Clicca "+" → cerca "Google Sheets" → "Create Spreadsheet Row". Connetti Google, crea un nuovo Sheet chiamato "Email Triage AI". Colonne: Data, Mittente, Oggetto, Categoria AI, Motivazione',
-      '<strong>Step 6 — Test:</strong> Clicca "Test" su ogni step per verificare che funzioni. Inviati un\'email di test dal tuo secondo account (o chiedi a un compagno)',
-      '<strong>Step 7 — Attiva:</strong> Clicca "Publish" per attivare lo Zap',
-      '<strong>Step 8 — Verifica:</strong> Invia 3 email diverse (una urgente, una normale, una spam) e controlla che il Google Sheet si popoli correttamente',
-      '<strong>Bonus:</strong> aggiungi un filtro — se la categoria è "URGENTE", aggiungi un\'azione Gmail che ti manda una notifica con oggetto "⚠️ EMAIL URGENTE: {{subject}}"',
-      '<strong>Screenshot finale:</strong> cattura lo Zap completo e il Google Sheet con almeno 3 righe classificate',
+      '<strong>Obiettivo:</strong> creare un Zap che classifica email con AI',
+      '<strong>Step 1 — Registrazione:</strong> zapier.com → "Sign up free" con Google (100 task/mese, 5 Zap)',
+      '<strong>Step 2 — Nuovo Zap:</strong> "Create" → "Zaps" → "Create a new Zap"',
+      '<strong>Step 3 — Trigger:</strong> Cerca "Gmail" → "New Email" → connetti Gmail → label "INBOX"',
+      '<strong>Step 4 — AI Step:</strong> "+" → cerca "ChatGPT" → "Conversation". Prompt: "Classifica email in URGENTE/NORMALE/SPAM. Rispondi con categoria + motivazione 1 riga. Da: {{from}}, Oggetto: {{subject}}, Testo: {{body_plain}}"',
+      '<strong>Step 5 — Sheets:</strong> "+" → "Google Sheets" → "Create Row". Crea sheet "Email Triage AI" con colonne: Data, Mittente, Oggetto, Categoria, Motivazione',
+      '<strong>Step 6 — Test:</strong> "Test" su ogni step, inviati un\'email di prova',
+      '<strong>Step 7 — Attiva:</strong> "Publish" per attivare lo Zap',
+      '<strong>Step 8 — Verifica:</strong> Invia 3 email diverse (urgente, normale, spam) e controlla il Sheet',
+      '<strong>Bonus:</strong> se categoria = URGENTE → azione Gmail di notifica',
+      '<strong>Screenshot:</strong> cattura Zap completo + Sheet con almeno 3 righe',
     ],
   },
 
@@ -99,17 +99,16 @@ export const slides = [
     tools: ['Make.com (make.com — free tier)', 'Google Sheets (free)'],
     deliverable: 'Screenshot dello scenario Make funzionante + output visibile',
     instructions: [
-      '<strong>Obiettivo:</strong> creare uno scenario Make.com che processa dati con AI e li salva automaticamente',
-      '<strong>Step 1 — Registrazione:</strong> Vai su make.com → "Get started free". Piano gratis: 1000 operazioni/mese — più generoso di Zapier!',
-      '<strong>Step 2 — Nuovo Scenario:</strong> Clicca "Create a new scenario"',
-      '<strong>Step 3 — Trigger Webhook:</strong> Clicca il "+" al centro → cerca "Webhooks" → "Custom webhook". Clicca "Add" → dai un nome → copia l\'URL del webhook. Questo URL è il "trigger" del tuo scenario',
-      '<strong>Step 4 — Testa il webhook:</strong> Apri un\'altra tab e vai su webhook.site (o usa curl da terminale). Invia un JSON di test al tuo webhook: {"nome": "Mario Rossi", "messaggio": "Vorrei informazioni sul vostro prodotto enterprise", "email": "mario@test.it"}',
-      '<strong>Step 5 — Modulo AI:</strong> Clicca "+" dopo il webhook → cerca "OpenAI" (o "HTTP" se preferisci chiamare API direttamente). Usa "Create a Completion". Prompt: "Analizza questo messaggio di un potenziale cliente e genera: 1) Un punteggio di interesse da 1 a 10, 2) La categoria (lead caldo / tiepido / freddo), 3) Una bozza di risposta in italiano. Messaggio: {{messaggio}} Da: {{nome}}"',
-      '<strong>Step 6 — Se non hai API key OpenAI:</strong> alternativa gratuita! Usa il modulo "HTTP — Make a request" per chiamare l\'API gratuita di Gemini, oppure usa il modulo "Google Gemini" se disponibile',
-      '<strong>Step 7 — Salva su Google Sheets:</strong> Clicca "+" → "Google Sheets" → "Add a Row". Configura: Nome, Email, Messaggio, Score AI, Categoria, Bozza Risposta',
-      '<strong>Step 8 — Test completo:</strong> Clicca "Run once" → invia un nuovo JSON al webhook → verifica che il Google Sheet si popoli con la classificazione AI',
-      '<strong>Step 9 — Screenshot:</strong> cattura lo scenario Make completo (sarà un bel diagramma visuale!) e il Google Sheet con i risultati',
-      '<strong>Nota Make vs Zapier:</strong> Make mostra il flusso come un diagramma visuale — molto più intuitivo per workflow complessi. Il free tier è 10x più generoso di Zapier.',
+      '<strong>Obiettivo:</strong> scenario Make.com che processa dati con AI e li salva',
+      '<strong>Step 1 — Registrazione:</strong> make.com → "Get started free" (1000 ops/mese gratis)',
+      '<strong>Step 2 — Nuovo Scenario:</strong> "Create a new scenario"',
+      '<strong>Step 3 — Webhook:</strong> "+" → "Webhooks" → "Custom webhook" → "Add" → copia l\'URL',
+      '<strong>Step 4 — Testa webhook:</strong> Invia JSON di test: {"nome":"Mario Rossi", "messaggio":"Info prodotto enterprise", "email":"mario@test.it"}',
+      '<strong>Step 5 — Modulo AI:</strong> "+" → "OpenAI" → "Create a Completion". Prompt: "Analizza messaggio cliente: 1) Score interesse 1-10, 2) Categoria lead caldo/tiepido/freddo, 3) Bozza risposta. Messaggio: {{messaggio}} Da: {{nome}}"',
+      '<strong>Step 6 — Senza API key OpenAI?</strong> Usa modulo "HTTP" per API Gemini gratis, oppure "Google Gemini"',
+      '<strong>Step 7 — Sheets:</strong> "+" → "Google Sheets" → "Add a Row". Colonne: Nome, Email, Messaggio, Score, Categoria, Risposta',
+      '<strong>Step 8 — Test:</strong> "Run once" → invia JSON al webhook → verifica Sheet',
+      '<strong>Step 9 — Screenshot:</strong> cattura scenario Make + Sheet con risultati',
     ],
   },
 
@@ -124,17 +123,16 @@ export const slides = [
     tools: ['n8n (n8n.cloud — trial gratuito)', 'Gmail (free)'],
     deliverable: 'Workflow n8n esportato (JSON) + screenshot del risultato',
     instructions: [
-      '<strong>Obiettivo:</strong> costruire un workflow di email triage completo su n8n, con classificazione AI e smistamento automatico',
-      '<strong>Step 1 — Registrazione:</strong> Vai su n8n.cloud → "Start free". Il trial gratuito include 2500 esecuzioni — più che sufficienti per il lab',
-      '<strong>Step 2 — Nuovo Workflow:</strong> Clicca "Add workflow" → dai il nome "Email Triage AI"',
-      '<strong>Step 3 — Trigger (opzione A):</strong> Aggiungi nodo "Gmail Trigger" → "Message Received" → connetti il tuo Gmail. Ogni nuova email farà partire il workflow',
-      '<strong>Step 3 — Trigger (opzione B):</strong> Se non vuoi connettere Gmail, usa "Manual Trigger" + un nodo "Set" con dati email finti per testare',
-      '<strong>Step 4 — Nodo AI:</strong> Aggiungi un nodo "OpenAI" (o "HTTP Request" per chiamare Gemini gratis). Prompt: "Classifica questa email. Rispondi SOLO in JSON: {\\\"categoria\\\": \\\"URGENTE|NORMALE|SPAM\\\", \\\"priorita\\\": 1-5, \\\"riassunto\\\": \\\"...\\\", \\\"azione_suggerita\\\": \\\"...\\\"}. Email da: {{$json.from}}. Oggetto: {{$json.subject}}. Testo: {{$json.text}}"',
-      '<strong>Step 5 — Switch/IF:</strong> Aggiungi un nodo "Switch" che smista in base alla categoria: ramo URGENTE, ramo NORMALE, ramo SPAM',
-      '<strong>Step 6 — Azioni per ramo:</strong> Ramo URGENTE → nodo "Gmail — Send Email" che ti manda un alert. Ramo NORMALE → nodo "Google Sheets — Append Row" per logging. Ramo SPAM → nodo "No Operation" (ignora)',
-      '<strong>Step 7 — Test:</strong> Clicca "Execute Workflow" (con trigger manuale) o inviati un\'email (con Gmail trigger). Verifica che lo smistamento funzioni correttamente',
-      '<strong>Step 8 — Esporta:</strong> Menu → "Download" per salvare il workflow come JSON. Fai screenshot del workflow visuale completo',
-      '<strong>Differenza vs Zapier/Make:</strong> n8n ti dà il controllo totale — puoi scrivere codice JavaScript inline, fare branching complesso, e soprattutto è open source. Se vuoi, puoi installarlo sul tuo server (Docker) e i dati restano tuoi.',
+      '<strong>Obiettivo:</strong> workflow n8n di email triage con AI e smistamento automatico',
+      '<strong>Step 1 — Registrazione:</strong> n8n.cloud → "Start free" (trial 2500 esecuzioni)',
+      '<strong>Step 2 — Nuovo Workflow:</strong> "Add workflow" → nome "Email Triage AI"',
+      '<strong>Step 3a — Trigger Gmail:</strong> Nodo "Gmail Trigger" → "Message Received" → connetti Gmail',
+      '<strong>Step 3b — Alternativa:</strong> "Manual Trigger" + nodo "Set" con dati email finti',
+      '<strong>Step 4 — Nodo AI:</strong> "OpenAI" (o "HTTP Request" per Gemini gratis). Prompt: "Classifica email in JSON: {categoria: URGENTE|NORMALE|SPAM, priorita: 1-5, riassunto, azione_suggerita}"',
+      '<strong>Step 5 — Switch:</strong> Nodo "Switch" che smista per categoria: URGENTE / NORMALE / SPAM',
+      '<strong>Step 6 — Azioni:</strong> URGENTE → Gmail alert | NORMALE → Sheets log | SPAM → ignora',
+      '<strong>Step 7 — Test:</strong> "Execute Workflow" → verifica smistamento',
+      '<strong>Step 8 — Esporta:</strong> Menu → "Download" per salvare JSON + screenshot',
     ],
     handsOnMaterial: {
       label: 'Email di test da usare durante l\'esercizio',
@@ -172,15 +170,15 @@ export const slides = [
     tools: ['Zapier (free)', 'Make.com (free)', 'n8n (free)'],
     deliverable: 'Tabella comparativa + presentazione di 2 minuti alla classe',
     instructions: [
-      '<strong>Obiettivo:</strong> hai usato 3 tool di automazione — ora confrontali sulla tua pelle',
-      '<strong>Il Problema:</strong> "Quando ricevo un feedback da un cliente (via form/email/webhook), l\'AI deve: 1) Analizzare il sentiment (positivo/negativo/neutro), 2) Generare una bozza di risposta, 3) Salvare tutto in un foglio di log"',
-      '<strong>Step 1:</strong> Hai già costruito versioni simili di questo workflow nei 3 esercizi precedenti. Ora confronta l\'esperienza',
-      '<strong>Step 2:</strong> Crea un Google Sheet con le colonne: Criterio | Zapier | Make.com | n8n',
-      '<strong>Step 3:</strong> Compila queste righe con voti 1-5: Tempo di setup (quanto ci hai messo?), Facilità d\'uso (intuitivo?), Flessibilità (puoi personalizzare?), Qualità del risultato (funziona bene?), Free tier (generoso?), Documentazione/Help (trovi risposte?)',
-      '<strong>Step 4:</strong> Aggiungi una riga "Pro" e una riga "Contro" per ciascun tool — basati sulla TUA esperienza, non su quello che hai letto online',
-      '<strong>Step 5:</strong> Riga finale: "Per il MIO lavoro sceglierei [X] perché..." — almeno 3 motivazioni concrete',
-      '<strong>Step 6:</strong> Prepara una mini-presentazione di 2 minuti: 1) Quale tool hai scelto, 2) Perché, 3) Un consiglio per chi inizia da zero',
-      '<strong>Ricorda:</strong> la risposta "giusta" dipende da TE — il tuo livello tecnico, il tuo budget, il tuo team. Non esiste il tool perfetto!',
+      '<strong>Obiettivo:</strong> confronta i 3 tool sulla tua esperienza diretta',
+      '<strong>Il Problema:</strong> "Feedback cliente → AI analizza sentiment, genera bozza risposta, salva in foglio di log"',
+      '<strong>Step 1:</strong> Hai già costruito workflow simili — ora confronta l\'esperienza',
+      '<strong>Step 2:</strong> Google Sheet con colonne: Criterio | Zapier | Make.com | n8n',
+      '<strong>Step 3:</strong> Voti 1-5 per: Tempo setup, Facilità d\'uso, Flessibilità, Qualità risultato, Free tier, Documentazione',
+      '<strong>Step 4:</strong> Aggiungi riga "Pro" e "Contro" per ogni tool — dalla TUA esperienza',
+      '<strong>Step 5:</strong> Riga finale: "Per il MIO lavoro sceglierei [X] perché..." (3 motivazioni)',
+      '<strong>Step 6:</strong> Mini-presentazione 2 min: tool scelto, perché, consiglio per chi inizia',
+      '<strong>Ricorda:</strong> non esiste il tool perfetto — esiste quello giusto per TE',
     ],
   },
 

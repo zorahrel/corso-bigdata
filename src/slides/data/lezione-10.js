@@ -80,35 +80,35 @@ export const slides = [
     <div style="font-size: 1.4em; font-weight: 900; color: var(--accent); min-width: 60px; text-align: center;">5'</div>
     <div>
       <div style="font-size: 0.65em; font-weight: 700;">Presentazione</div>
-      <div style="font-size: 0.55em; color: var(--muted);">Le tue 5 slide. Timer rigoroso. Vai dritto al punto.</div>
+      <div style="font-size: 0.65em; color: var(--muted);">Le tue 5 slide. Timer rigoroso. Vai dritto al punto.</div>
     </div>
   </div>
   <div style="display: flex; align-items: center; gap: 16px; background: var(--surface); border-radius: var(--radius); padding: 16px 24px; margin-bottom: 12px;">
     <div style="font-size: 1.4em; font-weight: 900; color: var(--secondary); min-width: 60px; text-align: center;">3'</div>
     <div>
       <div style="font-size: 0.65em; font-weight: 700;">Q&A</div>
-      <div style="font-size: 0.55em; color: var(--muted);">Il pubblico fa il "board". Domande difficili. Obiezioni vere.</div>
+      <div style="font-size: 0.65em; color: var(--muted);">Il pubblico fa il "board". Domande difficili. Obiezioni vere.</div>
     </div>
   </div>
   <div style="display: flex; align-items: center; gap: 16px; background: var(--surface); border-radius: var(--radius); padding: 16px 24px; margin-bottom: 12px;">
     <div style="font-size: 1.4em; font-weight: 900; color: var(--warning); min-width: 60px; text-align: center;">30%</div>
     <div>
       <div style="font-size: 0.65em; font-weight: 700;">Soluzione AI proposta</div>
-      <div style="font-size: 0.55em; color: var(--muted);">Tool scelti, workflow, realismo della proposta</div>
+      <div style="font-size: 0.65em; color: var(--muted);">Tool scelti, workflow, realismo della proposta</div>
     </div>
   </div>
   <div style="display: flex; align-items: center; gap: 16px; background: var(--surface); border-radius: var(--radius); padding: 16px 24px; margin-bottom: 12px;">
     <div style="font-size: 1.4em; font-weight: 900; color: #fb923c; min-width: 60px; text-align: center;">20%</div>
     <div>
       <div style="font-size: 0.65em; font-weight: 700;">Chiarezza + ROI</div>
-      <div style="font-size: 0.55em; color: var(--muted);">Il problema è chiaro? I numeri reggono?</div>
+      <div style="font-size: 0.65em; color: var(--muted);">Il problema è chiaro? I numeri reggono?</div>
     </div>
   </div>
   <div style="display: flex; align-items: center; gap: 16px; background: var(--surface); border-radius: var(--radius); padding: 16px 24px;">
     <div style="font-size: 1.4em; font-weight: 900; color: var(--danger); min-width: 60px; text-align: center;">🗳️</div>
     <div>
       <div style="font-size: 0.65em; font-weight: 700;">Voto peer</div>
-      <div style="font-size: 0.55em; color: var(--muted);">Alla fine, ognuno vota i 3 pitch migliori (escluso il proprio)</div>
+      <div style="font-size: 0.65em; color: var(--muted);">Alla fine, ognuno vota i 3 pitch migliori (escluso il proprio)</div>
     </div>
   </div>
 </div>`,
@@ -241,28 +241,29 @@ Tra 30 giorni sarete tra le persone più competenti in AI nella vostra azienda. 
     centered: true,
     heading: 'Il Percorso che Abbiamo Fatto',
     content: `<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:900px;margin:0 auto;">
-  <div style="border-top:3px solid #6c63ff;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#6c63ff;">01</strong><br><span style="font-size:0.55em;color:var(--muted);">Cos'è l'AI</span></div>
-  <div style="border-top:3px solid #818cf8;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#818cf8;">02</strong><br><span style="font-size:0.55em;color:var(--muted);">Modelli LLM</span></div>
-  <div style="border-top:3px solid #00d4aa;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#00d4aa;">03</strong><br><span style="font-size:0.55em;color:var(--muted);">Prompting</span></div>
-  <div style="border-top:3px solid #2dd4bf;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#2dd4bf;">04</strong><br><span style="font-size:0.55em;color:var(--muted);">OpenAI</span></div>
-  <div style="border-top:3px solid #34d399;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#34d399;">05</strong><br><span style="font-size:0.55em;color:var(--muted);">Claude</span></div>
-  <div style="border-top:3px solid #f59e0b;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#f59e0b;">06</strong><br><span style="font-size:0.55em;color:var(--muted);">Tool AI</span></div>
-  <div style="border-top:3px solid #fb923c;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#fb923c;">07</strong><br><span style="font-size:0.55em;color:var(--muted);">Agenti</span></div>
-  <div style="border-top:3px solid #c084fc;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#c084fc;">08</strong><br><span style="font-size:0.55em;color:var(--muted);">Produttività</span></div>
-  <div style="border-top:3px solid #fb923c;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#fb923c;">09</strong><br><span style="font-size:0.55em;color:var(--muted);">Lab Adozione</span></div>
-  <div style="border-top:3px solid #ef4444;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#ef4444;">10</strong><br><span style="font-size:0.55em;color:var(--muted);">Progetto finale</span></div>
+  <div style="border-top:3px solid #6c63ff;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#6c63ff;">01</strong><br><span style="font-size:0.7em;color:var(--muted);">Cos'è l'AI</span></div>
+  <div style="border-top:3px solid #818cf8;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#818cf8;">02</strong><br><span style="font-size:0.7em;color:var(--muted);">Modelli LLM</span></div>
+  <div style="border-top:3px solid #00d4aa;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#00d4aa;">03</strong><br><span style="font-size:0.7em;color:var(--muted);">Prompting</span></div>
+  <div style="border-top:3px solid #2dd4bf;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#2dd4bf;">04</strong><br><span style="font-size:0.7em;color:var(--muted);">OpenAI</span></div>
+  <div style="border-top:3px solid #34d399;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#34d399;">05</strong><br><span style="font-size:0.7em;color:var(--muted);">Claude</span></div>
+  <div style="border-top:3px solid #f59e0b;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#f59e0b;">06</strong><br><span style="font-size:0.7em;color:var(--muted);">Tool AI</span></div>
+  <div style="border-top:3px solid #fb923c;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#fb923c;">07</strong><br><span style="font-size:0.7em;color:var(--muted);">Agenti</span></div>
+  <div style="border-top:3px solid #c084fc;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#c084fc;">08</strong><br><span style="font-size:0.7em;color:var(--muted);">Produttività</span></div>
+  <div style="border-top:3px solid #fb923c;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#fb923c;">09</strong><br><span style="font-size:0.7em;color:var(--muted);">Lab Adozione</span></div>
+  <div style="border-top:3px solid #ef4444;padding:12px 8px;background:var(--surface);border-radius:8px;text-align:center;"><strong style="color:#ef4444;">10</strong><br><span style="font-size:0.7em;color:var(--muted);">Progetto finale</span></div>
 </div>`,
   },
 
   // 16. Route AI — Dove andare da qui
   {
     type: 'concept',
+    centered: true,
     heading: 'Le Route AI: Quale Percorso Fa per Te?',
     content: `<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:800px;margin:0 auto;">
   <div style="border-left:4px solid #6c63ff;padding:16px;background:var(--surface);border-radius:8px;">
     <strong style="color:#6c63ff;">🧠 Power User</strong>
-    <p style="font-size:0.5em;color:var(--muted);margin:8px 0 0;">Per chiunque lavori con testo, dati, comunicazione. Nessun codice necessario.</p>
-    <ul style="font-size:0.55em;color:var(--text);margin:8px 0 0;padding-left:16px;">
+    <p style="font-size:0.65em;color:var(--muted);margin:8px 0 0;">Per chiunque lavori con testo, dati, comunicazione. Nessun codice necessario.</p>
+    <ul style="font-size:0.65em;color:var(--text);margin:8px 0 0;padding-left:16px;">
       <li>Prompt engineering avanzato</li>
       <li>Claude Projects + ChatGPT Canvas per il workflow quotidiano</li>
       <li>Automazioni no-code (Zapier, Make, n8n)</li>
@@ -271,8 +272,8 @@ Tra 30 giorni sarete tra le persone più competenti in AI nella vostra azienda. 
   </div>
   <div style="border-left:4px solid #00d4aa;padding:16px;background:var(--surface);border-radius:8px;">
     <strong style="color:#00d4aa;">⚡ AI Builder</strong>
-    <p style="font-size:0.5em;color:var(--muted);margin:8px 0 0;">Per chi vuole creare con l'AI — anche senza essere sviluppatore.</p>
-    <ul style="font-size:0.55em;color:var(--text);margin:8px 0 0;padding-left:16px;">
+    <p style="font-size:0.65em;color:var(--muted);margin:8px 0 0;">Per chi vuole creare con l'AI — anche senza essere sviluppatore.</p>
+    <ul style="font-size:0.65em;color:var(--text);margin:8px 0 0;padding-left:16px;">
       <li>GPTs custom e Claude Projects avanzati</li>
       <li>Workflow complessi con agenti AI</li>
       <li>API OpenAI/Anthropic (low-code)</li>
@@ -281,8 +282,8 @@ Tra 30 giorni sarete tra le persone più competenti in AI nella vostra azienda. 
   </div>
   <div style="border-left:4px solid #f59e0b;padding:16px;background:var(--surface);border-radius:8px;">
     <strong style="color:#f59e0b;">🏢 AI Champion</strong>
-    <p style="font-size:0.5em;color:var(--muted);margin:8px 0 0;">Per chi vuole guidare l'adozione AI nella propria azienda.</p>
-    <ul style="font-size:0.55em;color:var(--text);margin:8px 0 0;padding-left:16px;">
+    <p style="font-size:0.65em;color:var(--muted);margin:8px 0 0;">Per chi vuole guidare l'adozione AI nella propria azienda.</p>
+    <ul style="font-size:0.65em;color:var(--text);margin:8px 0 0;padding-left:16px;">
       <li>AI governance e compliance (AI Act)</li>
       <li>Change management e formazione team</li>
       <li>ROI measurement e business case</li>
@@ -291,8 +292,8 @@ Tra 30 giorni sarete tra le persone più competenti in AI nella vostra azienda. 
   </div>
   <div style="border-left:4px solid #ef4444;padding:16px;background:var(--surface);border-radius:8px;">
     <strong style="color:#ef4444;">🔬 AI Engineer</strong>
-    <p style="font-size:0.5em;color:var(--muted);margin:8px 0 0;">Per chi vuole andare deep — richiede basi di programmazione.</p>
-    <ul style="font-size:0.55em;color:var(--text);margin:8px 0 0;padding-left:16px;">
+    <p style="font-size:0.65em;color:var(--muted);margin:8px 0 0;">Per chi vuole andare deep — richiede basi di programmazione.</p>
+    <ul style="font-size:0.65em;color:var(--text);margin:8px 0 0;padding-left:16px;">
       <li>Python + ML foundations (Fast.ai, Andrew Ng)</li>
       <li>Fine-tuning e RAG</li>
       <li>MCP servers, tool use, agenti autonomi</li>
@@ -312,36 +313,37 @@ Tra 30 giorni sarete tra le persone più competenti in AI nella vostra azienda. 
   // 16c. Risorse per ogni Route
   {
     type: 'concept',
+    centered: true,
     heading: 'Risorse Gratuite per Ogni Route',
     content: `<div style="max-width:800px;margin:0 auto;">
   <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
     <div style="padding:12px;background:var(--surface);border-radius:8px;">
-      <strong style="color:#6c63ff;font-size:0.55em;">🧠 Power User</strong>
-      <ul style="font-size:0.55em;color:var(--text);margin:6px 0 0;padding-left:14px;">
+      <strong style="color:#6c63ff;font-size:0.65em;">🧠 Power User</strong>
+      <ul style="font-size:0.65em;color:var(--text);margin:6px 0 0;padding-left:14px;">
         <li><a href="https://learnprompting.org" target="_blank">Learn Prompting</a> — guida gratuita completa</li>
         <li><a href="https://docs.anthropic.com/en/prompt-library/library" target="_blank">Anthropic Prompt Library</a> — 100+ prompt</li>
         <li><a href="https://learn.deeplearning.ai" target="_blank">DeepLearning.ai Short Courses</a> — gratis</li>
       </ul>
     </div>
     <div style="padding:12px;background:var(--surface);border-radius:8px;">
-      <strong style="color:#00d4aa;font-size:0.55em;">⚡ AI Builder</strong>
-      <ul style="font-size:0.55em;color:var(--text);margin:6px 0 0;padding-left:14px;">
+      <strong style="color:#00d4aa;font-size:0.65em;">⚡ AI Builder</strong>
+      <ul style="font-size:0.65em;color:var(--text);margin:6px 0 0;padding-left:14px;">
         <li><a href="https://platform.openai.com/docs" target="_blank">OpenAI API Docs</a></li>
         <li><a href="https://n8n.io" target="_blank">n8n</a> — workflow open-source</li>
         <li><a href="https://cursor.sh" target="_blank">Cursor</a> — AI code editor</li>
       </ul>
     </div>
     <div style="padding:12px;background:var(--surface);border-radius:8px;">
-      <strong style="color:#f59e0b;font-size:0.55em;">🏢 AI Champion</strong>
-      <ul style="font-size:0.55em;color:var(--text);margin:6px 0 0;padding-left:14px;">
+      <strong style="color:#f59e0b;font-size:0.65em;">🏢 AI Champion</strong>
+      <ul style="font-size:0.65em;color:var(--text);margin:6px 0 0;padding-left:14px;">
         <li><a href="https://grow.google/certificates/ai-essentials" target="_blank">Google AI Essentials</a> — certificato gratis</li>
         <li><a href="https://course.elementsofai.com/it/" target="_blank">Elements of AI</a> — in italiano</li>
         <li><a href="https://learn.microsoft.com/en-us/ai" target="_blank">Microsoft AI Skills</a> — badge gratis</li>
       </ul>
     </div>
     <div style="padding:12px;background:var(--surface);border-radius:8px;">
-      <strong style="color:#ef4444;font-size:0.55em;">🔬 AI Engineer</strong>
-      <ul style="font-size:0.55em;color:var(--text);margin:6px 0 0;padding-left:14px;">
+      <strong style="color:#ef4444;font-size:0.65em;">🔬 AI Engineer</strong>
+      <ul style="font-size:0.65em;color:var(--text);margin:6px 0 0;padding-left:14px;">
         <li><a href="https://www.fast.ai" target="_blank">Fast.ai</a> — corsi pratici gratuiti</li>
         <li><a href="https://roadmap.sh/ai-engineer" target="_blank">AI Engineer Roadmap</a> — step by step</li>
         <li><a href="https://www.coursera.org/resources/ai-learning-roadmap" target="_blank">Coursera AI Roadmap</a></li>

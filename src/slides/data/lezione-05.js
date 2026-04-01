@@ -58,14 +58,14 @@ export const slides = [
     layout: 'feature-grid',
     heading: 'Agentic AI: i numeri del 2026',
     features: [
-      { icon: '📡', title: 'Telecom: 48%', description: 'Quasi metà delle telco ha agenti AI in produzione (NVIDIA 2026)' },
-      { icon: '🛒', title: 'Retail/CPG: 47%', description: 'Agenti per supply chain, pricing, customer service (NVIDIA 2026)' },
-      { icon: '🏢', title: 'Enterprise: 78%', description: 'Adoption AI da 55% a 78% in un anno (AmplifAI)' },
-      { icon: '⚠️', title: '22% abbandonato', description: 'Quasi 1 progetto agentico su 4 fallisce per risultati insufficienti' },
-      { icon: '🔮', title: 'NVIDIA 2026', description: 'Agentic AI è il trend #1 nel report State of AI 2026' },
-      { icon: '📊', title: '150+ data points', description: 'Digital Applied ha raccolto 150+ statistiche sull\'AI agentica' },
+      { icon: '📡', title: 'Telecom: 48%', description: 'Telco con agenti AI in produzione (NVIDIA 2026)' },
+      { icon: '🛒', title: 'Retail/CPG: 47%', description: 'Agenti per supply chain, pricing, servizio clienti' },
+      { icon: '🏢', title: 'Enterprise: 78%', description: 'Adoption AI da 55% a 78% in un anno' },
+      { icon: '⚠️', title: '22% abbandonato', description: '1 progetto agentico su 4 fallisce' },
+      { icon: '🔮', title: 'NVIDIA 2026', description: 'Agentic AI è il trend #1 del report' },
+      { icon: '📊', title: '150+ data points', description: 'Statistiche raccolte da Digital Applied' },
     ],
-    footer: '<strong>Il messaggio:</strong> l\'AI agentica non è futuro — è presente. Ma il 22% di fallimenti dimostra che serve strategia, non solo tecnologia.',
+    footer: '<strong>Il messaggio:</strong> l\'AI agentica è presente, non futuro. Ma il 22% di fallimenti richiede strategia.',
   },
 
   // 6. Agente vs Chatbot vs Workflow
@@ -75,13 +75,13 @@ export const slides = [
     heading: 'Agente vs Chatbot vs Workflow',
     columns: ['', 'Chatbot', 'Workflow', 'Agente AI'],
     rows: [
-      ['Autonomia', 'Nessuna — risponde a domande', 'Fissa — segue regole IF/THEN', 'Alta — pianifica e decide'],
-      ['Tool use', 'No (solo testo)', 'Sì, predefiniti', 'Sì, scoperti dinamicamente'],
+      ['Autonomia', 'Nessuna', 'Fissa (IF/THEN)', 'Alta — pianifica e decide'],
+      ['Tool use', 'No (solo testo)', 'Sì, predefiniti', 'Sì, dinamici'],
       ['Adattabilità', 'Zero', 'Bassa', 'Alta — si auto-corregge'],
-      ['Esempio', 'FAQ bot', 'Email → Slack → Sheet', 'Monitora competitor, analizza, riporta'],
-      ['Complessità setup', 'Bassa', 'Media', 'Alta'],
+      ['Esempio', 'FAQ bot', 'Email → Slack → Sheet', 'Monitora e riporta'],
+      ['Complessità', 'Bassa', 'Media', 'Alta'],
     ],
-    footer: '<strong>Regola pratica:</strong> usa un chatbot per le FAQ, un workflow per processi ripetitivi, un agente per task complessi che richiedono giudizio.',
+    footer: '<strong>Regola:</strong> chatbot per FAQ, workflow per processi ripetitivi, agente per task complessi.',
   },
 
   // ─── SEZIONE 2: WORKFLOW AUTOMATION ───
@@ -94,9 +94,9 @@ export const slides = [
   <strong>Automatizzare i processi ripetitivi</strong> senza scrivere codice — il primo passo verso l'AI in azienda.
   <br><br>
   <strong>I 3 tool principali:</strong><br>
-  ⚡ <strong>Zapier:</strong> il più popolare, 7000+ integrazioni, zero codice. Perfetto per PMI.<br>
-  🟧 <strong>Make.com:</strong> visual builder potente, più flessibile di Zapier, ottimo rapporto prezzo/features.<br>
-  🟩 <strong>n8n:</strong> open source, self-hosted, con nodi AI nativi. Per chi vuole controllo totale.
+  ⚡ <strong>Zapier:</strong> 7000+ integrazioni, zero codice. Perfetto per PMI.<br>
+  🟧 <strong>Make.com:</strong> visual builder flessibile, ottimo rapporto prezzo/features.<br>
+  🟩 <strong>n8n:</strong> open source, self-hosted, nodi AI nativi. Controllo totale.
   <br><br>
   <strong>Tutti e tre</strong> ora integrano AI: nodi GPT, Claude, image generation, classificazione automatica.
 </p>`,
@@ -117,7 +117,7 @@ export const slides = [
       ['Open source', 'No', 'No', 'Sì'],
       ['Per chi', 'PMI, non-tecnici', 'Team marketing/ops', 'Dev, aziende tech'],
     ],
-    footer: '<strong>Consiglio:</strong> inizia con Zapier se sei non-tecnico, Make.com per workflow complessi, n8n se vuoi controllo totale e hai risorse tech.',
+    footer: '<strong>Consiglio:</strong> Zapier se non-tecnico, Make per workflow complessi, n8n se hai risorse tech.',
   },
 
   // 9. DEMO — Workflow AI con n8n
@@ -143,15 +143,15 @@ export const slides = [
     type: 'concept',
     heading: 'AI Act: lo stato al 2026',
     content: `<p class="concept-text">
-  L'<strong>AI Act europeo</strong> è il primo regolamento al mondo sull'intelligenza artificiale.
+  L'<strong>AI Act europeo</strong> — primo regolamento al mondo sull'AI.
   <br><br>
-  <strong>📅 Timeline aggiornata (26 marzo 2026):</strong><br>
-  ✅ Feb 2025 — Divieti pratiche inaccettabili (social scoring, manipolazione)<br>
-  ✅ Ago 2025 — Norme sui modelli GPAI (General Purpose AI)<br>
-  ⏳ Ago 2026 — <strong>Piena applicabilità generale</strong><br>
-  🔄 2027-2028 — Sistemi ad alto rischio (<strong>RINVIATO</strong> il 26/3/2026)
+  <strong>📅 Timeline aggiornata:</strong><br>
+  ✅ Feb 2025 — Divieti pratiche inaccettabili<br>
+  ✅ Ago 2025 — Norme modelli GPAI<br>
+  ⏳ Ago 2026 — <strong>Piena applicabilità</strong><br>
+  🔄 2027-2028 — Alto rischio (<strong>RINVIATO</strong> il 26/3/2026)
   <br><br>
-  <strong>⚠️ Obbligo AI Literacy già in vigore</strong> — le aziende devono formare il personale. Sanzioni fino a <strong>€35M</strong>.
+  <strong>⚠️ AI Literacy già in vigore</strong> — obbligo formazione personale. Sanzioni fino a <strong>€35M</strong>.
 </p>`,
     image: { src: '', alt: '' },
   },
@@ -162,12 +162,12 @@ export const slides = [
     layout: 'feature-grid',
     heading: 'AI Act: i 4 livelli di rischio',
     features: [
-      { icon: '🚫', title: 'Inaccettabile', description: 'VIETATO: social scoring, manipolazione subliminale, nudificazione AI' },
-      { icon: '🔴', title: 'Alto rischio', description: 'Regolato: assunzioni, credito, sanità, giustizia — rinviato a 2027-2028' },
-      { icon: '🟡', title: 'Rischio limitato', description: 'Obbligo trasparenza: chatbot devono dichiarare di essere AI' },
-      { icon: '🟢', title: 'Rischio minimo', description: 'Libero: la maggior parte delle app AI consumer — nessun obbligo specifico' },
+      { icon: '🚫', title: 'Inaccettabile', description: 'VIETATO: social scoring, manipolazione, nudificazione AI' },
+      { icon: '🔴', title: 'Alto rischio', description: 'Regolato: assunzioni, credito, sanità — rinviato 2027-2028' },
+      { icon: '🟡', title: 'Rischio limitato', description: 'Obbligo trasparenza: i chatbot devono dichiararsi AI' },
+      { icon: '🟢', title: 'Rischio minimo', description: 'Libero: la maggior parte delle app AI consumer' },
     ],
-    footer: '<strong>Per le aziende:</strong> il rinvio sull\'alto rischio dà più tempo, ma l\'obbligo di AI Literacy è GIÀ attivo. Non aspettate.',
+    footer: '<strong>Per le aziende:</strong> rinvio alto rischio = più tempo, ma AI Literacy è GIÀ attiva.',
   },
 
   // ─── SEZIONE 4: ADOZIONE AI IN ITALIA ───
@@ -177,14 +177,14 @@ export const slides = [
     type: 'concept',
     heading: 'Adozione AI in Italia: Banca d\'Italia',
     content: `<p class="concept-text">
-  <strong>Studio empirico QEF N.1005 (marzo 2026)</strong> — primo studio italiano su impatto reale dell'AI nelle imprese.
+  <strong>QEF N.1005 (marzo 2026)</strong> — primo studio italiano su impatto reale dell'AI.
   <br><br>
-  📊 <strong>8,2%</strong> delle imprese italiane (10+ dipendenti) usa AI — media EU: <strong>13,5%</strong><br>
-  📈 Chi adotta AI: <strong>+5,2% produttività</strong>, <strong>+2% margini operativi</strong><br>
-  👥 Effetto occupazione: <strong>non significativo</strong> — l'AI NON sta tagliando posti in Italia<br>
-  💡 Solo il 3% ha soluzioni AI proprie; 29% mix interno/esterno
+  📊 <strong>8,2%</strong> imprese italiane usa AI — media EU: <strong>13,5%</strong><br>
+  📈 Chi adotta: <strong>+5,2% produttività</strong>, <strong>+2% margini</strong><br>
+  👥 Occupazione: <strong>nessun impatto negativo</strong><br>
+  💡 Solo 3% ha soluzioni proprie; 29% mix interno/esterno
   <br><br>
-  <strong>Barriere:</strong> carenza talenti (39%), difficoltà a trovare use case (27%), governance (27%)
+  <strong>Barriere:</strong> talenti (39%), use case (27%), governance (27%)
 </p>`,
     image: { src: '', alt: '' },
   },
@@ -196,13 +196,13 @@ export const slides = [
     heading: 'Italia vs Mondo: il gap è un\'opportunità',
     columns: ['Metrica', 'Italia', 'Mondo'],
     rows: [
-      ['Imprese che usano AI', '8,2%', '88% (enterprise)'],
+      ['Imprese con AI', '8,2%', '88% (enterprise)'],
       ['Adozione YoY', 'n.d.', '+23pp (55%→78%)'],
-      ['GitHub Copilot', 'In crescita', '4,7M abbonati (+75% YoY)'],
-      ['Microsoft Copilot M365', 'In rollout', '41% adoption enterprise'],
-      ['Claude business', 'Emergente', '300K+ clienti, $14B run-rate'],
+      ['GitHub Copilot', 'In crescita', '4,7M abbonati (+75%)'],
+      ['Copilot M365', 'In rollout', '41% enterprise'],
+      ['Claude business', 'Emergente', '300K+ clienti'],
     ],
-    footer: '<strong>Il messaggio:</strong> 8% vs 88% — il gap è enorme, ma chi si muove ora ha un vantaggio competitivo colossale.',
+    footer: '<strong>Il messaggio:</strong> 8% vs 88% — gap enorme, ma chi si muove ora ha un vantaggio competitivo.',
   },
 
   // 14. Case study Italia 2026
@@ -211,12 +211,12 @@ export const slides = [
     layout: 'feature-grid',
     heading: 'Case study Italia 2026',
     features: [
-      { icon: '🏦', title: 'Banca d\'Italia', description: 'QEF N.1005: +5,2% produttività, nessun impatto negativo su occupazione' },
-      { icon: '🇮🇹', title: 'Bando vIvA', description: '10 progetti AI selezionati per il Made in Italy (30 marzo 2026)' },
-      { icon: '💼', title: 'Dedagroup/DedaAI', description: '€50M investiti in AI, 200+ professionisti dedicati' },
-      { icon: '🏛️', title: 'Fondazione Leonardo', description: 'Report AI-readiness + fondi PNRR (25 marzo 2026)' },
+      { icon: '🏦', title: 'Banca d\'Italia', description: '+5,2% produttività, nessun impatto su occupazione' },
+      { icon: '🇮🇹', title: 'Bando vIvA', description: '10 progetti AI per il Made in Italy (marzo 2026)' },
+      { icon: '💼', title: 'Dedagroup/DedaAI', description: '€50M in AI, 200+ professionisti dedicati' },
+      { icon: '🏛️', title: 'Fondazione Leonardo', description: 'Report AI-readiness + fondi PNRR' },
     ],
-    footer: '<strong>L\'AI in Italia si sta muovendo:</strong> dati empirici, bandi pubblici, investimenti privati. Non è più teoria.',
+    footer: '<strong>L\'AI in Italia si muove:</strong> dati empirici, bandi pubblici, investimenti privati.',
   },
 
   // ─── SEZIONE 5: ROI DELL'AI ───
@@ -226,17 +226,17 @@ export const slides = [
     type: 'concept',
     heading: 'ROI dell\'AI: quanto vale davvero',
     content: `<p class="concept-text">
-  <strong>$7.800/dipendente/anno</strong> — il ROI medio dell'AI nelle aziende che l'hanno adottata strutturalmente.
+  <strong>$7.800/dipendente/anno</strong> — ROI medio dell'AI adottata strutturalmente.
   <br><br>
   <strong>Top 3 use case GenAI (2026):</strong><br>
-  📝 Content creation: <strong>71%</strong> delle aziende<br>
+  📝 Content creation: <strong>71%</strong><br>
   💻 Code generation: <strong>58%</strong><br>
   🤝 Customer interaction: <strong>54%</strong>
   <br><br>
   <strong>In Italia (PMI):</strong><br>
-  ⏱️ Tempo risparmiato: 6,5 ore/settimana per dipendente<br>
-  💸 Riduzione costi operativi: -12% medio<br>
-  📈 ROI primo anno: 180% (chi implementa in modo strutturato)
+  ⏱️ 6,5 ore/settimana risparmiate per dipendente<br>
+  💸 Costi operativi: <strong>-12%</strong><br>
+  📈 ROI primo anno: <strong>180%</strong>
 </p>`,
     image: { src: '', alt: '' },
   },
@@ -248,16 +248,16 @@ export const slides = [
     content: `<p class="concept-text">
   <strong>Fai i conti con il tuo team:</strong>
   <br><br>
-  30 min risparmiati/giorno × 220 giorni lavorativi = <strong>110 ore/anno</strong> = quasi <strong>3 settimane</strong>
+  30 min/giorno × 220 giorni = <strong>110 ore/anno</strong> = quasi <strong>3 settimane</strong>
   <br><br>
-  Con 50 dipendenti: 50 × $7.800 = <strong>$390.000/anno</strong> di valore generato
+  50 dipendenti × $7.800 = <strong>$390.000/anno</strong> di valore
   <br><br>
   <strong>Costo medio AI per PMI:</strong><br>
-  • 10-50 dipendenti: ~€15.000/anno<br>
-  • 50-250 dipendenti: ~€65.000/anno<br>
-  • Il 45% usa solo tool gratuiti o freemium
+  • 10-50 dip.: ~€15.000/anno<br>
+  • 50-250 dip.: ~€65.000/anno<br>
+  • 45% usa solo tool gratuiti/freemium
   <br><br>
-  <strong>Il ROI è spesso &gt;10x</strong> — il problema non è il costo, è non iniziare.
+  <strong>ROI spesso &gt;10x</strong> — il problema non è il costo, è non iniziare.
 </p>`,
     image: { src: '', alt: '' },
   },
@@ -277,13 +277,13 @@ export const slides = [
     layout: 'feature-grid',
     heading: 'Le 5 resistenze più comuni',
     features: [
-      { icon: '😰', title: '"Mi ruberà il lavoro"', description: 'Dato Italia: nessun effetto significativo su occupazione (Banca d\'Italia 2026)' },
-      { icon: '🤷', title: '"Non sappiamo da dove iniziare"', description: '62% delle PMI — serve un percorso guidato, non un big bang' },
-      { icon: '🎓', title: '"Mancano competenze"', description: '58% delle PMI — per questo l\'AI Literacy è obbligatoria per legge' },
-      { icon: '💸', title: '"Costa troppo"', description: '45% usa tool gratuiti — il costo non è la vera barriera' },
-      { icon: '🙅', title: '"Il management non ci crede"', description: '29% delle PMI — servono numeri concreti ($7.800/dipendente/anno)' },
+      { icon: '😰', title: '"Mi ruberà il lavoro"', description: 'Nessun impatto su occupazione (Banca d\'Italia)' },
+      { icon: '🤷', title: '"Non so da dove iniziare"', description: '62% PMI — serve percorso guidato, non big bang' },
+      { icon: '🎓', title: '"Mancano competenze"', description: '58% PMI — AI Literacy è obbligatoria per legge' },
+      { icon: '💸', title: '"Costa troppo"', description: '45% usa tool gratuiti — il costo non è la barriera' },
+      { icon: '🙅', title: '"Il management non ci crede"', description: '29% PMI — servono numeri ($7.800/dip/anno)' },
     ],
-    footer: '<strong>Pattern:</strong> la resistenza è quasi sempre culturale, non tecnologica. I numeri aiutano a sbloccare, ma serve anche un champion interno.',
+    footer: '<strong>Pattern:</strong> la resistenza è culturale, non tecnologica. Servono numeri e un champion interno.',
   },
 
   // 19. Workflow ibrido: human-in-the-loop
@@ -296,7 +296,7 @@ export const slides = [
       { emoji: '👤', label: 'Umano decide', type: 'human' },
       { emoji: '🤖', label: 'AI implementa', type: 'ai' },
     ],
-    footer: 'Non automazione totale, ma <strong>augmentation</strong>. L\'AI gestisce il volume, l\'umano garantisce la qualità. Questo rassicura il team e produce risultati migliori.',
+    footer: 'Non automazione totale, ma <strong>augmentation</strong>. L\'AI gestisce il volume, l\'umano garantisce la qualità.',
   },
 
   // 20. QUOTE
@@ -342,10 +342,10 @@ export const slides = [
     heading: 'Esercitazione: AI Readiness + Pitch',
     timer: '90 minuti',
     instructions: [
-      '<strong>AI Readiness Assessment (30 min):</strong> Compila il template di autovalutazione per la tua azienda — dati, competenze, budget, governance, use case. Output: score e roadmap.',
-      '<strong>Calcola il ROI (15 min):</strong> Quanti dipendenti? × $7.800/anno = valore potenziale. Confronta con costo tool. Il business case si scrive da solo.',
-      '<strong>"Agent vs Workflow" (30 min):</strong> Stesso task (es: monitorare prezzi competitor) — implementalo con un workflow Zapier/Make E con un agente n8n. Confronta setup, flessibilità, costo.',
-      '<strong>Pitch per il CEO (15 min):</strong> Prepara un pitch di 3 minuti: use case specifico, ROI stimato, timeline 90 giorni, compliance AI Act.',
+      '<strong>AI Readiness Assessment (30 min):</strong> Compila il template di autovalutazione: dati, competenze, budget, governance. Output: score e roadmap.',
+      '<strong>Calcola il ROI (15 min):</strong> N. dipendenti × $7.800/anno = valore potenziale. Confronta con costo tool.',
+      '<strong>Agent vs Workflow (30 min):</strong> Stesso task (es: monitorare prezzi competitor) con workflow Zapier/Make e con agente n8n. Confronta setup e flessibilità.',
+      '<strong>Pitch per il CEO (15 min):</strong> Pitch di 3 min: use case, ROI stimato, timeline 90 giorni, compliance AI Act.',
     ],
   },
 
@@ -354,12 +354,12 @@ export const slides = [
     type: 'recap',
     heading: 'Recap',
     items: [
-      'Agenti AI: autonomia + tool use + loop — il 48% delle telco li usa già',
-      'Workflow automation: Zapier (semplice), Make (flessibile), n8n (open source + agenti)',
-      'AI Act: rinvio alto rischio 2027-2028, ma AI Literacy è GIÀ obbligatoria',
-      'Italia: 8,2% adozione vs 88% mondiale — gap enorme, opportunità enorme',
-      'ROI: $7.800/dipendente/anno, 180% primo anno per chi implementa bene',
-      'Change management: la resistenza è culturale, non tecnologica — servono numeri e champion',
+      'Agenti AI: autonomia + tool use + loop — 48% telco li usa già',
+      'Workflow: Zapier (semplice), Make (flessibile), n8n (open source)',
+      'AI Act: rinvio alto rischio 2027-2028, ma AI Literacy GIÀ obbligatoria',
+      'Italia: 8,2% vs 88% mondiale — gap = opportunità',
+      'ROI: $7.800/dipendente/anno, 180% primo anno',
+      'Change management: resistenza culturale — servono numeri e champion',
     ],
   },
 

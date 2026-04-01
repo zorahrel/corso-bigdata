@@ -55,34 +55,34 @@ export const slides = [
     content: `<div style="max-width: 850px; margin: 0 auto; text-align: left;">
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
   <div style="background: var(--surface); border-radius: var(--radius); padding: 14px 18px;">
-    <div style="font-size: 0.5em;"><strong style="color: #fb923c;">1. DATI</strong> — I dati aziendali sono digitalizzati e accessibili?<br><span style="color: var(--muted);">1 = tutto cartaceo · 5 = data warehouse strutturato</span></div>
+    <div style="font-size: 0.65em;"><strong style="color: #fb923c;">1. DATI</strong> — Dati digitalizzati e accessibili?<br><span style="color: var(--muted);">1 = cartaceo · 5 = data warehouse</span></div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 14px 18px;">
-    <div style="font-size: 0.5em;"><strong style="color: var(--secondary);">2. COMPETENZE</strong> — Il team ha familiarità con tool digitali?<br><span style="color: var(--muted);">1 = solo email · 5 = usa già AI quotidianamente</span></div>
+    <div style="font-size: 0.65em;"><strong style="color: var(--secondary);">2. COMPETENZE</strong> — Familiarità con tool digitali?<br><span style="color: var(--muted);">1 = solo email · 5 = usa AI ogni giorno</span></div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 14px 18px;">
-    <div style="font-size: 0.5em;"><strong style="color: var(--accent);">3. BUDGET</strong> — C'è budget dedicato a innovazione/AI?<br><span style="color: var(--muted);">1 = zero · 5 = budget allocato e approvato</span></div>
+    <div style="font-size: 0.65em;"><strong style="color: var(--accent);">3. BUDGET</strong> — Budget per innovazione/AI?<br><span style="color: var(--muted);">1 = zero · 5 = allocato e approvato</span></div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 14px 18px;">
-    <div style="font-size: 0.5em;"><strong style="color: var(--warning);">4. GOVERNANCE</strong> — Esistono policy per uso dati/tecnologia?<br><span style="color: var(--muted);">1 = nessuna policy · 5 = GDPR compliant + policy IT</span></div>
+    <div style="font-size: 0.65em;"><strong style="color: var(--warning);">4. GOVERNANCE</strong> — Policy per uso dati/tech?<br><span style="color: var(--muted);">1 = nessuna · 5 = GDPR + policy IT</span></div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 14px 18px;">
-    <div style="font-size: 0.5em;"><strong style="color: var(--danger);">5. USE CASE</strong> — Avete identificato processi ripetitivi automatizzabili?<br><span style="color: var(--muted);">1 = mai pensato · 5 = lista prioritizzata pronta</span></div>
+    <div style="font-size: 0.65em;"><strong style="color: var(--danger);">5. USE CASE</strong> — Processi ripetitivi identificati?<br><span style="color: var(--muted);">1 = mai pensato · 5 = lista pronta</span></div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 14px 18px;">
-    <div style="font-size: 0.5em;"><strong style="color: #fb923c;">6. LEADERSHIP</strong> — Il management supporta l'innovazione?<br><span style="color: var(--muted);">1 = resiste · 5 = sponsor attivo AI</span></div>
+    <div style="font-size: 0.65em;"><strong style="color: #fb923c;">6. LEADERSHIP</strong> — Management supporta innovazione?<br><span style="color: var(--muted);">1 = resiste · 5 = sponsor attivo</span></div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 14px 18px;">
-    <div style="font-size: 0.5em;"><strong style="color: var(--secondary);">7. CULTURA</strong> — L'azienda è aperta al cambiamento?<br><span style="color: var(--muted);">1 = "si è sempre fatto così" · 5 = cultura sperimentale</span></div>
+    <div style="font-size: 0.65em;"><strong style="color: var(--secondary);">7. CULTURA</strong> — Apertura al cambiamento?<br><span style="color: var(--muted);">1 = "sempre fatto così" · 5 = sperimentale</span></div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 14px 18px;">
-    <div style="font-size: 0.5em;"><strong style="color: var(--accent);">8. INFRASTRUTTURA</strong> — Avete strumenti cloud/SaaS?<br><span style="color: var(--muted);">1 = tutto locale/legacy · 5 = full cloud</span></div>
+    <div style="font-size: 0.65em;"><strong style="color: var(--accent);">8. INFRASTRUTTURA</strong> — Strumenti cloud/SaaS?<br><span style="color: var(--muted);">1 = locale/legacy · 5 = full cloud</span></div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 14px 18px;">
-    <div style="font-size: 0.5em;"><strong style="color: var(--warning);">9. PROCESSI</strong> — I workflow sono documentati?<br><span style="color: var(--muted);">1 = conoscenza tribale · 5 = processi mappati e misurati</span></div>
+    <div style="font-size: 0.65em;"><strong style="color: var(--warning);">9. PROCESSI</strong> — Workflow documentati?<br><span style="color: var(--muted);">1 = conoscenza tribale · 5 = mappati</span></div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 14px 18px;">
-    <div style="font-size: 0.5em;"><strong style="color: var(--danger);">10. RISCHIO</strong> — Qual è la tolleranza al rischio per nuove tecnologie?<br><span style="color: var(--muted);">1 = rischio zero · 5 = fail fast, learn fast</span></div>
+    <div style="font-size: 0.65em;"><strong style="color: var(--danger);">10. RISCHIO</strong> — Tolleranza al rischio tech?<br><span style="color: var(--muted);">1 = rischio zero · 5 = fail fast</span></div>
   </div>
 </div>
 </div>`,
@@ -98,10 +98,10 @@ export const slides = [
     deliverable: 'Documento con score di readiness (1-50), analisi punti deboli, roadmap 3 azioni prioritarie',
     instructions: [
       '<strong>Step 1 — SCEGLI L\'AZIENDA (5 min):</strong> Usa la tua azienda reale oppure inventane una credibile (settore, dimensione, n° dipendenti, tool attuali)',
-      '<strong>Step 2 — COMPILA IL TEMPLATE (15 min):</strong> Rispondi alle 10 domande dalla slide precedente, assegnando un punteggio da 1 a 5 per ciascuna. Scrivi anche una breve motivazione per ogni voto',
+      '<strong>Step 2 — COMPILA IL TEMPLATE (15 min):</strong> Rispondi alle 10 domande (slide precedente): punteggio 1-5 + breve motivazione per ogni voto',
       '<strong>Step 3 — CALCOLA LO SCORE:</strong> Somma i punteggi. <strong>10-20:</strong> 🔴 Non pronta — servono fondamenta. <strong>21-35:</strong> 🟡 Parzialmente pronta — quick win possibili. <strong>36-50:</strong> 🟢 Pronta — si può scalare',
-      '<strong>Step 4 — CHIEDI ALL\'AI (15 min):</strong> Su ChatGPT o Claude: "La mia azienda ha ottenuto [score]/50 nel readiness assessment AI. I punti più deboli sono: [lista punti bassi]. Settore: [X], dimensione: [N] dipendenti. Suggerisci: 1) Le 3 azioni prioritarie per migliorare la readiness. 2) I quick win implementabili in 2 settimane con budget zero. 3) I rischi principali da mitigare."',
-      '<strong>Step 5 — CREA LA ROADMAP (15 min):</strong> Su Google Docs, crea il documento finale: Titolo, Score e interpretazione, Top 3 punti deboli con piano d\'azione, Quick win immediati, Timeline a 90 giorni',
+      '<strong>Step 4 — CHIEDI ALL\'AI (15 min):</strong> Prompt: "Azienda [settore], [N] dip., score [X]/50. Punti deboli: [lista]. Suggerisci: 1) 3 azioni prioritarie, 2) quick win a budget zero in 2 settimane, 3) rischi da mitigare."',
+      '<strong>Step 5 — CREA LA ROADMAP (15 min):</strong> Su Google Docs: Titolo, Score, Top 3 punti deboli + piano d\'azione, Quick win, Timeline 90 giorni',
       '<strong>Step 6 — CONDIVIDI (10 min):</strong> Presenta il tuo assessment al gruppo (2 min a testa). Ricevi feedback: "Sei stato troppo generoso/severo su [punto]?"',
     ],
   },
@@ -130,28 +130,28 @@ export const slides = [
     content: `<div style="max-width: 850px; margin: 0 auto;">
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
   <div style="background: var(--surface); border-radius: var(--radius); padding: 18px;">
-    <div style="font-size: 0.55em; font-weight: 700; color: var(--danger); margin-bottom: 8px;">🤨 "Costa troppo"</div>
-    <div style="font-size: 0.5em; color: var(--muted); line-height: 1.7;">→ "I tool free bastano per partire. ChatGPT free + Google Docs = €0. Il costo vero è NON adottare: $7.800/dipendente/anno in produttività persa (McKinsey 2025)."</div>
+    <div style="font-size: 0.7em; font-weight: 700; color: var(--danger); margin-bottom: 8px;">🤨 "Costa troppo"</div>
+    <div style="font-size: 0.65em; color: var(--muted); line-height: 1.7;">→ Tool free per partire (€0). Il costo vero è NON adottare: $7.800/dip./anno persi (McKinsey 2025).</div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 18px;">
-    <div style="font-size: 0.55em; font-weight: 700; color: var(--danger); margin-bottom: 8px;">😰 "Sostituirà i dipendenti"</div>
-    <div style="font-size: 0.5em; color: var(--muted); line-height: 1.7;">→ "L'AI non sostituisce le persone, sostituisce i task ripetitivi. I dipendenti fanno lavoro a più alto valore. Il 92% delle aziende AI-adopter ha assunto, non licenziato."</div>
+    <div style="font-size: 0.7em; font-weight: 700; color: var(--danger); margin-bottom: 8px;">😰 "Sostituirà i dipendenti"</div>
+    <div style="font-size: 0.65em; color: var(--muted); line-height: 1.7;">→ AI sostituisce task ripetitivi, non persone. 92% aziende AI-adopter ha assunto, non licenziato.</div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 18px;">
-    <div style="font-size: 0.55em; font-weight: 700; color: var(--danger); margin-bottom: 8px;">🔒 "E la privacy/GDPR?"</div>
-    <div style="font-size: 0.5em; color: var(--muted); line-height: 1.7;">→ "Creiamo una AI Policy: dati classificati, tool approvati, niente PII sui tool cloud. L'AI Act EU dà tempo fino al 2027-2028 per l'alto rischio."</div>
+    <div style="font-size: 0.7em; font-weight: 700; color: var(--danger); margin-bottom: 8px;">🔒 "E la privacy/GDPR?"</div>
+    <div style="font-size: 0.65em; color: var(--muted); line-height: 1.7;">→ AI Policy: dati classificati, tool approvati, no PII su cloud. AI Act EU: tempo fino al 2027-28.</div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 18px;">
-    <div style="font-size: 0.55em; font-weight: 700; color: var(--danger); margin-bottom: 8px;">🤷 "Non è il momento giusto"</div>
-    <div style="font-size: 0.5em; color: var(--muted); line-height: 1.7;">→ "Solo l'8.2% delle imprese italiane usa AI. Il gap con il mondo (88%) è enorme. Chi si muove ORA ha un vantaggio competitivo di 2-3 anni."</div>
+    <div style="font-size: 0.7em; font-weight: 700; color: var(--danger); margin-bottom: 8px;">🤷 "Non è il momento giusto"</div>
+    <div style="font-size: 0.65em; color: var(--muted); line-height: 1.7;">→ Solo 8.2% imprese italiane usa AI (vs 88% mondo). Chi si muove ORA ha 2-3 anni di vantaggio.</div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 18px;">
-    <div style="font-size: 0.55em; font-weight: 700; color: var(--danger); margin-bottom: 8px;">😵‍💫 "Troppo complicato"</div>
-    <div style="font-size: 0.5em; color: var(--muted); line-height: 1.7;">→ "Partiamo con 1 use case, 3 persone, 2 settimane. Se funziona, scaliamo. Se no, abbiamo perso solo 2 settimane. Rischio quasi zero."</div>
+    <div style="font-size: 0.7em; font-weight: 700; color: var(--danger); margin-bottom: 8px;">😵‍💫 "Troppo complicato"</div>
+    <div style="font-size: 0.65em; color: var(--muted); line-height: 1.7;">→ 1 use case, 3 persone, 2 settimane. Se funziona, scaliamo. Rischio quasi zero.</div>
   </div>
   <div style="background: var(--surface); border-radius: var(--radius); padding: 18px;">
-    <div style="font-size: 0.55em; font-weight: 700; color: var(--danger); margin-bottom: 8px;">🎯 "Che ROI concreto?"</div>
-    <div style="font-size: 0.5em; color: var(--muted); line-height: 1.7;">→ "Esempio: email triage AI = -3h/settimana per persona. Su 10 persone = 30h/settimana = €36.000/anno risparmiati. Tool: €0 (versioni free)."</div>
+    <div style="font-size: 0.7em; font-weight: 700; color: var(--danger); margin-bottom: 8px;">🎯 "Che ROI concreto?"</div>
+    <div style="font-size: 0.65em; color: var(--muted); line-height: 1.7;">→ Email triage AI = -3h/sett. a persona. 10 persone = 30h/sett. = ~€36k/anno. Tool: €0.</div>
   </div>
 </div>
 </div>`,
@@ -166,11 +166,11 @@ export const slides = [
     tools: ['ChatGPT (free) o Claude (free)', 'Template obiezioni (slide precedente)'],
     deliverable: 'Documento con le 6 obiezioni gestite + risposte personalizzate per la propria azienda',
     instructions: [
-      '<strong>Step 1 — PREPARAZIONE (15 min):</strong> In coppia, decidete i ruoli: CEO scettico e Responsabile innovazione. Il "CEO" studia le obiezioni dal template. Il "Responsabile" prepara il pitch usando ChatGPT/Claude: "Devo convincere il mio CEO scettico ad adottare AI in azienda. Settore: [X]. Preparami un pitch di 3 minuti con numeri concreti e risposte alle obiezioni comuni."',
+      '<strong>Step 1 — PREPARAZIONE (15 min):</strong> In coppia, decidete i ruoli: CEO scettico e Responsabile innovazione. Il CEO studia le obiezioni dal template. Il Responsabile prepara il pitch con AI: "Pitch 3 min per adottare AI, settore [X], con numeri e risposte alle obiezioni."',
       '<strong>Step 2 — ROUND 1 (10 min):</strong> Il Responsabile presenta il piano (3 min). Il CEO fa obiezioni dal template (5 min di botta e risposta). Prendete appunti sulle obiezioni più difficili',
       '<strong>Step 3 — PAUSA E ADATTA (5 min):</strong> Il Responsabile torna su ChatGPT/Claude: "Il mio CEO ha obiettato che [obiezione difficile]. Come posso rispondere in modo più convincente con dati concreti?"',
       '<strong>Step 4 — ROUND 2 (10 min):</strong> Scambiate i ruoli! Chi era CEO diventa Responsabile e viceversa. Ripetete il pitch + obiezioni',
-      '<strong>Step 5 — DEBRIEF (10 min):</strong> Insieme, compilate un documento con: Le 3 obiezioni più difficili che avete incontrato. La risposta migliore per ciascuna. 1 insight che non avevate considerato',
+      '<strong>Step 5 — DEBRIEF (10 min):</strong> Compilate insieme: 3 obiezioni più difficili, risposta migliore per ciascuna, 1 insight inaspettato',
       '<strong>Step 6 — CONDIVISIONE (10 min):</strong> Ogni coppia condivide l\'obiezione più tosta e la risposta migliore con il gruppo',
     ],
   },
@@ -201,11 +201,11 @@ export const slides = [
     tools: ['ChatGPT (free) o Claude (free)', 'Google Docs (free)'],
     deliverable: 'Documento "Piano 90 Giorni" completo con use case, team, metriche, budget (€0), timeline',
     instructions: [
-      '<strong>Step 1 — CONTESTO (10 min):</strong> Apri Google Docs. Titolo: "Piano Adozione AI 90 Giorni — [Azienda]". Scrivi: Settore, N° dipendenti, Problema principale da risolvere con AI, Budget: €0 (solo tool gratuiti)',
-      '<strong>Step 2 — CHIEDI ALL\'AI (10 min):</strong> Su ChatGPT/Claude: "Sono [ruolo] in un\'azienda di [settore] con [N] dipendenti. Voglio creare un piano di adozione AI in 90 giorni con budget zero. Il problema principale è [X]. Crea un piano con 3 fasi: Mese 1 (Pilot), Mese 2 (Scale), Mese 3 (Measure). Per ogni fase includi: obiettivo, azioni concrete, tool gratuiti da usare, KPI da misurare, rischi."',
-      '<strong>Step 3 — MESE 1: PILOT (10 min):</strong> Compila nel doc: <br>• Use case scelto (1 solo, specifico)<br>• Team pilot (3 persone max, nomi/ruoli)<br>• Tool gratuito da usare<br>• KPI: tempo risparmiato, qualità output<br>• Check-point: review settimanale di 15 min',
-      '<strong>Step 4 — MESE 2: SCALE (10 min):</strong> Compila: <br>• Risultati attesi dal pilot (numeri)<br>• Criteri go/no-go per espandere<br>• Secondo team da coinvolgere<br>• Training necessario (chi forma chi)<br>• AI Policy da implementare (riferimento L09-Es3 della lezione precedente)',
-      '<strong>Step 5 — MESE 3: MEASURE (10 min):</strong> Compila: <br>• KPI finali: ore risparmiate, NPS interno, n° task automatizzati<br>• Report per il management (struttura)<br>• Decisione: continuare / espandere / fermare<br>• Piano per i successivi 6 mesi (se go)',
+      '<strong>Step 1 — CONTESTO (10 min):</strong> Google Docs: "Piano Adozione AI 90 Giorni — [Azienda]". Scrivi: settore, n° dipendenti, problema da risolvere, budget €0',
+      '<strong>Step 2 — CHIEDI ALL\'AI (10 min):</strong> Prompt: "Piano adozione AI 90 giorni, budget zero, [settore], [N] dip., problema: [X]. 3 fasi (Pilot/Scale/Measure). Per ogni fase: obiettivo, azioni, tool gratuiti, KPI, rischi."',
+      '<strong>Step 3 — MESE 1: PILOT (10 min):</strong> Compila: 1 use case specifico, team pilot (3 persone max), tool gratuito, KPI (tempo risparmiato, qualità), review settimanale 15 min',
+      '<strong>Step 4 — MESE 2: SCALE (10 min):</strong> Compila: risultati attesi (numeri), criteri go/no-go, secondo team, training (chi forma chi), AI Policy',
+      '<strong>Step 5 — MESE 3: MEASURE (10 min):</strong> Compila: KPI finali (ore, NPS, task automatizzati), report per management, decisione go/no-go, piano 6 mesi',
       '<strong>Step 6 — REVIEW INCROCIATA (10 min):</strong> Scambia il piano con un collega. Ognuno fa 3 domande: "Questo è realistico?", "Cosa manca?", "Come misuri il successo?"',
     ],
   },
@@ -237,10 +237,10 @@ export const slides = [
     tools: ['Browser', 'Account Google o email'],
     deliverable: 'Screenshot dell\'iscrizione completata + primo modulo iniziato/completato',
     instructions: [
-      '<strong>Step 1 — SCEGLI (5 min):</strong> Apri uno di questi link e scegli il corso che ti interessa di più:<br>• <a href="https://grow.google/certificates/ai-essentials" target="_blank">Google AI Essentials</a> — certificato Google, ~10h<br>• <a href="https://course.elementsofai.com/it/" target="_blank">Elements of AI</a> — in italiano, dall\'Università di Helsinki<br>• <a href="https://learn.microsoft.com/en-us/ai" target="_blank">Microsoft AI Skills</a> — badge gratuiti Microsoft',
+      '<strong>Step 1 — SCEGLI (5 min):</strong> Scegli un corso:<br>• <a href="https://grow.google/certificates/ai-essentials" target="_blank">Google AI Essentials</a> (~10h)<br>• <a href="https://course.elementsofai.com/it/" target="_blank">Elements of AI</a> (italiano, ~30h)<br>• <a href="https://learn.microsoft.com/en-us/ai" target="_blank">Microsoft AI Skills</a> (badge gratuiti)',
       '<strong>Step 2 — ISCRIVITI (5 min):</strong> Crea l\'account e completa la registrazione. Fai uno screenshot della dashboard del corso',
       '<strong>Step 3 — PRIMO MODULO (15 min):</strong> Inizia il primo modulo/lezione del corso scelto. L\'obiettivo è completarlo (o almeno iniziarlo) entro la fine dell\'esercizio',
-      '<strong>Step 4 — PIANO DI COMPLETAMENTO (5 min):</strong> Scrivi su un post-it o Google Keep: "Completerò [nome corso] entro il [data]. Dedicherò [N] minuti al giorno/settimana." Condividi il tuo piano con il gruppo',
+      '<strong>Step 4 — PIANO DI COMPLETAMENTO (5 min):</strong> Scrivi: "Completerò [corso] entro [data], [N] min al giorno/settimana." Condividi con il gruppo',
       '<strong>Bonus:</strong> Se hai già una certificazione AI, aiuta un collega a iscriversi e scegliere il corso giusto per il suo livello',
     ],
   },
