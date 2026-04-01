@@ -186,6 +186,8 @@ const DAYS = [
       { label: "NotebookLM — Podcast e Q&A sui tuoi documenti", url: "https://notebooklm.google.com" },
       { label: "Microsoft Copilot — AI in M365", url: "https://copilot.microsoft.com" },
       { label: "Perplexity — Ricerca AI con fonti", url: "https://perplexity.ai" },
+      { label: "🎬 Seedance 2.0 (Dreamina) — Video AI cinematici gratis", url: "https://dreamina.capcut.com/tools/seedance-2-0" },
+      { label: "🎬 VideoFX (Google) — Video AI 4K gratis", url: "https://labs.google/videoFX" },
     ],
     schedule: [
       { from: '09:00', to: '09:45', type: 'teoria', label: 'ChatGPT: Canvas, GPTs, API, Excel' },
