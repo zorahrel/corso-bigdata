@@ -188,6 +188,8 @@ const DAYS = [
       { label: "Perplexity — Ricerca AI con fonti", url: "https://perplexity.ai" },
       { label: "🎬 Seedance 2.0 (Dreamina) — Video AI cinematici gratis", url: "https://dreamina.capcut.com/tools/seedance-2-0" },
       { label: "🎬 VideoFX (Google) — Video AI 4K gratis", url: "https://labs.google/videoFX" },
+      { label: "🎨 Marc Kaz — AI art & video experiments", url: "https://www.instagram.com/marc.kaz/" },
+      { label: "🤖 OHMO AI — AI-generated content showcase", url: "https://www.instagram.com/ohmo.ai/reels/" },
     ],
     schedule: [
       { from: '09:00', to: '09:45', type: 'teoria', label: 'ChatGPT: Canvas, GPTs, API, Excel' },

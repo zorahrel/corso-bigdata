@@ -701,6 +701,9 @@ Puoi iterare ("cambia colori", "aggiungi export CSV") e <strong>pubblicare con u
       { label: '🎬 Seedance 2.0 Workflow PDF — guida completa video AI', url: '/slides/assets/Seedance2_Workflow.pdf' },
       { label: 'Cursor — Editor AI per developer', url: 'https://cursor.com' },
       { label: 'v0.dev — UI da prompt', url: 'https://v0.dev' },
+      { label: 'Tutorial: creare un GPT custom con API OpenWeather (LinkedIn)', url: 'https://www.linkedin.com/pulse/how-create-custom-gpt-openweather-api-integration-jakub-mach-jvr3e/' },
+      { label: '🎨 Marc Kaz — AI art & video experiments (Instagram)', url: 'https://www.instagram.com/marc.kaz/' },
+      { label: '🤖 OHMO AI — AI-generated content showcase (Instagram)', url: 'https://www.instagram.com/ohmo.ai/reels/' },
     ],
   },
 

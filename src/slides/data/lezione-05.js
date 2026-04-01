@@ -84,6 +84,103 @@ export const slides = [
     footer: '<strong>Regola:</strong> chatbot per FAQ, workflow per processi ripetitivi, agente per task complessi.',
   },
 
+  // 6b. Da UX a AX: Agent Experience
+  {
+    type: 'concept',
+    heading: 'Da UX a AX: Agent Experience',
+    content: `<p class="concept-text">
+  Per 30 anni abbiamo progettato per <strong>persone davanti a uno schermo</strong>. Click, feed, form, dashboard.
+  <br><br>
+  Ora si aggiunge un nuovo paradigma: la <strong>AX — Agent Experience</strong>.
+  <br><br>
+  Un prodotto dovrà essere:<br>
+  👤 <strong>Chiaro per le persone</strong> (UX classica)<br>
+  🤖 <strong>Leggibile, interrogabile, autorizzabile ed eseguibile da un agente</strong> (AX)
+  <br><br>
+  <strong>Cosa cambia in pratica:</strong><br>
+  • Non bastano più le schermate — servono <strong>API, MCP, permessi, memoria, policy</strong><br>
+  • I touchpoint si allargano: accanto ai <em>punti di contatto</em> con l'utente, nascono i <strong>punti di delega</strong><br>
+  • Superfici di fiducia, condizioni di azione, limiti di autonomia
+  <br><br>
+  <em>Se il tuo prodotto non è leggibile da un agente, perderà centralità nel flusso di valore.</em>
+</p>`,
+  },
+
+  // 6c. Da Push a Pull: gli agenti ribaltano l'attenzione
+  {
+    type: 'concept',
+    heading: 'Da Push a Pull: ribaltare l\'attenzione',
+    content: `<p class="concept-text">
+  Internet oggi vive di <strong>interruzioni</strong>: email, notifiche, feed, advertising. Tutto è costruito per tirare l'utente dentro il flusso.
+  <br><br>
+  <strong>Gli agenti ribaltano questa dinamica:</strong><br>
+  📥 <strong>Push (oggi):</strong> il servizio interrompe la persona → attenzione frammentata<br>
+  📤 <strong>Pull (domani):</strong> l'agente recupera ciò che conta, filtra il rumore, porta all'umano solo ciò che richiede giudizio
+  <br><br>
+  Email e messaggi non spariscono — diventano <strong>materia prima</strong> da classificare, sintetizzare e trasformare in decisione.
+  <br><br>
+  <strong>La risorsa più stressata resta l'attenzione.</strong> Ma se il layer operativo passa agli agenti, si libera spazio cognitivo per ciò che conta: interpretazione, creatività, responsabilità.
+</p>`,
+  },
+
+  // 6d. Multi-agent: squadre di agenti specializzati
+  {
+    type: 'concept',
+    heading: 'Multi-agent: squadre specializzate',
+    content: `<p class="concept-text">
+  Un agente solo non basta. La realtà premia la <strong>specializzazione</strong>.
+  <br><br>
+  <strong>Esempio di squadra:</strong><br>
+  📋 <strong>Planner:</strong> pianifica i passi<br>
+  🔍 <strong>Researcher:</strong> recupera informazioni<br>
+  ✅ <strong>Reviewer:</strong> verifica compliance e qualità<br>
+  💰 <strong>Executor:</strong> esegue transazioni e azioni<br>
+  🔄 <strong>Orchestrator:</strong> coordina tutto
+  <br><br>
+  Quando diventano <strong>persistenti</strong> (memoria, preferenze, storico) servono:<br>
+  • Routing e responsabilità<br>
+  • Sincronizzazione della memoria<br>
+  • Osservabilità e audit<br>
+  • Protocolli standard (MCP, A2A)
+</p>`,
+  },
+
+  // 6e. I nuovi ruoli dell'era agentica
+  {
+    type: 'custom',
+    layout: 'feature-grid',
+    heading: 'I nuovi ruoli dell\'era agentica',
+    features: [
+      { icon: '🎨', title: 'Agentic AI Designer', description: 'Progetta flussi di delega, superfici di fiducia, escalation tra persone e agenti' },
+      { icon: '🔧', title: 'Agentic AI Engineer', description: 'Costruisce memoria, tool layer, permessi, osservabilità, sandbox' },
+      { icon: '🎯', title: 'Agent Orchestrator', description: 'Coordina squadre di agenti su task, tempi, priorità e risorse' },
+      { icon: '⚖️', title: 'Agent Governor', description: 'Definisce vincoli, policy, soglie di autonomia, audit e intervento umano' },
+      { icon: '💰', title: 'AgentOps / Agent Economist', description: 'Struttura costi, incentivi, metriche di rendimento e gestione operativa' },
+    ],
+    footer: '<strong>Pattern storico:</strong> PC → IT aziendale · Web → web designer · Social → community manager · Cloud → DevOps · <strong>Agenti → questi ruoli</strong>.',
+  },
+
+  // 6f. Agenti e business: la fine dell'economia dell'interruzione
+  {
+    type: 'concept',
+    heading: 'Marketing nell\'era degli agenti',
+    content: `<p class="concept-text">
+  Molti business si reggono sull'<strong>economia dell'attenzione</strong>: l'advertising interrompe, persuade, spinge.
+  <br><br>
+  <strong>Ma un agente non si lascia sedurre da un banner.</strong><br>
+  Confronta dati, rilevanza, reputazione, costo, compatibilità con l'obiettivo.
+  <br><br>
+  <strong>Per essere scelti da un agente, serve:</strong><br>
+  📐 Offerta <strong>strutturata e verificabile</strong><br>
+  🤖 Contenuti <strong>machine-readable</strong><br>
+  🎯 <strong>Compatibilità semantica</strong> con l'obiettivo del cliente<br>
+  📊 Meno rumore, più <strong>qualità informativa</strong>
+  <br><br>
+  <strong>Nuove metriche:</strong> quanti agenti interagiscono col servizio? Con quali permessi? Quale tasso di successo? Quale valore generato?
+</p>`,
+    footer: '<strong>Il marketing non muore</strong> — è costretto a maturare. Da persuasione a rilevanza verificabile.',
+  },
+
   // ─── SEZIONE 2: WORKFLOW AUTOMATION ───
 
   // 7. Workflow Automation: la mappa
