@@ -463,6 +463,22 @@ export const slides = [
   // 25. RISORSE
   {
     type: 'resource',
+    type: 'concept',
+    heading: 'Come valutare un tool AI',
+    content: `Non tutti i tool AI sono uguali. Prima di scegliere, chiediti:`,
+    items: [
+      { emoji: '🔍', text: 'È un **wrapper** di un\'altra AI (es. GPT sotto il cofano) o ha tecnologia propria?' },
+      { emoji: '⚙️', text: 'Usa **modelli vecchi** con flussi standard, o ha integrato tecnologie nuove/esclusive?' },
+      { emoji: '🛠️', text: 'Ha già un **workflow pronto** per il tuo obiettivo, o devi costruirtelo da zero?' },
+      { emoji: '💰', text: 'Vale la pena **spendere 10-20€/mese** per risparmiare giorni/settimane di lavoro manuale?' },
+      { emoji: '🎯', text: 'Il risultato sarà **migliore** di quello che otterresti smanettando da solo senza essere programmatore?' },
+    ],
+    footer: '💡 Usa **There\'s an AI for That** (theresanaiforthat.com) per scoprire tool, ma valuta sempre criticamente prima di adottare.',
+  },
+
+  // Risorse
+  {
+    type: 'resource',
     heading: 'Risorse',
     links: [
       { label: 'NVIDIA State of AI Report 2026', url: 'https://blogs.nvidia.com/blog/state-of-ai-report-2026/' },
@@ -471,6 +487,7 @@ export const slides = [
       { label: 'Deloitte State of AI in Enterprise 2026', url: 'https://www.deloitte.com/cy/en/issues/generative-ai/state-of-ai-in-enterprise.html' },
       { label: 'n8n AI Agent Tutorial 2026 (YouTube)', url: 'https://www.youtube.com/watch?v=PfdnYe2690E' },
       { label: '150+ Agentic AI Statistics 2026', url: 'https://www.digitalapplied.com/blog/agentic-ai-statistics-2026-definitive-collection-150-data-points' },
+      { label: '🔍 There\'s an AI for That — Directory 10.000+ tool AI', url: 'https://theresanaiforthat.com' },
     ],
   },
 
