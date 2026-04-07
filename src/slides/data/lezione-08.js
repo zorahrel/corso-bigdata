@@ -21,8 +21,33 @@ export const slides = [
       { emoji: '\u{1F4E7}', text: 'Esercizio 2 — AI per email: scrivi, rispondi, riassumi (45 min)' },
       { emoji: '\u{1F4C4}', text: 'Esercizio 3 — AI per documenti: analisi report (45 min)' },
       { emoji: '\u{1F3A4}', text: 'Esercizio 4 — AI per meeting: trascrivi e genera notes (45 min)' },
-      { emoji: '\u{1F680}', text: 'Esercizio 5 — Il mio stack AI ideale (30 min)' },
+      { emoji: '\u{1F4BC}', text: 'Esercizio 5 — AI per trovare lavoro: CV e colloqui (45 min)' },
+      { emoji: '\u{1F4F1}', text: 'Esercizio 6 — AI per Social Media: post LinkedIn (30 min)' },
+      { emoji: '\u{1F680}', text: 'Esercizio 7 — Il mio stack AI ideale + presentazioni (20 min)' },
     ],
+  },
+
+  // 2b. SCALETTA ORARIA
+  {
+    type: 'custom',
+    layout: 'compare-table',
+    heading: '\u{1F4C5} Programma della Giornata — 6 ore',
+    columns: ['Orario', 'Attività', 'Durata'],
+    rows: [
+      ['09:00 – 09:15', 'Setup: verifica accessi, registrazione piattaforme', '15 min'],
+      ['09:15 – 10:00', 'Esercizio 1 — La mia settimana AI', '45 min'],
+      ['10:00 – 10:45', 'Esercizio 2 — AI per email', '45 min'],
+      ['10:45 – 11:00', '\u2615 Pausa', '15 min'],
+      ['11:00 – 11:45', 'Esercizio 3 — AI per documenti', '45 min'],
+      ['11:45 – 12:30', 'Esercizio 4 — AI per meeting', '45 min'],
+      ['12:30 – 12:45', '\u2615 Pausa', '15 min'],
+      ['12:45 – 13:15', 'AI per trovare lavoro — teoria + intro esercizio', '30 min'],
+      ['13:15 – 14:00', 'Esercizio 5 — CV potenziato con AI', '45 min'],
+      ['14:00 – 14:30', 'Esercizio 6 — AI per Social Media (LinkedIn)', '30 min'],
+      ['14:30 – 14:50', 'Esercizio 7 — Il mio stack AI + presentazioni', '20 min'],
+      ['14:50 – 15:00', 'Recap e chiusura', '10 min'],
+    ],
+    footer: '<strong>Totale:</strong> 330 min di attività + 30 min di pause = 6 ore.',
   },
 
   // 3. REGOLE DEL LAB
@@ -153,6 +178,7 @@ Headcount: 187 (+12). Tempo assunzione: 35 giorni (target: 28). Formazione AI: 1
     deliverable: 'Trascrizione mini-riunione + meeting notes + action items',
     instructions: [
       '<strong>Obiettivo:</strong> workflow completo: registra → trascrivi → genera notes → estrai action items',
+      '<strong>\u{1F9D1}\u200D\u{1F91D}\u200D\u{1F9D1} Formazione gruppi:</strong> Mettetevi in coppia con il vostro vicino di banco. Se siete in numero dispari, formate un gruppo da 3. Il tutor conferma i gruppi prima di partire.',
       '<strong>Step 1 — Mini-riunione (10 min):</strong> In coppia/gruppo di 3, riunione di 5 min su un tema a scelta. Parlate normalmente: decisioni, idee, azioni. Un membro prende appunti',
       '<strong>Step 2 — Trascrizione:</strong> Usa whispertyping.com (gratuito, locale nel browser) oppure Google Docs → Digitazione vocale',
       '<strong>Step 3 — Senza audio?</strong> Usa direttamente gli appunti disordinati e vai allo Step 4',
@@ -162,73 +188,6 @@ Headcount: 187 (+12). Tempo assunzione: 35 giorni (target: 28). Formazione AI: 1
       '<strong>Step 7 — Screenshot:</strong> Cattura trascrizione, meeting notes, action items',
       '<strong>Workflow reale:</strong> Meet registra → trascrizione → Claude → notes in 30 sec. Da 20 min a 2 min post-meeting.',
     ],
-  },
-
-  // ─── ESERCIZIO 5: Il mio stack AI ideale ──────────────────────────────
-
-  // 9. Esercizio 5: Il Mio Stack AI Ideale
-  {
-    type: 'hands-on',
-    heading: 'Esercizio 5: Il Mio Stack AI Ideale',
-    timer: '30 minuti',
-    level: 'base',
-    tools: ['Google Docs (free)'],
-    deliverable: 'Documento "Il Mio Stack AI" + presentazione 2 min alla classe',
-    instructions: [
-      '<strong>Obiettivo:</strong> sintetizzare le lezioni 06–08 in un piano d\'azione concreto da portare a casa',
-      '<strong>Step 1:</strong> Crea un Google Doc: "Il Mio Stack AI — [tuo nome] — [tuo ruolo]"',
-      '<strong>Step 2 — I miei 3 momenti AI:</strong> Dall\'Esercizio 1, per ognuno scrivi: cosa faccio oggi → tool AI → tempo risparmiato',
-      '<strong>Step 3 — Il mio toolkit:</strong> MAX 5 tool gratuiti. Per ognuno: Nome, Uso, Frequenza. Es: "Claude — documenti/email — ogni giorno"',
-      '<strong>Step 4 — Piano 30 giorni:</strong> Sett.1: prova tool 1. Sett.2: prova tool 2. Sett.3: integra. Sett.4: misura risultati',
-      '<strong>Step 5 — La metrica:</strong> UNA metrica di successo: "Tra 30 giorni funziona se [es: email in 50% del tempo]"',
-      '<strong>Step 6 — Presentazione (2 min):</strong> Chi sei, i 3 momenti AI, il toolkit scelto, cosa farai DOMANI',
-      '<strong>Ricorda:</strong> non serve lo stack perfetto. Serve INIZIARE domani mattina.',
-    ],
-  },
-
-  // 10. Template Stack AI
-  {
-    type: 'concept',
-    centered: true,
-    heading: 'Template: Il Mio Stack AI',
-    content: `<div style="max-width:700px; margin:0 auto; background:var(--surface); border-radius:var(--radius); padding:28px;">
-  <div style="font-size:0.7em; line-height:1.8; color:var(--text);">
-    <p><strong>Nome:</strong> _________________ <strong>Ruolo:</strong> _________________</p>
-    <br>
-    <p><strong>\u{1F4C5} I miei 3 momenti AI:</strong></p>
-    <p>1. _____________ → Tool: _____________ → Risparmio: ___min/giorno</p>
-    <p>2. _____________ → Tool: _____________ → Risparmio: ___min/giorno</p>
-    <p>3. _____________ → Tool: _____________ → Risparmio: ___min/giorno</p>
-    <br>
-    <p><strong>\u{1F9F0} Il mio toolkit (max 5):</strong></p>
-    <p>\u2022 _______________ per _______________</p>
-    <p>\u2022 _______________ per _______________</p>
-    <p>\u2022 _______________ per _______________</p>
-    <br>
-    <p><strong>\u{1F4CA} La mia metrica:</strong> Tra 30 giorni saprò che funziona se _____________</p>
-    <br>
-    <p><strong>\u{1F680} Domani mattina faccio:</strong> _____________________________________________</p>
-  </div>
-</div>`,
-  },
-
-  // 11. Stats motivazionali
-  {
-    type: 'stats',
-    heading: 'Perché Ne Vale la Pena',
-    stats: [
-      { value: 30, suffix: 'min', label: 'Risparmio medio giornaliero con AI (anche solo email)' },
-      { value: 120, suffix: 'h', label: 'Ore/anno risparmiate (30min × 240 giorni lavorativi)' },
-      { value: 3, suffix: 'sett', label: 'Settimane lavorative recuperate all\'anno' },
-      { value: 0, suffix: '€', label: 'Costo — tutti i tool di oggi sono gratuiti' },
-    ],
-  },
-
-  // 12. QUOTE
-  {
-    type: 'quote',
-    text: 'La produttività non è fare più cose. È fare le cose giuste, con meno sforzo.',
-    source: 'Cal Newport, adattato all\'era AI',
   },
 
   // ─── AI PER TROVARE LAVORO ──────────────────────────────────────────
@@ -270,21 +229,23 @@ Headcount: 187 (+12). Tempo assunzione: 35 giorni (target: 28). Formazione AI: 1
 </ul>`,
   },
 
-  // 16. Esercizio: Il tuo CV potenziato con AI
+  // 16. Esercizio 5: Il tuo CV potenziato con AI
   {
     type: 'hands-on',
-    heading: 'Esercizio: Il Tuo CV Potenziato con AI',
-    timer: '30 minuti',
+    heading: 'Esercizio 5: Il Tuo CV Potenziato con AI',
+    timer: '45 minuti',
     level: 'intermedio',
     tools: ['ChatGPT free', 'Claude free'],
     deliverable: 'CV personalizzato + lettera + 5 risposte a domande frequenti',
     instructions: [
+      '<strong>\u{1F9D1}\u200D\u{1F91D}\u200D\u{1F9D1} Formazione coppie:</strong> Lavorate in coppia con il vicino di banco. Aiutatevi a vicenda: uno cerca l\'offerta, l\'altro prepara il CV. Poi scambiate.',
       '<strong>Step 1:</strong> Trova un\'offerta di lavoro reale che ti interessa (LinkedIn, Indeed, InfoJobs)',
       '<strong>Step 2:</strong> Copia la job description completa',
       '<strong>Step 3:</strong> Su ChatGPT/Claude: "Ecco CV e offerta [incolla]. Riscrivi il CV per questa posizione. Mantieni la mia voce."',
       '<strong>Step 4:</strong> "Scrivi lettera di presentazione che menzioni [azienda] e i loro valori"',
       '<strong>Step 5:</strong> "Quali domande farà il recruiter? Preparami 5 risposte"',
       '<strong>Step 6:</strong> Confronta: fai lo stesso su Claude e ChatGPT. Quale risultato preferisci?',
+      '<strong>Step 7:</strong> Simula un mini-colloquio con l\'AI: "Fai il recruiter per [ruolo]. Intervistami e poi dammi feedback"',
     ],
   },
 
@@ -305,7 +266,96 @@ Headcount: 187 (+12). Tempo assunzione: 35 giorni (target: 28). Formazione AI: 1
 </div>`,
   },
 
-  // 18. RECAP
+  // ─── ESERCIZIO 6: AI per Social Media ──────────────────────────────────
+
+  // 18. Esercizio 6: AI per Social Media
+  {
+    type: 'hands-on',
+    heading: 'Esercizio 6: AI per Social Media — Post LinkedIn',
+    timer: '30 minuti',
+    level: 'base',
+    tools: ['ChatGPT (free)', 'Claude (free)', 'Gemini (free)'],
+    deliverable: 'Post LinkedIn ottimizzato + confronto output tra tool diversi',
+    instructions: [
+      '<strong>Obiettivo:</strong> usare l\'AI per creare un post LinkedIn professionale su qualcosa che hai imparato in questo corso, confrontando i risultati di tool diversi',
+      '<strong>Step 1 — Scegli il tema:</strong> Cosa hai imparato oggi che vale la pena condividere? Es: "Come l\'AI mi fa risparmiare 3 ore a settimana sulle email" o "Ho scoperto che l\'AI può trascrivere le riunioni in 30 secondi"',
+      '<strong>Step 2 — Primo draft su ChatGPT:</strong> "Scrivi un post LinkedIn professionale su [tema]. Tono: autentico, non corporate. Max 200 parole. Includi 3-5 hashtag rilevanti. Deve sembrare scritto da una persona vera, non da un bot."',
+      '<strong>Step 3 — Stesso prompt su Claude:</strong> Copia lo stesso prompt su Claude. Confronta: tono, struttura, originalità.',
+      '<strong>Step 4 — Ottimizza:</strong> Prendi il post che preferisci e chiedi: "Migliora questo post: aggiungi un hook iniziale forte, un dato concreto, e una call-to-action finale"',
+      '<strong>Step 5 — Verifica autenticità:</strong> Chiedi all\'AI: "Questo post sembra scritto da un umano o da un AI? Come posso renderlo più personale?" Aggiungi un aneddoto reale.',
+      '<strong>Step 6 — Screenshot:</strong> Cattura i 3 output (ChatGPT, Claude, versione finale ottimizzata). Quale preferisci e perché?',
+      '<strong>Bonus:</strong> Se hai tempo, prova anche su Gemini e confronta tutti e tre.',
+    ],
+  },
+
+  // ─── ESERCIZIO 7: Il mio stack AI ideale ──────────────────────────────
+
+  // Esercizio 7: Il Mio Stack AI Ideale
+  {
+    type: 'hands-on',
+    heading: 'Esercizio 7: Il Mio Stack AI Ideale',
+    timer: '20 minuti',
+    level: 'base',
+    tools: ['Google Docs (free)'],
+    deliverable: 'Documento "Il Mio Stack AI" + presentazione 1 min (5 volontari)',
+    instructions: [
+      '<strong>Obiettivo:</strong> sintetizzare le lezioni 06–08 in un piano d\'azione concreto da portare a casa',
+      '<strong>Step 1:</strong> Crea un Google Doc: "Il Mio Stack AI — [tuo nome] — [tuo ruolo]"',
+      '<strong>Step 2 — I miei 3 momenti AI:</strong> Dall\'Esercizio 1, per ognuno scrivi: cosa faccio oggi → tool AI → tempo risparmiato',
+      '<strong>Step 3 — Il mio toolkit:</strong> MAX 5 tool gratuiti. Per ognuno: Nome, Uso, Frequenza. Es: "Claude — documenti/email — ogni giorno"',
+      '<strong>Step 4 — Piano 30 giorni:</strong> Sett.1: prova tool 1. Sett.2: prova tool 2. Sett.3: integra. Sett.4: misura risultati',
+      '<strong>Step 5 — La metrica:</strong> UNA metrica di successo: "Tra 30 giorni funziona se [es: email in 50% del tempo]"',
+      '<strong>Step 6 — Presentazione (1 min):</strong> 5 volontari presentano alla classe: i 3 momenti AI, il toolkit scelto, cosa farai DOMANI. Chi non presenta condivide il Google Doc con il tutor.',
+      '<strong>Ricorda:</strong> non serve lo stack perfetto. Serve INIZIARE domani mattina.',
+    ],
+  },
+
+  // Template Stack AI
+  {
+    type: 'concept',
+    centered: true,
+    heading: 'Template: Il Mio Stack AI',
+    content: `<div style="max-width:700px; margin:0 auto; background:var(--surface); border-radius:var(--radius); padding:28px;">
+  <div style="font-size:0.7em; line-height:1.8; color:var(--text);">
+    <p><strong>Nome:</strong> _________________ <strong>Ruolo:</strong> _________________</p>
+    <br>
+    <p><strong>\u{1F4C5} I miei 3 momenti AI:</strong></p>
+    <p>1. _____________ → Tool: _____________ → Risparmio: ___min/giorno</p>
+    <p>2. _____________ → Tool: _____________ → Risparmio: ___min/giorno</p>
+    <p>3. _____________ → Tool: _____________ → Risparmio: ___min/giorno</p>
+    <br>
+    <p><strong>\u{1F9F0} Il mio toolkit (max 5):</strong></p>
+    <p>\u2022 _______________ per _______________</p>
+    <p>\u2022 _______________ per _______________</p>
+    <p>\u2022 _______________ per _______________</p>
+    <br>
+    <p><strong>\u{1F4CA} La mia metrica:</strong> Tra 30 giorni saprò che funziona se _____________</p>
+    <br>
+    <p><strong>\u{1F680} Domani mattina faccio:</strong> _____________________________________________</p>
+  </div>
+</div>`,
+  },
+
+  // Stats motivazionali
+  {
+    type: 'stats',
+    heading: 'Perché Ne Vale la Pena',
+    stats: [
+      { value: 30, suffix: 'min', label: 'Risparmio medio giornaliero con AI (anche solo email)' },
+      { value: 120, suffix: 'h', label: 'Ore/anno risparmiate (30min × 240 giorni lavorativi)' },
+      { value: 3, suffix: 'sett', label: 'Settimane lavorative recuperate all\'anno' },
+      { value: 0, suffix: '€', label: 'Costo — tutti i tool di oggi sono gratuiti' },
+    ],
+  },
+
+  // QUOTE
+  {
+    type: 'quote',
+    text: 'La produttività non è fare più cose. È fare le cose giuste, con meno sforzo.',
+    source: 'Cal Newport, adattato all\'era AI',
+  },
+
+  // RECAP
   {
     type: 'recap',
     heading: 'Recap — Lab 08',
@@ -314,6 +364,8 @@ Headcount: 187 (+12). Tempo assunzione: 35 giorni (target: 28). Formazione AI: 1
       'Hai gestito email con AI: scrivi, rispondi, riassumi — 40-60% più veloce',
       'Hai analizzato documenti con Claude Projects e ChatGPT',
       'Hai trasformato appunti di riunione in meeting notes in 30 secondi',
+      'Hai creato un CV potenziato con AI e simulato un colloquio',
+      'Hai scritto un post LinkedIn professionale confrontando 3 tool diversi',
       'Hai il TUO stack AI con un piano a 30 giorni — ora tocca a te!',
     ],
   },

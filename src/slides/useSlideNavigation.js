@@ -2,30 +2,38 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 
 const BROADCAST_SUPPORTED = typeof BroadcastChannel !== 'undefined'
 
+// Parse the raw slide index from the URL hash (no clamping)
+function readHashIndex(lessonId) {
+  const match = window.location.hash.match(/^#\/?(lezione-\d+)(?:\/(\d+))?$/)
+  if (match && match[1] === lessonId) return parseInt(match[2] || '1', 10) - 1
+  return 0
+}
+
 export function useSlideNavigation(totalSlides, lessonId, onExit) {
-  const parseHash = useCallback(() => {
-    const match = window.location.hash.match(/^#\/?(lezione-\d+)(?:\/(\d+))?$/)
-    if (match && match[1] === lessonId) return Math.max(0, Math.min((parseInt(match[2] || '1', 10) - 1), totalSlides - 1))
-    return 0
-  }, [lessonId, totalSlides])
-
-  const [currentIndex, setCurrentIndex] = useState(parseHash)
+  // Store the raw desired index from the URL — no clamping yet
+  const [rawIndex, setRawIndex] = useState(() => readHashIndex(lessonId))
   const isSyncing = useRef(false)
+  const ready = totalSlides > 0
 
-  // Re-parse hash when totalSlides becomes available (data loaded)
+  // Clamp only when we have totalSlides
+  const currentIndex = ready ? Math.max(0, Math.min(rawIndex, totalSlides - 1)) : rawIndex
+
+  // When totalSlides arrives, re-read hash to get the correct index
   useEffect(() => {
-    if (totalSlides > 0) setCurrentIndex(parseHash())
-  }, [totalSlides, parseHash])
+    if (ready) setRawIndex(readHashIndex(lessonId))
+  }, [ready, lessonId])
 
   const goTo = useCallback((idx) => {
+    if (!ready) return
     const clamped = Math.max(0, Math.min(idx, totalSlides - 1))
-    setCurrentIndex(clamped)
+    setRawIndex(clamped)
     window.location.hash = `#/${lessonId}/${clamped + 1}`
-  }, [totalSlides, lessonId])
+  }, [totalSlides, lessonId, ready])
 
   const next = useCallback(() => goTo(currentIndex + 1), [goTo, currentIndex])
   const prev = useCallback(() => goTo(currentIndex - 1), [goTo, currentIndex])
 
+  // Keyboard
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); next() }
@@ -38,11 +46,12 @@ export function useSlideNavigation(totalSlides, lessonId, onExit) {
     return () => window.removeEventListener('keydown', onKey)
   }, [next, prev, goTo, onExit, totalSlides])
 
+  // Hash changes
   useEffect(() => {
-    const onHash = () => setCurrentIndex(parseHash())
+    const onHash = () => setRawIndex(readHashIndex(lessonId))
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
-  }, [parseHash])
+  }, [lessonId])
 
   // Touch/swipe
   useEffect(() => {
@@ -59,14 +68,14 @@ export function useSlideNavigation(totalSlides, lessonId, onExit) {
 
   // BroadcastChannel sync
   useEffect(() => {
-    if (!BROADCAST_SUPPORTED || totalSlides === 0) return
+    if (!BROADCAST_SUPPORTED || !ready) return
 
     const channel = new BroadcastChannel('slide-sync')
 
     channel.onmessage = (e) => {
       const { type, lesson, index } = e.data || {}
       if (type !== 'navigate' || lesson !== lessonId) return
-      setCurrentIndex(prev => {
+      setRawIndex(prev => {
         if (prev === index) return prev
         isSyncing.current = true
         window.location.hash = `#/${lessonId}/${index + 1}`
@@ -75,11 +84,11 @@ export function useSlideNavigation(totalSlides, lessonId, onExit) {
     }
 
     return () => channel.close()
-  }, [lessonId, totalSlides])
+  }, [lessonId, ready])
 
   // Broadcast on navigation (only when not receiving)
   useEffect(() => {
-    if (!BROADCAST_SUPPORTED || totalSlides === 0) return
+    if (!BROADCAST_SUPPORTED || !ready) return
 
     if (isSyncing.current) {
       isSyncing.current = false
@@ -89,7 +98,7 @@ export function useSlideNavigation(totalSlides, lessonId, onExit) {
     const channel = new BroadcastChannel('slide-sync')
     channel.postMessage({ type: 'navigate', lesson: lessonId, index: currentIndex })
     channel.close()
-  }, [currentIndex, lessonId, totalSlides])
+  }, [currentIndex, lessonId, ready])
 
-  return { currentIndex, totalSlides, next, prev, goTo, syncSupported: BROADCAST_SUPPORTED }
+  return { currentIndex, totalSlides, next, prev, goTo, ready, syncSupported: BROADCAST_SUPPORTED }
 }

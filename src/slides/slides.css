@@ -518,21 +518,29 @@
 .compare-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
   font-size: 0.7em;
   max-width: 900px;
   margin: 0 auto;
+}
+.compare-table td:first-child,
+.compare-table th:first-child {
+  width: 22%;
+  font-weight: 600;
+  color: var(--text);
 }
 .compare-table th {
   background: var(--surface);
   padding: 12px;
   border-bottom: 2px solid var(--accent);
   font-weight: 700;
-  text-align: left;
+  text-align: center;
   color: var(--text);
 }
 .compare-table td {
   padding: 10px 12px;
   border-bottom: 1px solid var(--border);
+  text-align: center;
   color: var(--text-mid);
 }
 .compare-table tr:last-child td { border-bottom: none; }

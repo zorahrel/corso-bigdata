@@ -18,12 +18,39 @@ export const slides = [
     type: 'agenda',
     heading: 'Agenda — Oggi solo pratica!',
     items: [
-      { emoji: '\u{1F4AC}', text: 'Esercizio 1 — ChatGPT free: Canvas, istruzioni, memoria (45 min)' },
-      { emoji: '\u{1F9E0}', text: 'Esercizio 2 — Claude free: Projects, Artifacts, crea un\'app (45 min)' },
-      { emoji: '\u2728', text: 'Esercizio 3 — Gemini free: confronto sullo stesso task (45 min)' },
-      { emoji: '\u{1F4D3}', text: 'Esercizio 4 — NotebookLM: documenti e podcast automatico (45 min)' },
-      { emoji: '\u{1F4CA}', text: 'Esercizio 5 — Confronto finale: tabella comparativa (30 min)' },
+      { emoji: '\u{1F527}', text: 'Setup e registrazione piattaforme (20 min)' },
+      { emoji: '\u{1F4AC}', text: 'Esercizio 1 — ChatGPT free: Canvas, istruzioni, memoria (50 min)' },
+      { emoji: '\u2615', text: 'Pausa (15 min)' },
+      { emoji: '\u{1F9E0}', text: 'Esercizio 2 — Claude free: Projects, Artifacts, crea un\'app (50 min)' },
+      { emoji: '\u2728', text: 'Esercizio 3 — Gemini free: confronto sullo stesso task (50 min)' },
+      { emoji: '\u2615', text: 'Pausa (15 min)' },
+      { emoji: '\u{1F4D3}', text: 'Esercizio 4 — NotebookLM: documenti e podcast automatico (50 min)' },
+      { emoji: '\u{1F4CA}', text: 'Esercizio 5 — Confronto finale: tabella comparativa + presentazioni (60 min)' },
+      { emoji: '\u{1F525}', text: 'Bonus — AI Debate: bias, tono e accuratezza a confronto (30 min)' },
+      { emoji: '\u{1F3C1}', text: 'Recap e chiusura (20 min)' },
     ],
+  },
+
+  // 2b. SCHEDULE
+  {
+    type: 'custom',
+    layout: 'compare-table',
+    heading: '\u{1F4C5} Programma della Giornata — 6 ore',
+    columns: ['Orario', 'Attività', 'Durata'],
+    rows: [
+      ['09:00 – 09:20', 'Setup: registrazione piattaforme, verifica accessi', '20 min'],
+      ['09:20 – 10:10', 'Esercizio 1 — ChatGPT Free', '50 min'],
+      ['10:10 – 10:25', '\u2615 Pausa', '15 min'],
+      ['10:25 – 11:15', 'Esercizio 2 — Claude Free', '50 min'],
+      ['11:15 – 12:05', 'Esercizio 3 — Gemini Free', '50 min'],
+      ['12:05 – 12:15', 'Buffer / Q&A rapido', '10 min'],
+      ['12:15 – 12:30', '\u2615 Pausa', '15 min'],
+      ['12:30 – 13:20', 'Esercizio 4 — NotebookLM', '50 min'],
+      ['13:20 – 14:20', 'Esercizio 5 — Confronto finale + Presentazioni', '60 min'],
+      ['14:20 – 14:50', 'Bonus — AI Debate (chi finisce in anticipo)', '30 min'],
+      ['14:50 – 15:00', 'Recap e chiusura', '10 min'],
+    ],
+    footer: '<strong>Totale:</strong> 330 min di attività + 30 min di pause = 6 ore. Il bonus è facoltativo per chi finisce in anticipo.',
   },
 
   // 3. REGOLE DEL LAB
@@ -35,9 +62,10 @@ export const slides = [
   <ul class="feature-list">
     <li><span class="icon">\u{1F6AB}</span> <strong>ZERO teoria pesante</strong> — oggi si lavora, non si ascolta</li>
     <li><span class="icon">\u{1F4B0}</span> <strong>SOLO tool gratuiti</strong> — nessun account a pagamento richiesto</li>
-    <li><span class="icon">\u{1F4F8}</span> <strong>Ogni esercizio ha un deliverable</strong> — screenshot o documento da consegnare</li>
+    <li><span class="icon">\u{1F4F8}</span> <strong>Ogni esercizio ha un deliverable</strong> — screenshot o documento da consegnare su <strong>Google Classroom</strong></li>
     <li><span class="icon">\u{1F91D}</span> <strong>Aiutatevi tra di voi</strong> — il tutor facilita, voi sperimentate</li>
     <li><span class="icon">\u23F0</span> <strong>Timer attivo</strong> — rispettate i tempi per completare tutto</li>
+    <li><span class="icon">\u{1F527}</span> <strong>Primi 20 min = setup</strong> — registratevi su tutte le piattaforme PRIMA di iniziare</li>
   </ul>
 </div>`,
   },
@@ -55,13 +83,13 @@ export const slides = [
   {
     type: 'hands-on',
     heading: 'Esercizio 1: ChatGPT Free — Canvas, Istruzioni, Memoria',
-    timer: '45 minuti',
+    timer: '50 minuti',
     level: 'base',
-    tools: ['ChatGPT (chatgpt.com — account gratuito)'],
-    deliverable: 'Screenshot di: Custom Instructions, Canvas modificato, Memoria attiva',
+    tools: ['ChatGPT — <a href="https://chat.openai.com" target="_blank">chat.openai.com</a> (account gratuito)'],
+    deliverable: 'Consegna su Google Classroom: 3 screenshot (Custom Instructions, Canvas modificato, Memoria attiva) in un unico PDF o documento',
     instructions: [
       '<strong>Obiettivo:</strong> scoprire Custom Instructions, Canvas e Memory di ChatGPT free',
-      '<strong>Step 1 — Account:</strong> Vai su chatgpt.com → accedi con Google (gratis, 2 min)',
+      '<strong>Step 1 — Account:</strong> Vai su <a href="https://chat.openai.com" target="_blank">chat.openai.com</a> → accedi con Google (gratis, 2 min)',
       '<strong>Step 2 — Custom Instructions:</strong> Avatar → "Customize ChatGPT". Compila chi sei (ruolo, settore) e come vuoi le risposte ("italiano, tono professionale, con esempi")',
       '<strong>Step 3 — Testa:</strong> Nuova chat → "Dammi 3 consigli per migliorare la produttività". Nota come la risposta è calibrata su di te!',
       '<strong>Step 4 — Canvas:</strong> Chiedi: "Crea un\'analisi SWOT per il mio settore". Si apre un editor laterale: seleziona una sezione → "espandi" o "riscrivi in tono formale"',
@@ -69,6 +97,7 @@ export const slides = [
       '<strong>Step 6 — Memory:</strong> Scrivi: "Ricorda che preferisco bullet point". In una NUOVA chat verifica che ricordi. Controlla in Impostazioni → Memoria',
       '<strong>Step 7 — Screenshot:</strong> Cattura: 1) Custom Instructions, 2) Canvas modificato, 3) Schermata Memoria',
     ],
+    footer: '<strong>\u{1F9D1}\u200D\u{1F3EB} Nota tutor:</strong> Se gli studenti non riescono ad accedere con Google, possono creare un account con email. Se Canvas non si attiva, far provare il prompt: "Scrivi un documento di 500 parole su..." — Canvas si apre automaticamente su testi lunghi. Verifica che tutti abbiano completato la registrazione prima di procedere.',
   },
 
   // ─── ESERCIZIO 2: Claude ──────────────────────────────────────────────
@@ -77,13 +106,13 @@ export const slides = [
   {
     type: 'hands-on',
     heading: 'Esercizio 2: Claude Free — Projects, Artifacts, Crea un\'App',
-    timer: '45 minuti',
+    timer: '50 minuti',
     level: 'intermedio',
-    tools: ['Claude (claude.ai — account gratuito)'],
-    deliverable: 'Screenshot del Project con documenti + app creata con Artifacts',
+    tools: ['Claude — <a href="https://claude.ai" target="_blank">claude.ai</a> (account gratuito)'],
+    deliverable: 'Consegna su Google Classroom: screenshot del Project con documenti + screenshot/link dell\'app creata con Artifacts',
     instructions: [
       '<strong>Obiettivo:</strong> usare Projects (ora GRATIS!) per knowledge base + Artifacts per creare un\'app',
-      '<strong>Step 1 — Account:</strong> Vai su claude.ai → accedi con Google (gratis)',
+      '<strong>Step 1 — Account:</strong> Vai su <a href="https://claude.ai" target="_blank">claude.ai</a> → accedi con Google (gratis)',
       '<strong>Step 2 — Crea un Project:</strong> Menu laterale → "Projects" → "Create Project". Nome: "Il mio assistente [settore]"',
       '<strong>Step 3 — Aggiungi Knowledge:</strong> "Add Content" → carica 2-3 documenti (PDF, policy, FAQ). Se non ne hai, usa quelli del tutor',
       '<strong>Step 4 — Testa il Project:</strong> Fai 3 domande sui documenti. Nota come Claude cita le fonti specifiche!',
@@ -92,6 +121,7 @@ export const slides = [
       '<strong>Step 7 — Screenshot:</strong> Cattura: 1) Project con documenti, 2) Risposta con citazioni, 3) App Artifact',
       '<strong>Wow:</strong> Projects + Artifacts gratis da marzo 2026 — prima costava $20/mese!',
     ],
+    footer: '<strong>\u{1F9D1}\u200D\u{1F3EB} Nota tutor:</strong> Se il free tier di Claude limita i messaggi, far alternare gli studenti tra Projects e Artifacts. Se "Projects" non appare nel menu, verificare che l\'account sia stato creato dopo marzo 2026. Documenti di esempio disponibili nell\'Esercizio 4.',
   },
 
   // ─── ESERCIZIO 3: Gemini ──────────────────────────────────────────────
@@ -100,13 +130,17 @@ export const slides = [
   {
     type: 'hands-on',
     heading: 'Esercizio 3: Gemini Free — Confronto sullo Stesso Task',
-    timer: '45 minuti',
+    timer: '50 minuti',
     level: 'base',
-    tools: ['Gemini (gemini.google.com — account Google gratuito)', 'ChatGPT (free)', 'Claude (free)'],
-    deliverable: 'Google Doc con le 3 risposte affiancate e valutazione comparativa',
+    tools: [
+      'Gemini — <a href="https://gemini.google.com" target="_blank">gemini.google.com</a> (account Google gratuito)',
+      'ChatGPT — <a href="https://chat.openai.com" target="_blank">chat.openai.com</a>',
+      'Claude — <a href="https://claude.ai" target="_blank">claude.ai</a>',
+    ],
+    deliverable: 'Consegna su Google Classroom: Google Doc con le 3 risposte affiancate, tabella voti e verdetto motivato',
     instructions: [
       '<strong>Obiettivo:</strong> dare lo STESSO prompt a 3 AI e confrontare qualità, stile e completezza',
-      '<strong>Step 1:</strong> Apri 3 tab: chatgpt.com, claude.ai, gemini.google.com',
+      '<strong>Step 1:</strong> Apri 3 tab: <a href="https://chat.openai.com" target="_blank">chat.openai.com</a>, <a href="https://claude.ai" target="_blank">claude.ai</a>, <a href="https://gemini.google.com" target="_blank">gemini.google.com</a>',
       '<strong>Step 2 — Il prompt:</strong> Copia su tutte e 3: "Consulente aziendale: azienda manifatturiera IT, 200 dipendenti, 30M fatturato, budget 50K. Piano AI in 3 fasi con timeline, costi, KPI, rischi e mitigazioni"',
       '<strong>Step 3:</strong> Invia su tutte e 3 contemporaneamente, aspetta le risposte',
       '<strong>Step 4 — Valuta:</strong> Voto 1-5 per: Completezza, Praticità, Numeri concreti, Struttura, Tono professionale',
@@ -115,6 +149,7 @@ export const slides = [
       '<strong>Step 7 — Documento finale:</strong> Google Doc con risposte affiancate + tabella voti + "VINCITORE per questo task"',
       '<strong>Spoiler:</strong> non esiste un vincitore assoluto — dipende dal task!',
     ],
+    footer: '<strong>\u{1F9D1}\u200D\u{1F3EB} Nota tutor:</strong> Se qualcuno ha esaurito i messaggi gratuiti su Claude o ChatGPT, può lavorare in coppia con un compagno. L\'importante è che tutti vedano le 3 risposte a confronto.',
   },
 
   // ─── ESERCIZIO 4: NotebookLM ──────────────────────────────────────────
@@ -123,13 +158,13 @@ export const slides = [
   {
     type: 'hands-on',
     heading: 'Esercizio 4: NotebookLM — Documenti e Podcast Automatico',
-    timer: '45 minuti',
+    timer: '50 minuti',
     level: 'base',
-    tools: ['NotebookLM (notebooklm.google.com — gratuito con account Google)'],
-    deliverable: 'Screenshot delle risposte con citazioni + link al podcast audio generato',
+    tools: ['NotebookLM — <a href="https://notebooklm.google.com" target="_blank">notebooklm.google.com</a> (gratuito con account Google)'],
+    deliverable: 'Consegna su Google Classroom: screenshot delle risposte con citazioni + link condivisibile al podcast audio generato',
     instructions: [
       '<strong>Obiettivo:</strong> caricare documenti, fare domande con citazioni precise, generare un podcast audio',
-      '<strong>Step 1:</strong> Vai su notebooklm.google.com → "New Notebook"',
+      '<strong>Step 1:</strong> Vai su <a href="https://notebooklm.google.com" target="_blank">notebooklm.google.com</a> → "New Notebook"',
       '<strong>Step 2 — Carica 3 fonti:</strong> PDF, articolo Wikipedia, link YouTube, o Google Doc. Se non hai materiale, usa i documenti del tutor',
       '<strong>Step 3 — Domande:</strong> Chiedi: "Quali sono i 3 trend principali?". Nota le citazioni [1], [2] che rimandano ai documenti!',
       '<strong>Step 4 — Incrocia le fonti:</strong> "Ci sono contraddizioni tra le mie fonti?" — NotebookLM confronta automaticamente',
@@ -162,6 +197,7 @@ export const slides = [
         'Genera un podcast audio che riassuma i 3 documenti',
       ],
     },
+    footer: '<strong>\u{1F9D1}\u200D\u{1F3EB} Nota tutor:</strong> La generazione del podcast richiede 3-5 minuti. Far partire la generazione prima degli altri step così è pronto alla fine. Se NotebookLM dà errore con certi PDF, provare a convertirli in Google Doc prima di caricarli.',
   },
 
   // ─── ESERCIZIO 5: Confronto Finale ──────────────────────────────────────
@@ -169,24 +205,57 @@ export const slides = [
   // 9. Esercizio 5: Confronto finale
   {
     type: 'hands-on',
-    heading: 'Esercizio 5: Confronto Finale — Tabella Comparativa',
-    timer: '30 minuti',
+    heading: 'Esercizio 5: Confronto Finale — Tabella Comparativa + Presentazioni',
+    timer: '60 minuti',
     level: 'base',
     tools: ['Google Docs o Sheets (free)'],
-    deliverable: 'Tabella comparativa delle 4 piattaforme compilata + raccomandazione personale',
+    deliverable: 'Consegna su Google Classroom: Google Sheet con tabella comparativa compilata + raccomandazione personale motivata',
     instructions: [
-      '<strong>Obiettivo:</strong> sintetizzare tutto in una tabella comparativa delle 4 piattaforme',
+      '<strong>Obiettivo:</strong> sintetizzare tutto in una tabella comparativa delle 4 piattaforme e presentare i risultati',
+      '<strong>Fase 1 — Compilazione (25 min)</strong>',
       '<strong>Step 1:</strong> Google Sheet → colonne: Criterio | ChatGPT | Claude | Gemini | NotebookLM',
-      '<strong>Step 2:</strong> Voti 1-5 per: Facilita d\'uso, Qualita risposte, Funzionalita uniche, Utilita per il MIO lavoro, Velocita, UX',
-      '<strong>Step 3:</strong> Riga "Funzionalita killer" — la feature migliore di ciascuna',
-      '<strong>Step 4:</strong> Riga "Limite principale" — il difetto piu evidente di ciascuna',
-      '<strong>Step 5:</strong> "Per il MIO lavoro, lo stack ideale: [principale] + [secondaria] perche..."',
-      '<strong>Step 6:</strong> Prepara una mini-presentazione di 2 min per la classe',
+      '<strong>Step 2:</strong> Voti 1-5 per: Facilità d\'uso, Qualità risposte, Funzionalità uniche, Utilità per il MIO lavoro, Velocità, UX',
+      '<strong>Step 3:</strong> Riga "Funzionalità killer" — la feature migliore di ciascuna',
+      '<strong>Step 4:</strong> Riga "Limite principale" — il difetto più evidente di ciascuna',
+      '<strong>Step 5:</strong> "Per il MIO lavoro, lo stack ideale: [principale] + [secondaria] perché..."',
+      '<strong>Fase 2 — Presentazioni (35 min)</strong>',
+      '<strong>Step 6:</strong> Preparati: 1 minuto per presentare il tuo verdetto alla classe (qual è il tuo stack ideale e perché)',
+      '<strong>Step 7:</strong> Presentazioni a gruppi di 5: ogni gruppo presenta, poi 2 min di discussione. Il tutor segna i "vincitori" per categoria',
+      '<strong>Step 8:</strong> Votazione finale della classe: alza la mano per la piattaforma preferita. Il tutor annota i risultati alla lavagna',
       '<strong>Ricorda:</strong> non esiste la risposta "giusta" — il tool migliore è quello che TU userai davvero ogni giorno!',
     ],
+    footer: '<strong>\u{1F9D1}\u200D\u{1F3EB} Nota tutor:</strong> Per 25 studenti, organizzare 5 gruppi da 5. Ogni studente ha 1 min per presentare nel proprio gruppo, poi 1 portavoce per gruppo presenta alla classe (2 min ciascuno). Totale: ~25 min gruppi + 10 min plenaria. Se il tempo stringe, fare solo la plenaria con alzata di mano.',
   },
 
-  // 10. Tabella di riferimento
+  // ─── BONUS: AI Debate ──────────────────────────────────────────────
+
+  // 10. Bonus: AI Debate
+  {
+    type: 'hands-on',
+    heading: 'Bonus: AI Debate — Bias, Tono e Accuratezza a Confronto',
+    timer: '30 minuti',
+    level: 'intermedio',
+    tools: [
+      'ChatGPT — <a href="https://chat.openai.com" target="_blank">chat.openai.com</a>',
+      'Claude — <a href="https://claude.ai" target="_blank">claude.ai</a>',
+      'Gemini — <a href="https://gemini.google.com" target="_blank">gemini.google.com</a>',
+    ],
+    deliverable: 'Consegna su Google Classroom: Google Doc con le 3 risposte e analisi di bias/tono/accuratezza',
+    instructions: [
+      '<strong>Obiettivo:</strong> dare lo STESSO prompt controverso a tutte e 3 le piattaforme e analizzare differenze di bias, tono e accuratezza',
+      '<strong>Step 1:</strong> Scegliete UN prompt controverso dalla lista (o inventatene uno):',
+      '&nbsp;&nbsp;&nbsp;&nbsp;a) "L\'intelligenza artificiale sostituirà il 50% dei lavori entro 5 anni. Sei d\'accordo? Argomenta."',
+      '&nbsp;&nbsp;&nbsp;&nbsp;b) "Il remote working è più produttivo del lavoro in ufficio. Analizza pro e contro con dati."',
+      '&nbsp;&nbsp;&nbsp;&nbsp;c) "Le università tradizionali diventeranno obsolete grazie all\'e-learning e all\'AI. Discuti."',
+      '<strong>Step 2:</strong> Inviate lo STESSO prompt, parola per parola, su ChatGPT, Claude e Gemini',
+      '<strong>Step 3 — Analisi:</strong> Per ogni risposta valutate: Prende una posizione netta o resta neutrale? Cita fonti/dati? Il tono è assertivo, cauto o diplomatico? Ci sono affermazioni non verificabili?',
+      '<strong>Step 4 — Confronto:</strong> Google Doc con tabella: Piattaforma | Posizione | Tono | Dati citati | Bias rilevato',
+      '<strong>Step 5 — Verdetto:</strong> Quale AI è più "onesta"? Quale più utile per prendere decisioni? Quale evita di più il conflitto?',
+    ],
+    footer: '<strong>\u{1F9D1}\u200D\u{1F3EB} Nota tutor:</strong> Questo esercizio è FACOLTATIVO, per chi finisce in anticipo gli esercizi precedenti. È un ottimo spunto per discussione in classe. Se il tempo lo permette, far condividere i risultati più interessanti.',
+  },
+
+  // 11. Tabella di riferimento
   {
     type: 'custom',
     layout: 'compare-table',
@@ -217,7 +286,9 @@ export const slides = [
       'Claude free: Projects + Artifacts per knowledge base e app interattive — ORA GRATIS!',
       'Gemini free: multimodale + integrazione Google Workspace',
       'NotebookLM: citazioni precise, zero allucinazioni, podcast audio automatico',
+      'AI Debate: stessa domanda, risposte diverse — attenzione al bias!',
       'Non esiste il tool "migliore" — esiste quello giusto per il TUO task',
+      'Tutti i deliverable consegnati su Google Classroom',
     ],
   },
 

@@ -64,7 +64,7 @@ export function SlideViewer({ lessonId, onExit }) {
 
   const slides = lessonData?.slides || []
   const meta = lessonData?.meta || {}
-  const { currentIndex, totalSlides, next, prev, goTo, syncSupported } = useSlideNavigation(slides.length, lessonId, onExit)
+  const { currentIndex, totalSlides, next, prev, goTo, ready, syncSupported } = useSlideNavigation(slides.length, lessonId, onExit)
 
   if (error) {
     return (
@@ -75,12 +75,8 @@ export function SlideViewer({ lessonId, onExit }) {
     )
   }
 
-  if (!lessonData) {
-    return (
-      <div className="slide-viewport" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <div style={{ fontSize: '1.5em', color: 'var(--muted)' }}>Caricamento...</div>
-      </div>
-    )
+  if (!lessonData || !ready) {
+    return <div className="slide-viewport" />
   }
 
   const currentSlide = slides[currentIndex]

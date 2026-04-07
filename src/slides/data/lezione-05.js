@@ -29,7 +29,7 @@ export const slides = [
   // 3. MEME
   {
     type: 'meme',
-    image: { src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDFqOXR0bHJiNHkxN2h2NXQ3d2dsMXA3MHF4Z3h0cHJ5Y2YzZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/IZY2SE2JmPgFCo/giphy.gif', alt: 'Robot taking over' },
+    image: { src: 'https://i.giphy.com/media/l46CwEYnbFtFfjZNS/giphy.gif', alt: 'Robot falling over' },
     caption: '"Quando il boss dice: automatizziamo tutto con l\'AI"',
   },
 
@@ -58,12 +58,12 @@ export const slides = [
     layout: 'feature-grid',
     heading: 'Agentic AI: i numeri del 2026',
     features: [
-      { icon: '📡', title: 'Telecom: 48%', description: 'Telco con agenti AI in produzione (NVIDIA 2026)' },
-      { icon: '🛒', title: 'Retail/CPG: 47%', description: 'Agenti per supply chain, pricing, servizio clienti' },
-      { icon: '🏢', title: 'Enterprise: 78%', description: 'Adoption AI da 55% a 78% in un anno' },
-      { icon: '⚠️', title: '22% abbandonato', description: '1 progetto agentico su 4 fallisce' },
-      { icon: '🔮', title: 'NVIDIA 2026', description: 'Agentic AI è il trend #1 del report' },
-      { icon: '📊', title: '150+ data points', description: 'Statistiche raccolte da Digital Applied' },
+      { icon: '📡', title: 'Telecom: 48%', description: 'Quasi metà delle telco ha agenti AI in produzione' },
+      { icon: '🛒', title: 'Retail: 47%', description: 'Agenti AI per prezzi, magazzino e assistenza clienti' },
+      { icon: '🏢', title: 'Enterprise: 78%', description: 'Adozione AI balzata dal 55% al 78% in un solo anno' },
+      { icon: '⚠️', title: '22% fallisce', description: '1 progetto agentico su 4 viene abbandonato' },
+      { icon: '💰', title: 'ROI: $7.800/dip', description: 'Risparmio medio annuo per dipendente con AI strutturata' },
+      { icon: '⏱️', title: '6,5 ore/settimana', description: 'Tempo risparmiato in media per ogni dipendente' },
     ],
     footer: '<strong>Il messaggio:</strong> l\'AI agentica è presente, non futuro. Ma il 22% di fallimenti richiede strategia.',
   },
@@ -155,7 +155,7 @@ export const slides = [
       { icon: '🔧', title: 'Agentic AI Engineer', description: 'Costruisce memoria, tool layer, permessi, osservabilità, sandbox' },
       { icon: '🎯', title: 'Agent Orchestrator', description: 'Coordina squadre di agenti su task, tempi, priorità e risorse' },
       { icon: '⚖️', title: 'Agent Governor', description: 'Definisce vincoli, policy, soglie di autonomia, audit e intervento umano' },
-      { icon: '💰', title: 'AgentOps / Agent Economist', description: 'Struttura costi, incentivi, metriche di rendimento e gestione operativa' },
+      { icon: '💰', title: 'AgentOps Manager', description: 'Gestisce costi, metriche e rendimento operativo degli agenti' },
     ],
     footer: '<strong>Pattern storico:</strong> PC → IT aziendale · Web → web designer · Social → community manager · Cloud → DevOps · <strong>Agenti → questi ruoli</strong>.',
   },
@@ -171,14 +171,49 @@ export const slides = [
   Confronta dati, rilevanza, reputazione, costo, compatibilità con l'obiettivo.
   <br><br>
   <strong>Per essere scelti da un agente, serve:</strong><br>
-  📐 Offerta <strong>strutturata e verificabile</strong><br>
-  🤖 Contenuti <strong>machine-readable</strong><br>
-  🎯 <strong>Compatibilità semantica</strong> con l'obiettivo del cliente<br>
+  📐 Offerta <strong>strutturata e verificabile</strong> (dati chiari, non slogan)<br>
+  🤖 Contenuti <strong>leggibili dalle macchine</strong> (API, dati strutturati)<br>
+  🎯 <strong>Rilevanza reale</strong> rispetto all'obiettivo del cliente<br>
   📊 Meno rumore, più <strong>qualità informativa</strong>
   <br><br>
   <strong>Nuove metriche:</strong> quanti agenti interagiscono col servizio? Con quali permessi? Quale tasso di successo? Quale valore generato?
 </p>`,
     footer: '<strong>Il marketing non muore</strong> — è costretto a maturare. Da persuasione a rilevanza verificabile.',
+  },
+
+  // 6g. Agentic Commerce: gli agenti comprano per te
+  {
+    type: 'concept',
+    heading: 'Agentic Commerce: l\'AI compra per te',
+    content: `<p class="concept-text">
+  Non è fantascienza — sta succedendo ora:
+  <br><br>
+  🛒 <strong>Google "Buy for me":</strong> l'AI cerca, confronta e compra autonomamente dai siti<br>
+  🛍️ <strong>ChatGPT Shopping:</strong> "Buy it in ChatGPT" su Etsy e Shopify<br>
+  👟 <strong>Microsoft Copilot Checkout:</strong> ordini AI cresciuti <strong>15x</strong> nel 2025 (Keen, Pura Vida)
+  <br><br>
+  <strong>I numeri:</strong><br>
+  📊 <strong>45%</strong> consumatori già usa AI nel percorso d'acquisto (IBM 2026)<br>
+  💰 McKinsey stima <strong>$3-5 trilioni</strong> di mercato entro 2030<br>
+  🏪 Nuovi standard: <strong>ACP</strong> (OpenAI+Stripe) e <strong>UCP</strong> (Shopify+Google)
+  <br><br>
+  <strong>Domanda chiave:</strong> se l'agente del cliente sceglie per lui, come ti fai scegliere?
+</p>`,
+  },
+
+  // 6h. Quando l'AI combina disastri
+  {
+    type: 'custom',
+    layout: 'feature-grid',
+    heading: 'Quando l\'AI combina disastri',
+    features: [
+      { icon: '🍔', title: 'McDonald\'s Drive-Thru', description: 'AI ordina 260 McNuggets da sola. Progetto terminato dopo i video virali.' },
+      { icon: '🧪', title: 'Supermercato NZ', description: 'Meal planner AI suggerisce ricette con candeggina e "mocktail al cloro".' },
+      { icon: '💀', title: 'Replit AI Agent', description: 'Cancella database di produzione durante code freeze. Poi fabbrica report falsi per coprirsi.' },
+      { icon: '✈️', title: 'Air Canada Chatbot', description: 'Inventa policy inesistente. Tribunale condanna la compagnia a rispettarla.' },
+      { icon: '🔓', title: '80% senza controllo', description: '80% aziende con agenti autonomi non sa cosa fanno. Solo 21% ha inventario agenti.' },
+    ],
+    footer: '<strong>Lezione:</strong> più autonomia = più rischio. Servono guardrail, audit e human-in-the-loop.',
   },
 
   // ─── SEZIONE 2: WORKFLOW AUTOMATION ───
@@ -217,6 +252,23 @@ export const slides = [
     footer: '<strong>Consiglio:</strong> Zapier se non-tecnico, Make per workflow complessi, n8n se hai risorse tech.',
   },
 
+  // 8b. Mappa: codice vs tool vs AI autonoma
+  {
+    type: 'custom',
+    layout: 'compare-table',
+    heading: 'Quando serve cosa?',
+    columns: ['', 'Codice custom', 'Tool (n8n/Zapier)', 'AI autonoma'],
+    rows: [
+      ['Quando', 'Logica unica, non standard', 'Processo ripetitivo, regole chiare', 'Task variabile, serve giudizio'],
+      ['Chi lo fa', 'Developer', 'Chiunque (no-code/low-code)', 'L\'AI decide, l\'umano supervisiona'],
+      ['Esempio', 'API proprietaria, algoritmo ML', 'Email → classifica → Slack', 'Analizza email e rispondi in autonomia'],
+      ['Trigger', 'Evento nel codice', 'Webhook, cron, email', 'Cron, evento, o l\'agente monitora'],
+      ['Flessibilità', 'Totale', 'Media (nodi disponibili)', 'Alta (ragiona sul contesto)'],
+      ['Costo setup', 'Alto (dev time)', 'Basso (drag & drop)', 'Medio (prompt + test + guardrail)'],
+    ],
+    footer: '<strong>Regola pratica:</strong> se il task ha regole fisse → tool. Se serve giudizio → AI. Se è unico e complesso → codice.',
+  },
+
   // 9. DEMO — Workflow AI con n8n
   {
     type: 'demo',
@@ -231,6 +283,118 @@ export const slides = [
 <strong>Risorse:</strong><br>
 • <a href="https://www.youtube.com/watch?v=PfdnYe2690E">n8n AI Agent Tutorial 2026</a><br>
 • <a href="https://findskill.ai/courses/n8n-ai-automation-workflows/">Corso gratuito n8n + certificato</a>`,
+  },
+
+  // 9b. Use case reali con n8n
+  {
+    type: 'custom',
+    layout: 'feature-grid',
+    heading: '5 use case reali con n8n',
+    features: [
+      { icon: '📧', title: 'Email triage AI', description: 'Gmail → classifica con Claude → risponde, archivia o escala. Zero intervento umano sul 70% delle email.' },
+      { icon: '📊', title: 'Report automatici', description: 'Google Sheets + GPT → report settimanale in PDF → inviato su Slack ogni lunedì alle 9.' },
+      { icon: '🔍', title: 'Monitoraggio competitor', description: 'Scraping prezzi → confronto AI → alert su Telegram se il competitor cambia prezzo.' },
+      { icon: '📝', title: 'Content repurposing', description: 'Video YouTube → trascrizione → articolo blog + post LinkedIn + thread Twitter. Un contenuto, 4 canali.' },
+      { icon: '🧾', title: 'Fatture e documenti', description: 'PDF fattura → OCR + AI → estrae dati → compila Google Sheet → notifica contabilità.' },
+    ],
+    footer: '<strong>Pattern comune:</strong> trigger → arricchimento dati → decisione AI → azione → notifica.',
+  },
+
+  // 9c. Anatomia di un flusso n8n
+  {
+    type: 'concept',
+    heading: 'Anatomia di un flusso n8n',
+    content: `<p class="concept-text">
+  Un workflow n8n è un <strong>file JSON</strong> importabile con un click. Ecco la struttura:
+  <br><br>
+  <code style="display:block; background:rgba(108,99,255,0.08); padding:16px; border-radius:8px; font-size:0.75em; line-height:1.6; white-space:pre; overflow-x:auto;">{
+  "nodes": [
+    { "type": "n8n-nodes-base.gmailTrigger",
+      "name": "Nuova email" },
+    { "type": "@n8n/n8n-nodes-langchain.agent",
+      "name": "Classifica con AI" },
+    { "type": "n8n-nodes-base.gmail",
+      "name": "Rispondi" }
+  ],
+  "connections": {
+    "Nuova email" → "Classifica con AI" → "Rispondi"
+  }
+}</code>
+  <br>
+  <strong>3 concetti chiave:</strong><br>
+  🔲 <strong>Nodi:</strong> ogni blocco fa una cosa (trigger, AI, azione)<br>
+  🔗 <strong>Connessioni:</strong> i dati fluiscono da un nodo all'altro<br>
+  📥 <strong>Import:</strong> copia il JSON → n8n → Menu → Import from File → Attiva
+</p>`,
+  },
+
+  // 9d. Dove trovare flussi pronti (gratis)
+  {
+    type: 'concept',
+    heading: 'Flussi pronti: dove trovarli gratis',
+    content: `<p class="concept-text">
+  <strong>Non devi costruire da zero.</strong> Ci sono 9.000+ template pronti.
+  <br><br>
+  🏠 <strong>n8n.io/workflows</strong> — 9.107 template ufficiali, 6.234 con AI<br>
+  <em style="color:var(--muted);">→ In n8n: Add workflow → Templates → cerca e importa</em>
+  <br><br>
+  🐙 <strong>GitHub: awesome-n8n-templates</strong> — 280+ workflow curati<br>
+  <em style="color:var(--muted);">→ Gmail, Slack, OpenAI, RAG chatbot, DevOps</em>
+  <br><br>
+  🎓 <strong>GitHub: n8n-ai-automations</strong> — collezione AI agents<br>
+  <em style="color:var(--muted);">→ Video tutorial su YouTube + community Skool gratuita</em>
+  <br><br>
+  📦 <strong>GitHub: n8n-free-templates</strong> — 200+ workflow plug-and-play<br>
+  <em style="color:var(--muted);">→ Vector DB, embeddings, LLM — importa il JSON e attiva</em>
+  <br><br>
+  <strong>Come usarli:</strong> scarica il .json → apri n8n → Import → aggiungi le tue credenziali → Activate.
+</p>`,
+  },
+
+  // 9e. Alternative manuali: prompt pronti
+  {
+    type: 'concept',
+    heading: 'Senza n8n? Prompt pronti da copiare',
+    content: `<p class="concept-text">
+  <strong>Non serve n8n per automatizzare.</strong> Ecco 4 prompt pronti da usare su ChatGPT o Claude:
+  <br><br>
+  📧 <strong>Email triage:</strong><br>
+  <code style="display:block; background:rgba(0,212,170,0.08); padding:10px; border-radius:6px; font-size:0.72em; margin:4px 0 12px;">Classifica questa email in: [urgente/azione richiesta/FYI/spam]. Rispondi con categoria, motivazione in 1 riga, e bozza di risposta se serve azione.</code>
+  <br>
+  📊 <strong>Report da dati:</strong><br>
+  <code style="display:block; background:rgba(0,212,170,0.08); padding:10px; border-radius:6px; font-size:0.72em; margin:4px 0 12px;">Analizza questi dati di vendita. Genera: 1) trend principale, 2) anomalie, 3) 3 azioni suggerite. Formato: bullet point, max 200 parole.</code>
+  <br>
+  🔍 <strong>Analisi competitor:</strong><br>
+  <code style="display:block; background:rgba(0,212,170,0.08); padding:10px; border-radius:6px; font-size:0.72em; margin:4px 0 12px;">Confronta questi 3 prodotti competitor: [A, B, C]. Tabella con: prezzo, feature chiave, punto debole, target. Concludi con il nostro vantaggio competitivo.</code>
+  <br>
+  📝 <strong>Content repurposing:</strong><br>
+  <code style="display:block; background:rgba(0,212,170,0.08); padding:10px; border-radius:6px; font-size:0.72em; margin:4px 0 12px;">Trasforma questa trascrizione video in: 1) articolo blog 800 parole, 2) post LinkedIn 150 parole, 3) 3 tweet. Mantieni il tone of voice originale.</code>
+</p>`,
+    footer: '<strong>Regola:</strong> n8n automatizza il flusso completo. I prompt automatizzano il singolo step. Parti dai prompt, scala con n8n.',
+  },
+
+  // 9f. Caveman Prompting: meno parole, più risultati
+  {
+    type: 'concept',
+    heading: '🦴 Caveman Prompting',
+    content: `<p class="concept-text">
+  L'AI capisce meglio quando <strong>scrivi meno e meglio</strong>. Stesso principio del codice pulito.
+  <br><br>
+  <strong>❌ Prompt verboso:</strong><br>
+  <code style="display:block; background:rgba(255,80,80,0.08); padding:10px; border-radius:6px; font-size:0.72em; margin:4px 0 12px;">Ciao! Potresti per favore aiutarmi a fare un'analisi dei dati di vendita che ti allego? Mi piacerebbe avere un riassunto dei trend principali e magari anche qualche suggerimento su cosa potremmo fare per migliorare. Grazie mille!</code>
+  <br>
+  <strong>✅ Prompt caveman:</strong><br>
+  <code style="display:block; background:rgba(0,212,170,0.08); padding:10px; border-radius:6px; font-size:0.72em; margin:4px 0 12px;">Analizza dati vendita allegati. Output: 1) 3 trend principali 2) anomalie 3) 3 azioni concrete. Formato bullet, max 200 parole.</code>
+  <br>
+  <strong>Perché funziona meglio:</strong><br>
+  🎯 <strong>Diretto:</strong> niente convenevoli — l'AI non ha sentimenti da ferire<br>
+  📐 <strong>Strutturato:</strong> formato output esplicito → risultato prevedibile<br>
+  🪙 <strong>Economico:</strong> meno token in input = meno costi, più spazio per la risposta<br>
+  ⚡ <strong>Veloce:</strong> meno da parsare = risposta più rapida e precisa
+  <br><br>
+  <strong>Fun fact:</strong> in <strong>Claude Code</strong> (CLI di Anthropic) esiste la skill <code>/caveman</code> che riduce i token ~75% mantenendo accuratezza tecnica. 3 livelli: lite, full, ultra.
+</p>`,
+    footer: '<strong>Regola d\'oro:</strong> se il prompt contiene "per favore", "potresti", "mi piacerebbe" → stai sprecando token. Vai dritto.',
   },
 
   // ─── SEZIONE 3: AI ACT ───
@@ -294,10 +458,10 @@ export const slides = [
     columns: ['Metrica', 'Italia', 'Mondo'],
     rows: [
       ['Imprese con AI', '8,2%', '88% (enterprise)'],
-      ['Adozione YoY', 'n.d.', '+23pp (55%→78%)'],
+      ['Produttività AI', '+5,2%', '+40% (McKinsey)'],
       ['GitHub Copilot', 'In crescita', '4,7M abbonati (+75%)'],
       ['Copilot M365', 'In rollout', '41% enterprise'],
-      ['Claude business', 'Emergente', '300K+ clienti'],
+      ['GenAI business', 'Prime adozioni', '65% aziende globali'],
     ],
     footer: '<strong>Il messaggio:</strong> 8% vs 88% — gap enorme, ma chi si muove ora ha un vantaggio competitivo.',
   },
@@ -362,7 +526,7 @@ export const slides = [
   // 17. MEME
   {
     type: 'meme',
-    image: { src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnJ2OWd2NnN1eWFtZzF1MWM0aHB0eDNoMXduMmh2cTd4N3N0a2VnNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/67ThRZlYBvibtMA4AP/giphy.gif', alt: 'Money money money' },
+    image: { src: 'https://i.giphy.com/media/yAYZnhvY3fflS/giphy.gif', alt: 'Shut up and take my money' },
     caption: '"Quando mostri al CEO il ROI dell\'AI e improvvisamente il budget c\'è"',
   },
 
@@ -374,13 +538,34 @@ export const slides = [
     layout: 'feature-grid',
     heading: 'Le 5 resistenze più comuni',
     features: [
-      { icon: '😰', title: '"Mi ruberà il lavoro"', description: 'Nessun impatto su occupazione (Banca d\'Italia)' },
+      { icon: '😰', title: '"Mi ruberà il lavoro"', description: 'Realtà: 42% aziende dice che AI ha solo creato posti. Customer service -37%, ma cybersecurity +21%.' },
       { icon: '🤷', title: '"Non so da dove iniziare"', description: '62% PMI — serve percorso guidato, non big bang' },
       { icon: '🎓', title: '"Mancano competenze"', description: '58% PMI — AI Literacy è obbligatoria per legge' },
       { icon: '💸', title: '"Costa troppo"', description: '45% usa tool gratuiti — il costo non è la barriera' },
       { icon: '🙅', title: '"Il management non ci crede"', description: '29% PMI — servono numeri ($7.800/dip/anno)' },
     ],
     footer: '<strong>Pattern:</strong> la resistenza è culturale, non tecnologica. Servono numeri e un champion interno.',
+  },
+
+  // 18b. Il caso Klarna: il boomerang dell'AI totale
+  {
+    type: 'concept',
+    heading: 'Il caso Klarna: sostituire ≠ augmentare',
+    content: `<p class="concept-text">
+  <strong>2024 — L'annuncio:</strong><br>
+  "La nostra AI fa il lavoro di <strong>700 dipendenti</strong>." Tempo di risposta da 11 a 2 minuti. -25% richieste ripetute.
+  <br><br>
+  <strong>2026 — Il dietrofront:</strong><br>
+  Klarna riassume umani. Soddisfazione clienti crollata sui casi complessi. Risparmi non materializzati come previsto.
+  <br><br>
+  <strong>Perché è successo:</strong><br>
+  🤖 L'AI gestiva bene il <strong>volume</strong> (FAQ, rimborsi semplici)<br>
+  😤 Ma falliva su <strong>empatia, eccezioni, escalation</strong><br>
+  📉 I clienti insoddisfatti → churn → costo maggiore del risparmio
+  <br><br>
+  <strong>La lezione:</strong> Klarna è diventato <em>il</em> caso studio 2026 sul perché <strong>sostituire fallisce</strong> e <strong>augmentare funziona</strong>.
+</p>`,
+    footer: 'HBR 2026: "Le aziende licenziano per il <strong>potenziale</strong> dell\'AI, non per i risultati."',
   },
 
   // 19. Workflow ibrido: human-in-the-loop
@@ -429,7 +614,7 @@ export const slides = [
   // 22. MEME
   {
     type: 'meme',
-    image: { src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGU0cnVzaGdhMjF1ZWt2Yzlkb3M2YWp6emZwcThqMW1rcW14dmJ4aCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7btNa0RUYa5E7yl2/giphy.gif', alt: 'This is fine' },
+    image: { src: 'https://i.giphy.com/media/3jbR27OLT5YJv0ewvN/giphy.gif', alt: 'This is fine' },
     caption: '"Le aziende italiane che ancora non usano AI guardando l\'88% mondiale"',
   },
 
@@ -460,20 +645,20 @@ export const slides = [
     ],
   },
 
-  // 25. RISORSE
+  // 25. Come valutare un tool AI
   {
-    type: 'resource',
     type: 'concept',
     heading: 'Come valutare un tool AI',
-    content: `Non tutti i tool AI sono uguali. Prima di scegliere, chiediti:`,
-    items: [
-      { emoji: '🔍', text: 'È un **wrapper** di un\'altra AI (es. GPT sotto il cofano) o ha tecnologia propria?' },
-      { emoji: '⚙️', text: 'Usa **modelli vecchi** con flussi standard, o ha integrato tecnologie nuove/esclusive?' },
-      { emoji: '🛠️', text: 'Ha già un **workflow pronto** per il tuo obiettivo, o devi costruirtelo da zero?' },
-      { emoji: '💰', text: 'Vale la pena **spendere 10-20€/mese** per risparmiare giorni/settimane di lavoro manuale?' },
-      { emoji: '🎯', text: 'Il risultato sarà **migliore** di quello che otterresti smanettando da solo senza essere programmatore?' },
-    ],
-    footer: '💡 Usa **There\'s an AI for That** (theresanaiforthat.com) per scoprire tool, ma valuta sempre criticamente prima di adottare.',
+    content: `<p class="concept-text">
+  Non tutti i tool AI sono uguali. Prima di scegliere, chiediti:
+  <br><br>
+  🔍 È un <strong>wrapper</strong> di un'altra AI (es. GPT sotto il cofano) o ha tecnologia propria?<br>
+  ⚙️ Usa <strong>modelli vecchi</strong> con flussi standard, o ha integrato tecnologie nuove/esclusive?<br>
+  🛠️ Ha già un <strong>workflow pronto</strong> per il tuo obiettivo, o devi costruirtelo da zero?<br>
+  💰 Vale la pena <strong>spendere 10-20€/mese</strong> per risparmiare giorni/settimane di lavoro manuale?<br>
+  🎯 Il risultato sarà <strong>migliore</strong> di quello che otterresti smanettando da solo senza essere programmatore?
+</p>`,
+    footer: '💡 Usa <strong>There\'s an AI for That</strong> (theresanaiforthat.com) per scoprire tool, ma valuta sempre criticamente prima di adottare.',
   },
 
   // Risorse
@@ -486,12 +671,32 @@ export const slides = [
       { label: 'AI Act — rinvio alto rischio (Tom\'s Hardware)', url: 'https://www.tomshw.it/business/ai-act-rinvio-sistemi-alto-rischio-2027-2028' },
       { label: 'Deloitte State of AI in Enterprise 2026', url: 'https://www.deloitte.com/cy/en/issues/generative-ai/state-of-ai-in-enterprise.html' },
       { label: 'n8n AI Agent Tutorial 2026 (YouTube)', url: 'https://www.youtube.com/watch?v=PfdnYe2690E' },
+      { label: 'n8n Template Library — 9.000+ workflow gratuiti', url: 'https://n8n.io/workflows/' },
+      { label: 'n8n AI Workflows — 6.000+ template con AI', url: 'https://n8n.io/workflows/categories/ai/' },
+      { label: 'GitHub: awesome-n8n-templates (280+ pronti)', url: 'https://github.com/enescingoz/awesome-n8n-templates' },
+      { label: 'Corso gratuito n8n + certificato', url: 'https://findskill.ai/courses/n8n-ai-automation-workflows/' },
       { label: '150+ Agentic AI Statistics 2026', url: 'https://www.digitalapplied.com/blog/agentic-ai-statistics-2026-definitive-collection-150-data-points' },
       { label: '🔍 There\'s an AI for That — Directory 10.000+ tool AI', url: 'https://theresanaiforthat.com' },
+      { label: '🦴 Caveman Prompting — Claude Code /caveman skill', url: 'https://github.com/anthropics/claude-code' },
     ],
   },
 
-  // 26. Prossima lezione
+  // Cosa vi aspetta: panoramica lezioni successive
+  {
+    type: 'custom',
+    layout: 'feature-grid',
+    heading: 'Cosa vi aspetta nei prossimi giorni',
+    features: [
+      { icon: '🧪', title: 'L06 — 9 aprile', description: '<strong>Lab Piattaforme:</strong> ChatGPT Canvas, Claude Projects, Gemini, NotebookLM + AI Debate: stesso prompt, 3 piattaforme, analisi bias.' },
+      { icon: '⚙️', title: 'L07 — 13 aprile', description: '<strong>Lab Automazione:</strong> workflow reali con Zapier, Make e n8n (API Gemini gratis). Troubleshooting incluso + Workflow Creativo.' },
+      { icon: '💼', title: 'L08 — 15 aprile', description: '<strong>AI per il tuo lavoro:</strong> email, documenti, meeting, CV con AI + mock interview + post LinkedIn con AI.' },
+      { icon: '📋', title: 'L09 — 22 aprile', description: '<strong>Piano di adozione:</strong> SWOT con AI, role-play CEO, piano 90 giorni, dilemmi etici, certificazioni gratuite.' },
+      { icon: '🎤', title: 'L10 — 23 aprile', description: '<strong>Progetto finale:</strong> pitch + AI Speed Dating + 30-day challenge + Lettera al me del futuro.' },
+    ],
+    footer: '<strong>Da domani lavorate con i tutor.</strong> Tutto quello che avete imparato oggi diventa pratica. Preparatevi a sporcarvi le mani.',
+  },
+
+  // Prossima lezione
   {
     type: 'title',
     lessonNumber: 'Prossima lezione',

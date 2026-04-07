@@ -222,7 +222,16 @@ const DAYS = [
     resources: [
       { label: "NVIDIA State of AI Report 2026", url: "https://blogs.nvidia.com/blog/state-of-ai-report-2026/" },
       { label: "Banca d'Italia QEF N.1005 — AI e imprese", url: "https://www.bancaditalia.it/pubblicazioni/qef/2026-1005/index.html" },
-      { label: "n8n AI Agent Tutorial 2026", url: "https://www.youtube.com/watch?v=PfdnYe2690E" },
+      { label: "AI Act — rinvio alto rischio (Tom's Hardware)", url: "https://www.tomshw.it/business/ai-act-rinvio-sistemi-alto-rischio-2027-2028" },
+      { label: "Deloitte State of AI in Enterprise 2026", url: "https://www.deloitte.com/cy/en/issues/generative-ai/state-of-ai-in-enterprise.html" },
+      { label: "n8n AI Agent Tutorial 2026 (YouTube)", url: "https://www.youtube.com/watch?v=PfdnYe2690E" },
+      { label: "n8n Template Library — 9.000+ workflow gratuiti", url: "https://n8n.io/workflows/" },
+      { label: "n8n AI Workflows — 6.000+ template con AI", url: "https://n8n.io/workflows/categories/ai/" },
+      { label: "GitHub: awesome-n8n-templates (280+ pronti)", url: "https://github.com/enescingoz/awesome-n8n-templates" },
+      { label: "Corso gratuito n8n + certificato", url: "https://findskill.ai/courses/n8n-ai-automation-workflows/" },
+      { label: "150+ Agentic AI Statistics 2026", url: "https://www.digitalapplied.com/blog/agentic-ai-statistics-2026-definitive-collection-150-data-points" },
+      { label: "🔍 There's an AI for That — Directory 10.000+ tool AI", url: "https://theresanaiforthat.com" },
+      { label: "🦴 Caveman Prompting — Claude Code /caveman skill", url: "https://github.com/anthropics/claude-code" },
     ],
     schedule: [
       { from: '09:00', to: '10:00', type: 'teoria', label: 'Agenti AI + Agentic AI stats' },

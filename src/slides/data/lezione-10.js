@@ -19,10 +19,59 @@ export const slides = [
     heading: 'Agenda — L\'Ultima Giornata',
     items: [
       { emoji: '🎤', text: 'Esercizio 1 (60 min): Preparazione pitch "AI per il mio CEO"' },
-      { emoji: '🏆', text: 'Esercizio 2 (120 min): Presentazioni dei team' },
-      { emoji: '📅', text: 'Esercizio 3 (30 min): 30-Day AI Challenge personale' },
-      { emoji: '📚', text: 'Esercizio 4 (30 min): Risorse per continuare' },
+      { emoji: '🔄', text: 'Esercizio 2 (30 min): AI Speed Dating' },
+      { emoji: '☕', text: 'Pausa (15 min)' },
+      { emoji: '🏆', text: 'Esercizio 3 (120–150 min): Presentazioni dei team' },
+      { emoji: '🍽️', text: 'Pausa pranzo (15 min)' },
+      { emoji: '📅', text: 'Esercizio 4 (30 min): 30-Day AI Challenge personale' },
+      { emoji: '✉️', text: 'Esercizio 5 (20 min): Lettera al me del futuro' },
+      { emoji: '📚', text: 'Esercizio 6 (20 min): Risorse per continuare' },
     ],
+  },
+
+  // 2b. Schedule dettagliato
+  {
+    type: 'concept',
+    centered: true,
+    heading: 'Schedule della Giornata',
+    content: `<div style="max-width: 700px; margin: 0 auto;">
+  <div style="display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-left: 3px solid #6c63ff; margin-bottom: 6px;">
+    <div style="font-size: 0.7em; font-weight: 700; color: #6c63ff; min-width: 90px;">09:00–10:00</div>
+    <div style="font-size: 0.65em;">🎤 Esercizio 1 — Preparazione pitch (60 min)</div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-left: 3px solid #00d4aa; margin-bottom: 6px;">
+    <div style="font-size: 0.7em; font-weight: 700; color: #00d4aa; min-width: 90px;">10:00–10:30</div>
+    <div style="font-size: 0.65em;">🔄 Esercizio 2 — AI Speed Dating (30 min)</div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-left: 3px solid var(--muted); margin-bottom: 6px; opacity: 0.7;">
+    <div style="font-size: 0.7em; font-weight: 700; color: var(--muted); min-width: 90px;">10:30–10:45</div>
+    <div style="font-size: 0.65em;">☕ Pausa (15 min)</div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-left: 3px solid #f59e0b; margin-bottom: 6px;">
+    <div style="font-size: 0.7em; font-weight: 700; color: #f59e0b; min-width: 90px;">10:45–13:00</div>
+    <div style="font-size: 0.65em;">🏆 Esercizio 3 — Presentazioni (120–135 min)</div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-left: 3px solid var(--muted); margin-bottom: 6px; opacity: 0.7;">
+    <div style="font-size: 0.7em; font-weight: 700; color: var(--muted); min-width: 90px;">13:00–13:15</div>
+    <div style="font-size: 0.65em;">🍽️ Pausa pranzo (15 min)</div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-left: 3px solid #c084fc; margin-bottom: 6px;">
+    <div style="font-size: 0.7em; font-weight: 700; color: #c084fc; min-width: 90px;">13:15–13:45</div>
+    <div style="font-size: 0.65em;">📅 Esercizio 4 — 30-Day AI Challenge (30 min)</div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-left: 3px solid #fb923c; margin-bottom: 6px;">
+    <div style="font-size: 0.7em; font-weight: 700; color: #fb923c; min-width: 90px;">13:45–14:05</div>
+    <div style="font-size: 0.65em;">✉️ Esercizio 5 — Lettera al me del futuro (20 min)</div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-left: 3px solid #ef4444; margin-bottom: 6px;">
+    <div style="font-size: 0.7em; font-weight: 700; color: #ef4444; min-width: 90px;">14:05–14:25</div>
+    <div style="font-size: 0.65em;">📚 Esercizio 6 — Risorse per continuare (20 min)</div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-left: 3px solid #6c63ff; margin-bottom: 6px;">
+    <div style="font-size: 0.7em; font-weight: 700; color: #6c63ff; min-width: 90px;">14:25–15:00</div>
+    <div style="font-size: 0.65em;">🎓 Chiusura, recap, saluti (35 min)</div>
+  </div>
+</div>`,
   },
 
   // 3. Meme
@@ -68,13 +117,50 @@ export const slides = [
     ],
   },
 
-  // --- ESERCIZIO 2: Presentazioni ---
+  // --- ESERCIZIO 2: AI Speed Dating ---
 
-  // 6. Setup Presentazioni
+  // 6. Intro AI Speed Dating
+  {
+    type: 'concept',
+    heading: 'Esercizio 2: AI Speed Dating',
+    content: `<strong>Obiettivo:</strong> Condividere i migliori trucchi AI scoperti durante il corso.
+<br><br>
+<strong>Come funziona:</strong>
+<br>• A coppie, 5 minuti per turno
+<br>• Persona A mostra il suo <strong>miglior trucco/workflow AI</strong> dal corso (2.5 min)
+<br>• Persona B fa lo stesso (2.5 min)
+<br>• Al segnale del tutor: <strong>RUOTATE!</strong> Cambio partner
+<br>• 6 rotazioni = 30 minuti totali
+<br><br>
+<strong>Regola:</strong> Deve essere qualcosa che avete <em>provato davvero</em>, non solo visto. Mostrate lo schermo!
+<br><br>
+<strong>Perché:</strong> In 30 minuti vedrete 6 trucchi diversi. Imparerete più dai colleghi che da qualsiasi corso.`,
+    image: { src: 'https://media.giphy.com/media/l0HlNaQ6gWfllcjDO/giphy.gif', alt: 'Speed dating' },
+  },
+
+  // 7. AI Speed Dating hands-on
+  {
+    type: 'hands-on',
+    heading: 'Esercizio 2: AI Speed Dating',
+    timer: '30 minuti',
+    level: 'base',
+    tools: ['Il vostro laptop', 'Un tool AI qualsiasi'],
+    deliverable: '6 nuovi trucchi AI appresi dai colleghi',
+    instructions: [
+      '<strong>PREPARAZIONE (2 min):</strong> Pensate al vostro miglior trick AI del corso. Aprite il tool sul vostro schermo. Preparate una demo di 2 minuti max',
+      '<strong>ROUND 1–6 (5 min ciascuno):</strong> Il tutor dà il via. Persona A mostra (2.5 min), persona B mostra (2.5 min). Al suono del timer: alzatevi e cambiate partner. Spostatevi sempre in senso orario',
+      '<strong>REGOLE:</strong> NO slide, NO teoria — solo DEMO live. Mostrate lo schermo. Se il vostro trick è "ho usato ChatGPT per scrivere email", va benissimo. L\'importante è che sia reale',
+      '<strong>BONUS:</strong> Appuntatevi i trick migliori che vedete. Chiedete "come hai fatto?" Se qualcuno vi stupisce, ditegli "questo me lo rubo!"',
+    ],
+  },
+
+  // --- ESERCIZIO 3: Presentazioni ---
+
+  // 8. Setup Presentazioni
   {
     type: 'concept',
     centered: true,
-    heading: 'Esercizio 2: Presentazioni',
+    heading: 'Esercizio 3: Presentazioni',
     content: `<div style="max-width: 800px; margin: 0 auto;">
   <div style="display: flex; align-items: center; gap: 16px; background: var(--surface); border-radius: var(--radius); padding: 16px 24px; margin-bottom: 12px;">
     <div style="font-size: 1.4em; font-weight: 900; color: var(--accent); min-width: 60px; text-align: center;">5'</div>
@@ -90,18 +176,11 @@ export const slides = [
       <div style="font-size: 0.65em; color: var(--muted);">Il pubblico fa il "board". Domande difficili. Obiezioni vere.</div>
     </div>
   </div>
-  <div style="display: flex; align-items: center; gap: 16px; background: var(--surface); border-radius: var(--radius); padding: 16px 24px; margin-bottom: 12px;">
-    <div style="font-size: 1.4em; font-weight: 900; color: var(--warning); min-width: 60px; text-align: center;">30%</div>
+  <div style="display: flex; align-items: center; gap: 16px; background: rgba(239,68,68,0.08); border-radius: var(--radius); padding: 16px 24px; margin-bottom: 12px;">
+    <div style="font-size: 1.4em; font-weight: 900; color: var(--danger); min-width: 60px; text-align: center;">⚠️</div>
     <div>
-      <div style="font-size: 0.65em; font-weight: 700;">Soluzione AI proposta</div>
-      <div style="font-size: 0.65em; color: var(--muted);">Tool scelti, workflow, realismo della proposta</div>
-    </div>
-  </div>
-  <div style="display: flex; align-items: center; gap: 16px; background: var(--surface); border-radius: var(--radius); padding: 16px 24px; margin-bottom: 12px;">
-    <div style="font-size: 1.4em; font-weight: 900; color: #fb923c; min-width: 60px; text-align: center;">20%</div>
-    <div>
-      <div style="font-size: 0.65em; font-weight: 700;">Chiarezza + ROI</div>
-      <div style="font-size: 0.65em; color: var(--muted);">Il problema è chiaro? I numeri reggono?</div>
+      <div style="font-size: 0.65em; font-weight: 700;">Se più di 15 persone</div>
+      <div style="font-size: 0.65em; color: var(--muted);">Dividere in 2 gruppi paralleli in aule separate. Ogni gruppo ha un facilitatore.</div>
     </div>
   </div>
   <div style="display: flex; align-items: center; gap: 16px; background: var(--surface); border-radius: var(--radius); padding: 16px 24px;">
@@ -114,19 +193,68 @@ export const slides = [
 </div>`,
   },
 
-  // 7. Presentazioni hands-on
+  // 8b. Rubrica di valutazione
+  {
+    type: 'concept',
+    centered: true,
+    heading: 'Rubrica di Valutazione Presentazioni',
+    content: `<div style="max-width: 800px; margin: 0 auto;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.6em;">
+    <thead>
+      <tr style="border-bottom: 2px solid var(--accent);">
+        <th style="text-align: left; padding: 8px; color: var(--accent);">Criterio</th>
+        <th style="text-align: center; padding: 8px; color: var(--accent);">Punti</th>
+        <th style="text-align: left; padding: 8px; color: var(--muted);">Cosa si valuta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <td style="padding: 8px; font-weight: 700;">Problema + Dati</td>
+        <td style="text-align: center; padding: 8px; font-weight: 900; color: #6c63ff;">/25</td>
+        <td style="padding: 8px; color: var(--muted);">Il problema è reale? I numeri sono concreti e credibili?</td>
+      </tr>
+      <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <td style="padding: 8px; font-weight: 700;">Soluzione AI</td>
+        <td style="text-align: center; padding: 8px; font-weight: 900; color: #00d4aa;">/25</td>
+        <td style="padding: 8px; color: var(--muted);">Tool specifici, workflow chiaro, realismo della proposta</td>
+      </tr>
+      <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <td style="padding: 8px; font-weight: 700;">ROI + Timeline</td>
+        <td style="text-align: center; padding: 8px; font-weight: 900; color: #f59e0b;">/25</td>
+        <td style="padding: 8px; color: var(--muted);">Calcolo ROI sensato, piano 90 giorni realistico, rischi gestiti</td>
+      </tr>
+      <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <td style="padding: 8px; font-weight: 700;">Comunicazione</td>
+        <td style="text-align: center; padding: 8px; font-weight: 900; color: #fb923c;">/15</td>
+        <td style="padding: 8px; color: var(--muted);">Chiarezza espositiva, slide leggibili, rispetto del tempo (5 min)</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; font-weight: 700;">Q&A</td>
+        <td style="text-align: center; padding: 8px; font-weight: 900; color: #ef4444;">/10</td>
+        <td style="padding: 8px; color: var(--muted);">Qualità delle risposte alle obiezioni del "board"</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="margin-top: 12px; padding: 10px 16px; background: rgba(108,99,255,0.08); border-radius: 8px; font-size: 0.6em; color: var(--muted);">
+    <strong style="color: var(--accent);">Tempo stimato:</strong> 8 min/persona (5' pitch + 3' Q&A). Con 15 persone = ~120 min. Con 20+ persone = dividere in 2 gruppi paralleli.
+  </div>
+</div>`,
+  },
+
+  // 9. Presentazioni hands-on
   {
     type: 'hands-on',
-    heading: 'Esercizio 2: Presentazioni dei Team',
-    timer: '120 minuti',
+    heading: 'Esercizio 3: Presentazioni dei Team',
+    timer: '120–150 minuti',
     level: 'avanzato',
-    tools: ['Google Slides', 'Timer'],
+    tools: ['Google Slides', 'Timer', 'Rubrica di valutazione'],
     deliverable: 'Pitch presentato + feedback ricevuto + voto peer completato',
     instructions: [
-      '<strong>Format:</strong> 5 min presentazione + 3 min Q&A per team/persona. Il tutor gestisce il timer',
-      '<strong>Per chi presenta:</strong> Vai dritto al punto. Slide 1: problema con numeri. Slide 5: call to action. Non leggere le slide — racconta una storia',
+      '<strong>Format:</strong> 5 min presentazione + 3 min Q&A per team/persona = 8 min a testa. Il tutor gestisce il timer RIGOROSAMENTE. A 5 min esatti: "Concludi." A 8 min: "Grazie, il prossimo."',
+      '<strong>⚠️ Gestione gruppi grandi:</strong> Se più di 15 persone, dividere in 2 gruppi paralleli in aule separate. Ogni gruppo ha un facilitatore che gestisce timer e ordine. I voti peer si fanno solo all\'interno del proprio gruppo',
+      '<strong>Per chi presenta:</strong> Vai dritto al punto. Slide 1: problema con numeri. Slide 5: call to action. Non leggere le slide — racconta una storia. Ricorda la rubrica: problema (25), soluzione AI (25), ROI+timeline (25), comunicazione (15), Q&A (10)',
       '<strong>Per il "board" (tutti gli altri):</strong> Fate domande vere: "Quanto costa?", "Chi lo gestisce?", "E se l\'AI sbaglia?", "Che dati servono?", "In quanto tempo vediamo risultati?"',
-      '<strong>Feedback strutturato:</strong> Dopo ogni presentazione, ognuno scrive su un foglio: 1 cosa che ha funzionato bene, 1 cosa da migliorare, 1 domanda rimasta aperta',
+      '<strong>Feedback strutturato:</strong> Dopo ogni presentazione, ognuno scrive su un foglio: punteggio (0-100 con la rubrica), 1 cosa che ha funzionato bene, 1 cosa da migliorare',
       '<strong>Voto finale:</strong> Alla fine di tutte le presentazioni, ognuno vota i 3 pitch migliori (escluso il proprio). Scrivete i nomi su un foglio e consegnatelo al tutor',
       '<strong>Applausi:</strong> Ogni presentazione merita rispetto. Applaudite forte. 👏',
     ],
@@ -139,12 +267,12 @@ export const slides = [
     caption: '"Quando il tuo pitch convince anche il CEO più scettico della classe"',
   },
 
-  // --- ESERCIZIO 3: 30-Day Challenge ---
+  // --- ESERCIZIO 4: 30-Day Challenge ---
 
-  // 9. Intro Esercizio 3
+  // 11. Intro Esercizio 4
   {
     type: 'concept',
-    heading: 'Esercizio 3: 30-Day AI Challenge',
+    heading: 'Esercizio 4: 30-Day AI Challenge',
     content: `<strong>Obiettivo:</strong> Creare il tuo piano personalizzato di 30 giorni con un task AI al giorno.
 <br><br>
 <strong>Regola d'oro:</strong> 30 minuti al giorno, non di più. La costanza batte l'intensità.
@@ -159,10 +287,10 @@ export const slides = [
     image: { src: 'https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif', alt: 'Challenge' },
   },
 
-  // 10. Esercizio 3 hands-on
+  // 12. Esercizio 4 hands-on
   {
     type: 'hands-on',
-    heading: 'Esercizio 3: Crea il Tuo 30-Day AI Challenge',
+    heading: 'Esercizio 4: Crea il Tuo 30-Day AI Challenge',
     timer: '30 minuti',
     level: 'intermedio',
     tools: ['ChatGPT (free) o Claude (free)', 'Google Sheets (free)'],
@@ -175,13 +303,52 @@ export const slides = [
     ],
   },
 
-  // --- ESERCIZIO 4: Risorse per continuare ---
+  // --- ESERCIZIO 5: Lettera al me del futuro ---
 
-  // 11. Risorse per continuare
+  // 13. Intro Esercizio 5
+  {
+    type: 'concept',
+    heading: 'Esercizio 5: Lettera al Me del Futuro',
+    content: `<strong>Obiettivo:</strong> Scrivere una lettera a voi stessi, da aprire tra 6 mesi.
+<br><br>
+Un esercizio personale e potente. Nessuno leggerà questa lettera — è solo per voi.
+<br><br>
+<strong>Cosa scrivere:</strong>
+<br>• Cosa ho imparato in questo corso che non sapevo
+<br>• Quale tool/workflow implementerò per primo nel mio lavoro
+<br>• Cosa mi spaventava dell'AI — e cosa ne penso adesso
+<br>• Cosa mi entusiasma di più dell'AI nel mio futuro
+<br>• Un obiettivo concreto per i prossimi 6 mesi
+<br><br>
+<strong>Usate l'AI:</strong> Chiedete a Claude/ChatGPT di aiutarvi a strutturare la lettera con domande guidate.
+<br><br>
+<em style="color: var(--accent);">Tra 6 mesi, rileggendola, resterete sorpresi di quanto siete cresciuti.</em>`,
+    image: { src: 'https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif', alt: 'Letter to future self' },
+  },
+
+  // 14. Esercizio 5 hands-on
+  {
+    type: 'hands-on',
+    heading: 'Esercizio 5: Scrivi la Tua Lettera',
+    timer: '20 minuti',
+    level: 'base',
+    tools: ['ChatGPT (free) o Claude (free)', 'Google Docs / Notes / carta e penna'],
+    deliverable: 'Una lettera personale da rileggere tra 6 mesi (23 ottobre 2026)',
+    instructions: [
+      '<strong>Step 1 — CHIEDI ALL\'AI (5 min):</strong> Su Claude o ChatGPT: "Sto finendo un corso di AI per il lavoro. Aiutami a scrivere una lettera a me stesso da aprire tra 6 mesi. Fammi 5 domande per riflettere su: cosa ho imparato, cosa mi ha spaventato dell\'AI, cosa mi entusiasma, cosa implementerò, quale obiettivo mi do." Rispondete alle domande',
+      '<strong>Step 2 — SCRIVI (10 min):</strong> Usate le risposte per scrivere la lettera. Non deve essere perfetta — deve essere sincera. Iniziate con "Caro me del 23 ottobre 2026..." Scrivete quello che sentite, non quello che "dovreste" scrivere',
+      '<strong>Step 3 — SIGILLA (3 min):</strong> Inviatevi la lettera via email con oggetto "DA APRIRE IL 23/10/2026 — Lettera dal corso AI". Programmate un promemoria sul calendario per quella data. Non apritela prima!',
+      '<strong>Step 4 — MOMENTO DI SILENZIO (2 min):</strong> Prendetevi 2 minuti. Respirate. Siete alla fine di un percorso. Ce l\'avete fatta. Siate orgogliosi.',
+    ],
+  },
+
+  // --- ESERCIZIO 6: Risorse per continuare ---
+
+  // 15. Risorse per continuare
   {
     type: 'custom',
     layout: 'feature-grid',
-    heading: 'Esercizio 4: Le Vostre Risorse per Continuare',
+    heading: 'Esercizio 6: Le Vostre Risorse per Continuare',
     features: [
       { icon: '📬', title: 'Newsletter (gratuite)', description: '<strong>The Batch</strong> (deeplearning.ai) — settimanale, curata da Andrew Ng<br><strong>TLDR AI</strong> — digest giornaliero, 5 min di lettura<br><strong>Ben\'s Bites</strong> — tool e novità AI' },
       { icon: '🎓', title: 'Corsi gratuiti', description: '<strong>Google AI Essentials</strong> — certificato riconosciuto<br><strong>Elements of AI</strong> — in italiano<br><strong>Fast.ai</strong> — pratico, project-based<br><strong>DeepLearning.AI</strong> — corsi avanzati' },
@@ -190,11 +357,11 @@ export const slides = [
     ],
   },
 
-  // 12. Esercizio 4 hands-on
+  // 16. Esercizio 6 hands-on
   {
     type: 'hands-on',
-    heading: 'Esercizio 4: Costruisci il Tuo Kit di Risorse',
-    timer: '30 minuti',
+    heading: 'Esercizio 6: Costruisci il Tuo Kit di Risorse',
+    timer: '20 minuti',
     level: 'base',
     tools: ['Browser', 'Google Keep o Notes'],
     deliverable: 'Iscrizione a 2+ newsletter + 1 community + lista risorse salvata',
