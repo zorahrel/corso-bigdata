@@ -597,11 +597,4 @@ Tra 30 giorni sarete tra le persone più competenti in AI nella vostra azienda. 
 <span style="color: #f59e0b; font-weight: 700;">Stay human.</span>
 </p>`,
   },
-
-  // 20. Fine
-  {
-    type: 'closing',
-    heading: '',
-    style: { background: '#000' },
-  },
 ]
