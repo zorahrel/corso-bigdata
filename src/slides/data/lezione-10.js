@@ -74,6 +74,43 @@ export const slides = [
 </div>`,
   },
 
+  // 2c. Feedback dal docente via WhatsApp (call-to-action di apertura)
+  {
+    type: 'concept',
+    centered: true,
+    heading: 'Vuoi un Feedback dal Docente?',
+    headingColor: '#25D366',
+    content: `<div style="max-width: 780px; margin: 0 auto;">
+  <p style="font-size: 0.85em; color: var(--text); margin-bottom: 24px;">
+    In questi giorni avete lavorato su diversi esercizi — alcuni in gruppo, altri individuali.<br>
+    <strong>Scegliete almeno 2 degli esercizi svolti</strong> e inviatemeli su WhatsApp: vi rispondo con un feedback personalizzato.
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0;">
+    <div style="border-left: 4px solid #25D366; padding: 14px; background: var(--surface); border-radius: 8px; text-align: left;">
+      <strong style="color: #25D366; font-size: 0.75em;">① Cosa mandare</strong>
+      <p style="font-size: 0.65em; color: var(--muted); margin: 8px 0 0;">Almeno 2 esercizi tra quelli fatti il 22 e 23 aprile. Foto, screenshot, link a Google Sheet/Doc — quello che avete prodotto.</p>
+    </div>
+    <div style="border-left: 4px solid #6c63ff; padding: 14px; background: var(--surface); border-radius: 8px; text-align: left;">
+      <strong style="color: #6c63ff; font-size: 0.75em;">② Come mandarlo</strong>
+      <p style="font-size: 0.65em; color: var(--muted); margin: 8px 0 0;">WhatsApp singolo al mio numero. Scrivete il vostro nome e il numero dell'esercizio (es. "Es. 4 — Piano 90 giorni").</p>
+    </div>
+    <div style="border-left: 4px solid #f59e0b; padding: 14px; background: var(--surface); border-radius: 8px; text-align: left;">
+      <strong style="color: #f59e0b; font-size: 0.75em;">③ Entro quando</strong>
+      <p style="font-size: 0.65em; color: var(--muted); margin: 8px 0 0;">Entro <strong>fine giornata di oggi (23/04)</strong>. Dopo ricevete la mia risposta individuale.</p>
+    </div>
+  </div>
+
+  <div style="display: inline-block; background: rgba(37, 211, 102, 0.12); border: 1px solid #25D366; border-radius: 12px; padding: 14px 24px; margin-top: 12px;">
+    <div style="font-size: 0.75em; color: var(--text);">📱 Il mio contatto lo avete già nel <strong>gruppo WhatsApp del corso</strong></div>
+  </div>
+
+  <p style="font-size: 0.65em; color: var(--muted); margin-top: 24px; font-style: italic;">
+    Non è un obbligo, è un'opportunità. Chi consegna riceve feedback concreto su cui lavorare nei prossimi 30 giorni.
+  </p>
+</div>`,
+  },
+
   // 3. Meme
   {
     type: 'meme',
