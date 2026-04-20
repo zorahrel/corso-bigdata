@@ -74,16 +74,17 @@ export const slides = [
 </div>`,
   },
 
-  // 2c. Feedback dal docente via WhatsApp (call-to-action di apertura)
+  // 2c. Consegna esercizi via WhatsApp (call-to-action di apertura)
   {
     type: 'concept',
     centered: true,
-    heading: 'Vuoi un Feedback dal Docente?',
-    headingColor: '#25D366',
+    heading: 'Consegna degli Esercizi',
     content: `<div style="max-width: 780px; margin: 0 auto;">
+  <div style="display: inline-block; background: rgba(245, 158, 11, 0.15); border: 1px solid #f59e0b; border-radius: 999px; padding: 4px 14px; font-size: 0.6em; font-weight: 700; color: #f59e0b; letter-spacing: 0.5px; margin-bottom: 20px;">RICHIESTO</div>
+
   <p style="font-size: 0.85em; color: var(--text); margin-bottom: 24px;">
-    In questi giorni avete lavorato su diversi esercizi — alcuni in gruppo, altri individuali.<br>
-    <strong>Scegliete almeno 2 degli esercizi svolti</strong> e inviatemeli su WhatsApp: vi rispondo con un feedback personalizzato.
+    Prima di chiudere il corso: mandatemi <strong>almeno 2 degli esercizi svolti</strong> via WhatsApp.<br>
+    È la restituzione richiesta per questo corso — vi rispondo individualmente con un feedback.
   </p>
 
   <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0;">
@@ -104,10 +105,6 @@ export const slides = [
   <div style="display: inline-block; background: rgba(37, 211, 102, 0.12); border: 1px solid #25D366; border-radius: 12px; padding: 14px 24px; margin-top: 12px;">
     <div style="font-size: 0.75em; color: var(--text);">📱 Il mio contatto lo avete già nel <strong>gruppo WhatsApp del corso</strong></div>
   </div>
-
-  <p style="font-size: 0.65em; color: var(--muted); margin-top: 24px; font-style: italic;">
-    Non è un obbligo, è un'opportunità. Chi consegna riceve feedback concreto su cui lavorare nei prossimi 30 giorni.
-  </p>
 </div>`,
   },
 
