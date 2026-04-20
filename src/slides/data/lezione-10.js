@@ -67,10 +67,6 @@ export const slides = [
     <div style="font-size: 0.7em; font-weight: 700; color: #ef4444; min-width: 90px;">14:05–14:25</div>
     <div style="font-size: 0.65em;">📚 Esercizio 6 — Risorse per continuare (20 min)</div>
   </div>
-  <div style="display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-left: 3px solid #6c63ff; margin-bottom: 6px;">
-    <div style="font-size: 0.7em; font-weight: 700; color: #6c63ff; min-width: 90px;">14:25–15:00</div>
-    <div style="font-size: 0.65em;">🎓 Chiusura, recap, saluti (35 min)</div>
-  </div>
 </div>`,
   },
 
@@ -90,7 +86,7 @@ export const slides = [
   <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0;">
     <div style="border-left: 4px solid #25D366; padding: 14px; background: var(--surface); border-radius: 8px; text-align: left;">
       <strong style="color: #25D366; font-size: 0.75em;">① Cosa mandare</strong>
-      <p style="font-size: 0.65em; color: var(--muted); margin: 8px 0 0;">Almeno 2 esercizi tra quelli fatti il 22 e 23 aprile. Foto, screenshot, link a Google Sheet/Doc — quello che avete prodotto.</p>
+      <p style="font-size: 0.65em; color: var(--muted); margin: 8px 0 0;">Almeno 2 esercizi a scelta tra <strong>tutti quelli proposti nelle lezioni Lab con il Tutor</strong> (L06–L10, dal 09/04 al 23/04). Foto, screenshot o link a Google Sheet/Doc.</p>
     </div>
     <div style="border-left: 4px solid #6c63ff; padding: 14px; background: var(--surface); border-radius: 8px; text-align: left;">
       <strong style="color: #6c63ff; font-size: 0.75em;">② Come mandarlo</strong>
