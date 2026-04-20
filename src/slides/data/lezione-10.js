@@ -86,7 +86,7 @@ export const slides = [
   <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0;">
     <div style="border-left: 4px solid #25D366; padding: 14px; background: var(--surface); border-radius: 8px; text-align: left;">
       <strong style="color: #25D366; font-size: 0.75em;">① Cosa mandare</strong>
-      <p style="font-size: 0.65em; color: var(--muted); margin: 8px 0 0;">Almeno 2 esercizi a scelta tra <strong>tutti quelli proposti nelle lezioni Lab con il Tutor</strong> (L06–L10, dal 09/04 al 23/04). Foto, screenshot o link a Google Sheet/Doc.</p>
+      <p style="font-size: 0.65em; color: var(--muted); margin: 8px 0 0;">Almeno 2 esercizi a scelta tra <strong>tutti quelli proposti nelle lezioni Lab</strong> (L06–L10, dal 09/04 al 23/04). Foto, screenshot o link a Google Sheet/Doc.</p>
     </div>
     <div style="border-left: 4px solid #6c63ff; padding: 14px; background: var(--surface); border-radius: 8px; text-align: left;">
       <strong style="color: #6c63ff; font-size: 0.75em;">② Come mandarlo</strong>
