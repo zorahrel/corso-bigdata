@@ -286,10 +286,6 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-.day-card.deferred {
-  opacity: 0.55;
-}
-
 .day-header {
   padding: 0.65rem 0.75rem;
 }
